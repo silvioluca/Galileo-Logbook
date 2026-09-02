@@ -202,4 +202,352 @@ export const STRUMENTI_WIKI = [
       "Rileva il passaggio di un oggetto interrompendo un raggio (spesso infrarosso) e invia il segnale a un cronometro elettronico o a un'interfaccia di acquisizione dati. Elimina il tempo di reazione umano tipico del cronometraggio manuale, rendendo affidabili le misure di velocità istantanea e accelerazione.",
     immagine: null,
   },
+
+  // ---- Strumenti classici, antichi e storici ----
+
+  {
+    nome: 'Bussola magnetica',
+    branca: 'Misura',
+    grandezza: 'Direzione (orientamento)',
+    unita: '°',
+    descrizione:
+      "Un ago magnetizzato libero di ruotare su un perno si allinea al campo magnetico terrestre indicando il nord. Nota in Cina già nell'antichità e diffusa in Europa dal XII secolo per la navigazione, è uno dei più antichi strumenti di misura mai costruiti dall'uomo.",
+    immagine: null,
+  },
+  {
+    nome: 'Sestante',
+    branca: 'Misura',
+    grandezza: 'Angolo (altezza di un astro sull\'orizzonte)',
+    unita: '°',
+    sensibilita: 'circa 0,2\' (minuti d\'arco) nei modelli marittimi di precisione',
+    descrizione:
+      "Misura l'angolo tra un astro e l'orizzonte riflettendo la luce su due specchi, uno dei quali semiargentato: ruotando un braccio graduato si sovrappongono le due immagini. Perfezionato nel 1757, per due secoli è stato lo strumento cardine della navigazione astronomica in mare aperto.",
+    immagine: null,
+  },
+  {
+    nome: 'Teodolite',
+    branca: 'Misura',
+    grandezza: 'Angoli orizzontali e verticali',
+    unita: '°',
+    sensibilita: 'fino a pochi secondi d\'arco nei modelli topografici',
+    descrizione:
+      "Strumento ottico su treppiede che misura angoli orizzontali e verticali con estrema precisione tramite un cannocchiale girevole su due assi e cerchi graduati. Introdotto nel Cinquecento, resta lo strumento base della topografia e del rilevamento del territorio.",
+    immagine: null,
+  },
+  {
+    nome: 'Orologio a pendolo di Huygens',
+    branca: 'Misura',
+    grandezza: 'Tempo',
+    unita: 's',
+    descrizione:
+      "Christiaan Huygens brevettò nel 1656 il primo orologio regolato da un pendolo, sfruttando l'isocronismo delle piccole oscillazioni già osservato da Galileo. Passò la precisione della misura del tempo da minuti a pochi secondi al giorno, rendendolo per secoli il riferimento per ogni misura di durata in laboratorio.",
+    immagine: null,
+  },
+  {
+    nome: 'Areometro',
+    branca: 'Misura',
+    grandezza: 'Densità relativa di un liquido',
+    unita: 'kg/L (o scala arbitraria, es. gradi Baumé)',
+    descrizione:
+      "Galleggiante di vetro zavorrato e graduato che affonda in un liquido fino a una profondità legata alla densità del liquido stesso, per il principio di Archimede. Più il liquido è denso, meno l'areometro affonda: una lettura diretta, senza bilance né calcoli.",
+    immagine: null,
+  },
+  {
+    nome: 'Igrometro a capello',
+    branca: 'Misura',
+    grandezza: 'Umidità relativa dell\'aria',
+    unita: '%',
+    descrizione:
+      "Un capello (o una fibra sintetica) si allunga leggermente con l'umidità dell'aria; l'allungamento, amplificato meccanicamente, muove una lancetta su una scala percentuale. Ideato da Horace-Bénédict de Saussure nel 1783, resta un principio ancora usato in molti igrometri economici.",
+    immagine: null,
+  },
+
+  {
+    nome: 'Piano inclinato di Galileo',
+    branca: 'Meccanica',
+    grandezza: 'Spazio percorso in funzione del tempo',
+    unita: 'm, s',
+    descrizione:
+      "Una rotaia di legno levigata, inclinata di un piccolo angolo, su cui Galileo fece rotolare sfere per \"diluire\" nel tempo la caduta libera, troppo rapida per essere cronometrata con i mezzi del Seicento. Misurando gli spazi percorsi in tempi uguali (contati a orecchio con un canto, o con una clessidra ad acqua) dimostrò che lo spazio cresce col quadrato del tempo.",
+    immagine: null,
+  },
+  {
+    nome: 'Macchina di Atwood',
+    branca: 'Meccanica',
+    grandezza: 'Accelerazione',
+    unita: 'm/s²',
+    sensibilita: 'accelerazioni ridotte a pochi cm/s², facilmente cronometrabili',
+    descrizione:
+      "Due masse quasi uguali collegate da un filo su una carrucola: la piccola differenza di massa produce un'accelerazione molto minore di g, facile da misurare con gli strumenti dell'epoca. Ideata da George Atwood nel 1784 per verificare sperimentalmente le leggi di Newton sul moto uniformemente accelerato.",
+    immagine: null,
+  },
+  {
+    nome: 'Pendolo di Foucault',
+    branca: 'Meccanica',
+    grandezza: 'Rotazione terrestre (velocità angolare apparente del piano di oscillazione)',
+    unita: '°/h',
+    descrizione:
+      "Un pendolo lungo e pesante, lasciato libero di oscillare a lungo, mantiene il proprio piano di oscillazione nello spazio mentre la Terra ruota sotto di esso: un osservatore vede il piano ruotare lentamente. Presentato da Léon Foucault nel 1851 sotto la cupola del Panthéon di Parigi, fu la prima prova diretta e visibile della rotazione terrestre.",
+    immagine: null,
+  },
+  {
+    nome: 'Bilancia di torsione di Cavendish',
+    branca: 'Meccanica',
+    grandezza: 'Costante di gravitazione universale G',
+    unita: 'N·m²/kg²',
+    descrizione:
+      "Un manubrio con due piccole sfere, sospeso a un filo sottilissimo, ruota impercettibilmente per l'attrazione gravitazionale di due sfere di massa nota avvicinate ai lati. Misurando la torsione del filo, Henry Cavendish determinò nel 1798 la costante G e, con essa, la densità media della Terra.",
+    immagine: null,
+  },
+  {
+    nome: 'Giroscopio',
+    branca: 'Meccanica',
+    grandezza: 'Momento angolare, precessione',
+    unita: 'kg·m²/s',
+    descrizione:
+      "Un disco che ruota velocemente attorno al proprio asse, montato su supporti che gli lasciano libertà di orientamento (sospensione cardanica), conserva la direzione del proprio asse di rotazione e reagisce alle forze esterne con una precessione anziché ribaltandosi. Usato fin dall'Ottocento per mostrare la conservazione del momento angolare.",
+    immagine: null,
+  },
+
+  {
+    nome: 'Termoscopio di Galileo',
+    branca: 'Termologia',
+    grandezza: 'Variazioni di temperatura (senza scala numerica)',
+    unita: '—',
+    descrizione:
+      "Un bulbo di vetro con un lungo tubo immerso in un liquido colorato: riscaldando il bulbo l'aria si dilata e spinge giù il livello del liquido nel tubo. Costruito da Galileo intorno al 1593, non aveva ancora una vera scala graduata ma fu il primo strumento a rendere visibili le variazioni di temperatura, antenato diretto del termometro.",
+    immagine: null,
+  },
+  {
+    nome: 'Anello di Gravesande',
+    branca: 'Termologia',
+    grandezza: 'Dilatazione termica lineare',
+    unita: 'mm',
+    descrizione:
+      "Una sfera metallica passa esattamente attraverso un anello a temperatura ambiente; scaldata alla fiamma, si dilata quel tanto che basta a restare incastrata. Ideato da Willem 's Gravesande nel Settecento, rende visibile e memorabile la dilatazione termica dei solidi con un semplice esperimento qualitativo.",
+    immagine: null,
+  },
+  {
+    nome: 'Radiometro di Crookes',
+    branca: 'Termologia',
+    grandezza: 'Intensità della radiazione luminosa incidente (qualitativa)',
+    unita: 'giri/min',
+    descrizione:
+      "Quattro palette, nere da un lato e lucide dall'altro, ruotano libere in un bulbo di vetro a bassissima pressione quando colpite dalla luce: il lato nero assorbe più energia e riscalda il gas rarefatto circostante, che lo spinge via. Costruito da William Crookes nel 1873, mostra in modo spettacolare l'effetto meccanico della radiazione.",
+    immagine: null,
+  },
+
+  {
+    nome: 'Monocordo (sonometro)',
+    branca: 'Acustica',
+    grandezza: 'Frequenza di vibrazione di una corda',
+    unita: 'Hz',
+    descrizione:
+      "Una corda tesa su una cassa di risonanza, con un ponticello mobile che ne varia la lunghezza vibrante. Già usato da Pitagora per collegare i rapporti tra lunghezze di corda e gli intervalli musicali, resta lo strumento più diretto per studiare come frequenza, lunghezza, tensione e massa di una corda determinano il suono prodotto.",
+    immagine: null,
+  },
+  {
+    nome: 'Sirena di Cagniard de la Tour',
+    branca: 'Acustica',
+    grandezza: 'Frequenza del suono',
+    unita: 'Hz',
+    descrizione:
+      "Un disco forato ruota davanti a un getto d'aria che, interrotto a intervalli regolari dai fori, produce un suono la cui altezza dipende dalla velocità di rotazione. Inventata nel 1819, è stato il primo strumento capace di misurare direttamente la frequenza di un suono contando i giri del disco.",
+    immagine: null,
+  },
+  {
+    nome: 'Tubo di Kundt',
+    branca: 'Acustica',
+    grandezza: 'Velocità del suono in un gas',
+    unita: 'm/s',
+    descrizione:
+      "Un tubo di vetro orizzontale, cosparso all'interno di polvere leggera (sughero o licopodio), viene eccitato da un'onda sonora stazionaria: la polvere si accumula nei nodi di vibrazione, disegnando un motivo regolare da cui si ricava la lunghezza d'onda e, nota la frequenza, la velocità del suono nel gas contenuto. Ideato da August Kundt nel 1866.",
+    immagine: null,
+  },
+
+  {
+    nome: 'Cannocchiale di Galileo',
+    branca: 'Ottica',
+    grandezza: 'Ingrandimento angolare',
+    unita: 'x (numero di ingrandimenti)',
+    descrizione:
+      "Combina una lente convergente (obiettivo) e una divergente (oculare) per ingrandire oggetti lontani mantenendo l'immagine diritta. Perfezionato da Galileo nel 1609 e puntato per primo verso il cielo, rivelò i crateri lunari, le fasi di Venere e i satelliti di Giove, cambiando per sempre l'astronomia.",
+    immagine: null,
+  },
+  {
+    nome: 'Telescopio riflettore di Newton',
+    branca: 'Ottica',
+    grandezza: 'Ingrandimento angolare, raccolta di luce',
+    unita: 'x (ingrandimenti), mm (diametro dello specchio)',
+    descrizione:
+      "Usa uno specchio concavo al posto di una lente per raccogliere e focalizzare la luce, evitando l'aberrazione cromatica che affliggeva i telescopi a lenti dell'epoca. Costruito da Isaac Newton nel 1668, è il capostipite di tutti i grandi telescopi astronomici moderni, che sono quasi tutti riflettori.",
+    immagine: null,
+  },
+  {
+    nome: 'Specchio ustorio',
+    branca: 'Ottica',
+    grandezza: 'Concentrazione dell\'energia luminosa',
+    unita: '—',
+    descrizione:
+      "Uno specchio concavo (sferico o parabolico) concentra i raggi solari paralleli in un punto, il fuoco, dove la temperatura può salire abbastanza da incendiare materiali combustibili. Noto fin dall'antichità greca e legato alla leggendaria (e discussa) difesa di Siracusa attribuita ad Archimede, illustra in modo diretto la riflessione e la concentrazione dell'energia luminosa.",
+    immagine: null,
+  },
+  {
+    nome: 'Camera oscura',
+    branca: 'Ottica',
+    grandezza: 'Formazione dell\'immagine (qualitativa)',
+    unita: '—',
+    descrizione:
+      "Una scatola o una stanza buia con un piccolo foro su una parete proietta sulla parete opposta un'immagine capovolta di ciò che sta all'esterno: il principio della propagazione rettilinea della luce, descritto già da pensatori antichi e studiato sistematicamente nel Rinascimento, è anche l'antenato diretto della fotografia.",
+    immagine: null,
+  },
+  {
+    nome: 'Reticolo di diffrazione',
+    branca: 'Ottica',
+    grandezza: 'Lunghezza d\'onda della luce',
+    unita: 'nm',
+    sensibilita: 'risoluzione spettrale che cresce con il numero di righe per millimetro (tipicamente 300-1200 righe/mm)',
+    descrizione:
+      "Una superficie incisa con migliaia di righe sottilissime e parallele scompone la luce nei suoi colori per interferenza e diffrazione, con una precisione superiore a quella di un prisma. Perfezionato da Joseph von Fraunhofer nell'Ottocento, è alla base di ogni spettrometro moderno.",
+    immagine: null,
+  },
+  {
+    nome: 'Spettroscopio a prisma',
+    branca: 'Ottica',
+    grandezza: 'Composizione spettrale della luce',
+    unita: 'nm',
+    descrizione:
+      "Un cannocchiale, una fenditura e un prisma montati insieme permettono di osservare e misurare le righe dello spettro di una sorgente luminosa. Sviluppato da Kirchhoff e Bunsen nel 1859, ha permesso di identificare gli elementi chimici presenti nelle stelle, incluso l'elio, scoperto nello spettro solare prima che sulla Terra.",
+    immagine: null,
+  },
+  {
+    nome: 'Interferometro di Michelson',
+    branca: 'Ottica',
+    grandezza: 'Differenza di cammino ottico',
+    unita: 'frazioni di lunghezza d\'onda',
+    sensibilita: 'frazioni di micrometro, dell\'ordine della lunghezza d\'onda della luce visibile',
+    descrizione:
+      "Divide un fascio di luce in due percorsi perpendicolari con uno specchio semiriflettente, poi li ricombina: anche minime differenze di cammino ottico producono frange di interferenza visibili. L'esperimento di Michelson e Morley del 1887, che cercava invano di rilevare il moto della Terra rispetto all'etere, aprì la strada alla relatività ristretta di Einstein.",
+    immagine: null,
+  },
+
+  {
+    nome: 'Pila di Volta',
+    branca: 'Elettromagnetismo',
+    grandezza: 'Tensione elettrica continua',
+    unita: 'V',
+    descrizione:
+      "Una pila di dischi di rame e zinco alternati, separati da panni imbevuti di acqua salata, produce una corrente elettrica continua e costante nel tempo. Presentata da Alessandro Volta nel 1800, fu il primo generatore di elettricità della storia e rese per la prima volta possibile studiare la corrente elettrica invece dei soli fenomeni elettrostatici.",
+    immagine: null,
+  },
+  {
+    nome: 'Bottiglia di Leida',
+    branca: 'Elettromagnetismo',
+    grandezza: 'Carica elettrica accumulata',
+    unita: 'C',
+    descrizione:
+      "Un vaso di vetro rivestito di stagnola sia dentro che fuori, con un'asta metallica che attraversa il tappo: è il primo condensatore della storia, capace di immagazzinare una carica elettrica e rilasciarla tutta insieme in una scarica netta. Scoperta nel 1745 a Leida, permise per la prima volta di accumulare elettricità invece di produrla e disperderla subito.",
+    immagine: null,
+  },
+  {
+    nome: 'Elettroscopio a foglie d\'oro',
+    branca: 'Elettromagnetismo',
+    grandezza: 'Presenza e segno di una carica elettrica (qualitativa)',
+    unita: '—',
+    descrizione:
+      "Due sottilissime foglioline metalliche appese a un'asta si respingono divaricandosi quando l'asta viene caricata elettricamente, perché entrambe assumono carica dello stesso segno. Uno degli strumenti più antichi ed essenziali per rivelare l'elettrizzazione di un corpo, ancora oggi usato per l'estrema semplicità con cui rende visibile un fenomeno altrimenti invisibile.",
+    immagine: null,
+  },
+  {
+    nome: 'Macchina elettrostatica di Wimshurst',
+    branca: 'Elettromagnetismo',
+    grandezza: 'Alta tensione elettrostatica',
+    unita: 'kV',
+    descrizione:
+      "Due dischi controrotanti coperti di settori metallici, con spazzole striscianti e collettori, accumulano cariche per induzione elettrostatica fino a generare scintille di parecchi centimetri. Inventata da James Wimshurst nel 1880 circa, era il generatore di alta tensione più diffuso nei laboratori didattici prima dell'elettronica.",
+    immagine: null,
+  },
+  {
+    nome: 'Rocchetto di Ruhmkorff',
+    branca: 'Elettromagnetismo',
+    grandezza: 'Alta tensione impulsiva',
+    unita: 'kV',
+    descrizione:
+      "Trasforma la bassa tensione continua di una pila in impulsi di alta tensione tramite due avvolgimenti (primario e secondario) e un interruttore vibrante che apre e chiude ripetutamente il circuito primario. Perfezionato da Heinrich Ruhmkorff a metà Ottocento, alimentò i tubi a scarica di gas con cui Röntgen scoprì i raggi X nel 1895.",
+    immagine: null,
+  },
+  {
+    nome: 'Tubo di Crookes',
+    branca: 'Elettromagnetismo',
+    grandezza: 'Proprietà dei raggi catodici',
+    unita: '—',
+    descrizione:
+      "Un tubo di vetro a bassissima pressione, con due elettrodi, in cui una scarica ad alta tensione produce un fascio di raggi catodici che viaggia in linea retta e viene deviato da campi elettrici e magnetici. Gli esperimenti di J.J. Thomson su questo tubo portarono nel 1897 alla scoperta dell'elettrone.",
+    immagine: null,
+  },
+  {
+    nome: 'Bobina di Tesla',
+    branca: 'Elettromagnetismo',
+    grandezza: 'Alta tensione ad alta frequenza',
+    unita: 'kV, MHz',
+    descrizione:
+      "Due circuiti risonanti accoppiati (un avvolgimento primario e uno secondario) trasformano una tensione moderata in tensioni altissime a radiofrequenza, capaci di produrre lunghi archi elettrici visibili e persino accendere lampade senza fili. Inventata da Nikola Tesla nel 1891 per i suoi studi su corrente alternata e trasmissione dell'energia.",
+    immagine: null,
+  },
+  {
+    nome: 'Galvanometro',
+    branca: 'Elettromagnetismo',
+    grandezza: 'Piccole correnti elettriche',
+    unita: 'A (o divisioni di scala)',
+    sensibilita: 'fino a frazioni di microampere nei modelli a specchio',
+    descrizione:
+      "Una bobina percorsa da corrente, immersa in un campo magnetico, ruota di un angolo proporzionale all'intensità della corrente stessa, misurata leggendo la deviazione di un ago o di un fascio di luce riflesso da uno specchietto. Diretto discendente degli esperimenti di Ørsted e Ampère sull'elettromagnetismo, è il progenitore di amperometri e voltmetri analogici.",
+    immagine: null,
+  },
+  {
+    nome: 'Contatore Geiger',
+    branca: 'Elettromagnetismo',
+    grandezza: 'Radioattività (conteggio di particelle ionizzanti)',
+    unita: 'conteggi/s',
+    descrizione:
+      "Un tubo pieno di gas a bassa pressione, con un filo centrale a tensione elevata, produce un impulso elettrico misurabile ogni volta che una particella ionizzante lo attraversa e innesca una piccola scarica. Sviluppato da Hans Geiger nel 1908 e perfezionato con Walther Müller nel 1928, resta lo strumento più immediato per rivelare la radioattività.",
+    immagine: null,
+  },
+
+  {
+    nome: 'Macchina pneumatica di Von Guericke',
+    branca: 'Fluidodinamica',
+    grandezza: 'Pressione residua (vuoto parziale)',
+    unita: 'Pa',
+    descrizione:
+      "Una pompa a stantuffo estrae l'aria da un recipiente chiuso, creando un vuoto parziale. Otto von Guericke la usò nel celebre esperimento degli emisferi di Magdeburgo (1654): due squadre di cavalli non riuscirono a separare due semisfere di rame tenute insieme dalla sola pressione atmosferica dopo che l'aria all'interno era stata evacuata.",
+    immagine: null,
+  },
+  {
+    nome: 'Tubo di Venturi',
+    branca: 'Fluidodinamica',
+    grandezza: 'Portata e velocità di un fluido',
+    unita: 'm³/s, m/s',
+    descrizione:
+      "Un condotto con un tratto ristretto fa aumentare la velocità del fluido e, per il teorema di Bernoulli, diminuire la sua pressione: misurando la differenza di pressione tra tratto largo e stretto si risale alla portata. Descritto da Giovanni Battista Venturi nel 1797, è ancora oggi alla base di molti misuratori di portata industriali e dei carburatori.",
+    immagine: null,
+  },
+  {
+    nome: 'Fontana di Erone',
+    branca: 'Fluidodinamica',
+    grandezza: 'Pressione dell\'aria compressa da una colonna d\'acqua',
+    unita: '—',
+    descrizione:
+      "Tre recipienti collegati da tubi sfruttano il dislivello e la pressione dell'aria intrappolata per far zampillare un getto d'acqua più in alto del livello di partenza, apparentemente sfidando l'intuizione. Descritta da Erone di Alessandria nel I secolo d.C., è uno dei più antichi congegni idraulici che sfrutta consapevolmente la pressione di un gas.",
+    immagine: null,
+  },
+  {
+    nome: 'Vaso di Mariotte',
+    branca: 'Fluidodinamica',
+    grandezza: 'Portata costante di efflusso',
+    unita: 'm³/s',
+    descrizione:
+      "Un recipiente chiuso con un tubo che pesca fino a un livello fissato mantiene, sotto quel livello, una pressione di efflusso costante indipendente dal livello dell'acqua sopra di esso: il liquido esce quindi a portata costante finché il livello resta sopra l'estremità del tubo. Descritto da Edme Mariotte nel Seicento, è un classico esperimento di idrostatica.",
+    immagine: null,
+  },
 ];
