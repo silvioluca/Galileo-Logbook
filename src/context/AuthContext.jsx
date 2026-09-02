@@ -26,10 +26,12 @@ export function AuthProvider({ children }) {
     // Se stiamo tornando da signInWithRedirect, recupera il token prima
     // ancora che onAuthStateChanged aggiorni lo stato utente.
     elaboraRisultatoRedirect().then((token) => {
+      console.log('[GALILEO-DEBUG] token ottenuto dal redirect:', Boolean(token));
       if (token) setGoogleAccessToken(token);
     });
 
     const unsubscribe = subscribeAuth((u) => {
+      console.log('[GALILEO-DEBUG] onAuthStateChanged, utente:', u?.email || null);
       setUser(u);
       setLoading(false);
       if (!u) setGoogleAccessToken(null);

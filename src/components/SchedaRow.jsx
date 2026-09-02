@@ -38,6 +38,7 @@ export default function SchedaRow({ scheda, templateContenuto, onDelete }) {
   // click: se manca il token, mandiamo l'utente ad accedere e si riprova
   // dopo, quando sarà tornato sulla pagina.
   const eseguiConversione = (nome, funzioneConversione) => {
+    console.log('[GALILEO-DEBUG] click conversione, googleAccessToken presente:', Boolean(googleAccessToken));
     if (!googleAccessToken) {
       window.alert('Ti sto portando ad accedere con Google: al ritorno premi di nuovo il pulsante per convertire.');
       signIn();

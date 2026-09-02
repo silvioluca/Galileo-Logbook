@@ -33,11 +33,13 @@ export async function elaboraRisultatoRedirect() {
   if (!firebaseReady) return null;
   try {
     const risultato = await getRedirectResult(auth);
+    console.log('[GALILEO-DEBUG] getRedirectResult ->', risultato ? 'presente' : 'null', risultato);
     if (!risultato) return null;
     const credential = GoogleAuthProvider.credentialFromResult(risultato);
+    console.log('[GALILEO-DEBUG] credential ->', credential, 'accessToken presente:', Boolean(credential?.accessToken));
     return credential?.accessToken || null;
   } catch (err) {
-    console.warn('Errore nel recupero del risultato di accesso Google.', err);
+    console.warn('[GALILEO-DEBUG] Errore nel recupero del risultato di accesso Google.', err);
     return null;
   }
 }
