@@ -10,7 +10,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: '0,05 mm (nonio a 20 divisioni) o 0,02 mm (50 divisioni)',
     descrizione:
       "Misura lunghezze, diametri interni/esterni e profondità grazie a due coppie di becchi e un'astina di profondità. Il nonio, una scala ausiliaria che scorre affiancata alla scala principale, permette di leggere frazioni della più piccola divisione millimetrica senza bisogno di stime a occhio.",
-    immagine: null,
+    immagine: 'images/strumenti/calibro-nonio.png',
   },
   {
     nome: 'Micrometro (calibro Palmer)',
@@ -20,7 +20,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: '0,01 mm',
     descrizione:
       "Sfrutta una vite micrometrica per misurare spessori e diametri molto piccoli con precisione superiore al calibro a nonio. Un tamburo graduato, collegato alla vite, converte una rotazione minima in uno spostamento assiale leggibile con grande risoluzione.",
-    immagine: null,
+    immagine: 'images/strumenti/micrometro-palmer.png',
   },
   {
     nome: 'Bilancia',
@@ -30,7 +30,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'da 0,1 g (bilancia tecnica) a 1 mg (bilancia analitica)',
     descrizione:
       "Confronta la massa di un corpo con masse campione (bilance a bracci uguali) oppure misura la deformazione elastica indotta dal peso su un sensore (bilance elettroniche a cella di carico). In laboratorio didattico si usano soprattutto bilance elettroniche per rapidità e precisione.",
-    immagine: null,
+    immagine: 'images/strumenti/bilancia.png',
   },
   {
     nome: 'Cronometro',
@@ -40,7 +40,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: '0,01 s (manuale); μs–ns (elettronico con fotocellule)',
     descrizione:
       "Misura intervalli di tempo. Il cronometro manuale introduce un tempo di reazione dell'operatore (qualche centesimo di secondo) che diventa un errore sistematico non trascurabile su misure brevi; per questo negli esperimenti di cinematica si preferiscono cronometri elettronici avviati e fermati da fotocellule.",
-    immagine: null,
+    immagine: 'images/strumenti/cronometro.png',
   },
   {
     nome: 'Goniometro',
@@ -50,7 +50,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: '1°, o pochi primi d\'arco nei modelli con nonio',
     descrizione:
       "Misura angoli tra due direzioni o superfici tramite un settore graduato e un braccio mobile. È alla base di molti strumenti ottici (banco ottico, spettrometro a prisma) dove serve leggere con precisione l'angolo di incidenza, riflessione o rifrazione di un raggio.",
-    immagine: null,
+    immagine: 'images/strumenti/goniometro.png',
   },
   {
     nome: 'Dinamometro',
@@ -60,7 +60,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'dipende dalla molla; tipicamente 0,1 N',
     descrizione:
       "Misura una forza tramite l'allungamento di una molla calibrata, sfruttando la legge di Hooke (F = kx). Usato per pesare corpi, misurare l'attrito statico e dinamico, o verificare l'equilibrio di più forze concorrenti.",
-    immagine: null,
+    immagine: 'images/strumenti/dinamometro.png',
   },
   {
     nome: 'Rotaia a cuscino d\'aria',
@@ -70,7 +70,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'dipende dal sistema di rilevazione (fotocellule o sensore a ultrasuoni)',
     descrizione:
       "Un binario forato da cui esce un getto d'aria sostiene un carrello praticamente senza attrito, permettendo di studiare moto rettilineo uniforme, uniformemente accelerato e urti in condizioni molto vicine a quelle ideali previste dalla teoria.",
-    immagine: null,
+    immagine: 'images/strumenti/rotaia-cuscino-aria.png',
   },
   {
     nome: 'Diapason',
@@ -80,7 +80,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'frequenza fissa e nota (es. 440 Hz), non regolabile',
     descrizione:
       "Barra metallica a forcella che, percossa, vibra a una frequenza fissa e molto stabile determinata dalla sua geometria. Serve come sorgente sonora di riferimento per esperimenti su onde stazionarie, risonanza e battimenti.",
-    immagine: null,
+    immagine: 'images/strumenti/diapason.png',
   },
   {
     nome: 'Termometro',
@@ -90,7 +90,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'da 1 °C (a mercurio/alcol) a 0,1 °C (digitale)',
     descrizione:
       "Misura la temperatura sfruttando una proprietà fisica che varia con essa: la dilatazione di un liquido in un capillare (termometri a mercurio o alcol), o la variazione di resistenza/tensione di un sensore elettronico (termocoppie, termoresistenze) nei modelli digitali.",
-    immagine: null,
+    immagine: 'images/strumenti/termometro.png',
   },
   {
     nome: 'Calorimetro',
@@ -100,7 +100,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'limitata dalla precisione del termometro accoppiato',
     descrizione:
       "Recipiente isolato termicamente (spesso a doppia parete, tipo vaso Dewar) usato per misurare scambi di calore tra corpi a temperatura diversa senza dispersioni verso l'ambiente esterno, alla base della determinazione di calori specifici e calori latenti.",
-    immagine: null,
+    immagine: 'images/strumenti/calorimetro.png',
   },
   {
     nome: 'Barometro',
@@ -110,7 +110,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: '~1 hPa',
     descrizione:
       "Misura la pressione atmosferica. Il barometro a mercurio (Torricelli) la deduce dall'altezza di una colonna di mercurio sostenuta dalla pressione dell'aria; i modelli aneroidi usano invece una capsula metallica che si deforma con la pressione, più pratici ma meno diretti nel principio fisico.",
-    immagine: null,
+    immagine: 'images/strumenti/barometro.png',
   },
   {
     nome: 'Manometro',
@@ -120,7 +120,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'dipende dal modello, tipicamente qualche kPa',
     descrizione:
       "Misura la pressione di un gas o liquido contenuto in un recipiente o circuito, spesso per differenza rispetto alla pressione atmosferica (pressione relativa). I modelli a tubo a U sfruttano il dislivello di un liquido manometrico; quelli meccanici una membrana o un tubo di Bourdon.",
-    immagine: null,
+    immagine: 'images/strumenti/manometro.png',
   },
   {
     nome: 'Banco ottico',
@@ -140,7 +140,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'limitata dal goniometro usato per leggere gli angoli',
     descrizione:
       "Blocco trasparente a sezione triangolare che scompone la luce bianca nelle sue componenti cromatiche per rifrazione, poiché l'indice di rifrazione del vetro dipende leggermente dalla lunghezza d'onda (dispersione). Usato per studiare la dispersione della luce e misurare indici di rifrazione.",
-    immagine: null,
+    immagine: 'images/strumenti/prisma-ottico.png',
   },
   {
     nome: 'Multimetro',
@@ -150,7 +150,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'dipende dal modello, tipicamente 3-4 cifre e mezza',
     descrizione:
       "Strumento digitale multifunzione che riunisce voltmetro, amperometro e ohmetro in un unico dispositivo con selettore di modalità. Ha reso in gran parte superfluo l'impiego di voltmetri e amperometri analogici separati nei laboratori didattici moderni.",
-    immagine: null,
+    immagine: 'images/strumenti/multimetro.png',
   },
   {
     nome: 'Voltmetro',
@@ -160,7 +160,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'dipende dal modello',
     descrizione:
       "Misura la differenza di potenziale tra due punti di un circuito. Va collegato in parallelo all'elemento di cui si vuole misurare la tensione e deve avere resistenza interna molto alta per non alterare apprezzabilmente il circuito in esame.",
-    immagine: null,
+    immagine: 'images/strumenti/voltmetro.png',
   },
   {
     nome: 'Amperometro',
@@ -170,7 +170,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'dipende dal modello',
     descrizione:
       "Misura l'intensità della corrente che lo attraversa. Va inserito in serie nel ramo di circuito da misurare e deve avere resistenza interna molto bassa, così da non introdurre una caduta di potenziale significativa che alterebbe la corrente stessa.",
-    immagine: null,
+    immagine: 'images/strumenti/amperometro.png',
   },
   {
     nome: 'Generatore di funzioni',
@@ -180,7 +180,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'ampiezza e frequenza regolabili con continuità',
     descrizione:
       "Produce segnali elettrici periodici di forma (sinusoidale, quadra, triangolare), ampiezza e frequenza regolabili. Alimenta circuiti in corrente alternata per studiare fenomeni come risonanza, circuiti RLC e onde stazionarie su una corda o in un tubo sonoro.",
-    immagine: null,
+    immagine: 'images/strumenti/generatore-funzioni.png',
   },
   {
     nome: 'Oscilloscopio',
@@ -190,7 +190,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'dipende dal modello; risoluzione temporale fino a ns',
     descrizione:
       "Visualizza graficamente l'andamento nel tempo di una tensione elettrica, permettendo di misurare ampiezza, periodo, frequenza e sfasamento di segnali anche molto rapidi, cosa impossibile con un semplice voltmetro che dà solo un valore istantaneo o medio.",
-    immagine: null,
+    immagine: 'images/strumenti/oscilloscopio.png',
   },
   {
     nome: 'Fotocellula (sensore a interruzione di raggio)',
@@ -200,7 +200,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'fino al μs, a seconda dell\'elettronica di acquisizione collegata',
     descrizione:
       "Rileva il passaggio di un oggetto interrompendo un raggio (spesso infrarosso) e invia il segnale a un cronometro elettronico o a un'interfaccia di acquisizione dati. Elimina il tempo di reazione umano tipico del cronometraggio manuale, rendendo affidabili le misure di velocità istantanea e accelerazione.",
-    immagine: null,
+    immagine: 'images/strumenti/fotocellula.png',
   },
 
   // ---- Strumenti classici, antichi e storici ----
@@ -212,7 +212,7 @@ export const STRUMENTI_WIKI = [
     unita: '°',
     descrizione:
       "Un ago magnetizzato libero di ruotare su un perno si allinea al campo magnetico terrestre indicando il nord. Nota in Cina già nell'antichità e diffusa in Europa dal XII secolo per la navigazione, è uno dei più antichi strumenti di misura mai costruiti dall'uomo.",
-    immagine: null,
+    immagine: 'images/strumenti/bussola.png',
   },
   {
     nome: 'Sestante',
@@ -222,7 +222,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'circa 0,2\' (minuti d\'arco) nei modelli marittimi di precisione',
     descrizione:
       "Misura l'angolo tra un astro e l'orizzonte riflettendo la luce su due specchi, uno dei quali semiargentato: ruotando un braccio graduato si sovrappongono le due immagini. Perfezionato nel 1757, per due secoli è stato lo strumento cardine della navigazione astronomica in mare aperto.",
-    immagine: null,
+    immagine: 'images/strumenti/sestante.png',
   },
   {
     nome: 'Teodolite',
@@ -232,7 +232,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'fino a pochi secondi d\'arco nei modelli topografici',
     descrizione:
       "Strumento ottico su treppiede che misura angoli orizzontali e verticali con estrema precisione tramite un cannocchiale girevole su due assi e cerchi graduati. Introdotto nel Cinquecento, resta lo strumento base della topografia e del rilevamento del territorio.",
-    immagine: null,
+    immagine: 'images/strumenti/teodolite.png',
   },
   {
     nome: 'Orologio a pendolo di Huygens',
@@ -241,7 +241,7 @@ export const STRUMENTI_WIKI = [
     unita: 's',
     descrizione:
       "Christiaan Huygens brevettò nel 1656 il primo orologio regolato da un pendolo, sfruttando l'isocronismo delle piccole oscillazioni già osservato da Galileo. Passò la precisione della misura del tempo da minuti a pochi secondi al giorno, rendendolo per secoli il riferimento per ogni misura di durata in laboratorio.",
-    immagine: null,
+    immagine: 'images/strumenti/orologio-huygens.png',
   },
   {
     nome: 'Areometro',
@@ -250,7 +250,7 @@ export const STRUMENTI_WIKI = [
     unita: 'kg/L (o scala arbitraria, es. gradi Baumé)',
     descrizione:
       "Galleggiante di vetro zavorrato e graduato che affonda in un liquido fino a una profondità legata alla densità del liquido stesso, per il principio di Archimede. Più il liquido è denso, meno l'areometro affonda: una lettura diretta, senza bilance né calcoli.",
-    immagine: null,
+    immagine: 'images/strumenti/areometro.png',
   },
   {
     nome: 'Igrometro a capello',
@@ -259,7 +259,7 @@ export const STRUMENTI_WIKI = [
     unita: '%',
     descrizione:
       "Un capello (o una fibra sintetica) si allunga leggermente con l'umidità dell'aria; l'allungamento, amplificato meccanicamente, muove una lancetta su una scala percentuale. Ideato da Horace-Bénédict de Saussure nel 1783, resta un principio ancora usato in molti igrometri economici.",
-    immagine: null,
+    immagine: 'images/strumenti/igrometro-capello.png',
   },
 
   {
@@ -279,7 +279,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'accelerazioni ridotte a pochi cm/s², facilmente cronometrabili',
     descrizione:
       "Due masse quasi uguali collegate da un filo su una carrucola: la piccola differenza di massa produce un'accelerazione molto minore di g, facile da misurare con gli strumenti dell'epoca. Ideata da George Atwood nel 1784 per verificare sperimentalmente le leggi di Newton sul moto uniformemente accelerato.",
-    immagine: null,
+    immagine: 'images/strumenti/macchina-atwood.png',
   },
   {
     nome: 'Pendolo di Foucault',
@@ -306,7 +306,7 @@ export const STRUMENTI_WIKI = [
     unita: 'kg·m²/s',
     descrizione:
       "Un disco che ruota velocemente attorno al proprio asse, montato su supporti che gli lasciano libertà di orientamento (sospensione cardanica), conserva la direzione del proprio asse di rotazione e reagisce alle forze esterne con una precessione anziché ribaltandosi. Usato fin dall'Ottocento per mostrare la conservazione del momento angolare.",
-    immagine: null,
+    immagine: 'images/strumenti/giroscopio.png',
   },
 
   {
@@ -316,7 +316,7 @@ export const STRUMENTI_WIKI = [
     unita: '—',
     descrizione:
       "Un bulbo di vetro con un lungo tubo immerso in un liquido colorato: riscaldando il bulbo l'aria si dilata e spinge giù il livello del liquido nel tubo. Costruito da Galileo intorno al 1593, non aveva ancora una vera scala graduata ma fu il primo strumento a rendere visibili le variazioni di temperatura, antenato diretto del termometro.",
-    immagine: null,
+    immagine: 'images/strumenti/termoscopio-galileo.png',
   },
   {
     nome: 'Anello di Gravesande',
@@ -325,7 +325,7 @@ export const STRUMENTI_WIKI = [
     unita: 'mm',
     descrizione:
       "Una sfera metallica passa esattamente attraverso un anello a temperatura ambiente; scaldata alla fiamma, si dilata quel tanto che basta a restare incastrata. Ideato da Willem 's Gravesande nel Settecento, rende visibile e memorabile la dilatazione termica dei solidi con un semplice esperimento qualitativo.",
-    immagine: null,
+    immagine: 'images/strumenti/anello-gravesande.png',
   },
   {
     nome: 'Radiometro di Crookes',
@@ -334,7 +334,7 @@ export const STRUMENTI_WIKI = [
     unita: 'giri/min',
     descrizione:
       "Quattro palette, nere da un lato e lucide dall'altro, ruotano libere in un bulbo di vetro a bassissima pressione quando colpite dalla luce: il lato nero assorbe più energia e riscalda il gas rarefatto circostante, che lo spinge via. Costruito da William Crookes nel 1873, mostra in modo spettacolare l'effetto meccanico della radiazione.",
-    immagine: null,
+    immagine: 'images/strumenti/radiometro-crookes.png',
   },
 
   {
@@ -372,7 +372,7 @@ export const STRUMENTI_WIKI = [
     unita: 'x (numero di ingrandimenti)',
     descrizione:
       "Combina una lente convergente (obiettivo) e una divergente (oculare) per ingrandire oggetti lontani mantenendo l'immagine diritta. Perfezionato da Galileo nel 1609 e puntato per primo verso il cielo, rivelò i crateri lunari, le fasi di Venere e i satelliti di Giove, cambiando per sempre l'astronomia.",
-    immagine: null,
+    immagine: 'images/strumenti/cannocchiale-galileo.png',
   },
   {
     nome: 'Telescopio riflettore di Newton',
@@ -381,7 +381,7 @@ export const STRUMENTI_WIKI = [
     unita: 'x (ingrandimenti), mm (diametro dello specchio)',
     descrizione:
       "Usa uno specchio concavo al posto di una lente per raccogliere e focalizzare la luce, evitando l'aberrazione cromatica che affliggeva i telescopi a lenti dell'epoca. Costruito da Isaac Newton nel 1668, è il capostipite di tutti i grandi telescopi astronomici moderni, che sono quasi tutti riflettori.",
-    immagine: null,
+    immagine: 'images/strumenti/telescopio-newton.png',
   },
   {
     nome: 'Specchio ustorio',
@@ -409,7 +409,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'risoluzione spettrale che cresce con il numero di righe per millimetro (tipicamente 300-1200 righe/mm)',
     descrizione:
       "Una superficie incisa con migliaia di righe sottilissime e parallele scompone la luce nei suoi colori per interferenza e diffrazione, con una precisione superiore a quella di un prisma. Perfezionato da Joseph von Fraunhofer nell'Ottocento, è alla base di ogni spettrometro moderno.",
-    immagine: null,
+    immagine: 'images/strumenti/reticolo-diffrazione.png',
   },
   {
     nome: 'Spettroscopio a prisma',
@@ -418,7 +418,7 @@ export const STRUMENTI_WIKI = [
     unita: 'nm',
     descrizione:
       "Un cannocchiale, una fenditura e un prisma montati insieme permettono di osservare e misurare le righe dello spettro di una sorgente luminosa. Sviluppato da Kirchhoff e Bunsen nel 1859, ha permesso di identificare gli elementi chimici presenti nelle stelle, incluso l'elio, scoperto nello spettro solare prima che sulla Terra.",
-    immagine: null,
+    immagine: 'images/strumenti/spettroscopio-prisma.png',
   },
   {
     nome: 'Interferometro di Michelson',
@@ -428,7 +428,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'frazioni di micrometro, dell\'ordine della lunghezza d\'onda della luce visibile',
     descrizione:
       "Divide un fascio di luce in due percorsi perpendicolari con uno specchio semiriflettente, poi li ricombina: anche minime differenze di cammino ottico producono frange di interferenza visibili. L'esperimento di Michelson e Morley del 1887, che cercava invano di rilevare il moto della Terra rispetto all'etere, aprì la strada alla relatività ristretta di Einstein.",
-    immagine: null,
+    immagine: 'images/strumenti/interferometro-michelson.png',
   },
 
   {
@@ -438,7 +438,7 @@ export const STRUMENTI_WIKI = [
     unita: 'V',
     descrizione:
       "Una pila di dischi di rame e zinco alternati, separati da panni imbevuti di acqua salata, produce una corrente elettrica continua e costante nel tempo. Presentata da Alessandro Volta nel 1800, fu il primo generatore di elettricità della storia e rese per la prima volta possibile studiare la corrente elettrica invece dei soli fenomeni elettrostatici.",
-    immagine: null,
+    immagine: 'images/strumenti/pila-volta.png',
   },
   {
     nome: 'Bottiglia di Leida',
@@ -456,7 +456,7 @@ export const STRUMENTI_WIKI = [
     unita: '—',
     descrizione:
       "Due sottilissime foglioline metalliche appese a un'asta si respingono divaricandosi quando l'asta viene caricata elettricamente, perché entrambe assumono carica dello stesso segno. Uno degli strumenti più antichi ed essenziali per rivelare l'elettrizzazione di un corpo, ancora oggi usato per l'estrema semplicità con cui rende visibile un fenomeno altrimenti invisibile.",
-    immagine: null,
+    immagine: 'images/strumenti/elettroscopio.png',
   },
   {
     nome: 'Macchina elettrostatica di Wimshurst',
@@ -465,7 +465,7 @@ export const STRUMENTI_WIKI = [
     unita: 'kV',
     descrizione:
       "Due dischi controrotanti coperti di settori metallici, con spazzole striscianti e collettori, accumulano cariche per induzione elettrostatica fino a generare scintille di parecchi centimetri. Inventata da James Wimshurst nel 1880 circa, era il generatore di alta tensione più diffuso nei laboratori didattici prima dell'elettronica.",
-    immagine: null,
+    immagine: 'images/strumenti/macchina-wimshurst.png',
   },
   {
     nome: 'Rocchetto di Ruhmkorff',
@@ -483,7 +483,7 @@ export const STRUMENTI_WIKI = [
     unita: '—',
     descrizione:
       "Un tubo di vetro a bassissima pressione, con due elettrodi, in cui una scarica ad alta tensione produce un fascio di raggi catodici che viaggia in linea retta e viene deviato da campi elettrici e magnetici. Gli esperimenti di J.J. Thomson su questo tubo portarono nel 1897 alla scoperta dell'elettrone.",
-    immagine: null,
+    immagine: 'images/strumenti/tubo-crookes.png',
   },
   {
     nome: 'Bobina di Tesla',
@@ -492,7 +492,7 @@ export const STRUMENTI_WIKI = [
     unita: 'kV, MHz',
     descrizione:
       "Due circuiti risonanti accoppiati (un avvolgimento primario e uno secondario) trasformano una tensione moderata in tensioni altissime a radiofrequenza, capaci di produrre lunghi archi elettrici visibili e persino accendere lampade senza fili. Inventata da Nikola Tesla nel 1891 per i suoi studi su corrente alternata e trasmissione dell'energia.",
-    immagine: null,
+    immagine: 'images/strumenti/bobina-tesla.png',
   },
   {
     nome: 'Galvanometro',
@@ -502,7 +502,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'fino a frazioni di microampere nei modelli a specchio',
     descrizione:
       "Una bobina percorsa da corrente, immersa in un campo magnetico, ruota di un angolo proporzionale all'intensità della corrente stessa, misurata leggendo la deviazione di un ago o di un fascio di luce riflesso da uno specchietto. Diretto discendente degli esperimenti di Ørsted e Ampère sull'elettromagnetismo, è il progenitore di amperometri e voltmetri analogici.",
-    immagine: null,
+    immagine: 'images/strumenti/galvanometro.png',
   },
   {
     nome: 'Contatore Geiger',
@@ -511,7 +511,7 @@ export const STRUMENTI_WIKI = [
     unita: 'conteggi/s',
     descrizione:
       "Un tubo pieno di gas a bassa pressione, con un filo centrale a tensione elevata, produce un impulso elettrico misurabile ogni volta che una particella ionizzante lo attraversa e innesca una piccola scarica. Sviluppato da Hans Geiger nel 1908 e perfezionato con Walther Müller nel 1928, resta lo strumento più immediato per rivelare la radioattività.",
-    immagine: null,
+    immagine: 'images/strumenti/contatore-geiger.png',
   },
 
   {
@@ -530,7 +530,7 @@ export const STRUMENTI_WIKI = [
     unita: 'm³/s, m/s',
     descrizione:
       "Un condotto con un tratto ristretto fa aumentare la velocità del fluido e, per il teorema di Bernoulli, diminuire la sua pressione: misurando la differenza di pressione tra tratto largo e stretto si risale alla portata. Descritto da Giovanni Battista Venturi nel 1797, è ancora oggi alla base di molti misuratori di portata industriali e dei carburatori.",
-    immagine: null,
+    immagine: 'images/strumenti/tubo-venturi.png',
   },
   {
     nome: 'Fontana di Erone',
@@ -539,7 +539,7 @@ export const STRUMENTI_WIKI = [
     unita: '—',
     descrizione:
       "Tre recipienti collegati da tubi sfruttano il dislivello e la pressione dell'aria intrappolata per far zampillare un getto d'acqua più in alto del livello di partenza, apparentemente sfidando l'intuizione. Descritta da Erone di Alessandria nel I secolo d.C., è uno dei più antichi congegni idraulici che sfrutta consapevolmente la pressione di un gas.",
-    immagine: null,
+    immagine: 'images/strumenti/fontana-erone.png',
   },
   {
     nome: 'Vaso di Mariotte',
@@ -548,6 +548,6 @@ export const STRUMENTI_WIKI = [
     unita: 'm³/s',
     descrizione:
       "Un recipiente chiuso con un tubo che pesca fino a un livello fissato mantiene, sotto quel livello, una pressione di efflusso costante indipendente dal livello dell'acqua sopra di esso: il liquido esce quindi a portata costante finché il livello resta sopra l'estremità del tubo. Descritto da Edme Mariotte nel Seicento, è un classico esperimento di idrostatica.",
-    immagine: null,
+    immagine: 'images/strumenti/vaso-mariotte.png',
   },
 ];
