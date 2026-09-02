@@ -255,6 +255,22 @@
   line-height: 1.5;
 }
 
+.nobel-anno {
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+}
+
+.nobel-motivazione {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .modal-box.strumento-modal {
   max-width: 720px;
 }

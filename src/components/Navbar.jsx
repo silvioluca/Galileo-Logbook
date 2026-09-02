@@ -35,6 +35,11 @@ export default function Navbar() {
               Strumenti di Misura
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/nobel" onClick={() => setOpen(false)}>
+              Nobel
+            </NavLink>
+          </li>
         </ul>
         <div className="navbar-auth">
           {!loading &&
