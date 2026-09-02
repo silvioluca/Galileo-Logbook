@@ -1,5 +1,6 @@
 import {
   signInWithRedirect,
+  reauthenticateWithRedirect,
   getRedirectResult,
   signOut,
   onAuthStateChanged,
@@ -20,8 +21,18 @@ export function subscribeAuth(callback) {
 // più a rilevare la chiusura del popup, e l'access token non arriva mai).
 // signInWithRedirect evita del tutto il popup: la pagina naviga verso Google
 // e torna indietro; il risultato va recuperato con elaboraRisultatoRedirect.
+//
+// Se l'utente ha già una sessione Firebase persistente, un normale
+// signInWithRedirect può risolversi con un accesso "silenzioso" (Google vede
+// che il consenso è già stato dato) che NON produce un nuovo access token
+// tramite getRedirectResult: torna null anche se il login "funziona". Per
+// forzare un vero nuovo scambio OAuth (e quindi un token fresco) bisogna
+// usare reauthenticateWithRedirect sull'utente già loggato.
 export function signInGoogle() {
   if (!firebaseReady) throw new Error('Firebase non configurato: impossibile accedere.');
+  if (auth.currentUser) {
+    return reauthenticateWithRedirect(auth.currentUser, googleProvider);
+  }
   return signInWithRedirect(auth, googleProvider);
 }
 
