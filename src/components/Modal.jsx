@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
-export default function Modal({ open, onClose, title, children }) {
+export default function Modal({ open, onClose, title, children, className = '' }) {
   useEffect(() => {
     if (!open) return undefined;
     const onKeyDown = (e) => {
@@ -19,7 +19,7 @@ export default function Modal({ open, onClose, title, children }) {
   // contenitore che lo ha aperto.
   return createPortal(
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-box etched-frame" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+      <div className={`modal-box etched-frame ${className}`} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
         <div className="modal-header">
           <h3>{title}</h3>
           <button type="button" className="modal-close" onClick={onClose} aria-label="Chiudi">

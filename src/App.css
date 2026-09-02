@@ -218,6 +218,17 @@
 
 .strumento-card {
   padding: 1.5rem 1.5rem 1.25rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.strumento-card:hover,
+.strumento-card:focus-visible {
+  box-shadow:
+    0 0 0 4px var(--paper),
+    0 0 0 5px var(--accent-strong),
+    inset 0 0 30px rgba(43, 29, 15, 0.08);
+  outline: none;
 }
 
 .strumento-card h3 {
@@ -229,19 +240,53 @@
   font-style: italic;
   color: var(--ink-soft);
   font-size: 0.85rem;
-  margin: 0 0 0.3rem;
+  margin: 0;
 }
 
 .strumento-sensibilita {
   font-size: 0.8rem;
   color: var(--ink-soft);
-  margin: 0 0 0.6rem;
+  margin: 0.6rem 0;
 }
 
 .strumento-descrizione {
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.5;
+}
+
+.modal-box.strumento-modal {
+  max-width: 720px;
+}
+
+.strumento-modal-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 560px) {
+  .strumento-modal-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.strumento-modal-immagine {
+  min-height: 200px;
+  border: 1px dashed var(--line);
+  background: rgba(107, 68, 35, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.strumento-modal-testo .strumento-meta {
+  margin-bottom: 0.3rem;
 }
 
 .scheda-table {

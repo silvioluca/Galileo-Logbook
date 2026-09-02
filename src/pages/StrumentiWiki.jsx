@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { BRANCHE } from '../data/branche';
 import { STRUMENTI_WIKI } from '../data/strumentiWiki';
+import Modal from '../components/Modal';
 
 function raggruppaPerBranca(strumenti) {
   const perBranca = new Map();
@@ -15,6 +16,7 @@ function raggruppaPerBranca(strumenti) {
 export default function StrumentiWiki() {
   const [ricerca, setRicerca] = useState('');
   const [branca, setBranca] = useState('');
+  const [selezionato, setSelezionato] = useState(null);
 
   const filtrati = useMemo(() => {
     const testo = ricerca.trim().toLowerCase();
@@ -67,21 +69,50 @@ export default function StrumentiWiki() {
                 <h2>{nomeBranca}</h2>
                 <div className="strumenti-grid">
                   {elenco.map((s) => (
-                    <article className="etched-frame strumento-card" key={s.nome}>
+                    <article
+                      className="etched-frame strumento-card"
+                      key={s.nome}
+                      role="button"
+                      tabIndex={0}
+                      onClick={() => setSelezionato(s)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') setSelezionato(s);
+                      }}
+                    >
                       <h3>{s.nome}</h3>
                       <p className="strumento-meta">
                         {s.grandezza} · {s.unita}
                       </p>
-                      {s.sensibilita && (
-                        <p className="strumento-sensibilita">Sensibilità tipica: {s.sensibilita}</p>
-                      )}
-                      <p className="strumento-descrizione">{s.descrizione}</p>
                     </article>
                   ))}
                 </div>
               </section>
             ))
         )}
+
+        <Modal
+          open={Boolean(selezionato)}
+          onClose={() => setSelezionato(null)}
+          title={selezionato?.nome}
+          className="strumento-modal"
+        >
+          {selezionato && (
+            <div className="strumento-modal-layout">
+              <div className="strumento-modal-immagine" aria-hidden="true">
+                Immagine non ancora disponibile
+              </div>
+              <div className="strumento-modal-testo">
+                <p className="strumento-meta">
+                  {selezionato.grandezza} · {selezionato.unita}
+                </p>
+                {selezionato.sensibilita && (
+                  <p className="strumento-sensibilita">Sensibilità tipica: {selezionato.sensibilita}</p>
+                )}
+                <p className="strumento-descrizione">{selezionato.descrizione}</p>
+              </div>
+            </div>
+          )}
+        </Modal>
       </div>
     </div>
   );
