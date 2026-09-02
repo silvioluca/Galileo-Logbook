@@ -98,8 +98,15 @@ export default function StrumentiWiki() {
         >
           {selezionato && (
             <div className="strumento-modal-layout">
-              <div className="strumento-modal-immagine" aria-hidden="true">
-                Immagine non ancora disponibile
+              <div className="strumento-modal-immagine">
+                {selezionato.immagine ? (
+                  <img
+                    src={`${import.meta.env.BASE_URL}${selezionato.immagine}`}
+                    alt={selezionato.nome}
+                  />
+                ) : (
+                  <span aria-hidden="true">Immagine non ancora disponibile</span>
+                )}
               </div>
               <div className="strumento-modal-testo">
                 <p className="strumento-meta">

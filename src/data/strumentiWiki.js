@@ -288,7 +288,7 @@ export const STRUMENTI_WIKI = [
     unita: '°/h',
     descrizione:
       "Un pendolo lungo e pesante, lasciato libero di oscillare a lungo, mantiene il proprio piano di oscillazione nello spazio mentre la Terra ruota sotto di esso: un osservatore vede il piano ruotare lentamente. Presentato da Léon Foucault nel 1851 sotto la cupola del Panthéon di Parigi, fu la prima prova diretta e visibile della rotazione terrestre.",
-    immagine: null,
+    immagine: 'images/strumenti/pendolo-foucault.png',
   },
   {
     nome: 'Bilancia di torsione di Cavendish',
@@ -297,7 +297,7 @@ export const STRUMENTI_WIKI = [
     unita: 'N·m²/kg²',
     descrizione:
       "Un manubrio con due piccole sfere, sospeso a un filo sottilissimo, ruota impercettibilmente per l'attrazione gravitazionale di due sfere di massa nota avvicinate ai lati. Misurando la torsione del filo, Henry Cavendish determinò nel 1798 la costante G e, con essa, la densità media della Terra.",
-    immagine: null,
+    immagine: 'images/strumenti/bilancia-cavendish.png',
   },
   {
     nome: 'Giroscopio',
@@ -344,7 +344,7 @@ export const STRUMENTI_WIKI = [
     unita: 'Hz',
     descrizione:
       "Una corda tesa su una cassa di risonanza, con un ponticello mobile che ne varia la lunghezza vibrante. Già usato da Pitagora per collegare i rapporti tra lunghezze di corda e gli intervalli musicali, resta lo strumento più diretto per studiare come frequenza, lunghezza, tensione e massa di una corda determinano il suono prodotto.",
-    immagine: null,
+    immagine: 'images/strumenti/monocordo.png',
   },
   {
     nome: 'Sirena di Cagniard de la Tour',
@@ -362,7 +362,7 @@ export const STRUMENTI_WIKI = [
     unita: 'm/s',
     descrizione:
       "Un tubo di vetro orizzontale, cosparso all'interno di polvere leggera (sughero o licopodio), viene eccitato da un'onda sonora stazionaria: la polvere si accumula nei nodi di vibrazione, disegnando un motivo regolare da cui si ricava la lunghezza d'onda e, nota la frequenza, la velocità del suono nel gas contenuto. Ideato da August Kundt nel 1866.",
-    immagine: null,
+    immagine: 'images/strumenti/tubo-kundt.png',
   },
 
   {
@@ -399,7 +399,7 @@ export const STRUMENTI_WIKI = [
     unita: '—',
     descrizione:
       "Una scatola o una stanza buia con un piccolo foro su una parete proietta sulla parete opposta un'immagine capovolta di ciò che sta all'esterno: il principio della propagazione rettilinea della luce, descritto già da pensatori antichi e studiato sistematicamente nel Rinascimento, è anche l'antenato diretto della fotografia.",
-    immagine: null,
+    immagine: 'images/strumenti/camera-oscura.png',
   },
   {
     nome: 'Reticolo di diffrazione',
@@ -447,7 +447,7 @@ export const STRUMENTI_WIKI = [
     unita: 'C',
     descrizione:
       "Un vaso di vetro rivestito di stagnola sia dentro che fuori, con un'asta metallica che attraversa il tappo: è il primo condensatore della storia, capace di immagazzinare una carica elettrica e rilasciarla tutta insieme in una scarica netta. Scoperta nel 1745 a Leida, permise per la prima volta di accumulare elettricità invece di produrla e disperderla subito.",
-    immagine: null,
+    immagine: 'images/strumenti/bottiglia-leida.png',
   },
   {
     nome: 'Elettroscopio a foglie d\'oro',
@@ -474,7 +474,7 @@ export const STRUMENTI_WIKI = [
     unita: 'kV',
     descrizione:
       "Trasforma la bassa tensione continua di una pila in impulsi di alta tensione tramite due avvolgimenti (primario e secondario) e un interruttore vibrante che apre e chiude ripetutamente il circuito primario. Perfezionato da Heinrich Ruhmkorff a metà Ottocento, alimentò i tubi a scarica di gas con cui Röntgen scoprì i raggi X nel 1895.",
-    immagine: null,
+    immagine: 'images/strumenti/rocchetto-ruhmkorff.png',
   },
   {
     nome: 'Tubo di Crookes',
@@ -521,7 +521,7 @@ export const STRUMENTI_WIKI = [
     unita: 'Pa',
     descrizione:
       "Una pompa a stantuffo estrae l'aria da un recipiente chiuso, creando un vuoto parziale. Otto von Guericke la usò nel celebre esperimento degli emisferi di Magdeburgo (1654): due squadre di cavalli non riuscirono a separare due semisfere di rame tenute insieme dalla sola pressione atmosferica dopo che l'aria all'interno era stata evacuata.",
-    immagine: null,
+    immagine: 'images/strumenti/macchina-pneumatica.png',
   },
   {
     nome: 'Tubo di Venturi',
