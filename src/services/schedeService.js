@@ -1,11 +1,13 @@
 import {
   collection,
   getDocs,
+  getDoc,
   addDoc,
   updateDoc,
   deleteDoc,
   doc,
   arrayUnion,
+  arrayRemove,
   serverTimestamp,
 } from 'firebase/firestore';
 import { db, firebaseReady } from './firebase';
@@ -45,6 +47,18 @@ export async function getSchede() {
   return loadLocal();
 }
 
+export async function getSchedaById(id) {
+  if (firebaseReady) {
+    try {
+      const snap = await getDoc(doc(db, COLLECTION, id));
+      return snap.exists() ? { id: snap.id, ...snap.data() } : null;
+    } catch (err) {
+      console.warn('Firestore non raggiungibile, uso i dati locali.', err);
+    }
+  }
+  return loadLocal().find((s) => s.id === id) || null;
+}
+
 // Le scritture sono riservate al proprietario (Firestore rules). Se Firestore
 // è configurato, un errore (es. permessi insufficienti perché non si è
 // autenticati) deve arrivare a chi chiama, non essere nascosto salvando in
@@ -63,7 +77,16 @@ export async function addScheda(scheda) {
   return nuova;
 }
 
-// Aggiunge un formato in più (già convertito da chi lo carica) a una scheda
+export async function aggiornaScheda(id, dati) {
+  if (firebaseReady) {
+    await updateDoc(doc(db, COLLECTION, id), dati);
+    return;
+  }
+  const schede = loadLocal();
+  saveLocal(schede.map((s) => (s.id === id ? { ...s, ...dati } : s)));
+}
+
+// Aggiunge/rimuove un formato (già convertito da chi lo carica) a una scheda
 // già pubblicata — funziona anche molto dopo la creazione, non solo
 // all'importazione iniziale.
 export async function aggiungiFileOriginale(id, file) {
@@ -74,6 +97,18 @@ export async function aggiungiFileOriginale(id, file) {
   const schede = loadLocal();
   const aggiornate = schede.map((s) =>
     s.id === id ? { ...s, fileOriginali: [...(s.fileOriginali || []), file] } : s,
+  );
+  saveLocal(aggiornate);
+}
+
+export async function rimuoviFileOriginale(id, file) {
+  if (firebaseReady) {
+    await updateDoc(doc(db, COLLECTION, id), { fileOriginali: arrayRemove(file) });
+    return;
+  }
+  const schede = loadLocal();
+  const aggiornate = schede.map((s) =>
+    s.id === id ? { ...s, fileOriginali: (s.fileOriginali || []).filter((f) => f.fileId !== file.fileId) } : s,
   );
   saveLocal(aggiornate);
 }

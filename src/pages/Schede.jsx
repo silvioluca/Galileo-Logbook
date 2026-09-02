@@ -98,16 +98,6 @@ export default function Schede() {
     }
   };
 
-  // Aggiunge un formato appena caricato allo stato locale, senza ricaricare
-  // tutta la pagina.
-  const handleFileAggiunto = (schedaId, nuovoFile) => {
-    setSchede((prev) =>
-      prev.map((s) =>
-        s.id === schedaId ? { ...s, fileOriginali: [...(s.fileOriginali || []), nuovoFile] } : s,
-      ),
-    );
-  };
-
   return (
     <div className="page">
       <div className="container">
@@ -151,7 +141,6 @@ export default function Schede() {
                           templateContenuto={contenutoTemplatePer(s)}
                           isOwner={isOwner}
                           onDelete={isOwner ? handleDelete : undefined}
-                          onFileAggiunto={(nuovoFile) => handleFileAggiunto(s.id, nuovoFile)}
                         />
                       ))}
                     </Fragment>

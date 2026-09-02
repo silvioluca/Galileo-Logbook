@@ -14,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/schede" element={<Schede />} />
         <Route path="/crea-scheda" element={<CreaScheda />} />
+        <Route path="/modifica-scheda/:id" element={<CreaScheda />} />
       </Routes>
       <Footer />
     </div>

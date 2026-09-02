@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { IconPencil } from '@tabler/icons-react';
 import { scaricaDocx, scaricaPdf, apriInOverleaf } from '../utils/exportScheda';
-import { scaricaFileOriginale, caricaFileOriginale } from '../services/fileOriginaleService';
-import { aggiungiFileOriginale } from '../services/schedeService';
-import Modal from './Modal';
+import { scaricaFileOriginale } from '../services/fileOriginaleService';
 
 function etichettaModello(modello) {
   if (!modello) return '—';
@@ -14,12 +14,10 @@ function etichettaModello(modello) {
   return modello;
 }
 
-export default function SchedaRow({ scheda, templateContenuto, isOwner, onDelete, onFileAggiunto }) {
+export default function SchedaRow({ scheda, templateContenuto, isOwner, onDelete }) {
   const { titolo, modello, durataMinuti, numeroEsperienze, difficolta } = scheda;
   const fileOriginali = scheda.fileOriginali || (scheda.fileOriginale ? [scheda.fileOriginale] : []);
   const [azioneInCorso, setAzioneInCorso] = useState('');
-  const [modaleAperta, setModaleAperta] = useState(false);
-  const [caricamento, setCaricamento] = useState(false);
 
   const eseguiAzione = async (nome, azione) => {
     setAzioneInCorso(nome);
@@ -30,25 +28,6 @@ export default function SchedaRow({ scheda, templateContenuto, isOwner, onDelete
       console.warn(err);
     } finally {
       setAzioneInCorso('');
-    }
-  };
-
-  const handleCaricaFormato = async (e) => {
-    const file = e.target.files?.[0];
-    e.target.value = '';
-    if (!file) return;
-
-    setCaricamento(true);
-    try {
-      const caricato = await caricaFileOriginale(file);
-      await aggiungiFileOriginale(scheda.id, caricato);
-      onFileAggiunto?.(caricato);
-      setModaleAperta(false);
-    } catch (err) {
-      window.alert(err.message || 'Caricamento non riuscito: devi essere autenticato come proprietario.');
-      console.warn(err);
-    } finally {
-      setCaricamento(false);
     }
   };
 
@@ -96,14 +75,14 @@ export default function SchedaRow({ scheda, templateContenuto, isOwner, onDelete
           </>
         )}
         {isOwner && (
-          <button
-            type="button"
-            className="scheda-export"
-            title="Carica un altro formato di questa scheda (es. la versione PDF convertita a parte)"
-            onClick={() => setModaleAperta(true)}
+          <Link
+            to={`/modifica-scheda/${scheda.id}`}
+            className="scheda-delete"
+            title="Modifica scheda"
+            aria-label="Modifica scheda"
           >
-            + Formato
-          </button>
+            <IconPencil size={16} stroke={2} />
+          </Link>
         )}
         {onDelete && (
           <button
@@ -117,15 +96,6 @@ export default function SchedaRow({ scheda, templateContenuto, isOwner, onDelete
           </button>
         )}
       </td>
-
-      <Modal open={modaleAperta} onClose={() => setModaleAperta(false)} title="Carica un altro formato">
-        <p>
-          Aggiunge un file già pronto per questa scheda (es. hai importato il .docx e ora carichi
-          anche il .pdf convertito a parte). Non viene rigenerato: resta il file che carichi.
-        </p>
-        <input type="file" accept=".tex,.txt,.pdf,.docx" onChange={handleCaricaFormato} disabled={caricamento} />
-        {caricamento && <p className="form-notice">Caricamento in corso…</p>}
-      </Modal>
     </tr>
   );
 }

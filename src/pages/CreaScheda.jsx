@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { BRANCHE } from '../data/branche';
 import { DIFFICOLTA } from '../data/difficolta';
 import { TEMPLATES_PREDEFINITI } from '../data/templatesSeed';
-import { addScheda } from '../services/schedeService';
+import { addScheda, aggiornaScheda, getSchedaById, aggiungiFileOriginale, rimuoviFileOriginale } from '../services/schedeService';
 import { getTemplates, addTemplate, setTemplateById, deleteTemplate } from '../services/templatesService';
 import { parseSchedaTesto } from '../utils/parseSchedaFile';
 import { estraiTestoDaFile, estensioneSupportata } from '../utils/extractText';
-import { caricaFileOriginale } from '../services/fileOriginaleService';
+import { caricaFileOriginale, eliminaFileOriginale } from '../services/fileOriginaleService';
 import { useAuth } from '../context/AuthContext';
 import ChipInput from '../components/ChipInput';
 import SchedaPreview from '../components/SchedaPreview';
@@ -31,8 +31,11 @@ const FORM_INIZIALE = {
 };
 
 export default function CreaScheda() {
+  const { id } = useParams();
+  const modoModifica = Boolean(id);
   const { isOwner, loading: authLoading, signIn } = useAuth();
   const [form, setForm] = useState(FORM_INIZIALE);
+  const [caricamentoIniziale, setCaricamentoIniziale] = useState(modoModifica);
   const [salvataggio, setSalvataggio] = useState(false);
   const [erroreSalvataggio, setErroreSalvataggio] = useState('');
   const [templates, setTemplates] = useState([]);
@@ -42,7 +45,40 @@ export default function CreaScheda() {
   const [modaleTemplateAperta, setModaleTemplateAperta] = useState(false);
   const [modaleImportaAperta, setModaleImportaAperta] = useState(false);
   const [fileOriginale, setFileOriginale] = useState(null);
+  const [fileOriginali, setFileOriginali] = useState([]);
   const navigate = useNavigate();
+
+  // In modalità modifica, carica la scheda esistente e precompila il form.
+  useEffect(() => {
+    if (!modoModifica) return;
+    let attivo = true;
+    getSchedaById(id).then((s) => {
+      if (!attivo) return;
+      if (!s) {
+        setCaricamentoIniziale(false);
+        return;
+      }
+      setForm({
+        titolo: s.titolo || '',
+        branca: s.branca || BRANCHE[0],
+        esperienza: s.esperienza || '',
+        scopo: s.scopo || '',
+        procedimento: s.procedimento || '',
+        strumenti: s.strumenti || [],
+        grandezze: s.grandezze || [],
+        durataMinuti: s.durataMinuti ?? 60,
+        numeroEsperienze: s.numeroEsperienze ?? 1,
+        difficolta: s.difficolta || DIFFICOLTA[0],
+      });
+      setTemplateId(s.templateId || '');
+      setOrigine(s.templateId ? 'template' : 'importa');
+      setFileOriginali(s.fileOriginali || (s.fileOriginale ? [s.fileOriginale] : []));
+      setCaricamentoIniziale(false);
+    });
+    return () => {
+      attivo = false;
+    };
+  }, [id, modoModifica]);
 
   useEffect(() => {
     getTemplates().then(async (esistenti) => {
@@ -202,17 +238,50 @@ export default function CreaScheda() {
             : ''
           : 'Modello importato',
       templateId: origine === 'template' ? templateId || null : null,
-      fileOriginali: origine === 'importa' && fileOriginale ? [fileOriginale] : [],
     };
 
+    if (!modoModifica) {
+      scheda.fileOriginali = origine === 'importa' && fileOriginale ? [fileOriginale] : [];
+    }
+
     try {
-      await addScheda(scheda);
+      if (modoModifica) {
+        await aggiornaScheda(id, scheda);
+      } else {
+        await addScheda(scheda);
+      }
       navigate('/schede');
     } catch (err) {
       setErroreSalvataggio('Salvataggio non riuscito: devi essere autenticato come proprietario.');
       console.warn(err);
     } finally {
       setSalvataggio(false);
+    }
+  };
+
+  const handleAggiungiFormato = async (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file) return;
+    try {
+      const caricato = await caricaFileOriginale(file);
+      await aggiungiFileOriginale(id, caricato);
+      setFileOriginali((prev) => [...prev, caricato]);
+    } catch (err) {
+      window.alert(err.message || 'Caricamento non riuscito: devi essere autenticato come proprietario.');
+      console.warn(err);
+    }
+  };
+
+  const handleRimuoviFormato = async (file) => {
+    if (!window.confirm(`Eliminare il file "${file.nomeFile}"? L'operazione non è reversibile.`)) return;
+    try {
+      await rimuoviFileOriginale(id, file);
+      eliminaFileOriginale(file.fileId);
+      setFileOriginali((prev) => prev.filter((f) => f.fileId !== file.fileId));
+    } catch (err) {
+      window.alert(err.message || 'Eliminazione non riuscita: devi essere autenticato come proprietario.');
+      console.warn(err);
     }
   };
 
@@ -224,12 +293,12 @@ export default function CreaScheda() {
             const t = templates.find((x) => x.id === templateId);
             return t ? `Modello ${t.nome}` : '';
           })()
-        : fileOriginale
+        : fileOriginale || fileOriginali.length > 0
           ? 'Modello importato'
           : '',
   };
 
-  if (authLoading) {
+  if (authLoading || caricamentoIniziale) {
     return (
       <div className="page">
         <div className="container">
@@ -243,7 +312,7 @@ export default function CreaScheda() {
     return (
       <div className="page">
         <div className="container">
-          <h1>Crea Scheda</h1>
+          <h1>{modoModifica ? 'Modifica Scheda' : 'Crea Scheda'}</h1>
           <div className="etched-frame accesso-negato">
             <p>Solo il proprietario del catalogo può creare o modificare schede.</p>
             <button type="button" className="btn primary" onClick={signIn}>
@@ -258,8 +327,12 @@ export default function CreaScheda() {
   return (
     <div className="page">
       <div className="container">
-        <h1>Crea Scheda</h1>
-        <p>Compila i dettagli dell'esperienza. Scegli in fondo se generarla da un template o importarla da un file esistente.</p>
+        <h1>{modoModifica ? 'Modifica Scheda' : 'Crea Scheda'}</h1>
+        <p>
+          {modoModifica
+            ? "Aggiorna i dettagli dell'esperienza. I file scaricabili si gestiscono in fondo."
+            : "Compila i dettagli dell'esperienza. Scegli in fondo se generarla da un template o importarla da un file esistente."}
+        </p>
 
         <div className="crea-scheda-layout">
           <form className="form-card etched-frame" onSubmit={handleSubmit}>
@@ -446,9 +519,53 @@ export default function CreaScheda() {
               {importoNotice && <p className="form-notice">{importoNotice}</p>}
             </Modal>
 
+            {modoModifica && (
+              <>
+                <div className="ornament-divider">✦</div>
+                <div className="gestione-file">
+                  <label>File scaricabili</label>
+                  {fileOriginali.length === 0 ? (
+                    <p className="form-notice">
+                      Nessun file caricato: verranno offerti i formati generati automaticamente
+                      (DOCX/PDF/LaTeX).
+                    </p>
+                  ) : (
+                    <ul className="lista-file">
+                      {fileOriginali.map((f) => (
+                        <li key={f.fileId}>
+                          <span>
+                            {f.nomeFile} <span className="tag">.{f.estensione}</span>
+                          </span>
+                          <button
+                            type="button"
+                            className="scheda-delete"
+                            title="Elimina questo file"
+                            aria-label="Elimina questo file"
+                            onClick={() => handleRimuoviFormato(f)}
+                          >
+                            ✕
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <label htmlFor="aggiungi-formato" className="btn">
+                    + Carica un formato
+                  </label>
+                  <input
+                    id="aggiungi-formato"
+                    type="file"
+                    accept=".tex,.txt,.pdf,.docx"
+                    onChange={handleAggiungiFormato}
+                    hidden
+                  />
+                </div>
+              </>
+            )}
+
             <div className="form-actions">
               <button className="btn primary" type="submit" disabled={salvataggio}>
-                {salvataggio ? 'Salvataggio…' : 'Salva scheda'}
+                {salvataggio ? 'Salvataggio…' : modoModifica ? 'Salva modifiche' : 'Salva scheda'}
               </button>
             </div>
             {erroreSalvataggio && <p className="form-notice form-error">{erroreSalvataggio}</p>}

@@ -293,6 +293,9 @@
 }
 
 .scheda-delete {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
   background: none;
   border: none;
   color: var(--ink-soft);
@@ -698,6 +701,28 @@
   margin-top: 1.5rem;
   display: flex;
   gap: 1rem;
+}
+
+.gestione-file {
+  margin-bottom: 1rem;
+}
+
+.gestione-file > label {
+  margin-bottom: 0.5rem;
+}
+
+.lista-file {
+  list-style: none;
+  margin: 0 0 0.75rem;
+  padding: 0;
+}
+
+.lista-file li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .rich-text-editor {
