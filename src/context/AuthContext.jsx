@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { subscribeAuth, signInGoogle, signOutUser } from '../services/authService';
+import { subscribeAuth, signInGoogle, signOutUser, elaboraRisultatoRedirect } from '../services/authService';
 
 // Unico account autorizzato a creare/eliminare schede e template (vedi anche
 // le Firestore security rules, che devono usare la stessa email).
@@ -23,6 +23,12 @@ export function AuthProvider({ children }) {
   const [googleAccessToken, setGoogleAccessToken] = useState(null);
 
   useEffect(() => {
+    // Se stiamo tornando da signInWithRedirect, recupera il token prima
+    // ancora che onAuthStateChanged aggiorni lo stato utente.
+    elaboraRisultatoRedirect().then((token) => {
+      if (token) setGoogleAccessToken(token);
+    });
+
     const unsubscribe = subscribeAuth((u) => {
       setUser(u);
       setLoading(false);
@@ -33,11 +39,10 @@ export function AuthProvider({ children }) {
 
   const isOwner = user?.email === OWNER_EMAIL;
 
-  const signIn = async () => {
-    const token = await signInGoogle();
-    setGoogleAccessToken(token);
-    return token;
-  };
+  // Naviga via verso Google (redirect, non popup: i popup sono rotti dalla
+  // Cross-Origin-Opener-Policy di GitHub Pages). Il token si recupera al
+  // ritorno, non da questa chiamata.
+  const signIn = () => signInGoogle();
 
   const signOut = async () => {
     setGoogleAccessToken(null);

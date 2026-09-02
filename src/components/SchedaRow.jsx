@@ -33,12 +33,18 @@ export default function SchedaRow({ scheda, templateContenuto, onDelete }) {
 
   // Le conversioni DOCX<->PDF passano da Google Drive: servono l'accesso e il
   // consenso Google di chi clicca (non necessariamente il proprietario del
-  // catalogo) — se non è ancora presente lo richiede al volo.
-  const eseguiConversione = (nome, funzioneConversione) =>
-    eseguiAzione(nome, async () => {
-      const token = googleAccessToken || (await signIn());
-      await funzioneConversione(token);
-    });
+  // catalogo). L'accesso avviene per redirect (i popup non funzionano su
+  // GitHub Pages), quindi non possiamo "accedi e continua" nello stesso
+  // click: se manca il token, mandiamo l'utente ad accedere e si riprova
+  // dopo, quando sarà tornato sulla pagina.
+  const eseguiConversione = (nome, funzioneConversione) => {
+    if (!googleAccessToken) {
+      window.alert('Ti sto portando ad accedere con Google: al ritorno premi di nuovo il pulsante per convertire.');
+      signIn();
+      return;
+    }
+    eseguiAzione(nome, () => funzioneConversione(googleAccessToken));
+  };
 
   return (
     <tr className="scheda-row">
