@@ -11,6 +11,7 @@ import { caricaFileOriginale, eliminaFileOriginale } from '../services/fileOrigi
 import { useAuth } from '../context/AuthContext';
 import ChipInput from '../components/ChipInput';
 import SchedaPreview from '../components/SchedaPreview';
+import FileOriginalePreview from '../components/FileOriginalePreview';
 import Modal from '../components/Modal';
 import RichTextEditor from '../components/RichTextEditor';
 import { testoAHtml } from '../utils/testoAHtml';
@@ -45,6 +46,7 @@ export default function CreaScheda() {
   const [modaleTemplateAperta, setModaleTemplateAperta] = useState(false);
   const [modaleImportaAperta, setModaleImportaAperta] = useState(false);
   const [fileOriginale, setFileOriginale] = useState(null);
+  const [fileOriginaleRaw, setFileOriginaleRaw] = useState(null);
   const [fileOriginali, setFileOriginali] = useState([]);
   const navigate = useNavigate();
 
@@ -166,6 +168,7 @@ export default function CreaScheda() {
         strumenti: estratti.materiale.length > 0 ? estratti.materiale : f.strumenti,
       }));
       setFileOriginale(caricato);
+      setFileOriginaleRaw(file);
       setImportoNotice(
         `File "${file.name}" caricato e conservato così com'è (verrà offerto in download originale, non rigenerato). Campi precompilati automaticamente: verifica e correggi se necessario.`,
       );
@@ -557,7 +560,13 @@ export default function CreaScheda() {
 
           <aside className="crea-scheda-preview">
             <h2>Anteprima</h2>
-            <SchedaPreview scheda={anteprimaScheda} />
+            {origine === 'importa' && fileOriginaleRaw ? (
+              <FileOriginalePreview file={fileOriginaleRaw} />
+            ) : origine === 'importa' && fileOriginali[0] ? (
+              <FileOriginalePreview fileOriginale={fileOriginali[0]} />
+            ) : (
+              <SchedaPreview scheda={anteprimaScheda} />
+            )}
           </aside>
         </div>
       </div>

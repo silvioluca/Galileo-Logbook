@@ -31,8 +31,8 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/crea-scheda" onClick={() => setOpen(false)}>
-              Crea Scheda
+            <NavLink to="/strumenti" onClick={() => setOpen(false)}>
+              Strumenti di Misura
             </NavLink>
           </li>
         </ul>

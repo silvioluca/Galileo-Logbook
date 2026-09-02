@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Schede from './pages/Schede';
 import CreaScheda from './pages/CreaScheda';
+import StrumentiWiki from './pages/StrumentiWiki';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/schede" element={<Schede />} />
+        <Route path="/strumenti" element={<StrumentiWiki />} />
         <Route path="/crea-scheda" element={<CreaScheda />} />
         <Route path="/modifica-scheda/:id" element={<CreaScheda />} />
       </Routes>

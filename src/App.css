@@ -184,6 +184,10 @@
   margin-bottom: 1.5rem;
 }
 
+.schede-toolbar-crea {
+  margin-left: auto;
+}
+
 .filtri-bar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -194,6 +198,50 @@
 .filtro-field {
   display: flex;
   flex-direction: column;
+}
+
+.strumenti-sezione {
+  margin-bottom: 2.5rem;
+}
+
+.strumenti-sezione h2 {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.strumenti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.strumento-card {
+  padding: 1.5rem 1.5rem 1.25rem;
+}
+
+.strumento-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+}
+
+.strumento-meta {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin: 0 0 0.3rem;
+}
+
+.strumento-sensibilita {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin: 0 0 0.6rem;
+}
+
+.strumento-descrizione {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 .scheda-table {
@@ -386,6 +434,41 @@
 .crea-scheda-preview h2 {
   font-size: 1.2rem;
   margin-bottom: 0.75rem;
+}
+
+.anteprima-file-pdf {
+  width: 100%;
+  height: 70vh;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.anteprima-file-docx,
+.anteprima-file-testo {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.anteprima-file-testo {
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+}
+
+.anteprima-file-docx table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.6em 0;
+}
+
+.anteprima-file-docx th,
+.anteprima-file-docx td {
+  border: 1px solid var(--line);
+  padding: 0.25em 0.4em;
 }
 
 .origine-scheda {

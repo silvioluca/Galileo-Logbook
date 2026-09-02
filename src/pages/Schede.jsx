@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getSchede, deleteScheda } from '../services/schedeService';
 import { getTemplates } from '../services/templatesService';
 import { eliminaFileOriginale } from '../services/fileOriginaleService';
@@ -106,6 +107,11 @@ export default function Schede() {
 
         <div className="schede-toolbar">
           <FiltriBar filtri={filtri} onChange={setFiltri} />
+          {isOwner && (
+            <Link to="/crea-scheda" className="btn primary schede-toolbar-crea">
+              + Crea Scheda
+            </Link>
+          )}
         </div>
 
         {loading ? (
