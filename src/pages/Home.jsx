@@ -6,7 +6,7 @@ export default function Home() {
       <section className="hero-full">
         <img
           className="hero-bg-image"
-          src="./images/galileo-portrait.png"
+          src={`${import.meta.env.BASE_URL}images/galileo-portrait.png`}
           alt=""
           aria-hidden="true"
         />
