@@ -202,7 +202,7 @@ export default function CreaScheda() {
             : ''
           : 'Modello importato',
       templateId: origine === 'template' ? templateId || null : null,
-      fileOriginale: origine === 'importa' ? fileOriginale : null,
+      fileOriginali: origine === 'importa' && fileOriginale ? [fileOriginale] : [],
     };
 
     try {

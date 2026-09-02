@@ -21,8 +21,3 @@ const app = firebaseReady ? initializeApp(firebaseConfig) : null;
 export const db = firebaseReady ? getFirestore(app) : null;
 export const auth = firebaseReady ? getAuth(app) : null;
 export const googleProvider = new GoogleAuthProvider();
-// Scope aggiuntivo per convertire DOCX<->PDF tramite Google Drive/Docs
-// (import con conversione automatica + export), gratis e senza chiavi da
-// esporre: usa il consenso OAuth dell'utente già loggato con Google.
-// "drive.file" è il permesso minimo: riguarda solo i file creati dall'app.
-googleProvider.addScope('https://www.googleapis.com/auth/drive.file');

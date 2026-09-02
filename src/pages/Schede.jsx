@@ -89,14 +89,23 @@ export default function Schede() {
     const scheda = schede.find((s) => s.id === id);
     try {
       await deleteScheda(id);
-      if (scheda?.fileOriginale?.fileId) {
-        eliminaFileOriginale(scheda.fileOriginale.fileId);
-      }
+      const fileDaRimuovere = scheda?.fileOriginali || (scheda?.fileOriginale ? [scheda.fileOriginale] : []);
+      fileDaRimuovere.forEach((f) => f.fileId && eliminaFileOriginale(f.fileId));
       setSchede((prev) => prev.filter((s) => s.id !== id));
     } catch (err) {
       window.alert('Eliminazione non riuscita: devi essere autenticato come proprietario.');
       console.warn(err);
     }
+  };
+
+  // Aggiunge un formato appena caricato allo stato locale, senza ricaricare
+  // tutta la pagina.
+  const handleFileAggiunto = (schedaId, nuovoFile) => {
+    setSchede((prev) =>
+      prev.map((s) =>
+        s.id === schedaId ? { ...s, fileOriginali: [...(s.fileOriginali || []), nuovoFile] } : s,
+      ),
+    );
   };
 
   return (
@@ -140,7 +149,9 @@ export default function Schede() {
                           key={s.id}
                           scheda={s}
                           templateContenuto={contenutoTemplatePer(s)}
+                          isOwner={isOwner}
                           onDelete={isOwner ? handleDelete : undefined}
+                          onFileAggiunto={(nuovoFile) => handleFileAggiunto(s.id, nuovoFile)}
                         />
                       ))}
                     </Fragment>

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { scaricaDocx, scaricaPdf, apriInOverleaf } from '../utils/exportScheda';
-import { scaricaFileOriginale } from '../services/fileOriginaleService';
-import { convertiOriginaleInPdf, convertiOriginaleInDocx } from '../utils/convertiOriginale';
-import { useAuth } from '../context/AuthContext';
+import { scaricaFileOriginale, caricaFileOriginale } from '../services/fileOriginaleService';
+import { aggiungiFileOriginale } from '../services/schedeService';
+import Modal from './Modal';
 
 function etichettaModello(modello) {
   if (!modello) return '—';
@@ -14,10 +14,12 @@ function etichettaModello(modello) {
   return modello;
 }
 
-export default function SchedaRow({ scheda, templateContenuto, onDelete }) {
-  const { titolo, modello, durataMinuti, numeroEsperienze, difficolta, fileOriginale } = scheda;
-  const { googleAccessToken, signIn } = useAuth();
+export default function SchedaRow({ scheda, templateContenuto, isOwner, onDelete, onFileAggiunto }) {
+  const { titolo, modello, durataMinuti, numeroEsperienze, difficolta } = scheda;
+  const fileOriginali = scheda.fileOriginali || (scheda.fileOriginale ? [scheda.fileOriginale] : []);
   const [azioneInCorso, setAzioneInCorso] = useState('');
+  const [modaleAperta, setModaleAperta] = useState(false);
+  const [caricamento, setCaricamento] = useState(false);
 
   const eseguiAzione = async (nome, azione) => {
     setAzioneInCorso(nome);
@@ -31,15 +33,24 @@ export default function SchedaRow({ scheda, templateContenuto, onDelete }) {
     }
   };
 
-  // Le conversioni DOCX<->PDF passano da Google Drive: servono l'accesso e il
-  // consenso Google di chi clicca (non necessariamente il proprietario del
-  // catalogo) — se non è ancora presente lo richiede al volo (popup) e poi
-  // procede subito con la conversione.
-  const eseguiConversione = (nome, funzioneConversione) =>
-    eseguiAzione(nome, async () => {
-      const token = googleAccessToken || (await signIn());
-      await funzioneConversione(token);
-    });
+  const handleCaricaFormato = async (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file) return;
+
+    setCaricamento(true);
+    try {
+      const caricato = await caricaFileOriginale(file);
+      await aggiungiFileOriginale(scheda.id, caricato);
+      onFileAggiunto?.(caricato);
+      setModaleAperta(false);
+    } catch (err) {
+      window.alert(err.message || 'Caricamento non riuscito: devi essere autenticato come proprietario.');
+      console.warn(err);
+    } finally {
+      setCaricamento(false);
+    }
+  };
 
   return (
     <tr className="scheda-row">
@@ -55,39 +66,18 @@ export default function SchedaRow({ scheda, templateContenuto, onDelete }) {
         </span>
       </td>
       <td className="scheda-azioni">
-        {fileOriginale ? (
-          <>
+        {fileOriginali.length > 0 ? (
+          fileOriginali.map((f) => (
             <button
+              key={f.fileId}
               type="button"
               className="scheda-export"
               disabled={azioneInCorso !== ''}
-              onClick={() => eseguiAzione('originale', () => scaricaFileOriginale(fileOriginale))}
+              onClick={() => eseguiAzione(f.fileId, () => scaricaFileOriginale(f))}
             >
-              {azioneInCorso === 'originale' ? '…' : fileOriginale.estensione.toUpperCase()}
+              {azioneInCorso === f.fileId ? '…' : f.estensione.toUpperCase()}
             </button>
-            {fileOriginale.estensione === 'docx' && (
-              <button
-                type="button"
-                className="scheda-export"
-                disabled={azioneInCorso !== ''}
-                title="Converti in PDF (via Google Drive, richiede di accedere con Google)"
-                onClick={() => eseguiConversione('pdf', (token) => convertiOriginaleInPdf(fileOriginale, token))}
-              >
-                {azioneInCorso === 'pdf' ? 'Converto…' : 'PDF'}
-              </button>
-            )}
-            {fileOriginale.estensione === 'pdf' && (
-              <button
-                type="button"
-                className="scheda-export"
-                disabled={azioneInCorso !== ''}
-                title="Converti in DOCX (via Google Drive, richiede di accedere con Google)"
-                onClick={() => eseguiConversione('docx', (token) => convertiOriginaleInDocx(fileOriginale, token))}
-              >
-                {azioneInCorso === 'docx' ? 'Converto…' : 'DOCX'}
-              </button>
-            )}
-          </>
+          ))
         ) : (
           <>
             <button type="button" className="scheda-export" onClick={() => scaricaDocx(scheda)}>
@@ -105,6 +95,16 @@ export default function SchedaRow({ scheda, templateContenuto, onDelete }) {
             </button>
           </>
         )}
+        {isOwner && (
+          <button
+            type="button"
+            className="scheda-export"
+            title="Carica un altro formato di questa scheda (es. la versione PDF convertita a parte)"
+            onClick={() => setModaleAperta(true)}
+          >
+            + Formato
+          </button>
+        )}
         {onDelete && (
           <button
             type="button"
@@ -117,6 +117,15 @@ export default function SchedaRow({ scheda, templateContenuto, onDelete }) {
           </button>
         )}
       </td>
+
+      <Modal open={modaleAperta} onClose={() => setModaleAperta(false)} title="Carica un altro formato">
+        <p>
+          Aggiunge un file già pronto per questa scheda (es. hai importato il .docx e ora carichi
+          anche il .pdf convertito a parte). Non viene rigenerato: resta il file che carichi.
+        </p>
+        <input type="file" accept=".tex,.txt,.pdf,.docx" onChange={handleCaricaFormato} disabled={caricamento} />
+        {caricamento && <p className="form-notice">Caricamento in corso…</p>}
+      </Modal>
     </tr>
   );
 }

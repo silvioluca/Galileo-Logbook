@@ -9,7 +9,6 @@ const AuthContext = createContext({
   user: null,
   isOwner: false,
   loading: true,
-  googleAccessToken: null,
   signIn: () => {},
   signOut: () => {},
 });
@@ -17,35 +16,19 @@ const AuthContext = createContext({
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  // Access token OAuth di Google (scope drive.file), usato per le
-  // conversioni DOCX<->PDF via Google Drive. Vive solo in memoria: dura
-  // ~1 ora e va richiesto di nuovo (signIn) se scade.
-  const [googleAccessToken, setGoogleAccessToken] = useState(null);
 
   useEffect(() => {
     const unsubscribe = subscribeAuth((u) => {
       setUser(u);
       setLoading(false);
-      if (!u) setGoogleAccessToken(null);
     });
     return unsubscribe;
   }, []);
 
   const isOwner = user?.email === OWNER_EMAIL;
 
-  const signIn = async () => {
-    const token = await signInGoogle();
-    setGoogleAccessToken(token);
-    return token;
-  };
-
-  const signOut = async () => {
-    setGoogleAccessToken(null);
-    await signOutUser();
-  };
-
   return (
-    <AuthContext.Provider value={{ user, isOwner, loading, googleAccessToken, signIn, signOut }}>
+    <AuthContext.Provider value={{ user, isOwner, loading, signIn: signInGoogle, signOut: signOutUser }}>
       {children}
     </AuthContext.Provider>
   );

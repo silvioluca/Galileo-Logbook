@@ -2,8 +2,10 @@ import {
   collection,
   getDocs,
   addDoc,
+  updateDoc,
   deleteDoc,
   doc,
+  arrayUnion,
   serverTimestamp,
 } from 'firebase/firestore';
 import { db, firebaseReady } from './firebase';
@@ -59,6 +61,21 @@ export async function addScheda(scheda) {
   const nuova = { ...scheda, id: crypto.randomUUID(), createdAt: new Date().toISOString() };
   saveLocal([nuova, ...schede]);
   return nuova;
+}
+
+// Aggiunge un formato in più (già convertito da chi lo carica) a una scheda
+// già pubblicata — funziona anche molto dopo la creazione, non solo
+// all'importazione iniziale.
+export async function aggiungiFileOriginale(id, file) {
+  if (firebaseReady) {
+    await updateDoc(doc(db, COLLECTION, id), { fileOriginali: arrayUnion(file) });
+    return;
+  }
+  const schede = loadLocal();
+  const aggiornate = schede.map((s) =>
+    s.id === id ? { ...s, fileOriginali: [...(s.fileOriginali || []), file] } : s,
+  );
+  saveLocal(aggiornate);
 }
 
 export async function deleteScheda(id) {
