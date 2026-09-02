@@ -1,0 +1,16 @@
+export const GRANDEZZE = [
+  'Lunghezza',
+  'Massa',
+  'Tempo',
+  'Velocità',
+  'Accelerazione',
+  'Forza',
+  'Densità',
+  'Temperatura',
+  'Frequenza',
+  'Pressione',
+  'Corrente elettrica',
+  'Tensione',
+  'Resistenza',
+  'Lunghezza d\'onda',
+];

@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{enumitem}
+\usepackage{parskip}
+
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt}
+\setlist[enumerate]{leftmargin=1.4em, itemsep=4pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+{\LARGE\bfseries {{TITOLO}}\par}
+\vspace{2pt}
+{\small\itshape
+  {{BRANCA}} \textperiodcentered\ {{ESPERIENZA}} \textperiodcentered\ {{MODELLO}}
+  \textperiodcentered\ {{DURATA}} min
+  \textperiodcentered\ {{NUMERO_ESPERIENZE}} esperienze
+  \textperiodcentered\ Difficoltà: {{DIFFICOLTA}}\par
+}
+
+\vspace{14pt}
+{\bfseries Scopo dell'esperienza}\par
+{{SCOPO}}
+
+\vspace{10pt}
+{\bfseries Materiale utilizzato}
+\begin{itemize}
+{{MATERIALE_ITEMS}}
+\end{itemize}
+
+\vspace{10pt}
+{\bfseries Procedimento}\par
+{{PROCEDIMENTO}}
+
+\end{document}

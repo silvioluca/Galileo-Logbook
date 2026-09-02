@@ -1,0 +1,157 @@
+import { Fragment, useEffect, useMemo, useState } from 'react';
+import { getSchede, deleteScheda } from '../services/schedeService';
+import { getTemplates } from '../services/templatesService';
+import { eliminaFileOriginale } from '../services/fileOriginaleService';
+import { BRANCHE } from '../data/branche';
+import { TEMPLATES_PREDEFINITI } from '../data/templatesSeed';
+import { useAuth } from '../context/AuthContext';
+import FiltriBar from '../components/FiltriBar';
+import SchedaRow from '../components/SchedaRow';
+import DistribuzioneChart from '../components/DistribuzioneChart';
+
+const FILTRI_INIZIALI = { branca: '', grandezza: '', strumento: '', durata: 'tutte' };
+
+function rientraNellaDurata(durataMinuti, bucket) {
+  switch (bucket) {
+    case 'lt30':
+      return durataMinuti < 30;
+    case '30-60':
+      return durataMinuti >= 30 && durataMinuti <= 60;
+    case '60-90':
+      return durataMinuti > 60 && durataMinuti <= 90;
+    case 'gt90':
+      return durataMinuti > 90;
+    default:
+      return true;
+  }
+}
+
+function raggruppaPerBrancaEEsperienza(schede) {
+  const perBranca = new Map();
+  for (const branca of BRANCHE) perBranca.set(branca, new Map());
+
+  for (const s of schede) {
+    if (!perBranca.has(s.branca)) perBranca.set(s.branca, new Map());
+    const perEsperienza = perBranca.get(s.branca);
+    if (!perEsperienza.has(s.esperienza)) perEsperienza.set(s.esperienza, []);
+    perEsperienza.get(s.esperienza).push(s);
+  }
+
+  return perBranca;
+}
+
+export default function Schede() {
+  const { isOwner } = useAuth();
+  const [schede, setSchede] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [filtri, setFiltri] = useState(FILTRI_INIZIALI);
+  const [templates, setTemplates] = useState([]);
+
+  useEffect(() => {
+    let attivo = true;
+    getSchede().then((dati) => {
+      if (attivo) {
+        setSchede(dati);
+        setLoading(false);
+      }
+    });
+    getTemplates().then((dati) => {
+      if (attivo) setTemplates(dati);
+    });
+    return () => {
+      attivo = false;
+    };
+  }, []);
+
+  // Contenuto del template LaTeX associato a una scheda: se non ne ha uno
+  // (es. creata importando un file esistente), si usa il Classico come
+  // ripiego, così il pulsante "LaTeX" funziona comunque.
+  const contenutoTemplatePer = (scheda) => {
+    const trovato = templates.find((t) => t.id === scheda.templateId);
+    if (trovato) return trovato.contenuto;
+    return TEMPLATES_PREDEFINITI.find((t) => t.nome === 'Classico')?.contenuto || '';
+  };
+
+  const schedeFiltrate = useMemo(() => {
+    return schede.filter((s) => {
+      if (filtri.branca && s.branca !== filtri.branca) return false;
+      if (filtri.grandezza && !(s.grandezze || []).includes(filtri.grandezza)) return false;
+      if (filtri.strumento && !(s.strumenti || []).includes(filtri.strumento)) return false;
+      if (!rientraNellaDurata(s.durataMinuti, filtri.durata)) return false;
+      return true;
+    });
+  }, [schede, filtri]);
+
+  const gruppi = useMemo(() => raggruppaPerBrancaEEsperienza(schedeFiltrate), [schedeFiltrate]);
+
+  const handleDelete = async (id) => {
+    if (!window.confirm('Eliminare questa scheda? L\'operazione non è reversibile.')) return;
+    const scheda = schede.find((s) => s.id === id);
+    try {
+      await deleteScheda(id);
+      if (scheda?.fileOriginale?.fileId) {
+        eliminaFileOriginale(scheda.fileOriginale.fileId);
+      }
+      setSchede((prev) => prev.filter((s) => s.id !== id));
+    } catch (err) {
+      window.alert('Eliminazione non riuscita: devi essere autenticato come proprietario.');
+      console.warn(err);
+    }
+  };
+
+  return (
+    <div className="page">
+      <div className="container">
+        <h1>Schede di Laboratorio</h1>
+        <p>Consulta l'archivio delle schede, suddivise per branca della fisica.</p>
+
+        <div className="schede-toolbar">
+          <FiltriBar filtri={filtri} onChange={setFiltri} />
+        </div>
+
+        {loading ? (
+          <p>Caricamento delle schede…</p>
+        ) : schedeFiltrate.length === 0 ? (
+          <p className="empty-state">Nessuna scheda corrisponde ai filtri selezionati.</p>
+        ) : (
+          <table className="scheda-table">
+            <colgroup>
+              <col style={{ width: '26%' }} />
+              <col style={{ width: '17%' }} />
+              <col style={{ width: '13%' }} />
+              <col style={{ width: '9%' }} />
+              <col style={{ width: '9%' }} />
+              <col style={{ width: '26%' }} />
+            </colgroup>
+            {[...gruppi.entries()]
+              .filter(([, perEsperienza]) => perEsperienza.size > 0)
+              .map(([branca, perEsperienza]) => (
+                <tbody key={branca}>
+                  <tr className="riga-branca">
+                    <th colSpan={6}>{branca}</th>
+                  </tr>
+                  {[...perEsperienza.entries()].map(([esperienza, schedeEsperienza]) => (
+                    <Fragment key={esperienza}>
+                      <tr className="riga-esperienza">
+                        <td colSpan={6}>{esperienza}</td>
+                      </tr>
+                      {schedeEsperienza.map((s) => (
+                        <SchedaRow
+                          key={s.id}
+                          scheda={s}
+                          templateContenuto={contenutoTemplatePer(s)}
+                          onDelete={isOwner ? handleDelete : undefined}
+                        />
+                      ))}
+                    </Fragment>
+                  ))}
+                </tbody>
+              ))}
+          </table>
+        )}
+
+        <DistribuzioneChart schede={schede} />
+      </div>
+    </div>
+  );
+}

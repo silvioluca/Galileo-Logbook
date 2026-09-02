@@ -1,0 +1,15 @@
+export const STRUMENTI = [
+  'Calibro',
+  'Cronometro',
+  'Dinamometro',
+  'Bilancia',
+  'Termometro',
+  'Multimetro',
+  'Oscilloscopio',
+  'Generatore di funzioni',
+  'Rotaia a cuscino d\'aria',
+  'Diapason',
+  'Banco ottico',
+  'Amperometro',
+  'Voltmetro',
+];

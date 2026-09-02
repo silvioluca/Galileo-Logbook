@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  --ink: #2b1d0f;
+  --ink-soft: #4a3521;
+  --paper: #ece1c8;
+  --paper-dark: #ddcfa9;
+  --paper-darker: #cbb98c;
+  --accent: #6b4423;
+  --accent-strong: #4a2c12;
+  --line: rgba(43, 29, 15, 0.35);
+
+  color-scheme: light;
+  font-family: 'EB Garamond', 'Iowan Old Style', Georgia, serif;
+  color: var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    repeating-linear-gradient(
+      115deg,
+      rgba(43, 29, 15, 0.05) 0px,
+      rgba(43, 29, 15, 0.05) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    repeating-linear-gradient(
+      25deg,
+      rgba(43, 29, 15, 0.035) 0px,
+      rgba(43, 29, 15, 0.035) 1px,
+      transparent 1px,
+      transparent 6px
+    ),
+    radial-gradient(ellipse at center, #f2e8d0 0%, var(--paper) 60%, var(--paper-darker) 100%);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent-strong);
+  margin: 0 0 0.5em;
+}
+
+a {
+  color: var(--accent-strong);
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Cornice in stile incisione, riutilizzabile su card e riquadri */
+.etched-frame {
+  position: relative;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 235, 0.35);
+  box-shadow:
+    0 0 0 4px var(--paper),
+    0 0 0 5px var(--line),
+    inset 0 0 30px rgba(43, 29, 15, 0.08);
+}
+
+.etched-frame::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--line);
+  pointer-events: none;
+}
+
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  color: var(--accent);
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  margin: 0.15rem 0.25rem 0.15rem 0;
+  font-size: 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: rgba(107, 68, 35, 0.08);
+  color: var(--ink-soft);
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid var(--accent-strong);
+  background: transparent;
+  color: var(--accent-strong);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--accent-strong);
+  color: var(--paper);
+}
+
+.btn.primary {
+  background: var(--accent-strong);
+  color: var(--paper);
+}
+
+.btn.primary:hover {
+  background: var(--ink);
+}
+
+label {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  background: rgba(255, 250, 235, 0.6);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
