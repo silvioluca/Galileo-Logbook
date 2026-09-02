@@ -169,6 +169,7 @@ export default function CreaScheda() {
       setImportoNotice(
         `File "${file.name}" caricato e conservato così com'è (verrà offerto in download originale, non rigenerato). Campi precompilati automaticamente: verifica e correggi se necessario.`,
       );
+      setModaleImportaAperta(false);
     } catch (err) {
       setImportoNotice(err.message || `Non è stato possibile leggere/caricare "${file.name}". Compila i campi manualmente.`);
       console.warn(err);
@@ -442,63 +443,71 @@ export default function CreaScheda() {
               </div>
             </div>
 
-            <div className="ornament-divider">✦</div>
+            {/* In modifica, una scheda già importata non ha bisogno di questi
+                controlli: il suo contenuto reale si gestisce nella sezione
+                "File scaricabili" in fondo, non riscegliendo un template o
+                ri-importando. Per una scheda da template restano utili
+                (si può cambiare template). In creazione servono sempre. */}
+            {!(modoModifica && origine === 'importa') && (
+              <>
+                <div className="ornament-divider">✦</div>
 
-            <div className="origine-scheda">
-              <div className="origine-toggle" role="radiogroup" aria-label="Origine della scheda">
-                <button
-                  type="button"
-                  className={`btn${origine === 'template' ? ' primary' : ''}`}
-                  aria-pressed={origine === 'template'}
-                  onClick={() => setOrigine('template')}
-                >
-                  Usa un template
-                </button>
-                <button
-                  type="button"
-                  className={`btn${origine === 'importa' ? ' primary' : ''}`}
-                  aria-pressed={origine === 'importa'}
-                  onClick={() => {
-                    setOrigine('importa');
-                    setModaleImportaAperta(true);
-                  }}
-                >
-                  Importa scheda esistente
-                </button>
-              </div>
-
-              {origine === 'template' ? (
-                <div className="template-row">
-                  <select id="template" value={templateId} onChange={handleSelezionaTemplate}>
-                    <option value="">Nessun template selezionato</option>
-                    {templates.map((t) => (
-                      <option key={t.id} value={t.id}>
-                        {t.nome}
-                      </option>
-                    ))}
-                    <option value={NUOVO_TEMPLATE}>+ Carica nuovo template…</option>
-                  </select>
-                  {templateId && (
+                <div className="origine-scheda">
+                  <div className="origine-toggle" role="radiogroup" aria-label="Origine della scheda">
                     <button
                       type="button"
-                      className="scheda-delete"
-                      title="Elimina questo template"
-                      aria-label="Elimina questo template"
-                      onClick={handleEliminaTemplate}
+                      className={`btn${origine === 'template' ? ' primary' : ''}`}
+                      aria-pressed={origine === 'template'}
+                      onClick={() => setOrigine('template')}
                     >
-                      ✕
+                      Usa un template
                     </button>
+                    <button
+                      type="button"
+                      className={`btn${origine === 'importa' ? ' primary' : ''}`}
+                      aria-pressed={origine === 'importa'}
+                      onClick={() => {
+                        setOrigine('importa');
+                        setModaleImportaAperta(true);
+                      }}
+                    >
+                      Importa scheda esistente
+                    </button>
+                  </div>
+
+                  {origine === 'template' ? (
+                    <div className="template-row">
+                      <select id="template" value={templateId} onChange={handleSelezionaTemplate}>
+                        <option value="">Nessun template selezionato</option>
+                        {templates.map((t) => (
+                          <option key={t.id} value={t.id}>
+                            {t.nome}
+                          </option>
+                        ))}
+                        <option value={NUOVO_TEMPLATE}>+ Carica nuovo template…</option>
+                      </select>
+                      {templateId && (
+                        <button
+                          type="button"
+                          className="scheda-delete"
+                          title="Elimina questo template"
+                          aria-label="Elimina questo template"
+                          onClick={handleEliminaTemplate}
+                        >
+                          ✕
+                        </button>
+                      )}
+                    </div>
+                  ) : (
+                    importoNotice && (
+                      <div className="import-row">
+                        <p className="form-notice">{importoNotice}</p>
+                      </div>
+                    )
                   )}
                 </div>
-              ) : (
-                <div className="import-row">
-                  {importoNotice && <p className="form-notice">{importoNotice}</p>}
-                  <button type="button" className="btn" onClick={() => setModaleImportaAperta(true)}>
-                    Scegli un altro file
-                  </button>
-                </div>
-              )}
-            </div>
+              </>
+            )}
 
             <Modal
               open={modaleTemplateAperta}
