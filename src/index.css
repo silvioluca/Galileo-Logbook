@@ -138,6 +138,8 @@ textarea {
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
   text-decoration: none;
+  min-width: 11rem;
+  text-align: center;
 }
 
 .btn:hover {

@@ -207,20 +207,6 @@ export default function CreaScheda() {
     setTemplateId(e.target.value);
   };
 
-  const handleEliminaTemplate = async () => {
-    if (!templateId) return;
-    const t = templates.find((x) => x.id === templateId);
-    if (!window.confirm(`Eliminare il template "${t?.nome}"? Utile per rimuovere doppioni.`)) return;
-    try {
-      await deleteTemplate(templateId);
-      setTemplates((prev) => prev.filter((x) => x.id !== templateId));
-      setTemplateId('');
-    } catch (err) {
-      window.alert('Eliminazione non riuscita: devi essere autenticato come proprietario.');
-      console.warn(err);
-    }
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSalvataggio(true);
@@ -331,7 +317,7 @@ export default function CreaScheda() {
         <h1>{modoModifica ? 'Modifica Scheda' : 'Crea Scheda'}</h1>
         <p>
           {modoModifica
-            ? "Aggiorna i dettagli dell'esperienza. I file scaricabili si gestiscono in fondo."
+            ? "Aggiorna i dettagli dell'esperienza. Se la scheda è importata, i file scaricabili si gestiscono in fondo."
             : "Compila i dettagli dell'esperienza. Scegli in fondo se generarla da un template o importarla da un file esistente."}
         </p>
 
@@ -486,17 +472,6 @@ export default function CreaScheda() {
                         ))}
                         <option value={NUOVO_TEMPLATE}>+ Carica nuovo template…</option>
                       </select>
-                      {templateId && (
-                        <button
-                          type="button"
-                          className="scheda-delete"
-                          title="Elimina questo template"
-                          aria-label="Elimina questo template"
-                          onClick={handleEliminaTemplate}
-                        >
-                          ✕
-                        </button>
-                      )}
                     </div>
                   ) : (
                     importoNotice && (
@@ -528,7 +503,7 @@ export default function CreaScheda() {
               {importoNotice && <p className="form-notice">{importoNotice}</p>}
             </Modal>
 
-            {modoModifica && (
+            {modoModifica && origine === 'importa' && (
               <>
                 <div className="ornament-divider">✦</div>
                 <div className="gestione-file">

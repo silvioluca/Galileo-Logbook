@@ -34,6 +34,7 @@
 .navbar-auth .btn {
   font-size: 0.85rem;
   padding: 0.4rem 0.8rem;
+  min-width: 0;
   max-width: 220px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -280,6 +281,8 @@
   color: var(--ink-soft);
   cursor: pointer;
   white-space: nowrap;
+  min-width: 3.6rem;
+  text-align: center;
 }
 
 .scheda-export:hover {

@@ -1,4 +1,4 @@
-import { Document, Packer, Paragraph, HeadingLevel, TextRun, AlignmentType } from 'docx';
+import { Document, Packer, Paragraph, HeadingLevel, TextRun, AlignmentType, BorderStyle } from 'docx';
 import { jsPDF } from 'jspdf';
 import { renderTemplateLatex } from './renderTemplate';
 import { determinaSkin } from './templateSkin';
@@ -36,70 +36,97 @@ function metaTesto(scheda) {
 
 // ---------- DOCX ----------
 
+const FONT_CLASSICO = 'Cambria';
+const FONT_COMPATTO = 'Arial';
+const FONT_ARTISTICO = 'Garamond';
+
 function docxClassico(scheda) {
   const { titolo, scopo, strumenti = [], procedimento } = scheda;
+  const f = (opzioni) => new TextRun({ font: FONT_CLASSICO, ...opzioni });
   return [
-    new Paragraph({ text: titolo || 'Scheda di laboratorio', heading: HeadingLevel.TITLE }),
-    new Paragraph({ children: [new TextRun({ text: metaTesto(scheda), italics: true })] }),
+    new Paragraph({
+      heading: HeadingLevel.TITLE,
+      children: [f({ text: titolo || 'Scheda di laboratorio' })],
+    }),
+    new Paragraph({ children: [f({ text: metaTesto(scheda), italics: true })] }),
     new Paragraph({ text: '' }),
-    new Paragraph({ text: "Scopo dell'esperienza", heading: HeadingLevel.HEADING_2 }),
-    new Paragraph({ text: scopo || '' }),
+    new Paragraph({
+      heading: HeadingLevel.HEADING_2,
+      children: [f({ text: "Scopo dell'esperienza" })],
+    }),
+    new Paragraph({ children: [f({ text: scopo || '' })] }),
     new Paragraph({ text: '' }),
-    new Paragraph({ text: 'Materiale utilizzato', heading: HeadingLevel.HEADING_2 }),
-    ...strumenti.map((s) => new Paragraph({ text: s, bullet: { level: 0 } })),
+    new Paragraph({
+      heading: HeadingLevel.HEADING_2,
+      children: [f({ text: 'Materiale utilizzato' })],
+    }),
+    ...strumenti.map((s) => new Paragraph({ children: [f({ text: s })], bullet: { level: 0 } })),
     new Paragraph({ text: '' }),
-    new Paragraph({ text: 'Procedimento', heading: HeadingLevel.HEADING_2 }),
-    ...(haContenutoHtml(procedimento) ? convertiHtmlInDocx(procedimento) : [new Paragraph({ text: '—' })]),
+    new Paragraph({
+      heading: HeadingLevel.HEADING_2,
+      children: [f({ text: 'Procedimento' })],
+    }),
+    ...(haContenutoHtml(procedimento) ? convertiHtmlInDocx(procedimento) : [new Paragraph({ children: [f({ text: '—' })] })]),
   ];
 }
 
 function docxCompatto(scheda) {
   const { titolo, scopo, strumenti = [], procedimento, difficolta } = scheda;
+  const f = (opzioni) => new TextRun({ font: FONT_COMPATTO, ...opzioni });
   return [
     new Paragraph({
+      border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '999999', space: 4 } },
       children: [
-        new TextRun({ text: titolo || 'Scheda di laboratorio', bold: true, size: 28 }),
-        new TextRun({ text: `   Difficoltà: ${difficolta || ''}`, italics: true, size: 18 }),
+        f({ text: titolo || 'Scheda di laboratorio', bold: true, size: 26 }),
+        f({ text: `   Difficoltà: ${difficolta || ''}`, italics: true, size: 16 }),
       ],
     }),
-    new Paragraph({ children: [new TextRun({ text: metaTesto(scheda), size: 16, color: '555555' })] }),
+    new Paragraph({ children: [f({ text: metaTesto(scheda), size: 15, color: '777777' })] }),
     new Paragraph({ text: '' }),
     new Paragraph({
-      children: [new TextRun({ text: 'Scopo. ', bold: true }), new TextRun({ text: scopo || '' })],
+      children: [f({ text: 'SCOPO ', bold: true, size: 18, color: '2F6F5E' }), f({ text: scopo || '', size: 18 })],
     }),
     new Paragraph({
       children: [
-        new TextRun({ text: 'Materiale. ', bold: true }),
-        new TextRun({ text: strumenti.join(', ') }),
+        f({ text: 'MATERIALE ', bold: true, size: 18, color: '2F6F5E' }),
+        f({ text: strumenti.join(', '), size: 18 }),
       ],
     }),
-    new Paragraph({ children: [new TextRun({ text: 'Procedimento.', bold: true })] }),
-    ...(haContenutoHtml(procedimento) ? convertiHtmlInDocx(procedimento) : [new Paragraph({ text: '—' })]),
+    new Paragraph({ children: [f({ text: 'PROCEDIMENTO', bold: true, size: 18, color: '2F6F5E' })] }),
+    ...(haContenutoHtml(procedimento) ? convertiHtmlInDocx(procedimento) : [new Paragraph({ children: [f({ text: '—', size: 18 })] })]),
   ];
 }
 
 function docxArtistico(scheda) {
   const { titolo, scopo, strumenti = [], procedimento } = scheda;
+  const f = (opzioni) => new TextRun({ font: FONT_ARTISTICO, ...opzioni });
   return [
     new Paragraph({
       alignment: AlignmentType.CENTER,
-      children: [new TextRun({ text: (titolo || 'Scheda di laboratorio').toUpperCase(), bold: true, size: 32 })],
+      children: [f({ text: (titolo || 'Scheda di laboratorio').toUpperCase(), bold: true, size: 32, color: '6B4423' })],
     }),
     new Paragraph({
       alignment: AlignmentType.CENTER,
-      children: [new TextRun({ text: metaTesto(scheda), italics: true, size: 18 })],
+      children: [f({ text: metaTesto(scheda), italics: true, size: 18 })],
     }),
-    new Paragraph({ text: '' }),
+    new Paragraph({ alignment: AlignmentType.CENTER, children: [f({ text: '❦', size: 24, color: '6B4423' })] }),
     new Paragraph({
-      children: [new TextRun({ text: "SCOPO DELL'ESPERIENZA", bold: true, color: '6B4423' })],
+      alignment: AlignmentType.CENTER,
+      children: [f({ text: "SCOPO DELL'ESPERIENZA", bold: true, color: '6B4423' })],
     }),
-    new Paragraph({ children: [new TextRun({ text: scopo || '', italics: true })] }),
-    new Paragraph({ alignment: AlignmentType.CENTER, text: '✦' }),
-    new Paragraph({ children: [new TextRun({ text: 'MATERIALE UTILIZZATO', bold: true, color: '6B4423' })] }),
-    ...strumenti.map((s) => new Paragraph({ text: s, bullet: { level: 0 } })),
-    new Paragraph({ alignment: AlignmentType.CENTER, text: '✦' }),
-    new Paragraph({ children: [new TextRun({ text: 'PROCEDIMENTO', bold: true, color: '6B4423' })] }),
-    ...(haContenutoHtml(procedimento) ? convertiHtmlInDocx(procedimento) : [new Paragraph({ text: '—' })]),
+    new Paragraph({ alignment: AlignmentType.CENTER, children: [f({ text: scopo || '', italics: true })] }),
+    new Paragraph({ alignment: AlignmentType.CENTER, children: [f({ text: '✦' })] }),
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      children: [f({ text: 'MATERIALE UTILIZZATO', bold: true, color: '6B4423' })],
+    }),
+    ...strumenti.map((s) => new Paragraph({ alignment: AlignmentType.CENTER, children: [f({ text: s })] })),
+    new Paragraph({ alignment: AlignmentType.CENTER, children: [f({ text: '✦' })] }),
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      children: [f({ text: 'PROCEDIMENTO', bold: true, color: '6B4423' })],
+    }),
+    ...(haContenutoHtml(procedimento) ? convertiHtmlInDocx(procedimento) : [new Paragraph({ alignment: AlignmentType.CENTER, children: [f({ text: '—' })] })]),
   ];
 }
 
@@ -115,13 +142,14 @@ export async function scaricaDocx(scheda) {
 
 // ---------- PDF ----------
 
-function creaScrittore(doc, margine, larghezza, altezzaPagina) {
+function creaScrittore(doc, margine, larghezza, altezzaPagina, famiglia = 'times') {
   let y = margine;
   return {
-    scrivi(testo, { dimensione = 11, stile = 'normal', interlinea = 14, spazioSopra = 0, centrato = false } = {}) {
+    scrivi(testo, { dimensione = 11, stile = 'normal', interlinea = 14, spazioSopra = 0, centrato = false, colore = null } = {}) {
       y += spazioSopra;
-      doc.setFont('times', stile);
+      doc.setFont(famiglia, stile);
       doc.setFontSize(dimensione);
+      doc.setTextColor(...(colore || [0, 0, 0]));
       const righe = doc.splitTextToSize(testo || '', larghezza);
       righe.forEach((riga) => {
         if (y > altezzaPagina - margine) {
@@ -142,12 +170,13 @@ function creaScrittore(doc, margine, larghezza, altezzaPagina) {
     set y(valore) {
       y = valore;
     },
+    famiglia,
   };
 }
 
 function pdfClassico(doc, margine, larghezza, altezzaPagina, scheda) {
   const { titolo, scopo, strumenti = [], procedimento } = scheda;
-  const w = creaScrittore(doc, margine, larghezza, altezzaPagina);
+  const w = creaScrittore(doc, margine, larghezza, altezzaPagina, 'times');
 
   w.scrivi(titolo || 'Scheda di laboratorio', { dimensione: 18, stile: 'bold', interlinea: 22 });
   w.scrivi(metaTesto(scheda), { dimensione: 10, stile: 'italic', interlinea: 14 });
@@ -169,17 +198,20 @@ function pdfClassico(doc, margine, larghezza, altezzaPagina, scheda) {
 
 function pdfCompatto(doc, margine, larghezza, altezzaPagina, scheda) {
   const { titolo, scopo, strumenti = [], procedimento, difficolta } = scheda;
-  const w = creaScrittore(doc, margine, larghezza, altezzaPagina);
+  const w = creaScrittore(doc, margine, larghezza, altezzaPagina, 'helvetica');
+  const accento = [47, 111, 94];
 
   w.scrivi(`${titolo || 'Scheda di laboratorio'}   —   Difficoltà: ${difficolta || ''}`, {
     dimensione: 14,
     stile: 'bold',
     interlinea: 17,
   });
-  w.scrivi(metaTesto(scheda), { dimensione: 8, stile: 'italic', interlinea: 11 });
-  w.scrivi(`Scopo. ${scopo || ''}`, { dimensione: 9.5, interlinea: 12, spazioSopra: 6 });
-  w.scrivi(`Materiale. ${strumenti.join(', ')}`, { dimensione: 9.5, interlinea: 12, spazioSopra: 4 });
-  w.scrivi('Procedimento.', { dimensione: 9.5, interlinea: 12, spazioSopra: 4 });
+  doc.setDrawColor(150, 150, 150);
+  doc.line(margine, w.y - 11, margine + larghezza, w.y - 11);
+  w.scrivi(metaTesto(scheda), { dimensione: 8, stile: 'italic', interlinea: 11, colore: [120, 120, 120] });
+  w.scrivi(`SCOPO. ${scopo || ''}`, { dimensione: 9.5, interlinea: 12, spazioSopra: 6, colore: accento });
+  w.scrivi(`MATERIALE. ${strumenti.join(', ')}`, { dimensione: 9.5, interlinea: 12, spazioSopra: 4, colore: accento });
+  w.scrivi('PROCEDIMENTO.', { dimensione: 9.5, stile: 'bold', interlinea: 12, spazioSopra: 4, colore: accento });
   if (haContenutoHtml(procedimento)) {
     disegnaHtmlInPdf({ doc, scrittore: w, margine, html: procedimento, opzioniTesto: { dimensione: 9.5, interlinea: 12 } });
   } else {
@@ -189,32 +221,35 @@ function pdfCompatto(doc, margine, larghezza, altezzaPagina, scheda) {
 
 function pdfArtistico(doc, margine, larghezza, altezzaPagina, scheda) {
   const { titolo, scopo, strumenti = [], procedimento } = scheda;
-  const w = creaScrittore(doc, margine, larghezza, altezzaPagina);
+  const w = creaScrittore(doc, margine, larghezza, altezzaPagina, 'times');
+  const accento = [107, 68, 35];
 
   w.scrivi((titolo || 'Scheda di laboratorio').toUpperCase(), {
     dimensione: 20,
     stile: 'bold',
     interlinea: 24,
     centrato: true,
+    colore: accento,
   });
   w.scrivi(metaTesto(scheda), { dimensione: 9, stile: 'italic', interlinea: 13, centrato: true });
+  w.scrivi('❦', { dimensione: 14, interlinea: 18, spazioSopra: 4, centrato: true, colore: accento });
 
-  w.scrivi("SCOPO DELL'ESPERIENZA", { dimensione: 12, stile: 'bold', interlinea: 15, spazioSopra: 14 });
-  w.scrivi(scopo || '—', { stile: 'italic' });
+  w.scrivi("SCOPO DELL'ESPERIENZA", { dimensione: 12, stile: 'bold', interlinea: 15, spazioSopra: 10, centrato: true, colore: accento });
+  w.scrivi(scopo || '—', { stile: 'italic', centrato: true });
 
-  w.scrivi('✦', { interlinea: 16, spazioSopra: 6, centrato: true });
+  w.scrivi('✦', { interlinea: 16, spazioSopra: 6, centrato: true, colore: accento });
 
-  w.scrivi('MATERIALE UTILIZZATO', { dimensione: 12, stile: 'bold', interlinea: 15, spazioSopra: 6 });
-  if (strumenti.length === 0) w.scrivi('—');
-  else strumenti.forEach((s) => w.scrivi(`•  ${s}`));
+  w.scrivi('MATERIALE UTILIZZATO', { dimensione: 12, stile: 'bold', interlinea: 15, spazioSopra: 6, centrato: true, colore: accento });
+  if (strumenti.length === 0) w.scrivi('—', { centrato: true });
+  else strumenti.forEach((s) => w.scrivi(s, { centrato: true }));
 
-  w.scrivi('✦', { interlinea: 16, spazioSopra: 6, centrato: true });
+  w.scrivi('✦', { interlinea: 16, spazioSopra: 6, centrato: true, colore: accento });
 
-  w.scrivi('PROCEDIMENTO', { dimensione: 12, stile: 'bold', interlinea: 15, spazioSopra: 6 });
+  w.scrivi('PROCEDIMENTO', { dimensione: 12, stile: 'bold', interlinea: 15, spazioSopra: 6, centrato: true, colore: accento });
   if (haContenutoHtml(procedimento)) {
     disegnaHtmlInPdf({ doc, scrittore: w, margine, html: procedimento, opzioniTesto: { dimensione: 11, interlinea: 14 } });
   } else {
-    w.scrivi('—');
+    w.scrivi('—', { centrato: true });
   }
 }
 

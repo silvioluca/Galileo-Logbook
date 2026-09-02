@@ -36,11 +36,12 @@ function disegnaParagrafoMisto({ doc, margine, larghezza, altezzaPagina, scritto
   doc.setFontSize(dimensione);
   let x = margine;
   let y = scrittore.y;
+  const famiglia = scrittore.famiglia || 'times';
 
   segmenti.forEach((segmento) => {
     const parole = segmento.testo.split(/(\s+)/).filter((p) => p !== '');
     parole.forEach((parola) => {
-      doc.setFont('times', stileJsPdf(segmento));
+      doc.setFont(famiglia, stileJsPdf(segmento));
       const larghezzaParola = doc.getTextWidth(parola);
       const finePagina = x + larghezzaParola > margine + larghezza;
       if (finePagina && parola.trim() !== '') {
@@ -112,7 +113,7 @@ export function disegnaHtmlInPdf({ doc, scrittore, margine, larghezza, altezzaPa
         margin: { left: margine, right: margine },
         head: haIntestazione ? [righe[0]] : undefined,
         body: haIntestazione ? righe.slice(1) : righe,
-        styles: { font: 'times', fontSize: opzioniTesto.dimensione ? opzioniTesto.dimensione - 1.5 : 9.5 },
+        styles: { font: scrittore.famiglia || 'times', fontSize: opzioniTesto.dimensione ? opzioniTesto.dimensione - 1.5 : 9.5 },
         headStyles: { fillColor: [235, 222, 195], textColor: [43, 29, 15] },
         theme: 'grid',
       });
