@@ -1,42 +1,23 @@
 import { useMemo, useState } from 'react';
 import { NOBEL_FISICA } from '../data/nobelFisica';
 import Modal from '../components/Modal';
-import { formattaData, traduciLuogo } from '../utils/nobelUtils';
+import { formattaData } from '../utils/nobelUtils';
 
 function decennio(anno) {
   const inizio = Math.floor(anno / 10) * 10;
   return `${inizio}–${inizio + 9}`;
 }
 
-function componiBiografia(laureato, condivisoCon) {
-  const nascitaStr = formattaData(laureato.nascita);
-  const luogoNascita = traduciLuogo(laureato.luogoNascita);
-  const morteStr = formattaData(laureato.morte);
-  const luogoMorte = traduciLuogo(laureato.luogoMorte);
-
-  const nato = laureato.genere === 'female' ? 'nata' : 'nato';
-  const morto = laureato.genere === 'female' ? 'morta' : 'morto';
-
-  const frasi = [];
-  let f1 = `${laureato.nome} è ${nato}` + (nascitaStr ? ` il ${nascitaStr}` : '');
-  if (luogoNascita) f1 += ` a ${luogoNascita}`;
-  frasi.push(f1 + '.');
-
-  if (morteStr) {
-    let f2 = `È ${morto} il ${morteStr}`;
-    if (luogoMorte) f2 += ` a ${luogoMorte}`;
-    frasi.push(f2 + '.');
-  }
-
-  let f3 = `Ha ricevuto il Premio Nobel per la Fisica nel ${laureato.anno}`;
-  if (condivisoCon.length === 1) f3 += ` insieme a ${condivisoCon[0]}`;
+// Le date/luoghi di nascita e morte sono già nella bio estesa di Wikipedia:
+// qui si riportano solo i fatti specifici del premio, per non ripetersi.
+function infoPremio(laureato, condivisoCon) {
+  let testo = `Premio Nobel per la Fisica ${laureato.anno}`;
+  if (condivisoCon.length === 1) testo += `, condiviso con ${condivisoCon[0]}`;
   else if (condivisoCon.length > 1) {
-    f3 += ` insieme a ${condivisoCon.slice(0, -1).join(', ')} e ${condivisoCon[condivisoCon.length - 1]}`;
+    testo += `, condiviso con ${condivisoCon.slice(0, -1).join(', ')} e ${condivisoCon[condivisoCon.length - 1]}`;
   }
-  f3 += ` "${laureato.motivazione}".`;
-  frasi.push(f3);
-
-  return frasi.join(' ');
+  testo += ` — "${laureato.motivazione}"`;
+  return testo;
 }
 
 export default function Nobel() {
@@ -114,6 +95,17 @@ export default function Nobel() {
                   if (e.key === 'Enter' || e.key === ' ') setSelezionato(l);
                 }}
               >
+                <div className="nobel-card-foto">
+                  {l.immagine ? (
+                    <img
+                      src={`${import.meta.env.BASE_URL}${l.immagine}`}
+                      alt={l.nome}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="nobel-card-foto-placeholder" aria-hidden="true" />
+                  )}
+                </div>
                 <h3>{l.nome}</h3>
                 <p className="strumento-meta">
                   ({formattaData(l.nascita)} – {formattaData(l.morte) || 'vivente'})
@@ -144,14 +136,11 @@ export default function Nobel() {
                 )}
               </div>
               <div className="nobel-modal-testo">
-                <p className="strumento-meta">Premio Nobel per la Fisica {selezionato.anno}</p>
-                <p>{componiBiografia(selezionato, condivisoCon)}</p>
-                {selezionato.bioEstesa && (
-                  <>
-                    <div className="ornament-divider">✦</div>
-                    <p className="nobel-bio-estesa">{selezionato.bioEstesa}</p>
-                  </>
-                )}
+                <p className="strumento-meta">
+                  ({formattaData(selezionato.nascita)} – {formattaData(selezionato.morte) || 'vivente'})
+                </p>
+                <p className="nobel-anno">{infoPremio(selezionato, condivisoCon)}</p>
+                {selezionato.bioEstesa && <p className="nobel-bio-estesa">{selezionato.bioEstesa}</p>}
                 {selezionato.wikipedia && (
                   <p>
                     <a href={selezionato.wikipedia} target="_blank" rel="noreferrer">
