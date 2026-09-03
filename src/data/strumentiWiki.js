@@ -130,7 +130,7 @@ export const STRUMENTI_WIKI = [
     sensibilita: 'dipende dalla scala graduata del binario, tipicamente 1 mm',
     descrizione:
       "Guida rettilinea graduata su cui scorrono sorgente luminosa, lenti/specchi e schermo, mantenendoli allineati sullo stesso asse ottico. Permette di verificare sperimentalmente l'equazione dei punti coniugati e di misurare distanze focali di lenti e specchi.",
-    immagine: null,
+    immagine: 'images/strumenti/banco-ottico.jpg',
   },
   {
     nome: 'Prisma ottico',
@@ -390,7 +390,7 @@ export const STRUMENTI_WIKI = [
     unita: '—',
     descrizione:
       "Uno specchio concavo (sferico o parabolico) concentra i raggi solari paralleli in un punto, il fuoco, dove la temperatura può salire abbastanza da incendiare materiali combustibili. Noto fin dall'antichità greca e legato alla leggendaria (e discussa) difesa di Siracusa attribuita ad Archimede, illustra in modo diretto la riflessione e la concentrazione dell'energia luminosa.",
-    immagine: null,
+    immagine: 'images/strumenti/specchio-ustorio.jpg',
   },
   {
     nome: 'Camera oscura',
