@@ -1405,7 +1405,7 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro fondamentali indagini teoriche sulla struttura elettronica dei sistemi magnetici e disordinati',
     wikipedia: 'https://en.wikipedia.org/wiki/Nevill_Francis_Mott',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Nevill_Francis_Mott.jpg',
     bioEstesa: 'Sir Nevill Francis Mott (FRS, CH; Leeds, 30 settembre 1905 – Milton Keynes, 8 agosto 1996) è stato un fisico inglese, vincitore, insieme a Philip Warren Anderson e John Hasbrouck van Vleck, del premio Nobel per la fisica nel 1977, per «le loro fondamentali indagini teoriche sulla struttura elettronica dei sistemi magnetici e disordinati».',
   },
   {
@@ -1782,7 +1782,7 @@ export const NOBEL_FISICA = [
     motivazione: 'per lo sviluppo della tecnica della trappola ionica',
     wikipedia: 'https://en.wikipedia.org/wiki/Wolfgang_Paul',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Wolfgang_Paul.jpg',
     bioEstesa: 'Wolfgang Paul (Lorenzkirch, 10 agosto 1913 – Bonn, 7 dicembre 1993) è stato un fisico tedesco.\nVenne insignito del Premio Nobel per la Fisica nel 1989, per il suo contributo nella messa a punto della Trappola Ionica, un dispositivo utilizzato per intrappolare particelle cariche mediante campi elettromagnetici oscillanti. La trappola ionica ha trovato ampie applicazioni nella spettrometria di massa, nello studio di singoli ioni e elettroni, o ancora nel computer quantistico, dove viene impiegata per la realizzazione di qubit basati su ioni intrappolati.',
   },
   {
@@ -2835,7 +2835,7 @@ export const NOBEL_FISICA = [
     motivazione: 'per la modellizzazione fisica del clima terrestre, quantificando la variabilità e prevedendo in modo affidabile il riscaldamento globale.',
     wikipedia: 'https://en.wikipedia.org/wiki/Klaus_Hasselmann',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Klaus_Hasselmann.jpg',
     bioEstesa: 'Klaus Ferdinand Hasselmann (Amburgo, 25 ottobre 1931) è un climatologo, fisico e meteorologo tedesco noto per i suoi studi pionieristici sull\'utilizzo dei computer per le simulazioni climatiche.\nNel 2021 ha ricevuto il premio Nobel per la fisica (assieme a Syukuro Manabe e separatamente da Giorgio Parisi) "per la modellizzazione fisica del clima terrestre, quantificando la variabilità e prevedendo in modo affidabile il riscaldamento globale". Si trattò in particolare della prima assegnazione di tale premio per argomenti legati alla climatologia, e in generale alla geofisica.',
   },
   {
