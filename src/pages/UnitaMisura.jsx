@@ -80,54 +80,58 @@ export default function UnitaMisura() {
         {filtrate.length === 0 ? (
           <p className="empty-state">Nessuna unità corrisponde alla ricerca.</p>
         ) : (
-          <div className="unita-table-wrap">
-            <table className="scheda-table unita-table">
-              <colgroup>
-                <col style={{ width: '18%' }} />
-                <col style={{ width: '8%' }} />
-                <col style={{ width: '18%' }} />
-                <col style={{ width: '10%' }} />
-                <col style={{ width: '22%' }} />
-                <col style={{ width: '14%' }} />
-              </colgroup>
-              {[...gruppi.entries()]
-                .filter(([, elenco]) => elenco.length > 0)
-                .map(([categoria, elenco]) => (
-                  <tbody key={categoria}>
-                    <tr className="riga-branca">
-                      <th colSpan={6}>{categoria}</th>
-                    </tr>
-                    <tr className="unita-intestazione">
-                      <th>Grandezza</th>
-                      <th>Simbolo</th>
-                      <th>Unità di misura</th>
-                      <th>Simbolo</th>
-                      <th>Formula dimensionale</th>
-                      <th>Branca</th>
-                    </tr>
-                    {elenco.map((u) => (
-                      <tr
-                        key={`${u.categoria}-${u.grandezza}-${u.unita}`}
-                        className="scheda-row unita-row"
-                        role="button"
-                        tabIndex={0}
-                        onClick={() => setSelezionata(u)}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter' || e.key === ' ') setSelezionata(u);
-                        }}
-                      >
-                        <td>{u.grandezza}</td>
-                        <td>{u.simboloGrandezza}</td>
-                        <td>{u.unita}</td>
-                        <td>{u.simboloUnita}</td>
-                        <td>{u.formulaDimensionale}</td>
-                        <td>{u.branca}</td>
+          [...gruppi.entries()]
+            .filter(([, elenco]) => elenco.length > 0)
+            .map(([categoria, elenco]) => (
+              <section key={categoria} className="unita-sezione">
+                <h2>
+                  {categoria} <span className="unita-sezione-conteggio">({elenco.length})</span>
+                </h2>
+                <div className="unita-table-wrap etched-frame">
+                  <table className="scheda-table unita-table">
+                    <colgroup>
+                      <col style={{ width: '18%' }} />
+                      <col style={{ width: '8%' }} />
+                      <col style={{ width: '18%' }} />
+                      <col style={{ width: '10%' }} />
+                      <col style={{ width: '22%' }} />
+                      <col style={{ width: '14%' }} />
+                    </colgroup>
+                    <thead>
+                      <tr className="unita-intestazione">
+                        <th>Grandezza</th>
+                        <th>Simbolo</th>
+                        <th>Unità di misura</th>
+                        <th>Simbolo</th>
+                        <th>Formula dimensionale</th>
+                        <th>Branca</th>
                       </tr>
-                    ))}
-                  </tbody>
-                ))}
-            </table>
-          </div>
+                    </thead>
+                    <tbody>
+                      {elenco.map((u) => (
+                        <tr
+                          key={`${u.categoria}-${u.grandezza}-${u.unita}`}
+                          className="scheda-row unita-row"
+                          role="button"
+                          tabIndex={0}
+                          onClick={() => setSelezionata(u)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') setSelezionata(u);
+                          }}
+                        >
+                          <td>{u.grandezza}</td>
+                          <td>{u.simboloGrandezza}</td>
+                          <td>{u.unita}</td>
+                          <td>{u.simboloUnita}</td>
+                          <td>{u.formulaDimensionale}</td>
+                          <td>{u.branca}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            ))
         )}
 
         <Modal open={Boolean(selezionata)} onClose={() => setSelezionata(null)} title={selezionata?.unita}>

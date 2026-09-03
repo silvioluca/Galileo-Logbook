@@ -451,8 +451,26 @@
   background: rgba(107, 68, 35, 0.06);
 }
 
+.unita-sezione {
+  margin-bottom: 3.5rem;
+}
+
+.unita-sezione h2 {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.unita-sezione-conteggio {
+  font-size: 0.85rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
 .unita-table-wrap {
   overflow-x: auto;
+  padding: 1.25rem 1.5rem;
 }
 
 .unita-row {
