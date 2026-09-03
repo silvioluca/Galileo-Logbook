@@ -1,6 +1,7 @@
 // Albo dei premi Nobel per la Fisica (1901-2025), generato da dati ufficiali
-// (NobelPrize.org API) incrociati con le motivazioni in italiano di Wikipedia.
-// Il campo `immagine` non è ancora popolato.
+// (NobelPrize.org API) incrociati con le motivazioni in italiano di Wikipedia
+// e con l'incipit biografico di Wikipedia in italiano (campo `bioEstesa`).
+// Le immagini sono ritratti reali trasformati in stile acquaforte/seppia.
 export const NOBEL_FISICA = [
   {
     anno: 1901,
@@ -12,7 +13,8 @@ export const NOBEL_FISICA = [
     motivazione: 'in riconoscimento dello straordinario servizio reso per la scoperta delle importanti radiazioni che in seguito presero il suo nome (raggi X)',
     wikipedia: 'https://en.wikipedia.org/wiki/Wilhelm_Röntgen',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Wilhelm_Rntgen.png',
+    bioEstesa: 'Wilhelm Conrad Röntgen (Lennep, 27 marzo 1845 – Monaco di Baviera, 10 febbraio 1923) è stato un fisico tedesco. \nIl suo nome è legato alla scoperta, avvenuta l\'8 novembre 1895, della radiazione elettromagnetica nell\'intervallo di frequenza oggi noto come raggi X. L\'annuncio di questa scoperta avvenne il 5 gennaio 1896. Il luogo della scoperta oggi è un piccolo museo, la Röntgen-Gedächtnisstätte. A Röntgen fu assegnata la laurea onoraria di dottore in medicina dall\'Università di Würzburg, e il suo cognome è entrato a far parte del lessico della lingua tedesca, e si traduce appunto con "fare una radiografia".\nPer questa scoperta, Röntgen ricevette il primo premio Nobel per la fisica nel 1901. La motivazione fu "in riconoscimento dello straordinario servizio reso per la scoperta delle importanti radiazioni che in seguito presero il suo nome". Röntgen donò il premio in denaro alla sua università. Come Pierre Curie avrebbe fatto alcuni anni più tardi, Röntgen rifiutò di brevettare questa scoperta per motivi morali; non volle nemmeno che le nuove radiazioni prendessero il suo nome, anche se questo avvenne, indipendentemente dalla sua volontà.',
   },
   {
     anno: 1902,
@@ -24,7 +26,8 @@ export const NOBEL_FISICA = [
     motivazione: 'in riconoscimento dello straordinario servizio reso con le loro ricerche sull\'influenza del magnetismo sui fenomeni di emissione della luce (effetto Zeeman)',
     wikipedia: 'https://en.wikipedia.org/wiki/Hendrik_Lorentz',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Hendrik_Lorentz.png',
+    bioEstesa: 'Hendrik Antoon Lorentz (Arnhem, 18 luglio 1853 – Haarlem, 4 febbraio 1928) è stato un fisico olandese.\nFamoso per le sue ricerche sull\'elettromagnetismo (in particolare per la Forza di Lorentz) e l\'elettrodinamica, alcuni suoi contributi importanti, come le trasformazioni di Lorentz e alcune ipotesi sulla contrazione dei corpi in movimento, furono utilizzati da Albert Einstein per la descrizione dello spazio e del tempo nella formulazione della relatività ristretta.\nRicevette nel 1902 il Premio Nobel per la fisica assieme a Pieter Zeeman per la scoperta e la spiegazione teorica dell\'effetto Zeeman. Gli è stato dedicato anche un cratere lunare di 312 km di diametro.',
   },
   {
     anno: 1902,
@@ -36,7 +39,8 @@ export const NOBEL_FISICA = [
     motivazione: 'in riconoscimento dello straordinario servizio reso con le loro ricerche sull\'influenza del magnetismo sui fenomeni di emissione della luce (effetto Zeeman)',
     wikipedia: 'https://en.wikipedia.org/wiki/Pieter_Zeeman',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Pieter_Zeeman.png',
+    bioEstesa: 'Pieter Zeeman ([zeːmɑn]; Zonnemaire, 25 maggio 1865 – Amsterdam, 9 ottobre 1943) è stato un fisico olandese.\nNel 1902 divise il Premio Nobel per la fisica con Hendrik Lorentz, per la sua scoperta dell\'effetto Zeeman.',
   },
   {
     anno: 1903,
@@ -48,7 +52,8 @@ export const NOBEL_FISICA = [
     motivazione: 'in riconoscimento degli straordinari servizi che ha reso con la sua scoperta della radioattività spontanea',
     wikipedia: 'https://en.wikipedia.org/wiki/Henri_Becquerel',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Henri_Becquerel.png',
+    bioEstesa: 'Antoine Henri Becquerel (Parigi, 15 dicembre 1852 – Le Croisic, 25 agosto 1908) è stato un fisico francese, premio Nobel e scopritore della radioattività.',
   },
   {
     anno: 1903,
@@ -60,7 +65,8 @@ export const NOBEL_FISICA = [
     motivazione: 'in riconoscimento dei servizi straordinari che essi hanno reso nella loro ricerca congiunta sui fenomeni radioattivi scoperti dal professor Henri Becquerel',
     wikipedia: 'https://en.wikipedia.org/wiki/Pierre_Curie',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Pierre_Curie.png',
+    bioEstesa: 'Pierre Curie ([ˈpjɛʁ kyˈʁi]; Parigi, 15 maggio 1859 – Parigi, 19 aprile 1906) è stato un fisico e matematico francese.\n\nEgli fu un pioniere nei campi della cristallografia, del magnetismo, della piezoelettricità e della radioattività. Nel 1903 ricevette il premio Nobel per la fisica con sua moglie, Maria Skłodowska, ed Antoine Henri Becquerel «a riconoscimento degli straordinari servigi che essi hanno reso grazie alle loro ricerche congiunte sui fenomeni radioattivi scoperti dal professor Antoine Henri Becquerel».',
   },
   {
     anno: 1903,
@@ -72,7 +78,8 @@ export const NOBEL_FISICA = [
     motivazione: 'in riconoscimento dei servizi straordinari che essi hanno reso nella loro ricerca congiunta sui fenomeni radioattivi scoperti dal professor Henri Becquerel',
     wikipedia: 'https://en.wikipedia.org/wiki/Marie_Curie',
     genere: 'female',
-    immagine: null,
+    immagine: 'images/nobel/Marie_Curie.png',
+    bioEstesa: 'Maria Salomea Skłodowska-Curie (AFI: [ˈmarja skwɔˈdɔfska kʲiˈri]; Varsavia, 7 novembre 1867 – Passy, 4 luglio 1934) è stata una fisica, chimica e matematica polacca naturalizzata francese.\n\nNel 1903 fu la prima donna insignita del premio Nobel. Ricevette il premio Nobel per la fisica, insieme al marito Pierre Curie e ad Antoine Henri Becquerel, per i suoi studi sulle radiazioni. Nel 1911 ricevette un altro premio Nobel, questa volta per la chimica per aver scoperto il radio e il polonio, il cui nome è stato scelto proprio in onore della sua terra natale. È stata una dei cinque vincitori del Nobel ad averne ricevuti due ed è la sola ad aver vinto il premio in due distinti campi scientifici.\nMarie Curie crebbe nella Polonia russa; poiché qui le donne non potevano essere ammesse agli studi superiori, si trasferì a Parigi e nel 1891 iniziò a frequentare la Sorbona, dove si laureò in fisica e matematica. Nel dicembre del 1897 iniziò a compiere gli studi sulle sostanze radioattive, che da allora rimarranno al centro dei suoi interessi. Nel 1906, dopo la morte del marito Pierre Curie, investito da una carrozza, le fu concesso di insegnare alla Sorbona. Due anni più tardi le venne assegnata la cattedra di fisica generale, divenendo così la prima donna ad insegnare alla Sorbona. Morì in Francia nel 1934 per un\'anemia aplastica, causata dalle radiazioni a cui il suo corpo era stato per lungo tempo esposto e di cui aveva sempre negato la pericolosità.',
   },
   {
     anno: 1904,
@@ -84,7 +91,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le sue indagini sulla densità dei più importanti gas e per la sua scoperta dell\'argon, in connessione con questi studi',
     wikipedia: 'https://en.wikipedia.org/wiki/John_Strutt,_3rd_Baron_Rayleigh',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_Strutt_3rd_Baron_Rayleigh.png',
+    bioEstesa: 'John William Strutt, 3º barone di Rayleigh (Langford Grove, 12 novembre 1842 – Witham, 30 giugno 1919), è stato un fisico britannico.\nHa passato la maggior parte della sua carriera all’Università di Cambridge. Tra i numerosi premi, è stato insignito del Premio Nobel per la fisica nel 1904 “per i suoi studi dei più importanti gas e per la scoperta dell’argon in connessione ai suoi studi”.\nRayleigh sviluppò la prima trattazione teorica della diffusione ottica di particelle (scattering) molto minori della lunghezza d’onda della luce, un fenomeno noto oggi come “diffusione di Rayleigh”, che spiega inoltre perché il cielo è blu. Ha studiato e descritto le onde superficiali nei solidi, concetto che è oggi conosciuto come “Onde di Rayleigh”. Ha contribuito estensivamente alla fluidodinamica con concetti come il numero di Rayleigh, il flusso di Rayleigh, l’instabilità di Rayleigh-Taylor e il criterio di Rayleigh per la stabilità dei flussi di Taylor-Couette. La sua derivazione della legge di Rayleigh-Jeans per la radiazione classica di corpo nero ha giocato un ruolo importante per la nascita della meccanica quantistica.',
   },
   {
     anno: 1905,
@@ -96,7 +104,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le sue ricerche sui raggi catodici',
     wikipedia: 'https://en.wikipedia.org/wiki/Philipp_Lenard',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Philipp_Lenard.png',
+    bioEstesa: 'Philipp Eduard Anton von Lenard (Presburgo, 7 giugno 1862 – Messelhausen, 20 maggio 1947) è stato un fisico tedesco.\nFu insignito del Premio Nobel per la fisica nel 1905 per le sue ricerche sui raggi catodici, iniziate nel 1888, e le scoperte sulla maggior parte delle loro proprietà.',
   },
   {
     anno: 1906,
@@ -108,7 +117,8 @@ export const NOBEL_FISICA = [
     motivazione: 'in riconoscimento dei grandi meriti delle sue indagini teoriche e sperimentali sulla conduzione di energia elettrica dei gas',
     wikipedia: 'https://en.wikipedia.org/wiki/J._J._Thomson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/J_J_Thomson.png',
+    bioEstesa: 'Sir Joseph John Thomson (Manchester, 18 dicembre 1856 – Cambridge, 30 agosto 1940) è stato un fisico britannico, noto per aver scoperto nel 1891 l\'elettrone, la prima particella subatomica di carica elettrica negativa, mediante un esperimento con i cosiddetti tubi di Crookes.',
   },
   {
     anno: 1907,
@@ -120,7 +130,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i suoi strumenti ottici di precisione e per le indagini spettroscopiche e metrologiche effettuate con il loro aiuto (esperimento di Michelson-Morley)',
     wikipedia: 'https://en.wikipedia.org/wiki/Albert_Abraham_Michelson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Albert_Abraham_Michelson.png',
+    bioEstesa: 'Albert Abraham Michelson (Strzelno, 19 dicembre 1852 – Pasadena, 9 maggio 1931) è stato un fisico statunitense.\nÈ conosciuto principalmente per il fondamentale esperimento sul vento d\'etere, oltre che per i lavori sulla velocità della luce.',
   },
   {
     anno: 1908,
@@ -132,7 +143,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo metodo di riprodurre i colori fotograficamente basato sul fenomeno dell\'interferenza',
     wikipedia: 'https://en.wikipedia.org/wiki/Gabriel_Lippmann',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Gabriel_Lippmann.png',
+    bioEstesa: 'Gabriel Jonas Lippmann (Bonnevoie, 16 agosto 1845 – Oceano Atlantico, 13 luglio 1921) è stato un fisico francese.',
   },
   {
     anno: 1909,
@@ -144,7 +156,8 @@ export const NOBEL_FISICA = [
     motivazione: 'in riconoscimento del loro contributo allo sviluppo della telegrafia senza fili',
     wikipedia: 'https://en.wikipedia.org/wiki/Guglielmo_Marconi',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Guglielmo_Marconi.png',
+    bioEstesa: 'Guglielmo Giovanni Maria Marconi (Bologna, 25 aprile 1874 – Roma, 20 luglio 1937) è stato un inventore, imprenditore e politico italiano.\nÈ considerato uno dei principali protagonisti dello sviluppo delle telecomunicazioni moderne per il suo contributo alla realizzazione e alla diffusione della telegrafia senza fili, un sistema di comunicazione a distanza basato sulle onde radio. Il suo lavoro contribuì allo sviluppo dei sistemi di radiocomunicazione e gli valse il premio Nobel per la fisica nel 1909, assegnato congiuntamente a Carl Ferdinand Braun «in riconoscimento del loro contributo allo sviluppo della telegrafia senza fili».\n\n',
   },
   {
     anno: 1909,
@@ -156,7 +169,8 @@ export const NOBEL_FISICA = [
     motivazione: 'in riconoscimento del loro contributo allo sviluppo della telegrafia senza fili',
     wikipedia: 'https://en.wikipedia.org/wiki/Karl_Ferdinand_Braun',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Karl_Ferdinand_Braun.png',
+    bioEstesa: 'Karl Ferdinand Braun (Fulda, 6 giugno 1850 – New York, 20 aprile 1918) è stato un fisico tedesco.\nNel 1909 gli fu assegnato il premio Nobel per la fisica assieme a Guglielmo Marconi con la seguente motivazione:',
   },
   {
     anno: 1910,
@@ -168,7 +182,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo lavoro sull\'equazione di stato per i gas e i liquidi (Forza di van der Waals)',
     wikipedia: 'https://en.wikipedia.org/wiki/Johannes_Diderik_van_der_Waals',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Johannes_Diderik_van_der_Waals.png',
+    bioEstesa: 'Johannes Diderik van der Waals (Leida, 23 novembre 1837 – Amsterdam, 8 marzo 1923) è stato un fisico e matematico olandese.\nÈ famoso "per il suo lavoro sull\'equazione di stato per i gas e i liquidi", che gli valse il Premio Nobel per la fisica nel 1910. Van der Waals fu il primo a rendersi conto della necessità di tenere in considerazione il volume delle molecole e le forze intermolecolari ("forze di van der Waals", come vengono generalmente chiamate oggi) nello stabilire la relazione tra pressione, volume e temperatura dei gas e dei liquidi.',
   },
   {
     anno: 1911,
@@ -180,7 +195,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le sue scoperte riguardanti le leggi che regolano la radiazione di calore',
     wikipedia: 'https://en.wikipedia.org/wiki/Wilhelm_Wien',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Wilhelm_Wien.png',
+    bioEstesa: 'Wilhelm Wien (Fischhausen, 13 gennaio 1864 – Monaco di Baviera, 30 agosto 1928) è stato un fisico tedesco.\nÈ noto soprattutto per avere derivato dall\'elettromagnetismo e dalla termodinamica la legge che porta il suo nome, che lega l\'intensità di emissione di radiazione elettromagnetica di un corpo nero alla sua temperatura.\nNel 1879 Wien iniziò gli studi a Rastenburg, quindi proseguì a Heidelberg dopo il 1880. Nel 1882 frequentò l\'università di Gottinga e successivamente di Berlino. Dal 1883 lavorò nei laboratori di Hermann von Helmholtz e nel 1886 si laureò con una tesi sulla diffrazione della luce nei metalli e l\'influenza dei diversi materiali sul colore della luce riflessa.',
   },
   {
     anno: 1912,
@@ -192,7 +208,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua invenzione di regolatori automatici da utilizzare in combinazione con accumulatori di gas per l\'illuminazione di fari e boe',
     wikipedia: 'https://en.wikipedia.org/wiki/Gustaf_Dalén',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Gustaf_Daln.png',
+    bioEstesa: 'Nils Gustaf Dalén (Stenstorp, 30 novembre 1869 – Lidingö, 9 dicembre 1937) è stato un fisico svedese.',
   },
   {
     anno: 1913,
@@ -204,7 +221,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le sue indagini sulle proprietà della materia a basse temperature che ha portato, tra l\'altro, alla produzione di elio liquido',
     wikipedia: 'https://en.wikipedia.org/wiki/Heike_Kamerlingh_Onnes',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Heike_Kamerlingh_Onnes.png',
+    bioEstesa: 'Heike Kamerlingh Onnes (Groninga, 21 settembre 1853 – Leida, 21 febbraio 1926) è stato un fisico olandese, figura fondamentale nel campo della fisica delle basse temperature, premio Nobel per la Fisica nel 1913.\n\nLavorando presso l\'Università di Leida (dove fu professore dal 1882 al 1923), fu il primo a capire come ottenere la liquefazione dell\'elio, aprendo la strada allo studio dei sistemi a temperature prossime allo zero assoluto.\nSfruttando le potenzialità offerte da questa sua scoperta nel campo criogenico, poco tempo dopo fu il primo ad osservare il fenomeno della superconduzione: nel 1911 aveva notato infatti come in certi conduttori metallici, e in particolare nel mercurio, la resistività \n  \n    \n      \n        ρ\n      \n    \n    {\\displaystyle \\rho }\n  \n presentava moderate variazioni a temperature alte e diventava invece bruscamente nulla in prossimità dello zero assoluto trasformando così il metallo in un superconduttore. Nello stesso esperimento fu probabilmente realizzata per la prima volta anche la transizione dell\'elio allo stato superfluido, ma quest\'ultimo fenomeno non fu colto da Kamerlingh Onnes, e sarebbe stato effettivamente descritto solo nel 1937.\nL\'importanza dei risultati di Kamerlingh Onnes fu immediatamente riconosciuta dalla comunità scientifica, portandolo a ricevere il Premio Nobel per la fisica già nel 1913, all\'età di 60 anni.\nInoltre fu proprio Onnes a coniare il termine "entalpìa", per riferirsi a quella parte dell\'energia interna di un sistema (U) che può essere scambiata con l\'ambiente esterno.\nEra fratello del pittore olandese Menso Kamerlingh Onnes.',
   },
   {
     anno: 1914,
@@ -216,7 +234,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua scoperta della diffrazione dei raggi X da cristalli',
     wikipedia: 'https://en.wikipedia.org/wiki/Max_von_Laue',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Max_von_Laue.png',
+    bioEstesa: 'Max Theodor Felix von Laue (Pfaffendorf, 9 ottobre 1879 – Berlino, 24 aprile 1960) è stato un fisico e cristallografo tedesco, vincitore del Premio Nobel per la fisica nel 1914 per la scoperta della diffrazione dei raggi X da parte dei cristalli.\nInoltre s\'impegnò anche in ottica, cristallografia, meccanica quantistica, superconduttività e nella teoria della relatività. Von Laue occupò anche numerose posizioni amministrative che gli permisero di migliorare, guidare e sviluppare per quattro decenni la ricerca tedesca. Egli fu in prima linea nella riorganizzazione della ricerca tedesca in seguito alla seconda guerra mondiale.',
   },
   {
     anno: 1915,
@@ -228,7 +247,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro servizio reso nell\'analisi della struttura cristallina per mezzo dei raggi X (Legge di Bragg e determinazione della struttura di NaCl, ZnS e del diamante)',
     wikipedia: 'https://en.wikipedia.org/wiki/William_Henry_Bragg',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/William_Henry_Bragg.png',
+    bioEstesa: 'Sir William Henry Bragg (Wigton, 2 luglio 1862 – Londra, 10 marzo 1942) è stato un fisico, chimico e cristallografo britannico.',
   },
   {
     anno: 1915,
@@ -240,7 +260,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro servizio reso nell\'analisi della struttura cristallina per mezzo dei raggi X (Legge di Bragg e determinazione della struttura di NaCl, ZnS e del diamante)',
     wikipedia: 'https://en.wikipedia.org/wiki/William_Lawrence_Bragg',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/William_Lawrence_Bragg.png',
+    bioEstesa: 'Sir William Lawrence Bragg (Adelaide, 31 marzo 1890 – Ipswich, 1º luglio 1971) è stato un fisico e cristallografo britannico.',
   },
   {
     anno: 1917,
@@ -252,7 +273,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua scoperta della caratteristica radiazione X degli elementi',
     wikipedia: 'https://en.wikipedia.org/wiki/Charles_Glover_Barkla',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Charles_Glover_Barkla.png',
+    bioEstesa: 'Charles Glover Barkla (Widnes, 7 giugno 1877 – Edimburgo, 23 ottobre 1944) è stato un fisico britannico.',
   },
   {
     anno: 1918,
@@ -264,7 +286,8 @@ export const NOBEL_FISICA = [
     motivazione: 'in riconoscimento dei suoi servizi resi per il progresso della Fisica con la sua scoperta della quantizzazione dell\'energia (costante di Planck)',
     wikipedia: 'https://en.wikipedia.org/wiki/Max_Planck',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Max_Planck.png',
+    bioEstesa: 'Max Planck, nato Max Karl Ernst Ludwig Planck (Kiel, 23 aprile 1858 – Gottinga, 4 ottobre 1947) è stato un fisico tedesco, iniziatore della fisica quantistica e premio Nobel nel 1918.',
   },
   {
     anno: 1919,
@@ -276,7 +299,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua scoperta dell\'effetto Doppler nei raggi canale e la separazione delle linee spettrali nei campi elettrici (Effetto Stark-Lo Surdo)',
     wikipedia: 'https://en.wikipedia.org/wiki/Johannes_Stark',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Johannes_Stark.png',
+    bioEstesa: 'Johannes Stark (Schickenhof, 15 aprile 1874 – Traunstein, 21 giugno 1957) è stato un fisico tedesco.',
   },
   {
     anno: 1920,
@@ -288,7 +312,8 @@ export const NOBEL_FISICA = [
     motivazione: 'in riconoscimento del servizio reso alle misure di precisione in Fisica con la sua scoperta delle anomalie nelle leghe di acciaio e nichel (in particolare, l\'invar e l\'elinvar)',
     wikipedia: 'https://en.wikipedia.org/wiki/Charles_Édouard_Guillaume',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Charles_douard_Guillaume.png',
+    bioEstesa: 'Charles Edouard Guillaume (Fleurier, 15 febbraio 1861 – Sèvres, 13 giugno 1938) è stato un fisico svizzero, nato in Svizzera nel canton Neuchâtel, Premio Nobel per la fisica nel 1920.',
   },
   {
     anno: 1921,
@@ -300,7 +325,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i suoi servizi alla Fisica Teorica, e in particolare per la sua scoperta della legge dell\'effetto fotoelettrico (assegnato in realtà nel 1922 con data 1921, anno in cui non fu attribuito a nessuno)',
     wikipedia: 'https://en.wikipedia.org/wiki/Albert_Einstein',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Albert_Einstein.png',
+    bioEstesa: 'Albert Einstein (pronuncia italiana [ˈalbert ˈainstain]; tedesca [ˈalbɛɐ̯t ˈaɪnʃtaɪn]; Ulma, 14 marzo 1879 – Princeton, 18 aprile 1955) è stato un fisico tedesco naturalizzato svizzero e statunitense.\n\nConsiderato il più importante fisico del XX secolo e in generale uno dei più grandi ed influenti scienziati della storia, è conosciuto al grande pubblico per la formula dell\'equivalenza massa-energia, E=mc², definita "l\'equazione più famosa al mondo", per la relatività ristretta (1905), la relatività generale (1916) e molti altri suoi lavori, che ebbero una forte influenza anche sulla filosofia della scienza. Nel 1921 ricevette il premio Nobel per la fisica «per i contributi alla fisica teorica, in particolare per la scoperta della legge dell\'effetto fotoelettrico». La teoria della relatività, insieme alla meccanica quantistica, è ancor oggi uno dei pilastri della fisica moderna.\nNato a Ulma nel 1879 da una benestante famiglia ebraica, si trasferì con essa in Svizzera nel 1895, rinunciando alla cittadinanza tedesca l\'anno successivo. Sempre nel 1896 conseguì il diploma superiore e nell\'ottobre dello stesso anno fu ammesso al corso di matematica e fisica del Politecnico di Zurigo, da cui si laureò nel 1900. Dopo essere stato apolide per più di cinque anni, nel 1901 assunse la cittadinanza svizzera, che mantenne per il resto della sua vita. Nel 1914 fu eletto all\'Accademia Reale Prussiana delle Scienze e nominato professore di fisica teorica, nonché direttore dell\'Istituto di Fisica dell\'Università Humboldt di Berlino, dove rimase fino al 1933.\nNel 1905, ricordato come suo annus mirabilis, all\'età di 26 anni Einstein pubblicò quattro articoli, nei quali sono trattati l\'effetto fotoelettrico, il moto browniano, si introduce la relatività speciale e, a condizione che essa sia corretta, è dimostrata l\'equivalenza massa-energia. Einstein nel 1909 identificò per primo il dualismo onda-particella, che caratterizzerà tutto il successivo sviluppo della meccanica quantistica. Nel 1916 pubblicò un primo articolo sulla relatività generale, contenente la sua teoria della gravitazione; in questo articolo previde, tra l\'altro, l\'esistenza delle onde gravitazionali, osservate per la prima volta esattamente un secolo dopo. Nel 1917 applicò la teoria della relatività generale alla struttura dell\'universo e teorizzò i fenomeni di emissione spontanea e stimolata, la quale è il presupposto teorico per i dispositivi laser e maser. Nel 1924 estese agli atomi i risultati della statistica quantistica introdotta nel 1920 da Satyendra Nath Bose per i fotoni, formulando la cosiddetta statistica di Bose-Einstein.\nNel 1933, mentre Einstein era in visita negli Stati Uniti d\'America, Adolf Hitler salì al potere. A causa delle sue origini ebraiche, Einstein non fece più ritorno in Germania, stabilendosi negli Stati Uniti e diventando cittadino statunitense nel 1940. Alla vigilia della seconda guerra mondiale, inviò una lettera al presidente Franklin Delano Roosevelt, nella quale lo avvisava del possibile sviluppo da parte della Germania di "bombe di un nuovo tipo estremamente potenti" e suggeriva agli Stati Uniti di cominciare a lavorare su ricerche di questo tipo.\nNel 1935 introdusse con Boris Podolsky e Nathan Rosen il paradosso di Einstein-Podolsky-Rosen sull\'entanglement quantistico, che ha aperto un filone di ricerca sull\'interpretazione della meccanica quantistica e sulle sue applicazioni; negli ultimi anni di vita, tentò invano di unificare la gravità e l\'elettromagnetismo, forze fondamentali descritte dalle due teorie ch\'egli considerava esemplari, e si oppose all\'impostazione probabilistica della teoria quantistica, sostenendo che «Dio non gioca ai dadi».\nLa rivista Time lo ha nominato uomo del secolo ("person of the century") nel dicembre 1999, dedicandogli l\'ultima copertina del XX secolo, e i suoi traguardi intellettuali e la sua originalità hanno reso il termine "Einstein" sinonimo di "genio". Eugene Wigner scrisse di lui:',
   },
   {
     anno: 1922,
@@ -312,7 +338,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i suoi servizi nelle indagini sulla struttura degli atomi e delle radiazioni da loro provenienti',
     wikipedia: 'https://en.wikipedia.org/wiki/Niels_Bohr',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Niels_Bohr.png',
+    bioEstesa: 'Niels Henrik David Bohr (AFI: [ˈnels ˈboɐ̯ˀ]; Copenaghen, 7 ottobre 1885 – Copenaghen, 18 novembre 1962) è stato un fisico danese.\n\nDiede contributi fondamentali nella comprensione della struttura atomica e nella meccanica quantistica, per i quali ricevette il premio Nobel per la fisica nel 1922.',
   },
   {
     anno: 1923,
@@ -324,7 +351,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo lavoro sulla carica elementare di elettricità e sull\'effetto fotoelettrico',
     wikipedia: 'https://en.wikipedia.org/wiki/Robert_Andrews_Millikan',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Robert_Andrews_Millikan.png',
+    bioEstesa: 'Robert Andrews Millikan (Morrison, 22 marzo 1868 – San Marino, California, 19 dicembre 1953) è stato un fisico statunitense.\nVinse il Premio Nobel per la fisica nel 1923 per i suoi lavori sulla determinazione della carica elettrica dell\'elettrone e sull\'effetto fotoelettrico.',
   },
   {
     anno: 1924,
@@ -336,7 +364,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le sue scoperte e la ricerca nel campo della spettroscopia a raggi X',
     wikipedia: 'https://en.wikipedia.org/wiki/Manne_Siegbahn',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Manne_Siegbahn.png',
+    bioEstesa: 'Karl Manne Georg Siegbahn (Örebro, 3 dicembre 1886 – Stoccolma, 26 settembre 1978) è stato un fisico svedese.\nOttenne la laurea in fisica all\'Università di Lund nel 1911, con una tesi intitolata Magnetische Feldmessungen (misurazione magnetica del terreno). Sostituì il professor Janne Rydberg quando la salute di quest\'ultimo divenne precaria, subentrando a pieno titolo nel 1920; nel 1922 lasciò questa carica per una cattedra all\'Università di Uppsala.\nNel 1937, Siegbahn ottenne la carica di Direttore del Dipartimento di Fisica dell\'Istituto Nobel dell\'Accademia Reale Svedese delle Scienze. Nel 1988 questo venne rinominato Manne Siegbahn Institute (MSI). I gruppi di ricerca dell\'istituto da allora sono stati riorganizzati, ma il suo nome vive ancora nel Manne Siegbahn Laboratory sito nell\'Università di Stoccolma.\n\n',
   },
   {
     anno: 1925,
@@ -348,7 +377,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro scoperta delle leggi che regolano l\'impatto di un elettrone su un atomo (Esperimento di Franck-Hertz)',
     wikipedia: 'https://en.wikipedia.org/wiki/James_Franck',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/James_Franck.png',
+    bioEstesa: 'James Franck (Amburgo, 26 agosto 1882 – Gottinga, 21 maggio 1964) è stato un fisico tedesco.',
   },
   {
     anno: 1925,
@@ -360,7 +390,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro scoperta delle leggi che regolano l\'impatto di un elettrone su un atomo (Esperimento di Franck-Hertz)',
     wikipedia: 'https://en.wikipedia.org/wiki/Gustav_Ludwig_Hertz',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Gustav_Ludwig_Hertz.png',
+    bioEstesa: 'Gustav Ludwig Hertz (Amburgo, 22 luglio 1887 – Berlino, 30 ottobre 1975) è stato un fisico tedesco.\nLo zio paterno fu Heinrich Rudolf Hertz, e Gustav iniziò la sua carriera lavorando come tecnico di laboratorio. Divenuto professore, condusse esperimenti di fisica atomica presso l\'università di Berlino. Nel 1913 studiò con James Franck il potenziale di ionizzazione degli atomi dei diversi elementi, osservando che l\'energia d\'urto di questi con gli elettroni viene assorbita, solo secondo modalità predeterminate, dagli atomi. Tali ricerche contribuirono agli sviluppi successivi della fisica atomica. Premio Nobel nel 1925 con James Franck.  Nel 1945 si trasferì in Unione Sovietica, dove riprese a insegnare presso l\'università di Mosca.',
   },
   {
     anno: 1926,
@@ -372,7 +403,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo lavoro sulla struttura discontinua della materia, e specialmente per la sua scoperta dell\'equilibrio di sedimentazione',
     wikipedia: 'https://en.wikipedia.org/wiki/Jean_Baptiste_Perrin',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Jean_Baptiste_Perrin.png',
+    bioEstesa: 'Jean Baptiste Perrin (Lilla, 30 settembre 1870 – New York, 17 aprile 1942) è stato un fisico francese.\nStudiò all\'École Normale Supérieure, divenendo assistente nel periodo 1894-97, quando iniziò a studiare i raggi catodici e i raggi X. Ottenne il diploma di docteur ès sciences nel 1897, anno in cui gli fu affidata il ruolo di lettore di chimica fisica alla Sorbona. Divenne professore di quell\'università nel 1910, mantenendo il suo ruolo fino a dopo l\'occupazione tedesca. Determinò la costante di Avogadro.',
   },
   {
     anno: 1927,
@@ -384,7 +416,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua scoperta e l\'interpretazione dell\'effetto chiamato con il suo nome (effetto Compton)',
     wikipedia: 'https://en.wikipedia.org/wiki/Arthur_Compton',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Arthur_Compton.png',
+    bioEstesa: 'Arthur Holly Compton (Wooster, 10 settembre 1892 – Berkeley, 15 marzo 1962) è stato un fisico statunitense.\nHa vinto il Premio Nobel per la fisica nel 1927 per la scoperta dell\'effetto che porta il suo nome.',
   },
   {
     anno: 1927,
@@ -396,7 +429,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo metodo di rendere visibile i percorsi di particelle elettricamente cariche attraverso la condensazione del vapore (camera a nebbia)',
     wikipedia: 'https://en.wikipedia.org/wiki/Charles_Thomson_Rees_Wilson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Charles_Thomson_Rees_Wilson.png',
+    bioEstesa: 'Charles Thomson Rees Wilson (Edimburgo, 14 febbraio 1869 – Edimburgo, 15 novembre 1959) è stato un fisico britannico inventore, nel 1911, della camera a nebbia, detta anche, dal suo cognome, camera di Wilson.',
   },
   {
     anno: 1928,
@@ -408,7 +442,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo lavoro sul fenomeno termoionico e in particolare per la scoperta della legge che porta il suo nome',
     wikipedia: 'https://en.wikipedia.org/wiki/Owen_Willans_Richardson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Owen_Willans_Richardson.png',
+    bioEstesa: 'Owen Willans Richardson (Dewsbury, 26 aprile 1879 – Alton, 15 febbraio 1959) è stato un fisico inglese.\nFrequentò i corsi universitari a Cambridge e a Londra. Nel 1911 venne eletto membro dell\'American Philosophycal Society e nel 1913 fu fatto fellow della Royal Society.\nÈ noto per le sue ricerche sull\'effetto termoionico, scoperto da Thomas Alva Edison, che ha preso il nome attuale di effetto Edison-Richardson.\nI suoi studi lo portarono a stabilire una legge (Legge di Richardson) che dà l\'intensità della corrente anodica di saturazione di un diodo.\nRichardson continuò le indagini sul fenomeno termoionico applicando la meccanica statistica e pose in evidenza la connessione dell\'emissione elettronica termica con il fenomeno fotoelettrico. In entrambi i casi gli elettroni periferici per essere emessi devono superare un certo potenziale e il lavoro che deve essere compiuto (lavoro di estrazione) nei due casi è uguale.\nRichardson giunse così ad un\'ulteriore formula che lega l\'intensità della corrente termoionica, oltre che alla temperatura assoluta del filo incandescente, anche alla massa e alla carica dell\'elettrone.\nPer queste sue ricerche fu insignito del Premio Nobel per la Fisica nel 1928.',
   },
   {
     anno: 1929,
@@ -420,7 +455,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua scoperta della natura ondulatoria dell\'elettrone (Ipotesi di de Broglie)',
     wikipedia: 'https://en.wikipedia.org/wiki/Louis_de_Broglie',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Louis_de_Broglie.png',
+    bioEstesa: 'Louis-Victor Pierre Raymond de Broglie, VII duca di Broglie, comunemente chiamato Louis de Broglie (Dieppe, 15 agosto 1892 – Louveciennes, 19 marzo 1987), è stato un fisico, matematico e storico francese.\nIn possesso del titolo nobiliare di duca e discendente indiretto di Jacques Necker, Madame de Staël e del barone Holstein, fu accademico di Francia. S\'impose all\'attenzione del mondo scientifico con la sua tesi di dottorato, in cui espose le innovative teorie sul dualismo onda-particella della materia, aspetto fondamentale della meccanica quantistica, per il quale vinse il Premio Nobel per la fisica nel 1929.',
   },
   {
     anno: 1930,
@@ -432,7 +468,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i suoi studi sulla diffusione della luce e per la scoperta dell\'effetto che da lui prende il nome',
     wikipedia: 'https://en.wikipedia.org/wiki/C._V._Raman',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/C_V_Raman.png',
+    bioEstesa: 'Sir Chandrasekhara Venkata Raman (Tamil: சந்திரசேகர வெங்கடராமன்) (Tiruchirappalli, 7 novembre 1888 – Bangalore, 21 novembre 1970) è stato un fisico indiano, Premio Nobel per la fisica nel 1930 per i suoi studi sulla diffusione della luce e per la scoperta dell\'effetto Raman, che da lui prende il nome. Raman era zio del fisico Subrahmanyan Chandrasekhar, premio Nobel per la Fisica nel 1983.',
   },
   {
     anno: 1932,
@@ -444,7 +481,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la creazione della meccanica quantistica, la cui applicazione, tra l\'altro, ha portato alla scoperta delle forme allotropiche di idrogeno',
     wikipedia: 'https://en.wikipedia.org/wiki/Werner_Heisenberg',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Werner_Heisenberg.png',
+    bioEstesa: 'Werner Karl Heisenberg (Würzburg, 5 dicembre 1901 – Monaco di Baviera, 1º febbraio 1976) è stato un fisico tedesco.\nFu uno dei principali artefici della meccanica quantistica, in particolare per aver ispirato e formulato la versione nota come meccanica delle matrici e il principio di indeterminazione. Ricevette il premio Nobel per la fisica nel 1932 "per la creazione della meccanica quantistica".\nDette anche importanti contributi alle teorie dell\'idrodinamica dei flussi turbolenti, del nucleo atomico, del ferromagnetismo, dei raggi cosmici e delle particelle subatomiche e fu determinante nella pianificazione del primo reattore nucleare della Germania Occidentale a Karlsruhe.\nDurante la seconda guerra mondiale fu uno dei principali scienziati del programma tedesco sulle armi nucleari.',
   },
   {
     anno: 1933,
@@ -456,7 +494,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di nuove forme produttive di teoria atomica (equazione di Schrödinger ed equazione di Dirac)',
     wikipedia: 'https://en.wikipedia.org/wiki/Erwin_Schrödinger',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Erwin_Schrdinger.png',
+    bioEstesa: 'Erwin Rudolf Josef Alexander Schrödinger (Vienna, 12 agosto 1887 – Vienna, 4 gennaio 1961) è stato un fisico austriaco, fra i maggiori del XX secolo per i fondamentali contributi alla meccanica quantistica e, in particolare, per l\'equazione che porta il suo nome, grazie alla quale vinse il premio Nobel per la fisica nel 1933.',
   },
   {
     anno: 1933,
@@ -468,7 +507,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di nuove forme produttive di teoria atomica (equazione di Schrödinger ed equazione di Dirac)',
     wikipedia: 'https://en.wikipedia.org/wiki/Paul_Dirac',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Paul_Dirac.png',
+    bioEstesa: 'Paul Adrien Maurice Dirac (pronuncia inglese [dɪˈræk]; Bristol, 8 agosto 1902 – Tallahassee, 20 ottobre 1984) è stato un fisico britannico.\nPremio Nobel per la fisica nel 1933 (insieme a Erwin Schrödinger) per "la scoperta di nuove fruttuose forme della teoria atomica", diede contributi fondamentali allo sviluppo della meccanica quantistica e alla teoria quantistica dei campi, formulando, tra l\'altro, l\'omonima equazione e predicendo l\'esistenza dell\'antimateria. È considerato uno dei più importanti fisici del ventesimo secolo.\nGiudicato dai suoi amici e colleghi di carattere insolito (in una lettera del 1926 a Paul Ehrenfest, Albert Einstein scrisse di lui: «Questo equilibrio sul vertiginoso percorso tra il genio e la pazzia è impressionante»), fu professore lucasiano di matematica all\'Università di Cambridge, membro del Center for Theoretical Studies dell\'Università di Miami e trascorse gli ultimi dieci anni di vita all\'Università statale della Florida.',
   },
   {
     anno: 1935,
@@ -480,7 +520,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta del neutrone',
     wikipedia: 'https://en.wikipedia.org/wiki/James_Chadwick',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/James_Chadwick.png',
+    bioEstesa: 'Sir James Chadwick (Bollington, 20 ottobre 1891 – Cambridge, 24 luglio 1974) è stato un fisico britannico, premio Nobel per la fisica nel 1935 per la scoperta del neutrone.',
   },
   {
     anno: 1936,
@@ -492,7 +533,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua scoperta della radiazione cosmica',
     wikipedia: 'https://en.wikipedia.org/wiki/Victor_Francis_Hess',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Victor_Francis_Hess.png',
+    bioEstesa: 'Victor Franz Hess (Schloss Waldstein, 24 giugno 1883 – Mount Vernon, 17 dicembre 1964) è stato un fisico austriaco naturalizzato statunitense.\nPer le sue scoperte sui raggi cosmici vinse, insieme a Carl David Anderson, nel 1936 il Premio Nobel per la fisica.',
   },
   {
     anno: 1936,
@@ -504,7 +546,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua scoperta del positrone',
     wikipedia: 'https://en.wikipedia.org/wiki/Carl_David_Anderson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Carl_David_Anderson.png',
+    bioEstesa: 'Carl David Anderson (New York, 3 settembre 1905 – San Marino, 11 gennaio 1991) è stato un fisico statunitense.',
   },
   {
     anno: 1937,
@@ -516,7 +559,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro scoperta sperimentale della diffrazione degli elettroni da cristalli (dualismo onda-particella)',
     wikipedia: 'https://en.wikipedia.org/wiki/Clinton_Davisson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Clinton_Davisson.png',
+    bioEstesa: 'Clinton Joseph Davisson (Bloomington, 22 ottobre 1881 – Charlottesville, 1º febbraio 1958) è stato un fisico statunitense.',
   },
   {
     anno: 1937,
@@ -528,7 +572,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro scoperta sperimentale della diffrazione degli elettroni da cristalli (dualismo onda-particella)',
     wikipedia: 'https://en.wikipedia.org/wiki/George_Paget_Thomson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/George_Paget_Thomson.png',
+    bioEstesa: 'George Paget Thomson (Cambridge, 3 maggio 1892 – Cambridge, 10 settembre 1975) è stato un fisico britannico.\nEra figlio di Joseph John Thomson, premio Nobel per la Fisica nel 1906. \nDopo gli studi all\'università della città natale, lavorò per varie istituzioni come la stessa Cambridge, la University of Aberdeen e l\'Imperial College London. Lo scienziato è noto per la dimostrazione del dualismo onda-particella dell\'elettrone, effettuata contemporaneamente e indipendentemente dall\'altro fisico con cui condivise il Nobel, Clinton Davisson.',
   },
   {
     anno: 1938,
@@ -540,7 +585,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua dimostrazione dell\'esistenza di nuovi elementi radioattivi prodotti da irraggiamento neutronico, e per la relativa scoperta delle reazioni nucleari indotte da neutroni lenti',
     wikipedia: 'https://en.wikipedia.org/wiki/Enrico_Fermi',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Enrico_Fermi.png',
+    bioEstesa: 'Enrico Fermi (Roma, 29 settembre 1901 – Chicago, 28 novembre 1954) è stato un fisico italiano naturalizzato statunitense.\nNoto principalmente per gli studi teorici e sperimentali nell\'ambito della meccanica quantistica e della fisica nucleare, tra i suoi maggiori contributi si possono citare la teoria del decadimento beta, la statistica di Fermi-Dirac e i risultati riguardanti le forze nucleari debole e forte.\nDopo l\'attività di ricerca alla guida del gruppo dei cosiddetti "ragazzi di via Panisperna" a Roma, si trasferì negli Stati Uniti, dove progettò e guidò la costruzione del primo reattore nucleare a fissione, che produsse la prima reazione nucleare a catena controllata, e fu uno dei direttori tecnici del Progetto Manhattan, che portò alla realizzazione della bomba atomica. Fu, inoltre, tra i primi a interessarsi alle potenzialità della simulazione numerica in ambito scientifico, nonché l\'iniziatore di una feconda scuola di fisici, tanto in Italia quanto negli Stati Uniti.\nRicevette nel 1938 il premio Nobel per la fisica per «l\'identificazione di nuovi elementi della radioattività e la scoperta delle reazioni nucleari mediante neutroni lenti». In suo onore, venne dato il nome a un elemento della tavola periodica, il fermio (simbolo Fm), a un sottomultiplo del metro comunemente usato in fisica atomica e nucleare, il fermi, nonché a una delle due classi di particelle della statistica quantistica, i fermioni.',
   },
   {
     anno: 1939,
@@ -552,7 +598,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per l\'invenzione e lo sviluppo del ciclotrone e per i risultati ottenuti con esso, in particolare per quanto riguarda gli elementi radioattivi artificiali',
     wikipedia: 'https://en.wikipedia.org/wiki/Ernest_Lawrence',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Ernest_Lawrence.png',
+    bioEstesa: 'Ernest Orlando Lawrence (Canton, 8 agosto 1901 – Palo Alto, 27 agosto 1958) è stato un fisico statunitense.\nInventore e perfezionatore del ciclotrone, il primo acceleratore di particelle elementari. L\'invenzione fruttò a Lawrence il premio Nobel per la fisica nel 1939.',
   },
   {
     anno: 1943,
@@ -564,7 +611,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo contributo allo sviluppo del metodo del raggio molecolare e la sua scoperta del momento magnetico del protone',
     wikipedia: 'https://en.wikipedia.org/wiki/Otto_Stern',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Otto_Stern.png',
+    bioEstesa: 'Otto Stern (Żory, 17 febbraio 1888 – Berkeley, 17 agosto 1969) è stato un fisico tedesco naturalizzato statunitense.',
   },
   {
     anno: 1944,
@@ -576,7 +624,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo metodo della risonanza per la registrazione delle proprietà magnetiche dei nuclei atomici',
     wikipedia: 'https://en.wikipedia.org/wiki/Isidor_Isaac_Rabi',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Isidor_Isaac_Rabi.png',
+    bioEstesa: 'Isidor Isaac Rabi (Rymanów, 29 luglio 1898 – New York, 11 gennaio 1988) è stato un fisico statunitense.',
   },
   {
     anno: 1945,
@@ -588,7 +637,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta del Principio di esclusione, detto anche il principio di Pauli',
     wikipedia: 'https://en.wikipedia.org/wiki/Wolfgang_Pauli',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Wolfgang_Pauli.png',
+    bioEstesa: 'Wolfgang Ernst Pauli (Vienna, 25 aprile 1900 – Zurigo, 15 dicembre 1958) è stato un fisico austriaco naturalizzato svizzero.\nFra i padri fondatori della meccanica quantistica, suo è il principio di esclusione, per il quale vinse il premio Nobel nel 1945, secondo il quale due elettroni in un atomo non possono avere tutti i numeri quantici uguali.',
   },
   {
     anno: 1946,
@@ -600,7 +650,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per l\'invenzione di un apparecchio per la produzione di pressioni estremamente alte, e per le scoperte fatte nel campo della fisica ad alta pressione',
     wikipedia: 'https://en.wikipedia.org/wiki/Percy_Williams_Bridgman',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Percy_Williams_Bridgman.png',
+    bioEstesa: 'Percy Williams Bridgman (Cambridge, 21 aprile 1882 – Randolph, 20 agosto 1961) è stato un fisico e filosofo della scienza statunitense. Vinse il Premio Nobel per la fisica nel 1946 «per l\'invenzione di un apparecchio per la produzione di pressioni estremamente alte e per le scoperte fatte nel campo della fisica ad alta pressione.» Fu inoltre un pioniere dell\'analisi dimensionale.',
   },
   {
     anno: 1947,
@@ -612,7 +663,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le sue indagini sulla fisica dell\'alta atmosfera e in particolare per la scoperta del cosiddetto strato di Appleton',
     wikipedia: 'https://en.wikipedia.org/wiki/Edward_Victor_Appleton',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Edward_Victor_Appleton.png',
+    bioEstesa: 'Edward Victor Appleton (Bradford, 6 settembre 1892 – Edimburgo, 21 aprile 1965) è stato un fisico britannico, scopritore della regione atmosferica che riflette le onde corte, situata nella ionosfera, e per questo fu insignito nel 1947 del Premio Nobel per la fisica.',
   },
   {
     anno: 1948,
@@ -624,7 +676,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo sviluppo del metodo della camera a nebbia di Wilson, e le sue scoperte nel campo della fisica nucleare e delle radiazioni cosmiche',
     wikipedia: 'https://en.wikipedia.org/wiki/Patrick_Blackett,_Baron_Blackett',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Patrick_Blackett_Baron_Blackett.png',
+    bioEstesa: 'Patrick Maynard Stuart Blackett (Londra, 18 novembre 1897 – Londra, 13 luglio 1974) è stato un fisico britannico.',
   },
   {
     anno: 1949,
@@ -636,7 +689,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua previsione circa l\'esistenza di mesoni, sulla base di studi teorici sulle forze nucleari (potenziale di Yukawa)',
     wikipedia: 'https://en.wikipedia.org/wiki/Hideki_Yukawa',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Hideki_Yukawa.png',
+    bioEstesa: 'Hideki Yukawa (in giapponese: 湯川 秀樹; Tokyo, 23 gennaio 1907 – Kyoto, 8 settembre 1981) è stato un fisico giapponese, Premio Nobel nel 1949.',
   },
   {
     anno: 1950,
@@ -648,7 +702,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo sviluppo del metodo fotografico di studio dei processi nucleari e le sue scoperte riguardanti i mesoni fatta con questo metodo',
     wikipedia: 'https://en.wikipedia.org/wiki/C._F._Powell',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/C_F_Powell.png',
+    bioEstesa: 'Cecil Frank Powell (Tonbridge, 5 dicembre 1903 – Casargo, 9 agosto 1969) è stato un fisico britannico.\nSi formò presso il Sidney Sussex College dell\'università di Cambridge, dove conseguì il PhD nel 1927, e fu allievo di Charles Thomson Rees Wilson ed Ernest Rutherford. Trascorse praticamente la sua intera carriera alla Bristol University, dove diventò Will Professor di fisica nel 1948 e direttore del Wills Physics Laboratory nel 1964.\nHa guidato il gruppo di fisici dell\'Università di Bristol che intraprese importantissime ricerche sui raggi cosmici. Con i suoi collaboratori, fra cui il fisico italiano Giuseppe Occhialini e Cesare M. C. Lattes, ideò il metodo geniale e semplice di rivelazione e studio delle particelle attraverso le tracce che esse lasciano interagendo con i granuli di bromuro di argento di speciali lastre fotografiche. Le emulsioni di queste lastre hanno una maggiore percentuale di bromuro di argento di quelle normali e i granuli hanno dimensioni piccolissime.\nIl gruppo di Powell, studiando le particelle della radiazione cosmica e anche la natura relativistica delle particelle prodotte, scoprì nel 1947 il pione o mesone π, particella associata alle forze forti che tengono insieme neutroni e protoni nei nuclei.\nFu insignito del Premio Nobel per la fisica nel 1950 per le sue ricerche nello sviluppo del metodo fotografico nello studio dei processi nucleari e le sue scoperte relative ai mesoni fatte con questo metodo. Powell utilizzò nelle sue ricerche per lo sviluppo del metodo fotografico nello studio dei processi nucleari quello che la scienziata Marietta Blau aveva scoperto a Vienna prima del 1938 e quindi sarebbe stato giusto un riconoscimento anche a lei per il suo contributo decisivo alle ricerche.\nNel 1967, ebbe la medaglia d\'oro Lomonosov dell\'accademia sovietica delle scienze.',
   },
   {
     anno: 1951,
@@ -660,7 +715,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro lavoro pionieristico sulla trasmutazione dei nuclei atomici tramite particelle atomiche accelerate artificialmente',
     wikipedia: 'https://en.wikipedia.org/wiki/John_Cockcroft',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_Cockcroft.png',
+    bioEstesa: 'Sir John Douglas Cockcroft (Todmorden, 27 maggio 1897 – Cambridge, 18 settembre 1967) è stato un fisico britannico.\nCon l\'irlandese Ernest Walton, ottenne nel 1932 la disintegrazione nucleare, ottenuta colpendo nuclei di litio e boro con protoni accelerati artificialmente. Per accelerare i protoni a elevate energie, i due fisici svilupparono un tipo di acceleratore di particelle, ora chiamato generatore di Cockcroft-Walton,che permise loro di inaugurare l\'era della fisica nucleare, studiata attraverso esperimenti con particelle accelerate. La disintegrazione nucleare fu il primo esempio della trasmutazione degli elementi sognata dagli alchimisti, la tecnica successivamente sviluppata ha portato alla costruzione delle armi atomiche e delle centrali nucleari. Quello storico esperimento valse a Cockcroft il Premio Nobel per la fisica del 1951, che condivise con Walton.',
   },
   {
     anno: 1951,
@@ -672,7 +728,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro lavoro pionieristico sulla trasmutazione dei nuclei atomici tramite particelle atomiche accelerate artificialmente',
     wikipedia: 'https://en.wikipedia.org/wiki/Ernest_Walton',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Ernest_Walton.png',
+    bioEstesa: 'Ernest Thomas Sinton Walton (Dungarvan, 6 ottobre 1903 – Belfast, 25 giugno 1995) è stato un fisico irlandese, vincitore, insieme a John Cockcroft, del premio Nobel per la fisica nel 1951, per «il loro lavoro pionieristico sulla mutazione dei nuclei atomici tramite particelle atomiche accelerate artificialmente».',
   },
   {
     anno: 1952,
@@ -684,7 +741,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro sviluppo di nuovi metodi per le misurazioni di precessione atomica e le scoperte connesse',
     wikipedia: 'https://en.wikipedia.org/wiki/Felix_Bloch',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Felix_Bloch.png',
+    bioEstesa: 'Felix Bloch (Zurigo, 23 ottobre 1905 – Zurigo, 10 settembre 1983) è stato un fisico svizzero naturalizzato statunitense, premio Nobel per la fisica per il  contributo alla nascita della risonanza magnetica nucleare.',
   },
   {
     anno: 1952,
@@ -696,7 +754,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro sviluppo di nuovi metodi per le misurazioni di precessione atomica e le scoperte connesse',
     wikipedia: 'https://en.wikipedia.org/wiki/Edward_Mills_Purcell',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Edward_Mills_Purcell.png',
+    bioEstesa: 'Edward Mills Purcell (Taylorville, 30 agosto 1912 – Cambridge, 7 marzo 1997) è stato un fisico statunitense.',
   },
   {
     anno: 1953,
@@ -708,7 +767,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua dimostrazione del metodo di contrasto di fase, in particolare per l\'invenzione del microscopio a contrasto di fase',
     wikipedia: 'https://en.wikipedia.org/wiki/Frits_Zernike',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Frits_Zernike.png',
+    bioEstesa: 'Frederik Zernike detto Frits (Amsterdam, 16 luglio 1888 – Amersfoort, 10 marzo 1966) è stato un fisico olandese, vincitore del premio Nobel per la fisica nel 1953, per «la sua dimostrazione del metodo di contrasto di fase, soprattutto per l\'invenzione del microscopio a contrasto di fase». Il microscopio a contrasto di fase divenne particolarmente importante per lo studio delle cellule vive, perché permette di osservare cellule trasparenti senza colorarle.',
   },
   {
     anno: 1954,
@@ -720,7 +780,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua ricerca fondamentale nella meccanica quantistica, in particolare per la sua interpretazione statistica della funzione d\'onda',
     wikipedia: 'https://en.wikipedia.org/wiki/Max_Born',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Max_Born.png',
+    bioEstesa: 'Max Born (Breslavia, 11 dicembre 1882 – Gottinga, 5 gennaio 1970) è stato un fisico tedesco naturalizzato britannico, premio Nobel per la fisica nel 1954 per le importanti ricerche in meccanica quantistica e, in particolare, per l\'interpretazione statistica della funzione d\'onda.',
   },
   {
     anno: 1954,
@@ -732,7 +793,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il metodo della coincidenza e le scoperte fatte in quell\'ambito',
     wikipedia: 'https://en.wikipedia.org/wiki/Walther_Bothe',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Walther_Bothe.png',
+    bioEstesa: 'Walther Wilhelm Georg Bothe (Oranienburg, 8 gennaio 1891 – Heidelberg, 8 febbraio 1957) è stato un fisico, matematico e chimico tedesco, vincitore, insieme a Max Born, del premio Nobel per la fisica nel 1954, per «il metodo della coincidenza e le scoperte fatte in quell\'ambito».\nFu allievo di Max Planck all\'Università di berlino, dove ottenne il dottorato nel 1914.\nFu direttore dal 1934 dell\'Istituto di Fisica dell\'Università di Heidelberg che riuscì a far diventare uno dei meglio equipaggiati della Germania. È considerato uno dei più grandi fisici del suo tempo nei campi della radioattività artificiale e della radiazione cosmica.\nA lui è dovuta la tecnica dei contatori di particelle in coincidenza.',
   },
   {
     anno: 1955,
@@ -744,7 +806,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le sue scoperte riguardanti la struttura fine dello spettro di idrogeno (effetto Lamb)',
     wikipedia: 'https://en.wikipedia.org/wiki/Willis_Lamb',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Willis_Lamb.png',
+    bioEstesa: 'Willis Eugene Lamb Jr. (Los Angeles, 12 luglio 1913 – Tucson, 15 maggio 2008) è stato un fisico statunitense, vincitore, insieme a Polykarp Kusch, del premio Nobel per la fisica nel 1955, per «le sue scoperte riguardanti la struttura fine dello spettro dell\'idrogeno».',
   },
   {
     anno: 1955,
@@ -756,7 +819,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua precisa determinazione del momento magnetico dell\'elettrone',
     wikipedia: 'https://en.wikipedia.org/wiki/Polykarp_Kusch',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Polykarp_Kusch.png',
+    bioEstesa: 'Polykarp Kusch (Blankenburg, 26 gennaio 1911 – Dallas, 20 marzo 1993) è stato un fisico tedesco naturalizzato statunitense, vincitore, insieme a Willis Lamb, del premio Nobel per la fisica nel 1955, per «la sua determinazione di precisione del momento magnetico dell\'elettrone».',
   },
   {
     anno: 1956,
@@ -768,7 +832,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro ricerche sui semiconduttori e la loro scoperta dell\'effetto transistor',
     wikipedia: 'https://en.wikipedia.org/wiki/William_Shockley',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/William_Shockley.png',
+    bioEstesa: 'William Bradford Shockley (Londra, 13 febbraio 1910 – Stanford, 12 agosto 1989) è stato un fisico statunitense.\nAssieme a John Bardeen e Walter Houser Brattain fu insignito, nel 1956, del premio Nobel per la fisica per "le loro ricerche sui semiconduttori e la scoperta dell\'effetto transistor".\nL\'esperimento di Haynes e Shockley, che dimostrò la possibilità di iniettare lacune in una barretta di germanio mediante un contatto a punta, misurandone mobilità e vita media, fu il precursore del primo "transistor a filamento" e diede il via alla moderna elettronica dei semiconduttori.\nGli sforzi intrapresi da Shockley per commercializzare un nuovo design di transistor negli anni cinquanta e sessanta portarono alla creazione della Silicon Valley in California, che sarebbe così divenuta uno dei centri nevralgici per lo sviluppo dei dispositivi a semiconduttore.',
   },
   {
     anno: 1956,
@@ -780,7 +845,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro ricerche sui semiconduttori e la loro scoperta dell\'effetto transistor',
     wikipedia: 'https://en.wikipedia.org/wiki/John_Bardeen',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_Bardeen.png',
+    bioEstesa: 'John Bardeen (Madison, 23 maggio 1908 – Boston, 30 gennaio 1991) è stato un fisico e ingegnere elettrotecnico statunitense.\nÈ l\'unico ad aver vinto due premi Nobel in Fisica, nel 1956 per il transistor, assieme a William Bradford Shockley e Walter Houser Brattain, e nel 1972 per la teoria fondamentale della superconduttività ordinaria assieme a Leon Neil Cooper e John Robert Schrieffer, nota anche come teoria BCS.',
   },
   {
     anno: 1956,
@@ -792,7 +858,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro ricerche sui semiconduttori e la loro scoperta dell\'effetto transistor',
     wikipedia: 'https://en.wikipedia.org/wiki/Walter_Houser_Brattain',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Walter_Houser_Brattain.png',
+    bioEstesa: 'Walter Houser Brattain (Xiamen, 10 febbraio 1902 – Seattle, 13 ottobre 1987) è stato un fisico statunitense.\nVinse il Premio Nobel per la fisica nel 1956 assieme a John Bardeen e William Shockley per gli studi che portarono alla realizzazione del transistor.',
   },
   {
     anno: 1957,
@@ -804,7 +871,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro penetrante indagine delle cosiddette leggi di parità, che ha portato a importanti scoperte per quanto riguarda le particelle elementari',
     wikipedia: 'https://en.wikipedia.org/wiki/Chen_Ning_Yang',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Chen_Ning_Yang.png',
+    bioEstesa: 'Chen Ning Yang (楊振寧S, Yáng ZhènníngP; Hefei, 1º ottobre 1922 – Pechino, 18 ottobre 2025) è stato un fisico cinese naturalizzato statunitense (col nome di Chen Ning Franklin Yang), premio Nobel per la fisica nel 1957.',
   },
   {
     anno: 1957,
@@ -816,7 +884,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro penetrante indagine delle cosiddette leggi di parità, che ha portato a importanti scoperte per quanto riguarda le particelle elementari',
     wikipedia: 'https://en.wikipedia.org/wiki/Tsung-Dao_Lee',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Tsung-Dao_Lee.png',
+    bioEstesa: 'Tsung-Dao Lee (T. D. Lee, 李政道 Pinyin: Lǐ Zhèngdào) (Shanghai, 24 novembre 1926 – San Francisco, 4 agosto 2024) è stato un fisico cinese naturalizzato statunitense, vincitore nel 1957, all\'età di 30 anni, del Premio Nobel per la Fisica con Chen Ning Yang per il loro lavoro sulla violazione della legge di parità nelle interazioni deboli, che Chien-Shiung Wu dimostrò sperimentalmente dal 1956 al 1957, con il suo Esperimento di Wu.\nDivenne inoltre noto per il suo lavoro sulla violazione della parità fisica, il teorema di Lee-Yang, la fisica delle particelle, la fisica relativistica degli ioni pesanti (RHIC), i solitoni non topologici e le stelle solitoniche. Fu professore universitario emerito alla Columbia University di New York, dove insegnò dal 1953 fino al suo pensionamento nel 2012. \nDetentore del primato di più giovane premio Nobel nel campo della scienza dopo la seconda guerra mondiale, Lee divenne il terzo premio Nobel per le scienze più giovane della storia dopo William L. Bragg (che vinse il premio a 25 anni con il padre William H. Bragg nel 1915) e Werner Heisenberg (che vinse nel 1932 anche lui a 30 anni). Lee e Yang furono i primi vincitori cinesi.',
   },
   {
     anno: 1958,
@@ -828,7 +897,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta e l\'interpretazione dell\'effetto Čerenkov',
     wikipedia: 'https://en.wikipedia.org/wiki/Pavel_Cherenkov',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Pavel_Cherenkov.png',
+    bioEstesa: 'Pavel Alekseevič Čerenkov (in russo, Павел Алексеевич Черенков; Novaja Čigla, 28 luglio 1904 – Mosca, 6 gennaio 1990) è stato un fisico sovietico.\nFu lo scopritore della radiazione elettromagnetica detta, dal suo cognome, radiazione di Čerenkov: essa si origina quando una particella carica attraversa un dielettrico ad una velocità superiore a quella che la luce ha all\'interno dello stesso.\nSe il dielettrico è trasparente (liquido, vetro, plastica) la radiazione di Čerenkov può provocare fenomeni luminosi (effetto di Čerenkov); caso tipico: l\'acqua diventa azzurrina intorno ai reattori nucleari detti "a piscina".\nSulla radiazione e sull\'effetto Čerenkov sono basati i contatori che permettono la rilevazione di particelle elementari dotate di elevata energia, perciò questi apparecchi sono di grande utilità per l\'analisi dei raggi cosmici e dei fasci di particelle prodotti dagli acceleratori.\nČerenkov giunse alla sua scoperta con una serie di esperimenti iniziati a Mosca nel 1934, all\'istituto di fisica dell\'Accademia delle scienze dell\'Unione Sovietica.\nNel 1937 i suoi colleghi Il\'ja Michajlovič Frank e Igor\' Evgen\'evič Tamm ne diedero l\'interpretazione teorica. Per tale ragione, nel 1958 Čerenkov divise con essi il premio Nobel per la fisica.',
   },
   {
     anno: 1958,
@@ -840,7 +910,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta e l\'interpretazione dell\'effetto Čerenkov',
     wikipedia: 'https://en.wikipedia.org/wiki/Ilya_Frank',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Ilya_Frank.png',
+    bioEstesa: 'Il\'ja Michajlovič Frank (cir. russo Илья́ Миха́йлович Франк; San Pietroburgo, 23 ottobre 1908 – Mosca, 22 giugno 1990) è stato un fisico sovietico.\nRicevette il premio Nobel per la Fisica grazie al lavoro teorico svolto assieme al collega Igor\' Evgen\'evič Tamm nel 1937 a seguito della scoperta, avvenuta nel 1934 da parte di Pavel Alekseevič Čerenkov, del cosiddetto effetto Čerenkov. I tre condivisero il riconoscimento nel 1958.',
   },
   {
     anno: 1958,
@@ -852,7 +923,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta e l\'interpretazione dell\'effetto Čerenkov',
     wikipedia: 'https://en.wikipedia.org/wiki/Igor_Tamm',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Igor_Tamm.png',
+    bioEstesa: 'Igor\' Evgen\'evič Tamm in russo Игорь Евгеньевич Тамм? (Vladivostok, 8 luglio 1895 – Mosca, 12 aprile 1971) è stato un fisico russo.\nStudiò all\'università di Mosca dove si laureò in fisica nel 1918.\nRicevette il premio Nobel per la fisica nel 1958, insieme a Pavel Čerenkov, e Il\'ja Michajlovič Frank per i loro lavori sull\'effetto Čerenkov.\nNel 1951 inventò e propose in collaborazione con Andrej Dmitrievič Sacharov il sistema del tokamak, metodo che permette di realizzare la fusione nucleare controllata.\nDi lui parla il fisico russo George Gamow, il quale narra nella sua autobiografia, "La mia linea di universo", una storia della sua giovinezza: durante la Rivoluzione russa, quando Tamm era professore di fisica all\'Università di Odessa, una volta in cui il cibo scarseggiava decise di andare in un paese vicino sotto il controllo comunista cercando di barattare dei cucchiai di argento in cambio di qualcosa da mangiare; tuttavia quando arrivò scoprì che il paese era sotto il controllo di una banda di anticomunisti, armati di fucili ed esplosivi. I banditi si insospettirono di Tamm, che era vestito elegantemente, e lo portarono dal loro capo che gli chiese chi fosse e cosa facesse; egli rispose che era un professore di matematica, così che il capo gli rispose che sarebbe stato liberato se gli avesse detto la stima dell\'errore che si commette nel tagliare la serie di Maclaurin al termine n, in caso contrario sarebbe stato fucilato; Tamm confuso dalla situazione riuscì comunque a dare una soluzione soddisfacente e venne liberato, non scoprendo mai chi fosse quel misterioso bandito.\nTamm morì a Mosca il 12 aprile 1971.',
   },
   {
     anno: 1959,
@@ -864,7 +936,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro scoperta dell\'antiprotone',
     wikipedia: 'https://en.wikipedia.org/wiki/Emilio_G._Segrè',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Emilio_G_Segr.png',
+    bioEstesa: 'Emilio Gino Segrè (Tivoli, 1º febbraio 1905 – Lafayette, 22 aprile 1989) è stato un fisico italiano naturalizzato statunitense, vincitore del Premio Nobel per la fisica nel 1959.',
   },
   {
     anno: 1959,
@@ -876,7 +949,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro scoperta dell\'antiprotone',
     wikipedia: 'https://en.wikipedia.org/wiki/Owen_Chamberlain',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Owen_Chamberlain.png',
+    bioEstesa: 'Owen Chamberlain (San Francisco, 10 luglio 1920 – Berkeley, 28 febbraio 2006) è stato un fisico statunitense.\nHa ricevuto il premio Nobel per la fisica nel 1959 per la scoperta dell\'antiprotone, insieme all\'italiano Emilio Segrè.',
   },
   {
     anno: 1960,
@@ -888,7 +962,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per l\'invenzione della camera a bolle',
     wikipedia: 'https://en.wikipedia.org/wiki/Donald_A._Glaser',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Donald_A_Glaser.png',
+    bioEstesa: 'Donald Arthur Glaser (Cleveland, 21 settembre 1926 – Berkeley, 28 febbraio 2013) è stato un fisico e neurobiologo statunitense, vincitore del premio Nobel per la fisica nel 1960, per «l\'invenzione della camera a bolle».',
   },
   {
     anno: 1961,
@@ -900,7 +975,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i suoi studi pionieristici sullo scattering (diffusione) degli elettroni nei nuclei atomici e per le scoperte conseguenti sulla struttura dei nuclei atomici',
     wikipedia: 'https://en.wikipedia.org/wiki/Robert_Hofstadter',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Robert_Hofstadter.png',
+    bioEstesa: 'Robert Hofstadter (New York, 5 febbraio 1915 – Stanford, 17 novembre 1990) è stato un fisico statunitense.\nVinse il premio Nobel nel 1961 per la fisica (insieme a Rudolf Ludwig Mössbauer) per i suoi studi pionieristici sullo scattering degli elettroni sul nucleo e per le scoperte conseguenti sulla struttura dei nuclei atomici.',
   },
   {
     anno: 1961,
@@ -912,7 +988,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le sue ricerche riguardanti l\'assorbimento della risonanza dei raggi gamma e la conseguente scoperta dell\'effetto che porta il suo nome (effetto Mössbauer)',
     wikipedia: 'https://en.wikipedia.org/wiki/Rudolf_Mössbauer',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Rudolf_Mssbauer.png',
+    bioEstesa: 'Rudolf Ludwig Mössbauer (Monaco di Baviera, 31 gennaio 1929 – Grünwald, 14 settembre 2011) è stato un fisico tedesco.\nMössbauer è noto per i suoi studi sui raggi gamma generati dalle transizioni nucleari. Studiò fisica al Politecnico di Monaco (TUM) ed ottenne il Ph.D con Heinz Maier-Leibnitz. Assieme allo statunitense Robert Hofstadter vinse il Premio Nobel per la fisica nel 1961 per la sua scoperta del 1957 dell\'effetto Mössbauer, una ricerca che aveva condotto come studente al dipartimento di fisica dell\'Istituto per le Ricerche Mediche Max Planck di Heidelberg.\nA lui è stato dedicato il minerale mössbauerite, la cui natura non sarebbe potuta essere chiarita senza la scoperta dell\'effetto mössbauer.',
   },
   {
     anno: 1962,
@@ -924,7 +1001,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le sue teorie pionieristiche sulla materia condensata, in particolare sull\'elio liquido',
     wikipedia: 'https://en.wikipedia.org/wiki/Lev_Landau',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Lev_Landau.png',
+    bioEstesa: 'Lev Davidovič Landau (in russo Лев Дави́дович Ланда́у?; Baku, 22 gennaio 1908 – Mosca, 1º aprile 1968) è stato un fisico sovietico, premio Nobel per la fisica nel 1962.',
   },
   {
     anno: 1963,
@@ -936,7 +1014,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i suoi contributi alla teoria del nucleo atomico e le particelle elementari, in particolare attraverso la scoperta e l\'applicazione dei principi fondamentali di simmetria',
     wikipedia: 'https://en.wikipedia.org/wiki/Eugene_Wigner',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Eugene_Wigner.png',
+    bioEstesa: 'Eugene Paul Wigner, in ungherese Jenő Pál Wigner (Budapest, 17 novembre 1902 – Princeton, 1º gennaio 1995), è stato un fisico e matematico ungherese naturalizzato statunitense, premio Nobel per la fisica nel 1963 "per i suoi contributi alla teoria del nucleo atomico e delle particelle elementari, in particolare attraverso la scoperta e l\'applicazione dei principi fondamentali di simmetria.".\nEsponente della scuola di famosi scienziati ebrei ungheresi cresciuta a Budapest all\'inizio del XX secolo, comprendente Paul Erdős, Edward Teller, John von Neumann e Leó Szilárd, ha proposto e risolto alcune delle questioni più profonde della fisica del XX secolo, ponendo le fondamenta della teoria delle simmetrie in meccanica quantistica e, sul finire degli anni trenta, estendendo le sue ricerche al nucleo atomico. Ebbe un importante ruolo anche nel gruppo che, tra il 1939 e il 1945, portò alla costruzione della prima bomba atomica.',
   },
   {
     anno: 1963,
@@ -948,7 +1027,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro scoperte riguardanti la struttura nucleare',
     wikipedia: 'https://en.wikipedia.org/wiki/Maria_Goeppert-Mayer',
     genere: 'female',
-    immagine: null,
+    immagine: 'images/nobel/Maria_Goeppert-Mayer.png',
+    bioEstesa: 'Maria Goeppert-Mayer (Katowice, 28 giugno 1906 – San Diego, 20 febbraio 1972) è stata una fisica tedesca naturalizzata statunitense, premio Nobel per la fisica nel 1963 assieme a J. Hans D. Jensen per aver proposto il modello a guscio (shell) del nucleo atomico. \nFu la seconda donna a ricevere il premio Nobel per la fisica, dopo Marie Curie.',
   },
   {
     anno: 1963,
@@ -960,7 +1040,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro scoperte riguardanti la struttura nucleare',
     wikipedia: 'https://en.wikipedia.org/wiki/J._Hans_D._Jensen',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/J_Hans_D_Jensen.png',
+    bioEstesa: 'Johannes Hans Daniel Jensen (Amburgo, 25 giugno 1907 – Heidelberg, 11 febbraio 1973) è stato un fisico tedesco, vincitore, insieme a Maria Goeppert-Mayer, del premio Nobel per la fisica nel 1963, «per le loro scoperte riguardanti la struttura nucleare».. A ciascuno dei due fu assegnato un quarto del premio. L\'altra metà fu conferita a Eugene Wigner, con una diversa motivazione.',
   },
   {
     anno: 1964,
@@ -972,7 +1053,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il lavoro fondamentale nel campo dell\'elettronica quantistica, che ha portato alla costruzione di oscillatori e amplificatori basati sul principio maser-laser',
     wikipedia: 'https://en.wikipedia.org/wiki/Charles_Hard_Townes',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Charles_Hard_Townes.png',
+    bioEstesa: 'Charles Hard Townes (Greenville, 28 luglio 1915 – Oakland, 27 gennaio 2015) è stato un fisico statunitense.',
   },
   {
     anno: 1964,
@@ -984,7 +1066,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il lavoro fondamentale nel campo dell\'elettronica quantistica, che ha portato alla costruzione di oscillatori e amplificatori basati sul principio maser-laser',
     wikipedia: 'https://en.wikipedia.org/wiki/Nikolay_Basov',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Nikolay_Basov.png',
+    bioEstesa: 'Nikolaj Gennadievič Basov (in russo Николай Геннадиевич Басов?; Usman\', 14 dicembre 1922 – 1º luglio 2001) è stato un fisico sovietico.\nNel 1964 vinse il Premio Nobel per la fisica, con Aleksandr Prochorov e Charles Hard Townes, per il suo contributo nel campo dell\'elettronica quantistica che portarono poi allo sviluppo del laser e del maser.',
   },
   {
     anno: 1964,
@@ -996,7 +1079,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il lavoro fondamentale nel campo dell\'elettronica quantistica, che ha portato alla costruzione di oscillatori e amplificatori basati sul principio maser-laser',
     wikipedia: 'https://en.wikipedia.org/wiki/Alexander_Prokhorov',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Alexander_Prokhorov.png',
+    bioEstesa: 'Aleksandr Michajlovič Prochorov (in russo Александр Михайлович Прохоров?; Atherton, 11 luglio 1916 – Mosca, 8 gennaio 2002) è stato un fisico sovietico.',
   },
   {
     anno: 1965,
@@ -1008,7 +1092,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro lavoro fondamentale nella elettrodinamica quantistica, con profonde conseguenze per la fisica delle particelle elementari',
     wikipedia: 'https://en.wikipedia.org/wiki/Sin-Itiro_Tomonaga',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Sin-Itiro_Tomonaga.png',
+    bioEstesa: 'Shin\'ichirō Tomonaga o Sin-Itiro Tomonaga (in giapponese: 朝永 振一郎; Tokyo, 31 marzo 1906 – Tokyo, 8 luglio 1979) è stato un fisico giapponese, Premio Nobel per la fisica nel 1965.',
   },
   {
     anno: 1965,
@@ -1020,7 +1105,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro lavoro fondamentale nella elettrodinamica quantistica, con profonde conseguenze per la fisica delle particelle elementari',
     wikipedia: 'https://en.wikipedia.org/wiki/Julian_Schwinger',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Julian_Schwinger.png',
+    bioEstesa: 'Julian Seymour Schwinger (New York, 12 febbraio 1918 – Los Angeles, 16 luglio 1994) è stato un fisico e matematico statunitense.\nFisico teorico tra i più importanti del XX secolo, insignito del premio Nobel, il suo contributo è stato fondamentale per lo sviluppo della teoria quantistica dei campi, con particolare applicazione all\'elettrodinamica quantistica.\nHa formulato la teoria delle perturbazioni relativisticamente invariante e ha effettuato la rinormalizzazione al primo ordine della QED. Il suo metodo di calcolo basato sul principio variazionale ha permesso di derivare le equazioni del moto per i campi quantistici. È stato il primo a ipotizzare un modello di unificazione elettrodebole e a proporre un esempio di confinamento in 1+1 dimensioni. Gli si devono anche la teoria delle generazioni di neutrini, i termini di Schwinger e la teoria dei campi con spin 3/2.',
   },
   {
     anno: 1965,
@@ -1032,7 +1118,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro lavoro fondamentale nella elettrodinamica quantistica, con profonde conseguenze per la fisica delle particelle elementari',
     wikipedia: 'https://en.wikipedia.org/wiki/Richard_Feynman',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Richard_Feynman.png',
+    bioEstesa: 'Richard Phillips Feynman (IPA: [ˈfaɪnmən]) (New York, 11 maggio 1918 – Los Angeles, 15 febbraio 1988) è stato un fisico e divulgatore scientifico statunitense, Premio Nobel per la fisica nel 1965 per l\'elaborazione dell\'elettrodinamica quantistica.\n\nÈ conosciuto per il suo lavoro nella formulazione dell\'integrale sui cammini della meccanica quantistica, la teoria dell\'elettrodinamica quantistica, e la fisica della superfluidità dell\'elio liquido iper-raffreddato, nonché in fisica delle particelle per la quale ha proposto il modello a partoni. Per aver contribuito allo sviluppo dell\'elettrodinamica quantistica, Feynman ricevette il Premio Nobel per la fisica nel 1965 insieme a Julian Schwinger e Shin\'ichirō Tomonaga.\nFeynman sviluppò uno schema largamente utilizzato per raffigurare le espressioni matematiche che descrivono il comportamento delle particelle subatomiche, che prese in seguito il nome di diagramma di Feynman. Durante la sua vita, Feynman era diventato uno dei più famosi scienziati al mondo. In un sondaggio del 1999 della rivista britannica Physics World di 130 fisici di spicco nel mondo si classificò come uno dei primi dieci fisici più grandi di tutti i tempi.\nDurante la seconda guerra mondiale aiutò nello sviluppo della bomba atomica e diventò noto al grande pubblico negli anni 1980 come membro della commissione Rogers, il comitato che indagò sul disastro dello Space Shuttle Challenger. Oltre al suo lavoro in fisica teorica, Feynman viene considerato un pioniere del campo del computer quantistico e gli è attribuita l\'introduzione del concetto della nanotecnologia. Teneva la cattedra Richard C. Tolman in fisica teorica al California Institute of Technology.\nFeynman è stato un divulgatore della fisica sia tramite libri sia tramite conferenze, tra cui una del 1959 sulla nanotecnologia top-down chiamata There\'s Plenty of Room at the Bottom e la pubblicazione in tre volumi delle sue lezioni agli studenti undergraduate, The Feynman Lectures on Physics (tradotto in italiano come La fisica di Feynman). Feynman deve la sua notorietà anche ai suoi libri semi-autobiografici Surely You\'re Joking, Mr. Feynman! e What Do You Care What Other People Think? (in italiano rispettivamente Sta scherzando, Mr Feynman! e Che t\'importa di ciò che dice la gente?) e dei libri scritti su di lui come Tuva or Bust! di Ralph Leighton e la biografia Genius: The Life and Science of Richard Feynman di James Gleick.',
   },
   {
     anno: 1966,
@@ -1044,7 +1131,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta e lo sviluppo di metodi ottici per lo studio della risonanza hertziana negli atomi',
     wikipedia: 'https://en.wikipedia.org/wiki/Alfred_Kastler',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Alfred_Kastler.png',
+    bioEstesa: 'Alfred Kastler (Guebwiller, 3 maggio 1902 – Bandol, 7 gennaio 1984) è stato un fisico francese, nato in Alsazia quando questa regione faceva parte dell\'Impero Germanico, vincitore del premio Nobel per la fisica nel 1966, per «la scoperta e lo sviluppo di metodi ottici per lo studio della risonanza hertziana negli atomi».',
   },
   {
     anno: 1967,
@@ -1056,7 +1144,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i suoi contributi alla teoria delle reazioni nucleari, in particolare le sue scoperte riguardanti la produzione di energia nelle stelle',
     wikipedia: 'https://en.wikipedia.org/wiki/Hans_Bethe',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Hans_Bethe.png',
+    bioEstesa: 'Hans Albrecht Bethe (Strasburgo, 2 luglio 1906 – Ithaca, 6 marzo 2005) è stato un fisico e astronomo tedesco naturalizzato statunitense.',
   },
   {
     anno: 1968,
@@ -1068,7 +1157,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo contributo determinante alla fisica delle particelle elementari, in particolare, la scoperta di un gran numero di stati di risonanza, resa possibile attraverso il suo sviluppo della tecnica della camera a bolle con l\'impiego di idrogeno e l\'analisi dei dati',
     wikipedia: 'https://en.wikipedia.org/wiki/Luis_Walter_Alvarez',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Luis_Walter_Alvarez.png',
+    bioEstesa: 'Luis Walter Álvarez (San Francisco, 13 giugno 1911 – Berkeley, 1º settembre 1988) è stato un fisico statunitense di origine spagnola da parte del padre e di origine statunitense da parte della madre.',
   },
   {
     anno: 1969,
@@ -1080,7 +1170,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i suoi contributi e scoperte in materia di classificazione delle particelle elementari e le loro interazioni (Eightfold way)',
     wikipedia: 'https://en.wikipedia.org/wiki/Murray_Gell-Mann',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Murray_Gell-Mann.png',
+    bioEstesa: 'Murray Gell-Mann (New York, 15 settembre 1929 – Santa Fe, 24 maggio 2019) è stato un fisico statunitense, Premio Nobel per la Fisica nel 1969 per gli studi sulle particelle elementari, in particolare sulla teoria dei quark.',
   },
   {
     anno: 1970,
@@ -1092,7 +1183,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il lavoro fondamentale e le scoperte nel campo della magnetoidrodinamica con feconde applicazioni in diverse parti della fisica del plasma',
     wikipedia: 'https://en.wikipedia.org/wiki/Hannes_Alfvén',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Hannes_Alfvn.png',
+    bioEstesa: 'Hannes Olof Gösta Alfvén (Norrköping, 30 maggio 1908 – Stoccolma, 2 aprile 1995) è stato un fisico svedese.\nSi laureò nell\'Università di Uppsala nel 1926 e conseguì il dottorato come specialista in fisica del plasma per la stessa Università nel 1935. \nFu uno degli scopritori della magnetoidrodinamica. All\'Università di Uppsala ha cominciato il lavoro di ricercatore, passando nel 1937 all\'Istituto Nobel della Fisica di Stoccolma e divenne nel 1940–1967 professore all\'Istituto Reale di Tecnologia della stessa città.\nHa scoperto le Onde di Alfvén, onde trasversali che sono generate in un plasma situato all\'interno di un campo magnetico. Diede impulso alla teoria nebulare di formazione del sistema solare, spiegando come la materia espulsa dal vento solare, sotto l\'azione di campi elettromagnetici, avrebbe trasferito il momento angolare del sole alla nebulosa protoplanetaria. \nFu professore di elettronica del plasma nell\'Università di Stoccolma, oltre che membro dell\'Accademia delle Scienze e del Consiglio Scientifico della Svezia. A causa di disaccordi con il suo governo si è trasferì 1969 all\'Università della California, in cui ha lavorato come professore esterno.\nRicevette il Premio Nobel per la Fisica nel 1970 insieme con il fisico francese Louis Néel e fu anche membro dell\'Accademia delle scienze dell\'Unione Sovietica.',
   },
   {
     anno: 1970,
@@ -1104,7 +1196,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il lavoro fondamentale e le scoperte relative all\'antiferromagnetismo e al ferromagnetismo che hanno portato a importanti applicazioni nella fisica dello stato solido',
     wikipedia: 'https://en.wikipedia.org/wiki/Louis_Néel',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Louis_Nel.png',
+    bioEstesa: 'Louis Eugène Félix Néel (Lione, 22 novembre 1904 – Brive-la-Gaillarde, 17 novembre 2000) è stato un fisico francese, vincitore, insieme a Hannes Alfvén, del premio Nobel per la fisica nel 1970, per «il lavoro e le scoperte fondamentali nel campo del ferromagnetismo e dell\'antiferromagnetismo, che hanno condotto a importanti applicazioni nella fisica dello stato solido».',
   },
   {
     anno: 1971,
@@ -1116,7 +1209,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua invenzione e lo sviluppo del metodo olografico',
     wikipedia: 'https://en.wikipedia.org/wiki/Dennis_Gabor',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Dennis_Gabor.png',
+    bioEstesa: 'Dennis Gabor (Budapest, 5 giugno 1900 – Londra, 8 febbraio 1979) è stato un ingegnere, fisico e inventore ungherese naturalizzato britannico.\nNel 1971 ricevette il Premio Nobel per l\'invenzione dell\'olografia.',
   },
   {
     anno: 1972,
@@ -1128,7 +1222,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per aver sviluppato congiuntamente la teoria della superconduttività, di solito chiamata teoria BCS',
     wikipedia: 'https://en.wikipedia.org/wiki/John_Bardeen',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_Bardeen.png',
+    bioEstesa: 'John Bardeen (Madison, 23 maggio 1908 – Boston, 30 gennaio 1991) è stato un fisico e ingegnere elettrotecnico statunitense.\nÈ l\'unico ad aver vinto due premi Nobel in Fisica, nel 1956 per il transistor, assieme a William Bradford Shockley e Walter Houser Brattain, e nel 1972 per la teoria fondamentale della superconduttività ordinaria assieme a Leon Neil Cooper e John Robert Schrieffer, nota anche come teoria BCS.',
   },
   {
     anno: 1972,
@@ -1140,7 +1235,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per aver sviluppato congiuntamente la teoria della superconduttività, di solito chiamata teoria BCS',
     wikipedia: 'https://en.wikipedia.org/wiki/Leon_Cooper',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Leon_Cooper.png',
+    bioEstesa: 'Leon Cooper (New York, 28 febbraio 1930 – Providence, 23 ottobre 2024) è stato un fisico statunitense, vincitore, insieme a John Bardeen e Robert Schrieffer, del premio Nobel per la fisica nel 1972, per «la loro teoria della superconduttività, generalmente denominata Teoria BCS».',
   },
   {
     anno: 1972,
@@ -1152,7 +1248,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per aver sviluppato congiuntamente la teoria della superconduttività, di solito chiamata teoria BCS',
     wikipedia: 'https://en.wikipedia.org/wiki/John_Robert_Schrieffer',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_Robert_Schrieffer.png',
+    bioEstesa: 'John Robert Schrieffer (Oak Park, 31 maggio 1931 – Tallahassee, 27 luglio 2019) è stato un fisico statunitense, vincitore, insieme a John Bardeen e Leon Cooper, del premio Nobel per la fisica nel 1972, per «la loro teoria della superconduttività, generalmente denominata Teoria BCS».',
   },
   {
     anno: 1973,
@@ -1164,7 +1261,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro scoperte sperimentali riguardanti, rispettivamente, i fenomeni di tunneling nei semiconduttori e superconduttori',
     wikipedia: 'https://en.wikipedia.org/wiki/Leo_Esaki',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Leo_Esaki.png',
+    bioEstesa: 'Reona Esaki  (江崎 玲於奈?, Esaki Reona), detto Leo (Ōsaka, 12 marzo 1925), è un fisico giapponese, insignito, insieme a Ivar Giaever, del premio Nobel per la fisica nel 1973, «per le loro scoperte sperimentali riguardanti i fenomeni di tunneling nei semiconduttori e superconduttori». Esaki e Giaver sono stati premiati con 1/4 di premio ciascuno. L\'altrà metà del premio è andata a Brian Josephson, con una diversa motivazione.\nEsaki è conosciuto, inoltre, per l\'invenzione del "diodo di Esaki" (o diodo tunnel), che sfrutta proprio il fenomeno di tunnelling da lui studiato nei semiconduttori. All\'epoca della scoperta Esaki lavorava per la società Tokyo Tsushin Kogyo, oggi denominata Sony. È inoltre stato un pioniere della tecnologia dei cosiddetti superreticoli (superlattice in inglese), quando lavorava all\'IBM.',
   },
   {
     anno: 1973,
@@ -1176,7 +1274,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro scoperte sperimentali riguardanti, rispettivamente, i fenomeni di tunneling nei semiconduttori e superconduttori',
     wikipedia: 'https://en.wikipedia.org/wiki/Ivar_Giaever',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Ivar_Giaever.png',
+    bioEstesa: 'Ivar Giaever (Bergen, 5 aprile 1929 – Schenectady, 20 giugno 2025) è stato un fisico norvegese naturalizzato statunitense, premio Nobel per la fisica nel 1973, assieme a Leo Esaki e Brian Josephson, per le scoperte riguardo ai fenomeni di tunneling nei semiconduttori e superconduttori.',
   },
   {
     anno: 1973,
@@ -1188,7 +1287,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le sue previsioni teoriche delle proprietà di una supercorrente attraverso una barriera a tunnel, in particolare quei fenomeni che sono generalmente noti come effetto Josephson',
     wikipedia: 'https://en.wikipedia.org/wiki/Brian_David_Josephson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Brian_David_Josephson.png',
+    bioEstesa: 'Brian David Josephson (Cardiff, 4 gennaio 1940) è un fisico gallese; a 22 anni la scoperta dell\'effetto Josephson gli valse il Premio Nobel per la fisica solamente 11 anni dopo condividendolo con Leo Esaki e Ivar Giaever.\nDall\'autunno del 2007 è professore emerito presso l\'Università di Cambridge, dove dirige il Progetto Unificazione Mente-Materia (Mind–Matter Unification Project) nell\'ambito del gruppo di ricerca sulla teoria della fisica della materia condensata. È anche membro del Trinity College (Cambridge).',
   },
   {
     anno: 1974,
@@ -1200,7 +1300,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro ricerca pionieristica nell\'astrofisica radio: Ryle per le sue osservazioni e le invenzioni, in particolare la tecnica di sintesi d\'apertura, e Hewish per il suo ruolo determinante nella scoperta delle pulsar',
     wikipedia: 'https://en.wikipedia.org/wiki/Martin_Ryle',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Martin_Ryle.png',
+    bioEstesa: 'Martin Ryle (Brighton, 27 settembre 1918 – Cambridge, 14 ottobre 1984) è stato un astronomo britannico.',
   },
   {
     anno: 1974,
@@ -1212,7 +1313,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro ricerca pionieristica nell\'astrofisica radio: Ryle per le sue osservazioni e le invenzioni, in particolare la tecnica di sintesi d\'apertura, e Hewish per il suo ruolo determinante nella scoperta delle pulsar',
     wikipedia: 'https://en.wikipedia.org/wiki/Antony_Hewish',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Antony_Hewish.png',
+    bioEstesa: 'Antony Hewish (Fowey, 11 maggio 1924 – 13 settembre 2021) è stato un astronomo britannico, vincitore del premio Nobel per la fisica nel 1974, condiviso con Martin Ryle, per il suo contributo allo sviluppo della radioastronomia e per il suo ruolo nella scoperta delle pulsar. A posteriori fu riconosciuto che la scoperta delle pulsar la si deve essenzialmente a Jocelyn Bell.\nLui le rubò, infatti, il merito.',
   },
   {
     anno: 1975,
@@ -1224,7 +1326,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta del collegamento tra moto collettivo e moto delle particelle nei nuclei atomici e lo sviluppo della teoria della struttura del nuclei atomici basato su questo collegamento',
     wikipedia: 'https://en.wikipedia.org/wiki/Aage_Bohr',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Aage_Bohr.png',
+    bioEstesa: 'Aage Niels Bohr (Copenaghen, 19 giugno 1922 – Copenaghen, 8 settembre 2009) è stato un fisico danese.',
   },
   {
     anno: 1975,
@@ -1236,7 +1339,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta del collegamento tra moto collettivo e moto delle particelle nei nuclei atomici e lo sviluppo della teoria della struttura del nuclei atomici basato su questo collegamento',
     wikipedia: 'https://en.wikipedia.org/wiki/Ben_Roy_Mottelson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Ben_Roy_Mottelson.png',
+    bioEstesa: 'Ben Roy Mottelson, all\'anagrafe Benjamin Roy Mottelson (Chicago, 9 luglio 1926 – Copenaghen, 13 maggio 2022), è stato un fisico statunitense naturalizzato danese, vincitore, insieme a Aage Niels Bohr e James Rainwater, del premio Nobel per la fisica nel 1975, per «la scoperta del collegamento tra moto collettivo e moto delle particelle nei nuclei atomici e lo sviluppo della teoria della struttura del nuclei atomici basato su questo collegamento»..',
   },
   {
     anno: 1975,
@@ -1248,7 +1352,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta del collegamento tra moto collettivo e moto delle particelle nei nuclei atomici e lo sviluppo della teoria della struttura del nuclei atomici basato su questo collegamento',
     wikipedia: 'https://en.wikipedia.org/wiki/James_Rainwater',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/James_Rainwater.png',
+    bioEstesa: 'Leo James Rainwater (Council, 9 dicembre 1917 – Yonkers, 31 maggio 1986) è stato un fisico statunitense.\nHa condiviso il Premio Nobel per la fisica nel 1975 per la sua parte nel determinare la forma asimmetrica dei nuclei atomici.',
   },
   {
     anno: 1976,
@@ -1260,7 +1365,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro lavoro pionieristico nella scoperta di una particella elementare pesante di un nuovo tipo (il mesone J/ψ)',
     wikipedia: 'https://en.wikipedia.org/wiki/Burton_Richter',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Burton_Richter.png',
+    bioEstesa: 'Burton Richter (New York, 22 marzo 1931 – Stanford, 18 luglio 2018) è stato un fisico statunitense, vincitore, insieme a Samuel Chao Chung Ting, del premio Nobel per la fisica nel 1976, per «il lavoro pionieristico nella scoperta di un nuovo tipo di particella elementare pesante».\nNel 1975 Richter trascorse un anno al CERN, durante il quale lavoro all\'esperimento ISR.\nNel 2010 ha ricevuto il Premio Enrico Fermi dal Dipartimento dell\'Energia degli Stati Uniti d\'America.',
   },
   {
     anno: 1976,
@@ -1272,7 +1378,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro lavoro pionieristico nella scoperta di una particella elementare pesante di un nuovo tipo (il mesone J/ψ)',
     wikipedia: 'https://en.wikipedia.org/wiki/Samuel_C._C._Ting',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Samuel_C_C_Ting.png',
+    bioEstesa: 'Samuel Chao Chung Ting (丁肇中S, Dīng ZhàozhōngP; Ann Arbor, 27 gennaio 1936) è un fisico statunitense di origine cinese, vincitore, insieme a Burton Richter, del premio Nobel per la fisica nel 1976, per «il lavoro pionieristico nella scoperta di un nuovo tipo di particella elementare pesante», il mesone J/ψ.\nDopo esserne stato uno dei propositori, Ting è diventato il ricercatore principale a capo della collaborazione internazionale dell\'Alpha Magnetic Spectrometer (AMS), il rivelatore installato sulla Stazione spaziale internazionale che misura in maniera diretta il flusso di raggi cosmici provenienti dallo spazio.',
   },
   {
     anno: 1977,
@@ -1284,7 +1391,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro fondamentali indagini teoriche sulla struttura elettronica dei sistemi magnetici e disordinati',
     wikipedia: 'https://en.wikipedia.org/wiki/Philip_Warren_Anderson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Philip_Warren_Anderson.png',
+    bioEstesa: 'Philip Warren Anderson (Indianapolis, 13 dicembre 1923 – Princeton, 29 marzo 2020) è stato un fisico statunitense, vincitore del Premio Nobel per la fisica nel 1977 per il contributo alle teorie dello scattering nell\'antiferromagnetismo e nella superconduttività ad alta temperatura e della rottura spontanea di simmetria.',
   },
   {
     anno: 1977,
@@ -1297,6 +1405,7 @@ export const NOBEL_FISICA = [
     wikipedia: 'https://en.wikipedia.org/wiki/Nevill_Francis_Mott',
     genere: 'male',
     immagine: null,
+    bioEstesa: 'Sir Nevill Francis Mott (FRS, CH; Leeds, 30 settembre 1905 – Milton Keynes, 8 agosto 1996) è stato un fisico inglese, vincitore, insieme a Philip Warren Anderson e John Hasbrouck van Vleck, del premio Nobel per la fisica nel 1977, per «le loro fondamentali indagini teoriche sulla struttura elettronica dei sistemi magnetici e disordinati».',
   },
   {
     anno: 1977,
@@ -1308,7 +1417,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro fondamentali indagini teoriche sulla struttura elettronica dei sistemi magnetici e disordinati',
     wikipedia: 'https://en.wikipedia.org/wiki/John_Hasbrouck_Van_Vleck',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_Hasbrouck_Van_Vleck.png',
+    bioEstesa: 'John Hasbrouck van Vleck (Middletown, 13 marzo 1899 – Cambridge, 27 ottobre 1980) è stato un fisico statunitense.\nFiglio del matematico Edward Burr van Vleck e nipote dell\'astronomo John Monroe van Vleck, crebbe a Madison e frequentò l\'Università di Harvard, dove si laureò. Venne assunto dall\'Università del Minnesota come assistente nel 1923, poi passò all\'Università del Wisconsin-Madison ed infine ad Harvard.\nVan Vleck sviluppò varie teorie fondamentali della meccanica quantistica del magnetismo e dei rapporti nei complessi metallici (cosiddetta Teoria del campo cristallino).\nNel 1977 vinse il Premio Nobel per la fisica, assieme a Philip Warren Anderson e Sir Nevill Mott, per il suo contributo a capire il comportamento degli elettroni nei solidi magnetici.',
   },
   {
     anno: 1978,
@@ -1320,7 +1430,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le sue invenzioni e scoperte basilari nel campo della fisica delle basse temperature',
     wikipedia: 'https://en.wikipedia.org/wiki/Pyotr_Kapitsa',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Pyotr_Kapitsa.png',
+    bioEstesa: 'Pëtr Leonidovič Kapica (in russo Пётр Леонидович Капица?; Kronštadt, 9 luglio 1894 – Mosca, 8 aprile 1984) è stato un fisico sovietico.',
   },
   {
     anno: 1978,
@@ -1332,7 +1443,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro scoperta della radiazione cosmica di fondo a microonde',
     wikipedia: 'https://en.wikipedia.org/wiki/Arno_Allan_Penzias',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Arno_Allan_Penzias.png',
+    bioEstesa: 'Arno Allan Penzias (Monaco di Baviera, 26 aprile 1933 – San Francisco, 22 gennaio 2024) è stato un fisico tedesco naturalizzato statunitense.\nVinse il premio Nobel per la fisica nel 1978 per la scoperta della radiazione cosmica di fondo.',
   },
   {
     anno: 1978,
@@ -1344,7 +1456,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro scoperta della radiazione cosmica di fondo a microonde',
     wikipedia: 'https://en.wikipedia.org/wiki/Robert_Woodrow_Wilson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Robert_Woodrow_Wilson.png',
+    bioEstesa: 'Robert Woodrow Wilson (Houston, 10 gennaio 1936) è un astronomo e fisico statunitense.',
   },
   {
     anno: 1979,
@@ -1356,7 +1469,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i loro contributi alla teoria unificata dell\'interazione debole ed elettromagnetica tra le particelle elementari, compresi, tra l\'altro, la previsione della corrente debole neutra',
     wikipedia: 'https://en.wikipedia.org/wiki/Sheldon_Lee_Glashow',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Sheldon_Lee_Glashow.png',
+    bioEstesa: 'Sheldon Lee Glashow (New York, 5 dicembre 1932) è un fisico statunitense, premio Nobel nel 1979.',
   },
   {
     anno: 1979,
@@ -1368,7 +1482,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i loro contributi alla teoria unificata dell\'interazione debole ed elettromagnetica tra le particelle elementari, compresi, tra l\'altro, la previsione della corrente debole neutra',
     wikipedia: 'https://en.wikipedia.org/wiki/Abdus_Salam',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Abdus_Salam.png',
+    bioEstesa: 'Abdus Salam (Jhang, 29 gennaio 1926 – Oxford, 21 novembre 1996) è stato un fisico pakistano, Premio Nobel per la Fisica nel 1979.',
   },
   {
     anno: 1979,
@@ -1380,7 +1495,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i loro contributi alla teoria unificata dell\'interazione debole ed elettromagnetica tra le particelle elementari, compresi, tra l\'altro, la previsione della corrente debole neutra',
     wikipedia: 'https://en.wikipedia.org/wiki/Steven_Weinberg',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Steven_Weinberg.png',
+    bioEstesa: 'Steven Weinberg (New York, 3 maggio 1933 – Austin, 23 luglio 2021) è stato un fisico statunitense, premio Nobel nel 1979.',
   },
   {
     anno: 1980,
@@ -1392,7 +1508,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di violazioni dei principi fondamentali di simmetria e il decadimento dei mesoni K-neutro (Simmetria CP)',
     wikipedia: 'https://en.wikipedia.org/wiki/James_Cronin',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/James_Cronin.png',
+    bioEstesa: 'James Watson Cronin (Chicago, 29 settembre 1931 – Saint Paul, 25 agosto 2016) è stato un fisico statunitense, vincitore, insieme a Val Fitch, del premio Nobel per la fisica nel 1980, per «la scoperta di violazioni dei principi fondamentali di simmetria e il decadimento dei mesoni K-neutro» (simmetria CP).',
   },
   {
     anno: 1980,
@@ -1404,7 +1521,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di violazioni dei principi fondamentali di simmetria e il decadimento dei mesoni K-neutro (Simmetria CP)',
     wikipedia: 'https://en.wikipedia.org/wiki/Val_Logsdon_Fitch',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Val_Logsdon_Fitch.png',
+    bioEstesa: 'Val Logsdon Fitch (Merriman, 10 marzo 1923 – Princeton, 5 febbraio 2015) è stato un fisico statunitense, vincitore, insieme a James Cronin, del premio Nobel per la fisica nel 1980, per «la scoperta di violazioni dei principi fondamentali di simmetria e il decadimento dei mesoni K-neutro» (simmetria CP).',
   },
   {
     anno: 1981,
@@ -1416,7 +1534,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro contributo allo sviluppo della spettroscopia laser',
     wikipedia: 'https://en.wikipedia.org/wiki/Nicolaas_Bloembergen',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Nicolaas_Bloembergen.png',
+    bioEstesa: 'Nicolaas Bloembergen (Dordrecht, 11 marzo 1920 – Tucson, 5 settembre 2017) è stato un fisico olandese naturalizzato statunitense, premiato con il Premio Nobel per la Fisica nel 1981.',
   },
   {
     anno: 1981,
@@ -1428,7 +1547,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro contributo allo sviluppo della spettroscopia laser',
     wikipedia: 'https://en.wikipedia.org/wiki/Arthur_Leonard_Schawlow',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Arthur_Leonard_Schawlow.png',
+    bioEstesa: 'Arthur Leonard Schawlow (Mount Vernon, 5 maggio 1921 – Palo Alto, 28 aprile 1999) è stato un fisico statunitense, vincitore, insieme a Nicolaas Bloembergen, del premio Nobel per la fisica nel 1981, per «il loro contributo allo sviluppo della spettroscopia laser». Insieme ai due fu premiato Kai Siegbahn «per il suo contributo allo sviluppo di spettroscopia degli elettroni ad alta risoluzione».',
   },
   {
     anno: 1981,
@@ -1440,7 +1560,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo contributo allo sviluppo di spettroscopia degli elettroni ad alta risoluzione',
     wikipedia: 'https://en.wikipedia.org/wiki/Kai_Siegbahn',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Kai_Siegbahn.png',
+    bioEstesa: 'Kai Manne Börje Siegbahn (Lund, 20 aprile 1918 – Ängelholm, 20 luglio 2007) è stato un fisico svedese, vincitore, insieme ad Arthur Schawlow e Nicolaas Bloembergen, del premio Nobel per la fisica nel 1981, per «il suo contributo allo sviluppo della spettroscopia degli elettroni ad alta risoluzione».',
   },
   {
     anno: 1982,
@@ -1452,7 +1573,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua teoria dei fenomeni critici in relazione alla fase di transizione',
     wikipedia: 'https://en.wikipedia.org/wiki/Kenneth_G._Wilson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Kenneth_G_Wilson.png',
+    bioEstesa: 'Kenneth Geddes Wilson (Waltham, 8 giugno 1936 – Saco, 15 giugno 2013) è stato un fisico statunitense.\nRicevette numerosi riconoscimenti, tra cui il Premio Nobel per la Fisica ed il Premio Wolf. Il suo campo di ricerca riguarda principalmente la teoria quantistica dei campi, e le sue connessioni con problemi di meccanica statistica e computazionali.',
   },
   {
     anno: 1983,
@@ -1464,7 +1586,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i suoi studi teorici dei processi fisici che danno origine alla struttura ed evoluzione delle stelle (Limite di Chandrasekhar)',
     wikipedia: 'https://en.wikipedia.org/wiki/Subrahmanyan_Chandrasekhar',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Subrahmanyan_Chandrasekhar.png',
+    bioEstesa: 'Subrahmanyan Chandrasekhar (in tamil சுப்பிரமணியன் சந்திரசேகர்; Lahore, 19 ottobre 1910 – Chicago, 21 agosto 1995) è stato un fisico, astrofisico e matematico indiano naturalizzato statunitense.',
   },
   {
     anno: 1983,
@@ -1476,7 +1599,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i suoi studi teorici e sperimentali sulle reazioni nucleari che danno origine agli elementi chimici nell\'universo',
     wikipedia: 'https://en.wikipedia.org/wiki/William_Alfred_Fowler',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/William_Alfred_Fowler.png',
+    bioEstesa: 'William Alfred Fowler (Pittsburgh, 9 agosto 1911 – Pasadena, 14 marzo 1995) è stato un astrofisico statunitense.\nNon va confuso con l\'astronomo inglese Alfred Fowler.',
   },
   {
     anno: 1984,
@@ -1488,7 +1612,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro contributo decisivo al grande progetto, che ha portato alla scoperta delle particelle W e Z, comunicatori di interazione debole',
     wikipedia: 'https://en.wikipedia.org/wiki/Carlo_Rubbia',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Carlo_Rubbia.png',
+    bioEstesa: 'Carlo Rubbia (Gorizia, 31 marzo 1934) è un fisico italiano, vincitore del premio Nobel per la fisica nel 1984 e senatore a vita della Repubblica italiana dal 2013.',
   },
   {
     anno: 1984,
@@ -1500,7 +1625,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro contributo decisivo al grande progetto, che ha portato alla scoperta delle particelle W e Z, comunicatori di interazione debole',
     wikipedia: 'https://en.wikipedia.org/wiki/Simon_van_der_Meer',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Simon_van_der_Meer.png',
+    bioEstesa: 'Simon van der Meer (L\'Aia, 24 novembre 1925 – Ginevra, 4 marzo 2011) è stato un fisico olandese.',
   },
   {
     anno: 1985,
@@ -1512,7 +1638,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta dell\'effetto Hall quantistico',
     wikipedia: 'https://en.wikipedia.org/wiki/Klaus_von_Klitzing',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Klaus_von_Klitzing.png',
+    bioEstesa: 'Klaus von Klitzing (Schroda, 28 giugno 1943) è un fisico tedesco.\nNel 1985 ha vinto il Premio Nobel per la fisica per la scoperta dell\'effetto Hall quantistico.\nAlla fine della seconda guerra mondiale, Klaus venne portato dai suoi genitori nella Germania Ovest. Dopo gli studi di fisica presso la Università tecnica di Braunschweig, presso la quale si laureerà nel 1969, von Klitzing si trasferisce per 10 anni all\'università di Würzburg dove consegue il dottorato di ricerca nel 1972 con una tesi su "Le proprietà galvanometriche del tellurio sottoposto a campi magnetici ad alta intensità" e l\'abilitazione nel 1978. In questo periodo svolge il suo lavoro di ricerca anche presso il Clarendon Laboratory di Oxford e il High Magnetic Field Laboratory di Grenoble. Nel 1980, anno della sua scoperta, diviene professore presso l\'Università di Monaco di Baviera, mentre nel 1985 diventa direttore di dipartimento presso il Max-Planck-Institut für Festkörperforschung di Stoccarda (Istituto Max Planck per la Ricerca Sullo Stato Solido).\nLa costante di von Klitzing, \n  \n    \n      \n        \n          R\n          \n            K\n          \n        \n        =\n        h\n        \n          /\n        \n        \n          e\n          \n            2\n          \n        \n      \n    \n    {\\displaystyle R_{K}=h/e^{2}}\n  \n, pari a 25812,807449±0,000086 ohm è così chiamata in onore della scoperta dell\'effetto Hall quantistico da parte di von Klitzing. Tale costante è elencata nel "Reference on Constants, Units, and Uncertainty" del National Institute of Standards and Technology. Il suo inverso è il quanto di conducibilità elettrica. Tale scoperta fu utile anche per determinare con precisione la costante di struttura fine (vedi anche costanti fisiche) e per stabilire gli standard più convenienti per la misura delle resistenze.\nAttualmente la ricerca di von Klitzing è principalmente concentrata sulle proprietà di sistemi elettronici a bassa dimensionalità (low dimensional electronic systems) in particolare a bassa temperatura e in presenza di campi magnetici intensi. È tuttora direttore di dipartimento presso il Max-Planck-Institut per la Ricerca dello Stato Solido di Stoccarda.',
   },
   {
     anno: 1986,
@@ -1524,7 +1651,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo lavoro fondamentale nell\'ottica elettronica, e per la progettazione del primo microscopio elettronico',
     wikipedia: 'https://en.wikipedia.org/wiki/Ernst_Ruska',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Ernst_Ruska.png',
+    bioEstesa: 'Ernst August Friedrich Ruska (Heidelberg, 25 dicembre 1906 – Berlino, 27 maggio 1988) è stato un fisico tedesco, vincitore del Premio Nobel per la fisica nel 1986.\nA lui, assieme a Max Knoll, si deve la nascita del primo microscopio elettronico nel 1933. Fu professore all\'Università libera di Berlino.',
   },
   {
     anno: 1986,
@@ -1536,7 +1664,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro progettazione del microscopio a scansione per effetto tunnel',
     wikipedia: 'https://en.wikipedia.org/wiki/Gerd_Binnig',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Gerd_Binnig.png',
+    bioEstesa: 'Gerd Binnig (Francoforte sul Meno, 20 luglio 1947) è un fisico tedesco.\nNacque a Francoforte sul Meno. La sua famiglia si divise fra Francoforte e Offenbach, fintanto che il fisico dovette frequentare in periodi diversi le scuole di entrambe le città. A 10 anni decise di diventare un fisico, ma si è presto chiesto se avesse fatto la giusta scelta. Si concentrò anche nella musica, suonando in una band. Iniziò inoltre a suonare il violino nell\'orchestra della scuola.\nNel 1969, ha sposato Lore Wagler, una psicologa con la quale ebbe due figli: uno nacque in Svizzera, l\'altro in California.\nNel 1978, accettò l\'offerta dell\'IBM di entrare nel gruppo di ricerca di Zurigo. Lì incontrò Heinrich Rohrer, insieme al quale ha ricevuto il Premio Nobel per la fisica nel 1986 per i loro progetti sul Microscopio a effetto tunnel.\nLa squadra di ricerca includeva Christoph Gerber e Edmund Weibel, i quali vennero presto ricompensati con dei premi, tra i quali lo stesso Premio Nobel.\nNel 1994 Gerd Binnig ha fondato Definiens, la quale divenne nel 2000 un\'impresa commerciale. Oggi, compagnie ed istituzioni nel mondo usano la tecnologia Definiens. La Definiens attualmente si occupa di scienze biologiche e della Terra. Nelle scienze biologiche, la tecnologia Definiens è usata per accelerare i processi diagnostici. Nelle scienze della Terra permette  la classificazione e l\'analisi di satelliti ed aree di spazio con velocità, esattezza e chiarezza più grandi.',
   },
   {
     anno: 1986,
@@ -1548,7 +1677,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro progettazione del microscopio a scansione per effetto tunnel',
     wikipedia: 'https://en.wikipedia.org/wiki/Heinrich_Rohrer',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Heinrich_Rohrer.png',
+    bioEstesa: 'Heinrich Rohrer (Buchs, 6 giugno 1933 – Wollerau, 16 maggio 2013) è stato un fisico svizzero, premio Nobel per la fisica nel 1986 insieme a Gerd Binnig per il progetto del Microscopio a scansione per effetto tunnel; e a Ernst Ruska che sviluppò il primo microscopio elettronico..',
   },
   {
     anno: 1987,
@@ -1560,7 +1690,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro importante passo avanti nella scoperta della superconduttività nei materiali ceramici',
     wikipedia: 'https://en.wikipedia.org/wiki/Georg_Bednorz',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Georg_Bednorz.png',
+    bioEstesa: 'Johannes Georg Bednorz (Neuerkirchen, 16 maggio 1950) è un fisico tedesco.\nFiglio di un maestro elementare e di un\'insegnante di pianoforte, durante l\'infanzia viene spinto a studiare musica classica. Ma il piccolo Bednorz preferisce assistere il fratello durante le riparazioni di auto e moto, successivamente però inizia a suonare il violino e la tromba.\nI suoi interessi volgono verso attività pratiche e inizialmente si interessa più di chimica che di fisica. Difatti nel 1968 si iscrive al corso di chimica dell\'Università di Münster, qui inizia ad occuparsi di cristallografia. Nel 1972 fa la sua prima esperienza in Svizzera nel laboratorio di ricerca dell\'IBM, il cui dipartimento di fisica era diretto da Karl Alexander Müller. Ivi si occupa di cristallografia e stato solido.\nDopo la laurea terminata in Germania, inizia la tesi del dottorato al Politecnico di Zurigo al laboratorio di fisica dello stato solido ed ha tra i relatori Alex Müller conosciuto pochi anni prima.\nNel 1982 entra a far parte del laboratorio IBM, nel gruppo di ricerca di Müller. La loro grande scoperta arriva nel 1986: studiando delle perovskiti si accorgono che un certo tipo (un ossido di lantanio, bario e rame) è un superconduttore a 35 K.\nPer questa scoperta i due vengono insigniti del premio Nobel per la fisica nel 1987.',
   },
   {
     anno: 1987,
@@ -1572,7 +1703,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro importante passo avanti nella scoperta della superconduttività nei materiali ceramici',
     wikipedia: 'https://en.wikipedia.org/wiki/K._Alex_Müller',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/K_Alex_Mller.png',
+    bioEstesa: 'Karl Alexander Müller (Basilea, 20 aprile 1927 – Zurigo, 9 gennaio 2023) è stato un fisico svizzero, vincitore del Premio Nobel per la fisica nel 1987.',
   },
   {
     anno: 1988,
@@ -1584,7 +1716,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il metodo del fascio di neutrini e la dimostrazione della struttura doppia dei leptoni attraverso la scoperta del neutrino muonico',
     wikipedia: 'https://en.wikipedia.org/wiki/Leon_M._Lederman',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Leon_M_Lederman.png',
+    bioEstesa: 'Leon Max Lederman (New York, 15 luglio 1922 – Rexburg, 3 ottobre 2018) è stato un fisico statunitense.\nTra i suoi successi vi sono le scoperte del neutrino muonico nel 1962 e del quark bottom (nello stato legato del mesone upsilon) nel 1977 che hanno contribuito alla sua affermazione tra i fisici delle particelle più importanti.\nHa ricevuto nel 1982 il premio Wolf per la fisica, assieme a Martin Lewis Perl, per le loro ricerche sui quark e sui leptoni, e nel 1988 il premio Nobel per la fisica, assieme a Melvin Schwartz e Jack Steinberger, per le loro ricerche sui neutrini. Scrittore scientifico riconosciuto, è diventato noto nel 1993 per il suo libro intitolato The God Particle (erroneamente tradotto in italiano come La particella di Dio invece di "La particella Dio") in cui stabiliva l\'importanza del bosone di Higgs.',
   },
   {
     anno: 1988,
@@ -1596,7 +1729,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il metodo del fascio di neutrini e la dimostrazione della struttura doppia dei leptoni attraverso la scoperta del neutrino muonico',
     wikipedia: 'https://en.wikipedia.org/wiki/Melvin_Schwartz',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Melvin_Schwartz.png',
+    bioEstesa: 'Melvin Schwartz (New York, 2 novembre 1932 – Twin Falls, 28 agosto 2006) è stato un fisico statunitense, vincitore, insieme a Leon Lederman e Jack Steinberger, del premio Nobel per la fisica nel 1988, per «il metodo del fascio di neutrini e la dimostrazione della struttura doppia dei leptoni attraverso la scoperta del neutrino muone».',
   },
   {
     anno: 1988,
@@ -1608,7 +1742,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il metodo del fascio di neutrini e la dimostrazione della struttura doppia dei leptoni attraverso la scoperta del neutrino muonico',
     wikipedia: 'https://en.wikipedia.org/wiki/Jack_Steinberger',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Jack_Steinberger.png',
+    bioEstesa: 'Hans Jakob Steinberger, noto come Jack Steinberger (Bad Kissingen, 25 maggio 1921 – Ginevra, 12 dicembre 2020), è stato un fisico statunitense.\nHa vinto il Premio Nobel per la Fisica nel 1988 insieme a Leon Max Lederman e Melvin Schwartz per aver concepito e realizzato il fascio di neutrini ad alta energia che ha permesso la scoperta del neutrino muonico.',
   },
   {
     anno: 1989,
@@ -1620,7 +1755,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per l\'invenzione del metodo dei campi oscillatori separati e il suo utilizzo nel maser ad idrogeno e in altri orologi atomici',
     wikipedia: 'https://en.wikipedia.org/wiki/Norman_Foster_Ramsey,_Jr.',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Norman_Foster_Ramsey_Jr.png',
+    bioEstesa: 'Norman Foster Ramsey Jr. (Washington, 27 agosto 1915 – Wayland, 4 novembre 2011) è stato un fisico statunitense, vincitore, insieme a Wolfgang Paul e Hans Dehmelt, del premio Nobel per la fisica nel 1989, per «l\'invenzione del metodo dei campi oscillatori separati e il suo utilizzo nel maser ad idrogeno e in altri orologi atomici». A Ramsey è stata assegnata la metà del premio.',
   },
   {
     anno: 1989,
@@ -1632,7 +1768,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per lo sviluppo della tecnica della trappola ionica',
     wikipedia: 'https://en.wikipedia.org/wiki/Hans_Georg_Dehmelt',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Hans_Georg_Dehmelt.png',
+    bioEstesa: 'Hans Georg Dehmelt (Görlitz, 9 settembre 1922 – Seattle, 7 marzo 2017) è stato un fisico tedesco naturalizzato statunitense, vincitore, insieme a Wolfgang Paul, del premio Nobel per la fisica nel 1989, per «lo sviluppo della tecnica della trappola ionica».\nLa tecnica è utilizzata per effettuare misurazioni di alta precisione del Fattore-g degli elettroni. Dehmelt e Paul sono stati premiati con 1/4 di premio ciascuno. L\'altra metà del premio è stata assegnata a Norman Foster Ramsey, con una diversa motivazione.',
   },
   {
     anno: 1989,
@@ -1645,6 +1782,7 @@ export const NOBEL_FISICA = [
     wikipedia: 'https://en.wikipedia.org/wiki/Wolfgang_Paul',
     genere: 'male',
     immagine: null,
+    bioEstesa: 'Wolfgang Paul (Lorenzkirch, 10 agosto 1913 – Bonn, 7 dicembre 1993) è stato un fisico tedesco.\nVenne insignito del Premio Nobel per la Fisica nel 1989, per il suo contributo nella messa a punto della Trappola Ionica, un dispositivo utilizzato per intrappolare particelle cariche mediante campi elettromagnetici oscillanti. La trappola ionica ha trovato ampie applicazioni nella spettrometria di massa, nello studio di singoli ioni e elettroni, o ancora nel computer quantistico, dove viene impiegata per la realizzazione di qubit basati su ioni intrappolati.',
   },
   {
     anno: 1990,
@@ -1656,7 +1794,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro indagini pionieristiche relative alla diffusione inelastica profonda degli elettroni sui protoni e sui collegati neutroni, che sono state di fondamentale importanza per lo sviluppo del modello a quark e la fisica delle particelle',
     wikipedia: 'https://en.wikipedia.org/wiki/Jerome_Isaac_Friedman',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Jerome_Isaac_Friedman.png',
+    bioEstesa: 'Jerome Isaac Friedman (Chicago, 28 marzo 1930) è un fisico statunitense.\nVincitore nel 1990 del Premio Nobel per la fisica insieme a Henry Way Kendall e a Richard Edward Taylor per "le loro indagini pionieristiche relative alla diffusione profondamente anelastica degli elettroni su protoni e neutroni legati, che sono state di fondamentale importanza per lo sviluppo del modello dei quark e per la fisica delle particelle".',
   },
   {
     anno: 1990,
@@ -1668,7 +1807,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro indagini pionieristiche relative alla diffusione inelastica profonda degli elettroni sui protoni e sui collegati neutroni, che sono state di fondamentale importanza per lo sviluppo del modello a quark e la fisica delle particelle',
     wikipedia: 'https://en.wikipedia.org/wiki/Henry_Way_Kendall',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Henry_Way_Kendall.png',
+    bioEstesa: 'Henry Way Kendall (Boston, 9 dicembre 1926 – Wakulla Springs State Park, 15 febbraio 1999) è stato un fisico statunitense, vincitore, insieme a Richard Edward Taylor e Jerome Friedman, del premio Nobel per la fisica nel 1990.',
   },
   {
     anno: 1990,
@@ -1680,7 +1820,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le loro indagini pionieristiche relative alla diffusione inelastica profonda degli elettroni sui protoni e sui collegati neutroni, che sono state di fondamentale importanza per lo sviluppo del modello a quark e la fisica delle particelle',
     wikipedia: 'https://en.wikipedia.org/wiki/Richard_E._Taylor',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Richard_E_Taylor.png',
+    bioEstesa: 'Richard Edward Taylor (Medicine Hat, 2 novembre 1929 – Stanford, 22 febbraio 2018) è stato un fisico canadese naturalizzato statunitense, vincitore, insieme a Jerome Isaac Friedman e Henry Way Kendall, del premio Nobel per la fisica nel 1990, per «le loro indagini pionieristiche relative alla profonda diffusione inelastica degli elettroni sui protoni e sui collegati neutroni, che sono state di fondamentale importanza per lo sviluppo del modello dei quark e la fisica delle particelle».',
   },
   {
     anno: 1991,
@@ -1692,7 +1833,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per aver scoperto che i metodi sviluppati per lo studio di ordinari fenomeni in sistemi semplici possono essere generalizzati a forme più complesse di materia, in particolare a cristalli liquidi e polimeri',
     wikipedia: 'https://en.wikipedia.org/wiki/Pierre-Gilles_de_Gennes',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Pierre-Gilles_de_Gennes.png',
+    bioEstesa: 'Pierre-Gilles de Gennes (Parigi, 24 ottobre 1932 – Orsay, 18 maggio 2007) è stato un fisico francese, noto per i suoi studi in molti campi fra cui i superconduttori, i cristalli liquidi e i polimeri. In particolare, è considerato uno dei padri fondatori dello studio della materia soffice. Nel 1991 è stato insignito del Premio Nobel per la fisica.',
   },
   {
     anno: 1992,
@@ -1704,7 +1846,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la sua invenzione e lo sviluppo di rivelatori di particelle, in particolare la camera proporzionale a multifili',
     wikipedia: 'https://en.wikipedia.org/wiki/Georges_Charpak',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Georges_Charpak.png',
+    bioEstesa: 'Georges Charpak (Dabrowica, 1º agosto 1924 – Parigi, 29 settembre 2010) è stato un fisico polacco naturalizzato francese nel 1946.',
   },
   {
     anno: 1993,
@@ -1716,7 +1859,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di un nuovo tipo di pulsar, una scoperta che ha aperto nuove possibilità per lo studio della gravitazione (PSR B1913+16)',
     wikipedia: 'https://en.wikipedia.org/wiki/Russell_Alan_Hulse',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Russell_Alan_Hulse.png',
+    bioEstesa: 'Russell Alan Hulse (New York, 28 novembre 1950) è un fisico statunitense.\nUtilizzando il radiotelescopio di Arecibo, sull\'isola di Porto Rico insieme al collega Joseph Hooton Taylor, nel 1974, dopo una ricerca a grande scala sulla rilevazione di pulsar, ne ha scoperte una dozzina che emettono regolari e rapidi fasci di onde radio.\nIn particolare l\'irregolarità nell\'emissione radio della pulsar doppia PSR 1913+16 ha portato i due a dedurre che la pulsar ha per compagna una stella alla quale è legata in una stretta orbita.\nTale scoperta ha valso ad entrambi l\'attribuzione del Premio Nobel per la fisica nell\'anno 1993. Dal 2003 è docente di fisica e matematica presso l\'Università del Texas a Dallas.',
   },
   {
     anno: 1993,
@@ -1728,7 +1872,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di un nuovo tipo di pulsar, una scoperta che ha aperto nuove possibilità per lo studio della gravitazione (PSR B1913+16)',
     wikipedia: 'https://en.wikipedia.org/wiki/Joseph_Hooton_Taylor,_Jr.',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Joseph_Hooton_Taylor_Jr.png',
+    bioEstesa: 'Joseph Hooton Taylor Jr. (Filadelfia, 29 marzo 1941) è un fisico statunitense.',
   },
   {
     anno: 1994,
@@ -1740,7 +1885,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per lo sviluppo della spettroscopia dei neutroni e per i contributi pionieristici allo sviluppo delle tecniche di scattering dei neutroni per gli studi della materia condensata',
     wikipedia: 'https://en.wikipedia.org/wiki/Bertram_Brockhouse',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Bertram_Brockhouse.png',
+    bioEstesa: 'Bertram Neville Brockhouse (Lethbridge, 15 luglio 1918 – Hamilton, 13 ottobre 2003) è stato un fisico canadese, vincitore, insieme a Clifford Shull, del premio Nobel per la fisica nel 1994, «i contributi pionieristici allo sviluppo delle tecniche di scattering dei neutroni per gli studi della materia condensata», in particolare per «lo sviluppo della tecnica di spettroscopia dei neutroni».',
   },
   {
     anno: 1994,
@@ -1752,7 +1898,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per lo sviluppo della tecnica di diffrazione dei neutroni e per i contributi pionieristici allo sviluppo delle tecniche di scattering dei neutroni per gli studi della materia condensata',
     wikipedia: 'https://en.wikipedia.org/wiki/Clifford_Shull',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Clifford_Shull.png',
+    bioEstesa: 'Clifford Glenwood Shull (Pittsburgh, 23 settembre 1915 – Hamilton, 31 marzo 2001) è stato un fisico statunitense, vincitore, insieme a Bertram Brockhouse, del premio Nobel per la fisica nel 1994, per «i contributi pionieristici allo sviluppo delle tecniche di scattering dei neutroni per gli studi della materia condensata», in particolare per «lo sviluppo della tecnica di diffrazione del neutrone».',
   },
   {
     anno: 1995,
@@ -1764,7 +1911,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta del leptone tau e per i contributi pionieristici sperimentali alla fisica del leptone',
     wikipedia: 'https://en.wikipedia.org/wiki/Martin_Lewis_Perl',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Martin_Lewis_Perl.png',
+    bioEstesa: 'Martin Perl (New York, 24 giugno 1927 – Palo Alto, 30 settembre 2014) è stato un fisico statunitense.',
   },
   {
     anno: 1995,
@@ -1776,7 +1924,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la rilevazione del neutrino, e per i contributi pionieristici sperimentali alla fisica del leptone',
     wikipedia: 'https://en.wikipedia.org/wiki/Frederick_Reines',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Frederick_Reines.png',
+    bioEstesa: 'Frederick Reines (Paterson, 16 marzo 1918 – Orange, 26 agosto 1998) è stato un fisico statunitense, premio Nobel per la fisica nel 1995 per i suoi lavori riguardo ai neutrini.',
   },
   {
     anno: 1996,
@@ -1788,7 +1937,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro scoperta della superfluidità nell\'elio-3',
     wikipedia: 'https://en.wikipedia.org/wiki/David_Lee_(physicist)',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/David_Lee_physicist.png',
+    bioEstesa: 'David Morris Lee (Rye, 20 gennaio 1931) è un fisico statunitense, premio Nobel per la fisica nel 1996 assieme a Douglas Osheroff e Robert Coleman Richardson per la scoperta della superfluidità dell\'elio-3..',
   },
   {
     anno: 1996,
@@ -1800,7 +1950,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro scoperta della superfluidità nell\'elio-3',
     wikipedia: 'https://en.wikipedia.org/wiki/Douglas_Osheroff',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Douglas_Osheroff.png',
+    bioEstesa: 'Douglas Dean Osheroff (Aberdeen, 1º agosto 1945) è un fisico statunitense, premio Nobel per la fisica nel 1996 assieme a David Lee e Robert Coleman Richardson per la scoperta della superfluidità dell\'elio-3..',
   },
   {
     anno: 1996,
@@ -1812,7 +1963,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la loro scoperta della superfluidità nell\'elio-3',
     wikipedia: 'https://en.wikipedia.org/wiki/Robert_Coleman_Richardson',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Robert_Coleman_Richardson.png',
+    bioEstesa: 'Robert Coleman Richardson (Washington, 26 giugno 1937 – Ithaca, 19 febbraio 2013) è stato un fisico statunitense, premio Nobel per la fisica nel 1996 assieme a David Lee e Douglas Osheroff per la scoperta della superfluidità dell\'elio-3..',
   },
   {
     anno: 1997,
@@ -1824,7 +1976,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per lo sviluppo di metodi per raffreddare e intrappolare gli atomi con luce laser (raffreddamento laser)',
     wikipedia: 'https://en.wikipedia.org/wiki/Steven_Chu',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Steven_Chu.png',
+    bioEstesa: 'Steven Chu (Saint Louis, 28 febbraio 1948) è un fisico e politico statunitense, Segretario dell\'energia sotto l\'amministrazione Obama dal 2009 al 2013.',
   },
   {
     anno: 1997,
@@ -1836,7 +1989,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per lo sviluppo di metodi per raffreddare e intrappolare gli atomi con luce laser (raffreddamento laser)',
     wikipedia: 'https://en.wikipedia.org/wiki/Claude_Cohen-Tannoudji',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Claude_Cohen-Tannoudji.png',
+    bioEstesa: 'Claude Cohen-Tannoudji (Costantina, 1º aprile 1933) è un fisico francese, conosciuto per aver vinto, assieme a Steven Chu e William Phillips, il premio Nobel per la fisica nel 1997 per i suoi lavori sul raffreddamento laser, e per aver realizzato una serie di volumi didattici sulla meccanica quantistica.',
   },
   {
     anno: 1997,
@@ -1848,7 +2002,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per lo sviluppo di metodi per raffreddare e intrappolare gli atomi con luce laser (raffreddamento laser)',
     wikipedia: 'https://en.wikipedia.org/wiki/William_Daniel_Phillips',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/William_Daniel_Phillips.png',
+    bioEstesa: 'William Daniel Phillips (Wilkes-Barre, 5 novembre 1948) è un fisico statunitense, vincitore, insieme a Steven Chu e Claude Cohen-Tannoudji, del premio Nobel per la fisica nel 1997, per le ricerche sul raffreddamento laser e in particolare per «lo sviluppo di metodi per raffreddare e catturare gli atomi tramite laser».',
   },
   {
     anno: 1998,
@@ -1860,7 +2015,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di una nuova forma di fluido quantistico attraverso eccitazioni caricate frazionalmente',
     wikipedia: 'https://en.wikipedia.org/wiki/Robert_B._Laughlin',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Robert_B_Laughlin.png',
+    bioEstesa: 'Robert Betts Laughlin (Visalia, 1º novembre 1950) è un fisico statunitense.',
   },
   {
     anno: 1998,
@@ -1872,7 +2028,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di una nuova forma di fluido quantistico attraverso eccitazioni caricate frazionalmente',
     wikipedia: 'https://en.wikipedia.org/wiki/Horst_Ludwig_Störmer',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Horst_Ludwig_Strmer.png',
+    bioEstesa: 'Horst Ludwig Störmer (Francoforte sul Meno, 6 aprile 1949) è un fisico tedesco, vincitore, insieme a Daniel Tsui e Robert Laughlin, del premio Nobel per la fisica nel 1998, «per la scoperta di una nuova forma di fluido quantistico attraverso eccitazioni caricate frazionalmente» (effetto Hall quantistico).',
   },
   {
     anno: 1998,
@@ -1884,7 +2041,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di una nuova forma di fluido quantistico attraverso eccitazioni caricate frazionalmente',
     wikipedia: 'https://en.wikipedia.org/wiki/Daniel_C._Tsui',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Daniel_C_Tsui.png',
+    bioEstesa: 'Daniel Chee Tsui (Henan, 28 febbraio 1939) è un fisico cinese naturalizzato statunitense.',
   },
   {
     anno: 1999,
@@ -1896,7 +2054,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per aver spiegato la struttura quantistica dell\'interazione elettrodebole nella fisica',
     wikipedia: 'https://en.wikipedia.org/wiki/Gerard_\'t_Hooft',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Gerard_t_Hooft.png',
+    bioEstesa: 'Gerardus (Gerard) \'t Hooft ([xeːrɑrt ət hoːft]; Den Helder, 5 luglio 1946) è un fisico olandese, premio Nobel per la fisica nel 1999 con Martinus J. G. Veltman «per aver spiegato la struttura quantistica dell\'interazione elettrodebole».\nGli è stato intitolato l\'asteroide 9491 Thooft, di cui ha scritto una costituzione per i futuri abitanti. Ha vinto la medaglia Lorentz nel 1986. \nNel 2025 ha ricevuto lo Special Breakthrough Prize in Fundamental Physics per i suoi contributi fondamentali alla teoria di gauge e al modello standard.\nInsegna fisica teorica all\'Università di Utrecht nei Paesi Bassi.\nIl suo prozio Frits Zernike fu premio Nobel per la fisica. Il cognome \'t Hooft significa "la testa" (\'t è un\'abbreviazione per "het").',
   },
   {
     anno: 1999,
@@ -1908,7 +2067,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per aver spiegato la struttura quantistica dell\'interazione elettrodebole nella fisica',
     wikipedia: 'https://en.wikipedia.org/wiki/Martinus_J._G._Veltman',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Martinus_J_G_Veltman.png',
+    bioEstesa: 'Martinus Justinus Godefriedus Veltman (Waalwijk, 27 giugno 1931 – Bilthoven, 4 gennaio 2021) è stato un fisico olandese, vincitore, insieme a Gerardus \'t Hooft, del premio Nobel per la fisica nel 1999, «per aver spiegato la struttura quantistica dell\'interazione elettrodebole».',
   },
   {
     anno: 2000,
@@ -1920,7 +2080,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per lo sviluppo delle eterostrutture dei semiconduttori utilizzate nell\'elettronica ad alta velocità e nell\'optoelettronica e per il lavoro di base nella tecnologia dell\'informazione e della comunicazione',
     wikipedia: 'https://en.wikipedia.org/wiki/Zhores_Alferov',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Zhores_Alferov.png',
+    bioEstesa: 'Žores Ivanovič Alfërov (in russo Жорес Иванович Алфёров?, traslitterato anche come Jores Ivanovich Alfiorov; Vitebsk, 15 marzo 1930 – San Pietroburgo, 1º marzo 2019) è stato un fisico e politico sovietico, dal 1991 russo.\nHa contribuito significativamente alla moderna fisica delle eterostrutture e all\'elettronica.',
   },
   {
     anno: 2000,
@@ -1932,7 +2093,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per lo sviluppo delle eterostrutture dei semiconduttori utilizzate nell\'elettronica ad alta velocità e nell\'optoelettronica e per il lavoro di base nella tecnologia dell\'informazione e della comunicazione',
     wikipedia: 'https://en.wikipedia.org/wiki/Herbert_Kroemer',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Herbert_Kroemer.png',
+    bioEstesa: 'Herbert Kroemer (Weimar, 25 agosto 1928 – Santa Barbara, 8 marzo 2024) è stato un fisico tedesco.',
   },
   {
     anno: 2000,
@@ -1944,7 +2106,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo ruolo nell\'invenzione del circuito integrato e per il lavoro di base nella tecnologia dell\'informazione e della comunicazione',
     wikipedia: 'https://en.wikipedia.org/wiki/Jack_Kilby',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Jack_Kilby.png',
+    bioEstesa: 'Jack St. Clair Kilby (Jefferson City, 8 novembre 1923 – Dallas, 20 giugno 2005) è stato un ingegnere elettrotecnico statunitense.\nRealizzò il primo circuito integrato nel 1958 mentre stava lavorando alla Texas Instruments (TI), nello stesso periodo in cui Robert Noyce creava il suo primo microchip alla Fairchild Semiconductor (anche se il brevetto di Noyce arrivò 6 mesi dopo).',
   },
   {
     anno: 2001,
@@ -1956,7 +2119,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la realizzazione della condensazione di Bose-Einstein in gas diluiti di atomi alcalini, e per i primi fondamentali studi sulle proprietà dei condensati',
     wikipedia: 'https://en.wikipedia.org/wiki/Eric_Allin_Cornell',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Eric_Allin_Cornell.png',
+    bioEstesa: 'Eric Allin Cornell (Palo Alto, 19 dicembre 1961) è un fisico statunitense.\nAssieme a Carl E. Wieman, è stato in grado di sintetizzare, nel 1995 il primo Condensato di Bose-Einstein. Per questo motivo, Cornell, Wieman e Wolfgang Ketterle vinsero assieme il Premio Nobel per la fisica nel 2001.',
   },
   {
     anno: 2001,
@@ -1968,7 +2132,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la realizzazione della condensazione di Bose-Einstein in gas diluiti di atomi alcalini, e per i primi fondamentali studi sulle proprietà dei condensati',
     wikipedia: 'https://en.wikipedia.org/wiki/Wolfgang_Ketterle',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Wolfgang_Ketterle.png',
+    bioEstesa: 'Wolfgang Ketterle (Heidelberg, 21 ottobre 1957) è un fisico tedesco, professore di fisica al Massachusetts Institute of Technology (MIT) e vincitore del Premio Nobel per la fisica nel 2001, assieme a Eric Allin Cornell e Carl Wieman, per la realizzazione della condensazione di Bose-Einstein in gas diluiti di atomi alcalini, e per i primi fondamentali studi sulle proprietà dei condensati.',
   },
   {
     anno: 2001,
@@ -1980,7 +2145,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la realizzazione della condensazione di Bose-Einstein in gas diluiti di atomi alcalini, e per i primi fondamentali studi sulle proprietà dei condensati',
     wikipedia: 'https://en.wikipedia.org/wiki/Carl_Wieman',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Carl_Wieman.png',
+    bioEstesa: 'Carl Edwin Wieman (Corvallis, 26 marzo 1951) è un fisico statunitense.',
   },
   {
     anno: 2002,
@@ -1992,7 +2158,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i contributi pionieristici all\'astrofisica, e in particolare per l\'individuazione dei neutrini cosmici',
     wikipedia: 'https://en.wikipedia.org/wiki/Raymond_Davis,_Jr.',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Raymond_Davis_Jr.png',
+    bioEstesa: 'Raymond Davis Jr. (Washington, 14 ottobre 1914 – New York, 31 maggio 2006) è stato un chimico e fisico statunitense.\nÈ famoso per essere stato l\'ideatore dell\'esperimento di Homestake, nella omonima miniera di Dakota del Sud, che tra gli anni settanta e gli anni novanta portò all\'individuazione dei neutrini solari.',
   },
   {
     anno: 2002,
@@ -2004,7 +2171,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i contributi pionieristici all\'astrofisica, e in particolare per l\'individuazione dei neutrini cosmici',
     wikipedia: 'https://en.wikipedia.org/wiki/Masatoshi_Koshiba',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Masatoshi_Koshiba.png',
+    bioEstesa: 'Masatoshi Koshiba (小柴 昌俊) (Toyohashi, 19 settembre 1926 – Tokyo, 12 novembre 2020) è stato un fisico giapponese e uno dei fondatori dell’astronomia dei neutrini.\nIl suo lavoro con i rivelatori di neutrini KamiokaNDE e Super‑Kamiokande è stato determinante per la rivelazione dei neutrini solari e dei neutrini da supernova, avviando l\'astronomia multi-messaggero.\n\nKoshiba vinse il Premio Wolf per la fisica nel 2000 e il Premio Nobel per la Fisica nel 2002, congiuntamente con Raymond Davis Jr., "per i contributi pionieristici all’astrofisica, in particolare per la rivelazione dei neutrini cosmici".\nÈ stato consigliere senior presso l’International Center for Elementary Particle Physics (ICEPP) e professore all’Università di Tokyo.',
   },
   {
     anno: 2002,
@@ -2016,7 +2184,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i contributi pionieristici all\'astrofisica, che hanno portato alla scoperta di sorgenti cosmiche di raggi X',
     wikipedia: 'https://en.wikipedia.org/wiki/Riccardo_Giacconi',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Riccardo_Giacconi.png',
+    bioEstesa: 'Riccardo Giacconi (Genova, 6 ottobre 1931 – San Diego, 9 dicembre 2018) è stato un astrofisico italiano naturalizzato statunitense, vincitore del Premio Nobel per la fisica nel 2002 "per i contributi pionieristici all\'astrofisica, che hanno portato alla scoperta di sorgenti cosmiche di raggi X".',
   },
   {
     anno: 2003,
@@ -2028,7 +2197,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i contributi pionieristici alla teoria dei superconduttori e superfluidi',
     wikipedia: 'https://en.wikipedia.org/wiki/Alexei_Alexeyevich_Abrikosov',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Alexei_Alexeyevich_Abrikosov.png',
+    bioEstesa: 'Aleksej Alekseevič Abrikosov (in russo Алексей Алексеевич Абрикосов?; Mosca, 25 giugno 1928 – Palo Alto, 29 marzo 2017) è stato un fisico russo naturalizzato statunitense.',
   },
   {
     anno: 2003,
@@ -2040,7 +2210,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i contributi pionieristici alla teoria dei superconduttori e superfluidi',
     wikipedia: 'https://en.wikipedia.org/wiki/Vitaly_Ginzburg',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Vitaly_Ginzburg.png',
+    bioEstesa: 'Vitalij Lazarevič Ginzburg (in russo Виталий Лазаревич Гинзбург?; Mosca, 4 ottobre 1916 – Mosca, 8 novembre 2009) è stato un fisico sovietico, di ascendenza ebraica, insignito del Premio Nobel per la fisica nel 2003, insieme ad Alexei Abrikosov e Anthony Leggett per il loro "pionieristico contributi alla teoria dei superconduttori e dei superfluidi".\nLa sua carriera in fisica è stata trascorsa nell\'ex Unione Sovietica ed è stato una delle figure di spicco nel programma di armi nucleari dell\'ex Unione Sovietica, lavorando alla progettazione di dispositivi termonucleari. Divenne membro dell\'Accademia Russa delle Scienze e successe a Igor Tamm come capo del Dipartimento di Fisica Teorica dell\'Istituto di Fisica Lebedev dell\'Accademia Russa delle Scienze  (FIAN). Ginzburg è stato un ateo schietto e fu critico nei confronti dell\'influenza del clero nella società russa.',
   },
   {
     anno: 2003,
@@ -2052,7 +2223,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i contributi pionieristici alla teoria dei superconduttori e superfluidi',
     wikipedia: 'https://en.wikipedia.org/wiki/Anthony_James_Leggett',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Anthony_James_Leggett.png',
+    bioEstesa: 'Anthony James Leggett (Camberwell, 26 marzo 1938 – Urbana, 8 marzo 2026) è stato un fisico britannico, professore di fisica alla University of Illinois at Urbana-Champaign.\nStudioso della fisica delle basse temperature, per il suo lavoro pionieristico sui superfluidi e sulla superconduttività ha ricevuto il Premio Nobel per la fisica nel 2003.',
   },
   {
     anno: 2004,
@@ -2064,7 +2236,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta della libertà asintotica e della teoria dell\'interazione forte',
     wikipedia: 'https://en.wikipedia.org/wiki/David_Gross',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/David_Gross.png',
+    bioEstesa: 'David Jonathan Gross (Washington, 19 febbraio 1941) è un fisico statunitense.\nÈ vincitore del Premio Nobel per la fisica del 2004, insieme a Hugh David Politzer e Frank Wilczek, per la scoperta della libertà asintotica nella cromodinamica quantistica, che ha permesso di completare il quadro del modello standard.',
   },
   {
     anno: 2004,
@@ -2076,7 +2249,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta della libertà asintotica e della teoria dell\'interazione forte',
     wikipedia: 'https://en.wikipedia.org/wiki/Hugh_David_Politzer',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Hugh_David_Politzer.png',
+    bioEstesa: 'Hugh David Politzer (New York, 31 agosto 1949) è un fisico statunitense.\nVincitore nel 2004 del Premio Nobel in Fisica insieme a Gross e Wilczek per la scoperta sulla libertà asintotica in cromodinamica quantistica, permettendo di completare il quadro nel panorama del modello standard.\nNato nel 1949 a New York, si è laureato nel 1969 all\'Università del Michigan, e quindi ha ottenuto il PhD nel 1974 ad Harvard, sotto la guida di Sidney Coleman.\nNel suo primo articolo (1973) Politzer descrive la libertà asintotica: più i quark sono vicini uno all\'altro, più debole sarà l\'interazione forte, determinata dalla rispettiva carica di colore; con l\'aumentare della distanza l\'interazione sarà forte, fino a che i quark non si troveranno in condizioni estreme (grande distanza uno dall\'altro) essi si troveranno nella condizione di particelle libere. Questo risultato, scoperto contemporaneamente a Gross e Wilczek, è di estrema importanza nello sviluppo e nella comprensione della QCD, la teoria che spiega le interazioni nucleari forti.',
   },
   {
     anno: 2004,
@@ -2088,7 +2262,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta della libertà asintotica e della teoria dell\'interazione forte',
     wikipedia: 'https://en.wikipedia.org/wiki/Frank_Wilczek',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Frank_Wilczek.png',
+    bioEstesa: 'Frank Wilczek (New York, 15 maggio 1951) è un fisico statunitense, vincitore del premio Nobel del 2004.',
   },
   {
     anno: 2005,
@@ -2100,7 +2275,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il suo contributo alla teoria quantistica della coerenza ottica',
     wikipedia: 'https://en.wikipedia.org/wiki/Roy_J._Glauber',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Roy_J_Glauber.png',
+    bioEstesa: 'Roy Jay Glauber (New York, 1º settembre 1925 – 26 dicembre 2018) è stato un fisico statunitense.',
   },
   {
     anno: 2005,
@@ -2112,7 +2288,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro contributo allo sviluppo della spettroscopia di precisione basata sui laser, in particolare per la tecnica del pettine di frequenze ottiche',
     wikipedia: 'https://en.wikipedia.org/wiki/John_L._Hall',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_L_Hall.png',
+    bioEstesa: 'John Lewis Hall (Denver, 21 agosto 1934) è un fisico statunitense.\nHa condiviso il premio Nobel per la fisica con Theodor W. Hänsch per i suoi lavori sulla spettroscopia.',
   },
   {
     anno: 2005,
@@ -2124,7 +2301,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il loro contributo allo sviluppo della spettroscopia di precisione basata sui laser, in particolare per la tecnica del pettine di frequenze ottiche',
     wikipedia: 'https://en.wikipedia.org/wiki/Theodor_W._Hänsch',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Theodor_W_Hnsch.png',
+    bioEstesa: 'Theodor Wolfgang Hänsch (Heidelberg, 30 ottobre 1941) è un fisico tedesco.\nNel 2005 lui e John Hall hanno vinto il Premio Nobel per la fisica per i loro contributi allo sviluppo della spettroscopia di precisione basata sull\'utilizzo del laser.\nDopo aver conseguito il dottorato ad Heidelberg fra il 1975 ed il 1986 è stato professore all\'Università di Stanford. Successivamente è rientrato in Germania all\'Istituto Max Planck. Nel 1989 ha ricevuto il premio Leibniz dalla Deutsche Forschungsgemeinschaft (un\'organizzazione per la ricerca), la più alta onorificenza tedesca per un ricercatore.\nHänsch è il direttore del Max-Planck-Institut für Quantenoptik (ottica quantistica) a Garching bei München e professore di fisica sperimentale e spettroscopia laser all\'Ludwig-Maximilians-Universität di Monaco. È Professore Emerito presso l\'Università degli Studi di Firenze.\nUno dei suoi studenti, Carl Wieman, ha ricevuto il Premio Nobel nel 2001.',
   },
   {
     anno: 2006,
@@ -2136,7 +2314,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta delle anisotropie del corpo nero presenti nella radiazione cosmica di fondo',
     wikipedia: 'https://en.wikipedia.org/wiki/John_C._Mather',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_C_Mather.png',
+    bioEstesa: 'John Cromwell Mather (Roanoke, 7 agosto 1946) è un astrofisico e cosmologo statunitense.\nMather è astrofisico capo al Goddard Space Flight Center della NASA nel Maryland. Inoltre è professore aggiunto all\'Università del Maryland, College Park. Gli è stato conferito nel 2006 il premio Nobel per la fisica in condivisione con George F. Smoot per la scoperta delle anisotropie del corpo nero presenti nella radiazione cosmica di fondo tramite il satellite COBE (Cosmic Background Explorer). Le loro scoperte hanno rafforzato la teoria del Big Bang; collabora al progetto per il telescopio orbitante James Webb, lanciato il 25 Dicembre 2021 verso il secondo Punto di Lagrange (L2) a circa 1,5 milioni di km dalla Terra.',
   },
   {
     anno: 2006,
@@ -2148,7 +2327,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta delle anisotropie del corpo nero presenti nella radiazione cosmica di fondo',
     wikipedia: 'https://en.wikipedia.org/wiki/George_Smoot',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/George_Smoot.png',
+    bioEstesa: 'George Fitzgerald Smoot III (Yukon, 20 febbraio 1945 – Parigi, 18 settembre 2025) è stato un astrofisico e cosmologo statunitense.\nÈ stato professore di fisica presso l\'University of California, Berkeley. Ha vinto il premio Nobel per la fisica nel 2006 in condivisione con John C. Mather per la scoperta delle anisotropie del corpo nero presenti nella radiazione cosmica di fondo tramite il satellite COBE (Cosmic Background Explorer). Le loro scoperte hanno rafforzato la teoria del Big Bang.',
   },
   {
     anno: 2007,
@@ -2160,7 +2340,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta della magnetoresistenza gigante',
     wikipedia: 'https://en.wikipedia.org/wiki/Albert_Fert',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Albert_Fert.png',
+    bioEstesa: 'Albert Fert (Carcassonne, 7 marzo 1938) è un fisico francese, premio Nobel per la fisica vinto il 9 ottobre 2007 per le sue ricerche sull\'effetto di magnetoresistenza gigante con Peter Grünberg.\nQuesti studi permisero ai moderni dischi rigidi di superare la barriera del gigabyte. Attualmente è professore all\'università di Parigi XI-Orsay e direttore scientifico di un\'unità del CNRS/Thales.',
   },
   {
     anno: 2007,
@@ -2172,7 +2353,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta della magnetoresistenza gigante',
     wikipedia: 'https://en.wikipedia.org/wiki/Peter_Grünberg',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Peter_Grnberg.png',
+    bioEstesa: 'Peter Grünberg (Plzeň, 18 maggio 1939 – Jülich, 7 aprile 2018) è stato un fisico tedesco, premio Nobel per la fisica vinto il 9 ottobre 2007 per i suoi studi sull\'effetto di magnetoresistenza gigante con Albert Fert.\nSi è diplomato nel 1962 presso la Johann Wolfgang Goethe-Universität di Francoforte sul Meno, proseguendo poi gli studi fino al conseguimento della laurea (nel 1966) e del dottorato (nel 1969) alla Technische Universität Darmstadt. Successivamente ha frequentato l\'Istituto di Fisica dello stato solido al centro ricerche di Jülich, dove è diventato ricercatore capo nel settore dei materiali a film multistrato magnetici, fino al ritiro nel 2004.\nNel 1986 scoprì lo scambio di coppie antiparallele cariche in strati ferromagnetici separati da strati non ferromagnetici e nel 1988 scoprì l\'effetto ferromagnetico gigante (GMR). Scoperta analoga venne fatta in modo indipendente e contemporanea anche da Albert Fert.\nI lavori di Grünberg lo portarono a vincere l\'APS International Prize for New Materials, l\'International Union of Pure and Applied Physics Magnetism Award, l\'Hewlett-Packard Europhysics Prize, e il premio Wolf per la fisica del 2006/7 e il Japan Prize nel 2007. Sempre nel 2007 gli fu assegnato il premio Nobel per la fisica per la scoperta della magnetoresistenza gigante. Vinse anche il German Future Prize for Technology and Innovation nel 1988.',
   },
   {
     anno: 2008,
@@ -2184,7 +2366,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta del meccanismo della rottura spontanea di simmetria nella fisica subatomica',
     wikipedia: 'https://en.wikipedia.org/wiki/Yoichiro_Nambu',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Yoichiro_Nambu.png',
+    bioEstesa: 'Yōichirō Nambu (南部陽一郎?, Nambu Yōichirō; Tokyo, 18 gennaio 1921 – Osaka, 5 luglio 2015) è stato un fisico giapponese naturalizzato statunitense, premio Nobel per la fisica nel 2008.',
   },
   {
     anno: 2008,
@@ -2196,7 +2379,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta dell\'origine della simmetria rotta che predice l\'esistenza di almeno tre famiglie di quark in natura',
     wikipedia: 'https://en.wikipedia.org/wiki/Makoto_Kobayashi_(physicist)',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Makoto_Kobayashi_physicist.png',
+    bioEstesa: 'Makoto Kobayashi (小林誠?, Kobayashi Makoto; Nagoya, 7 aprile 1944) è un fisico giapponese, molto conosciuto per il suo lavoro sulla violazione CP.\nIl suo articolo "CP Violation in the Renormalizable Theory of Weak Interaction" (1973) scritto in collaborazione con Toshihide Maskawa è il terzo articolo più citato nell\'ambito della fisica delle alte energie (dati 2006). Insieme a Toshihide Maskawa, ha generalizzato il lavoro di Cabibbo sul mescolamento dei quark e ha costruito la matrice CKM, lavoro per cui insieme al collega vinse il Premio Nobel per la fisica nel 2008.\nL\'ansatz della matrice CKM postulò l\'esistenza di una terza generazione di quark. L\'ipotesi fu confermata sperimentalmente quattro anni dopo, con la scoperta del quark bottom.',
   },
   {
     anno: 2008,
@@ -2208,7 +2392,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta dell\'origine della simmetria rotta che predice l\'esistenza di almeno tre famiglie di quark in natura',
     wikipedia: 'https://en.wikipedia.org/wiki/Toshihide_Maskawa',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Toshihide_Maskawa.png',
+    bioEstesa: 'Toshihide Maskawa, o Masukawa (in giapponese 益川 敏英?, Masukawa Toshihide; Nagoya, 7 febbraio 1940 – Kyoto, 23 luglio 2021), è stato un fisico giapponese noto per il suo lavoro sulla violazione CP.\nMaskawa nacque nella prefettura di Aichi, e si laureò all\'Università di Nagoya nel 1962. Presso la stessa università ricevette un Ph.D nel 1967.\nIl suo articolo "CP Violation in the Renormalizable Theory of Weak Interaction", scritto in collaborazione con Makoto Kobayashi, è il terzo articolo più citato nell\'ambito della fisica delle alte energie (dati 2006). Insieme a Toshihide Maskawa, ha generalizzato il lavoro di Cabibbo sul mescolamento dei quark e ha costruito la matrice CKM, lavoro per cui insieme al collega vinse il Premio Nobel per la fisica nel 2008.',
   },
   {
     anno: 2009,
@@ -2220,7 +2405,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per il pionieristico progresso riguardante la trasmissione di luce in fibre ottiche per la comunicazione',
     wikipedia: 'https://en.wikipedia.org/wiki/Charles_K._Kao',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Charles_K_Kao.png',
+    bioEstesa: 'Charles Kuen Kao 高錕 (Shanghai, 4 novembre 1933 – Hong Kong, 23 settembre 2018) è stato un ingegnere e fisico cinese.\nÈ stato un pioniere delle fibre ottiche nelle telecomunicazioni, tanto da guadagnarsi il titolo di padre delle fibre ottiche.',
   },
   {
     anno: 2009,
@@ -2232,7 +2418,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per l\'invenzione di un circuito semiconduttore per la raccolta di immagini - il CCD',
     wikipedia: 'https://en.wikipedia.org/wiki/Willard_Boyle',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Willard_Boyle.png',
+    bioEstesa: 'Willard Sterling Boyle (Amherst, 19 agosto 1924 – Truro, 7 maggio 2011) è stato un fisico canadese.',
   },
   {
     anno: 2009,
@@ -2244,7 +2431,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per l\'invenzione di un circuito semiconduttore per la raccolta di immagini - il CCD',
     wikipedia: 'https://en.wikipedia.org/wiki/George_E._Smith',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/George_E_Smith.png',
+    bioEstesa: 'George Elwood Smith (White Plains, 10 maggio 1930 – Barnegat, 28 maggio 2025) è stato un fisico statunitense.',
   },
   {
     anno: 2010,
@@ -2256,7 +2444,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i pionieristici esperimenti riguardanti il materiale bi-dimensionale grafene',
     wikipedia: 'https://en.wikipedia.org/wiki/Andre_Geim',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Andre_Geim.png',
+    bioEstesa: 'Andrej Konstantinovič Gejm (in russo Андрей Константинович Гейм?; Soči, 21 ottobre 1958) è un fisico sovietico naturalizzato olandese, vincitore del Premio Nobel per la fisica nel 2010.\nÈ noto per lo sviluppo del Gecko tape, gli studi sulla levitazione diamagnetica, e in particolare per gli studi compiuti sul grafene insieme a Konstantin Novosëlov, suo collega all\'Università di Manchester, che hanno valso a entrambi il conferimento del Premio Nobel per la fisica del 2010 «per i pionieristici esperimenti riguardanti il grafene», scoperto dai due fisici nel 2004.',
   },
   {
     anno: 2010,
@@ -2268,7 +2457,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i pionieristici esperimenti riguardanti il materiale bi-dimensionale grafene',
     wikipedia: 'https://en.wikipedia.org/wiki/Konstantin_Novoselov',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Konstantin_Novoselov.png',
+    bioEstesa: 'Konstantin Sergeevič Novosëlov (in russo Константин Сергеевич Новосёлов?; Nižnij Tagil, 23 agosto 1974) è un fisico russo naturalizzato inglese, vincitore del Premio Nobel per la Fisica nel 2010.',
   },
   {
     anno: 2011,
@@ -2280,7 +2470,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta dell\'accelerazione dell\'espansione dell\'universo attraverso lo studio delle lontane supernovae',
     wikipedia: 'https://en.wikipedia.org/wiki/Saul_Perlmutter',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Saul_Perlmutter.png',
+    bioEstesa: 'Saul Perlmutter (Champaign, 22 settembre 1959) è un fisico statunitense, vincitore del Premio Nobel per la Fisica nel 2011, insieme a Brian P. Schmidt e Adam Riess, per la scoperta riguardante l\'accelerazione dell\'espansione dell\'universo attraverso lo studio delle supernove.\nSaul Perlmutter è uno dei tre figli di Daniel D. Perlmutter, di famiglia aschenazita, professore emerito di chimica all\'Università di Pennsylvania, e di Felice (Feige) D. Perlmutter (nata Davidson), professoressa emerita alla Temple University\'s School of Social Administration. Suo nonno materno, Samuel Davidson (1903–1989), ha emigrato in Canada (e in seguito con sua moglie Chaika Newman a New York) dalla Bessarabia nel 1919.',
   },
   {
     anno: 2011,
@@ -2292,7 +2483,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta dell\'accelerazione dell\'espansione dell\'universo attraverso lo studio delle lontane supernovae',
     wikipedia: 'https://en.wikipedia.org/wiki/Brian_Schmidt',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Brian_Schmidt.png',
+    bioEstesa: 'Brian Paul Schmidt (Missoula, 24 febbraio 1967) è un fisico statunitense naturalizzato australiano, vincitore del Premio Nobel per la Fisica nel 2011, insieme agli statunitensi Saul Perlmutter e Adam Riess, per la scoperta riguardante l\'accelerazione dell\'universo attraverso lo studio delle supernove.',
   },
   {
     anno: 2011,
@@ -2304,7 +2496,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta dell\'accelerazione dell\'espansione dell\'universo attraverso lo studio delle lontane supernovae',
     wikipedia: 'https://en.wikipedia.org/wiki/Adam_Riess',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Adam_Riess.png',
+    bioEstesa: 'Adam Riess (Washington, 16 dicembre 1969) è un fisico statunitense.\nÈ il vincitore del Premio Nobel per la fisica nel 2011, insieme a Saul Perlmutter e Brian P. Schmidt, per la scoperta riguardante l\'accelerazione dell\'universo attraverso lo studio delle supernove. Nel 2002 aveva ricevuto il Premio Helen B. Warner per l\'astronomia.',
   },
   {
     anno: 2012,
@@ -2316,7 +2509,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i pionieristici esperimenti che consentono di misurare la manipolazione dei singoli sistemi quantistici',
     wikipedia: 'https://en.wikipedia.org/wiki/Serge_Haroche',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Serge_Haroche.png',
+    bioEstesa: 'Serge Haroche (Casablanca, 11 settembre 1944) è un fisico francese di origine marocchina, vincitore del Premio Nobel per la Fisica nel 2012, insieme allo statunitense David Wineland, per la scoperta riguardante i metodi sperimentali che hanno permesso la misurazione e la manipolazione dei sistemi quantistici individuali.',
   },
   {
     anno: 2012,
@@ -2328,7 +2522,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i pionieristici esperimenti che consentono di misurare la manipolazione dei singoli sistemi quantistici',
     wikipedia: 'https://en.wikipedia.org/wiki/David_J._Wineland',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/David_J_Wineland.png',
+    bioEstesa: 'David Jeffrey Wineland (Milwaukee, 24 febbraio 1944) è un fisico statunitense, vincitore del Premio Nobel per la Fisica nel 2012, insieme al francese Serge Haroche per la scoperta riguardante i metodi sperimentali che hanno permesso la misurazione e la manipolazione dei sistemi quantistici individuali.',
   },
   {
     anno: 2013,
@@ -2340,7 +2535,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta teorica di un meccanismo che contribuisce alla nostra comprensione dell\'origine della massa delle particelle subatomiche, e che è stato confermato recentemente attraverso la scoperta della particella fondamentale prevista, da parte degli esperimenti ATLAS e CMS al Large Hadron Collider del CERN',
     wikipedia: 'https://en.wikipedia.org/wiki/François_Englert',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Franois_Englert.png',
+    bioEstesa: 'François Englert (Etterbeek, 6 novembre 1932 – Uccle, 18 giugno 2026) è stato un fisico teorico belga, premio Nobel per la fisica nel 2013.',
   },
   {
     anno: 2013,
@@ -2352,7 +2548,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta teorica di un meccanismo che contribuisce alla nostra comprensione dell\'origine della massa delle particelle subatomiche, e che è stato confermato recentemente attraverso la scoperta della particella fondamentale prevista, da parte degli esperimenti ATLAS e CMS al Large Hadron Collider del CERN',
     wikipedia: 'https://en.wikipedia.org/wiki/Peter_Higgs',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Peter_Higgs.png',
+    bioEstesa: 'Peter Ware Higgs (Newcastle upon Tyne, 29 maggio 1929 – Edimburgo, 8 aprile 2024) è stato un fisico britannico, Premio Nobel per la fisica nel 2013, condiviso con François Englert, per il suo lavoro sulla massa delle particelle subatomiche.\nLaureatosi e specializzatosi presso il King\'s College di Londra, tenne la cattedra di fisica teorica all\'Università di Edimburgo, diventando professore emerito nel 1996. Fu anche membro della Royal Society inglese.',
   },
   {
     anno: 2014,
@@ -2364,7 +2561,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per l\'invenzione del LED blu efficiente, che ha reso possibile la produzione di luminose sorgenti di luce bianca a risparmio energetico',
     wikipedia: 'https://en.wikipedia.org/wiki/Isamu_Akasaki',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Isamu_Akasaki.png',
+    bioEstesa: 'Isamu Akasaki ( (赤崎 勇?, Akasaki Isamu); Chiran, 30 gennaio 1929 – Nagoya, 1º aprile 2021) è stato un fisico e ingegnere giapponese, noto per aver inventato il LED blu con giunzione p-n al nitruro di gallio (GaN) nel 1989, per il quale è stato insignito del premio Nobel nel 2014.',
   },
   {
     anno: 2014,
@@ -2376,7 +2574,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per l\'invenzione del LED blu efficiente, che ha reso possibile la produzione di luminose sorgenti di luce bianca a risparmio energetico',
     wikipedia: 'https://en.wikipedia.org/wiki/Hiroshi_Amano',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Hiroshi_Amano.png',
+    bioEstesa: 'Hiroshi Amano (Hamamatsu, 11 settembre 1960) è un fisico, ingegnere e ricercatore giapponese, Premio Nobel per la Fisica nel 2014, insieme a Isamu Akasaki e Shūji Nakamura “per l\'invenzione di efficienti diodi emettitori di luce blu (LED) che ha sviluppato fonti di luce bianca luminosa e a risparmio energetico”.',
   },
   {
     anno: 2014,
@@ -2388,7 +2587,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per l\'invenzione del LED blu efficiente, che ha reso possibile la produzione di luminose sorgenti di luce bianca a risparmio energetico',
     wikipedia: 'https://en.wikipedia.org/wiki/Shuji_Nakamura',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Shuji_Nakamura.png',
+    bioEstesa: 'Shūji Nakamura (中村 修二?, Nakamura Shūji; Ikata, 22 maggio 1954) è un ingegnere e ricercatore in microelettronica giapponese naturalizzato statunitense, vincitore del Premio Nobel per la fisica nel 2014, insieme a Isamu Akasaki e Hiroshi Amano, «per l\'invenzione di diodi a luce blu efficienti che ha consentito di ottenere brillanti fonti di luce bianca a risparmio energetico».',
   },
   {
     anno: 2015,
@@ -2400,7 +2600,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta delle oscillazioni del neutrino che mostrano che il neutrino ha massa',
     wikipedia: 'https://en.wikipedia.org/wiki/Takaaki_Kajita',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Takaaki_Kajita.png',
+    bioEstesa: 'Takaaki Kajita (梶田 隆章?, Kajita Takaaki; Higashimatsuyama, 9 marzo 1959) è un fisico giapponese, vincitore del Premio Nobel per la Fisica nel 2015, insieme al canadese Arthur McDonald «per la scoperta delle oscillazioni del neutrino che mostrano che il neutrino ha massa».\n\nTakaaki Kajita attualmente è Special University Professor all\'Università di Tokyo, è stato Direttore del  Cosmic Ray Research (ICRR) dell\'Università di Tokyo fra il 2008 e il 2022. Attualmente è  Presidente dello Science Council of Japan.\nT. Kajita ha ricevuto il suo Ph.D. dall\'Università di Tokyo, School of Science nel 1986. Ha condotto ricerche negli esperimenti Kamiokande,  Super-Kamiokande, T2K e Hyper-Kamiokande.\nA settembre 2016 gli viene conferita la laurea honoris causa in fisica dell\'Università degli Studi di Padova e nel gennaio 2017 gli viene conferita anche dall\'Università \'Federico II\' di Napoli. Il 13 febbraio 2017 viene insignito di un\'ulteriore laurea honoris causa, questa volta presso l\'Università degli Studi di Perugia, presso cui ha tenuto una Lectio Magistralis dal titolo "Le onde gravitazionali e la nuova astrofisica".',
   },
   {
     anno: 2015,
@@ -2412,7 +2613,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta delle oscillazioni del neutrino che mostrano che il neutrino ha massa',
     wikipedia: 'https://en.wikipedia.org/wiki/Arthur_B._McDonald',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Arthur_B_McDonald.png',
+    bioEstesa: 'Arthur Bruce McDonald (Sydney, 29 agosto 1943) è un fisico canadese, vincitore del Premio Nobel per la Fisica nel 2015, insieme al giapponese Takaaki Kajita per i loro studi che hanno portato a mostrare che i neutrini hanno una massa..',
   },
   {
     anno: 2016,
@@ -2424,7 +2626,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le scoperte teoriche di transizioni di fase topologiche e fasi topologiche della materia',
     wikipedia: 'https://en.wikipedia.org/wiki/David_J._Thouless',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/David_J_Thouless.png',
+    bioEstesa: 'David James Thouless (Bearsden, 21 settembre 1934 – Cambridge, 6 aprile 2019) è stato un fisico britannico, noto per i suoi lavori nel campo della fisica della materia condensata ed è stato insignito del Premio Nobel per la fisica nel 2016 assieme a Duncan Haldane e J. Michael Kosterlitz “per le scoperte teoriche di transizioni di fase topologiche e fasi topologiche della materia”.\nFra i suoi contributi, di particolare rilevanza sono i lavori in merito alla transizione di Kosterlitz-Thouless.',
   },
   {
     anno: 2016,
@@ -2436,7 +2639,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le scoperte teoriche di transizioni di fase topologiche e fasi topologiche della materia',
     wikipedia: 'https://en.wikipedia.org/wiki/Duncan_Haldane',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Duncan_Haldane.png',
+    bioEstesa: 'Frederick Duncan Michael Haldane (Londra, 14 settembre 1951) è un fisico britannico, Premio Nobel per la fisica nel 2016 assieme a David Thouless e J. Michael Kosterlitz “per le scoperte teoriche di transizioni di fase topologiche e fasi topologiche della materia”.\nHa lavorato come fisico presso l\'Institut Laue-Langevin in Francia tra il 1977 e il 1981 prima di unirsi alla University of Southern California.',
   },
   {
     anno: 2016,
@@ -2448,7 +2652,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le scoperte teoriche di transizioni di fase topologiche e fasi topologiche della materia',
     wikipedia: 'https://en.wikipedia.org/wiki/J._Michael_Kosterlitz',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/J_Michael_Kosterlitz.png',
+    bioEstesa: 'John Michael Kosterlitz (Aberdeen, 22 giugno 1943) è un fisico britannico, Premio Nobel per la fisica nel 2016 assieme a David Thouless e Duncan Haldane “per le scoperte teoriche di transizioni di fase topologiche e fasi topologiche della materia”.\nFra i suoi contributi, di particolare rilevanza sono i lavori in merito alla transizione di Kosterlitz-Thouless.\nÈ stato anche un noto arrampicatore e apritore di nuove vie, negli anni sessanta e settanta.',
   },
   {
     anno: 2017,
@@ -2460,7 +2665,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i decisivi contributi al rivelatore LIGO e l\'osservazione delle onde gravitazionali',
     wikipedia: 'https://en.wikipedia.org/wiki/Rainer_Weiss',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Rainer_Weiss.png',
+    bioEstesa: 'Rainer Weiss (Berlino, 29 settembre 1932 – Cambridge, 25 agosto 2025) è stato un fisico tedesco naturalizzato statunitense, specializzato in fisica della gravitazione. Nel 1984, insieme a Kip Thorne, fondò il progetto LIGO per la ricerca delle onde gravitazionali.\nIl 3 ottobre 2017 conseguì il Premio Nobel per la fisica, insieme a Barry Barish e Kip Thorne, "per contributi decisivi all\'osservatorio LIGO e all\'osservazione delle onde gravitazionali".',
   },
   {
     anno: 2017,
@@ -2472,7 +2678,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i decisivi contributi al rivelatore LIGO e l\'osservazione delle onde gravitazionali',
     wikipedia: 'https://en.wikipedia.org/wiki/Barry_Barish',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Barry_Barish.png',
+    bioEstesa: 'Barry Clark Barish (Omaha, 27 gennaio 1936) è un fisico sperimentale statunitense specializzato in fisica della gravitazione e fisica delle particelle.\nIl 3 ottobre 2017 ha conseguito il Premio Nobel per la fisica, insieme a Rainer Weiss e Kip Thorne, per la scoperta delle onde gravitazionali.',
   },
   {
     anno: 2017,
@@ -2484,7 +2691,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per i decisivi contributi al rivelatore LIGO e l\'osservazione delle onde gravitazionali',
     wikipedia: 'https://en.wikipedia.org/wiki/Kip_Thorne',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Kip_Thorne.png',
+    bioEstesa: 'Kip Stephen Thorne (Logan, 1º giugno 1940) è un fisico teorico statunitense, specializzato in fisica della gravitazione e astrofisica e uno dei maggiori esperti mondiali di relatività generale.\nNel 2017 ha ricevuto,  insieme a Rainer Weiss e Barry Barish, il Premio Nobel per la fisica per il rilevamento delle onde gravitazionali.',
   },
   {
     anno: 2018,
@@ -2496,7 +2704,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per invenzioni rivoluzionarie nel campo della fisica del laser',
     wikipedia: 'https://en.wikipedia.org/wiki/Arthur_Ashkin',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Arthur_Ashkin.png',
+    bioEstesa: 'Arthur Ashkin (New York, 2 settembre 1922 – Rumson, 21 settembre 2020) è stato un fisico statunitense vincitore del Premio Nobel per la fisica del 2018, insieme a Donna Strickland e Gérard Mourou, per  le loro "invenzioni rivoluzionarie nel campo della fisica dei laser".',
   },
   {
     anno: 2018,
@@ -2508,7 +2717,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per invenzioni rivoluzionarie nel campo della fisica del laser',
     wikipedia: 'https://en.wikipedia.org/wiki/Gérard_Mourou',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Grard_Mourou.png',
+    bioEstesa: 'Gérard Albert Mourou (Albertville, 22 giugno 1944) è un fisico francese vincitore del Premio Nobel per la fisica del 2018, insieme a Donna Strickland e Arthur Ashkin, per  le loro "invenzioni rivoluzionarie nel campo della fisica dei laser".',
   },
   {
     anno: 2018,
@@ -2520,7 +2730,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per invenzioni rivoluzionarie nel campo della fisica del laser',
     wikipedia: 'https://en.wikipedia.org/wiki/Donna_Strickland',
     genere: 'female',
-    immagine: null,
+    immagine: 'images/nobel/Donna_Strickland.png',
+    bioEstesa: 'Donna Theo Strickland (Guelph, 27 maggio 1959) è una fisica canadese vincitrice del Premio Nobel per la fisica del 2018, insieme a Gérard Mourou e Arthur Ashkin, per le loro "invenzioni rivoluzionarie nel campo della fisica dei laser".\nÈ la terza donna a ricevere il Nobel per la fisica dopo Maria Goeppert-Mayer nel 1963 e Marie Curie nel 1903.',
   },
   {
     anno: 2019,
@@ -2532,7 +2743,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per le scoperte teoriche nella cosmologia fisica',
     wikipedia: 'https://en.wikipedia.org/wiki/Jim_Peebles',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Jim_Peebles.png',
+    bioEstesa: 'Phillip James Edwin Peebles, conosciuto come Jim Peebles (Winnipeg, 25 aprile 1935), è un astronomo canadese naturalizzato statunitense.\nAllievo di Fred Hoyle., ottenuta la laurea all\'Università di Manitoba, conseguì poi il dottorato sotto la supervisione di Robert Dicke all\'Università di Princeton, dove è professore emerito di scienze alla cattedra Albert Einstein.\nInsieme con Robert Dicke predisse la radiazione cosmica di fondo. Contribuì alle teorie della nucleosintesi primordiale, materia oscura, energia oscura e alla teoria della struttura.\nL\'8 ottobre 2019 gli è stato conferito il premio Nobel per la Fisica per le rivoluzionarie "scoperte teoriche in cosmologia fisica".',
   },
   {
     anno: 2019,
@@ -2544,7 +2756,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di un esopianeta che orbita attorno ad una stella di tipo solare',
     wikipedia: 'https://en.wikipedia.org/wiki/Michel_Mayor',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Michel_Mayor.png',
+    bioEstesa: 'Michel Gustave Édouard Mayor (Losanna, 12 gennaio 1942) è un astronomo svizzero.\nMichel Mayor ha insegnato al Dipartimento di Astronomia dell\'Università di Ginevra. Nel 1995 con Didier Queloz ha scoperto 51 Pegasi b, il primo pianeta extrasolare orbitante intorno ad una stella simile al Sole, 51 Pegasi.',
   },
   {
     anno: 2019,
@@ -2556,7 +2769,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di un esopianeta che orbita attorno ad una stella di tipo solare',
     wikipedia: 'https://en.wikipedia.org/wiki/Didier_Queloz',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Didier_Queloz.png',
+    bioEstesa: 'Didier Patrick Queloz (Ginevra, 23 febbraio 1966) è un astronomo svizzero, co-scopritore di 51 Pegasi b, il primo esopianeta in orbita attorno a una stella di sequenza principale.',
   },
   {
     anno: 2020,
@@ -2568,7 +2782,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta che la formazione dei buchi neri è una robusta previsione della teoria della relatività generale.',
     wikipedia: 'https://en.wikipedia.org/wiki/Roger_Penrose',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Roger_Penrose.png',
+    bioEstesa: 'Sir Roger Penrose, cavaliere e OM. (Colchester, 8 agosto 1931), è un matematico, fisico e cosmologo britannico, premio Nobel per la fisica nel 2020 "per avere scoperto che la formazione dei buchi neri è una robusta previsione della teoria generale della relatività”.\nFellow della Royal Society, è noto per il suo lavoro nel campo della fisica matematica, in particolare per i suoi contributi alla cosmologia; si occupa inoltre di giochi matematici. Laureato all\'Università di Cambridge, è professore emerito all\'Istituto di matematica dell\'Università di Oxford. Nel 1988 ha ricevuto, assieme a Stephen Hawking, il Premio Wolf per la fisica.',
   },
   {
     anno: 2020,
@@ -2580,7 +2795,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di un oggetto compatto supermassiccio al centro della nostra galassia.',
     wikipedia: 'https://en.wikipedia.org/wiki/Reinhard_Genzel',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Reinhard_Genzel.png',
+    bioEstesa: 'Reinhard Genzel (Bad Homburg vor der Höhe, 24 marzo 1952) è un astrofisico tedesco, che ha dato contributi decisivi nei campi dell\'astronomia dell\'infrarosso e submillimetrica, dell\'imaging astronomico ad alta definizione, nello studio del Centro della Via Lattea, dei buchi neri supermassicci nel centro delle galassie, dei meccanismi di formazione ed evoluzione galattica e dei fenomeni di formazione stellare.\nNel 2020 ha condiviso con Roger Penrose e Andrea Ghez il Premio Nobel per la fisica per la sua scoperta di un buco nero supermassiccio al centro della nostra galassia.',
   },
   {
     anno: 2020,
@@ -2592,7 +2808,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta di un oggetto compatto supermassiccio al centro della nostra galassia.',
     wikipedia: 'https://en.wikipedia.org/wiki/Andrea_M._Ghez',
     genere: 'female',
-    immagine: null,
+    immagine: 'images/nobel/Andrea_M_Ghez.png',
+    bioEstesa: 'Andrea Mia Ghez (New York, 16 giugno 1965) è un\'astronoma statunitense, insignita del Premio Nobel per la fisica nel 2020, "per la scoperta di un oggetto compatto supermassiccio al centro della nostra galassia".',
   },
   {
     anno: 2021,
@@ -2604,7 +2821,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la modellizzazione fisica del clima terrestre, quantificando la variabilità e prevedendo in modo affidabile il riscaldamento globale.',
     wikipedia: 'https://en.wikipedia.org/wiki/Syukuro_Manabe',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Syukuro_Manabe.png',
+    bioEstesa: 'Syukuro Manabe o Shukurō Manabe (in giapponese: 真鍋 淑郎; Shingū, 21 settembre 1931) è un climatologo e fisico giapponese naturalizzato statunitense noto per i suoi studi pionieristici sull\'utilizzo dei computer per le simulazioni climatiche.\nNel 2021 ha ricevuto il premio Nobel per la fisica (assieme a Klaus Hasselmann e separatamente da Giorgio Parisi) "per la modellizzazione fisica del clima terrestre, quantificando la variabilità e prevedendo in modo affidabile il riscaldamento globale". Si trattò in particolare della prima assegnazione di tale premio per argomenti legati alla climatologia, e in generale alla geofisica.',
   },
   {
     anno: 2021,
@@ -2617,6 +2835,7 @@ export const NOBEL_FISICA = [
     wikipedia: 'https://en.wikipedia.org/wiki/Klaus_Hasselmann',
     genere: 'male',
     immagine: null,
+    bioEstesa: 'Klaus Ferdinand Hasselmann (Amburgo, 25 ottobre 1931) è un climatologo, fisico e meteorologo tedesco noto per i suoi studi pionieristici sull\'utilizzo dei computer per le simulazioni climatiche.\nNel 2021 ha ricevuto il premio Nobel per la fisica (assieme a Syukuro Manabe e separatamente da Giorgio Parisi) "per la modellizzazione fisica del clima terrestre, quantificando la variabilità e prevedendo in modo affidabile il riscaldamento globale". Si trattò in particolare della prima assegnazione di tale premio per argomenti legati alla climatologia, e in generale alla geofisica.',
   },
   {
     anno: 2021,
@@ -2628,7 +2847,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta dell\'interazione tra disordine e fluttuazioni nei sistemi fisici dalla scala atomica a quella planetaria.',
     wikipedia: 'https://en.wikipedia.org/wiki/Giorgio_Parisi',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Giorgio_Parisi.png',
+    bioEstesa: 'Giorgio Parisi (Roma, 4 agosto 1948) è un fisico italiano, premio Nobel per la fisica nel 2021 per i suoi studi sui sistemi complessi.\nFisico teorico dagli interessi di ricerca molto variegati, è noto per i suoi studi in teoria quantistica dei campi (soprattutto nell\'ambito della cromodinamica quantistica), in meccanica statistica (in particolare, ma non soltanto, per i suoi studi sui vetri di spin) e per l\'applicazione di quest\'ultima a vari ambiti della teoria dei sistemi complessi.',
   },
   {
     anno: 2022,
@@ -2640,7 +2860,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per esperimenti con fotoni entangled, stabilendo la violazione delle disuguaglianze di Bell e aprendo la strada alla scienza dell\'informazione quantistica',
     wikipedia: 'https://en.wikipedia.org/wiki/Alain_Aspect',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Alain_Aspect.png',
+    bioEstesa: 'Alain Aspect (Agen, 15 giugno 1947) è un fisico francese, insignito del Premio Nobel per la fisica nel 2022.',
   },
   {
     anno: 2022,
@@ -2652,7 +2873,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per esperimenti con fotoni entangled, stabilendo la violazione delle disuguaglianze di Bell e aprendo la strada alla scienza dell\'informazione quantistica',
     wikipedia: 'https://en.wikipedia.org/wiki/John_Clauser',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_Clauser.png',
+    bioEstesa: 'John Francis Clauser (Pasadena, 1º dicembre 1942) è un fisico statunitense conosciuto per i suoi contributi ai fondamenti della meccanica quantistica.\nDivenne famoso per il suo lavoro sulla disuguaglianza di Clauser-Horne-Shimony-Holt.\nNel 1972 assieme a Stuart Freedman eseguì per la prima volta una verifica sperimentale del teorema di Bell.\nNel 2010 gli è stato assegnato il Premio Wolf assieme a Alain Aspect e Anton Zeilinger. Nel 2022, sempre assieme ad Aspect e Zeilinger, ha ricevuto il Premio Nobel.',
   },
   {
     anno: 2022,
@@ -2664,7 +2886,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per esperimenti con fotoni entangled, stabilendo la violazione delle disuguaglianze di Bell e aprendo la strada alla scienza dell\'informazione quantistica',
     wikipedia: 'https://en.wikipedia.org/wiki/Anton_Zeilinger',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Anton_Zeilinger.png',
+    bioEstesa: 'Anton Zeilinger (Ried im Innkreis, 20 maggio 1945) è un fisico austriaco.\nAttualmente è professore all\'Università di Vienna, precedentemente all\'Università di Innsbruck.\nÈ stato definito un pioniere nel nuovo campo dell\'informatica quantistica ed è famoso per aver realizzato il teletrasporto quantistico con i fotoni.',
   },
   {
     anno: 2023,
@@ -2676,7 +2899,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per metodi sperimentali che generano impulsi di luce ad attosecondi per lo studio della dinamica degli elettroni nella materia',
     wikipedia: 'https://en.wikipedia.org/wiki/Pierre_Agostini',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Pierre_Agostini.png',
+    bioEstesa: 'Pierre Agostini (Tunisi, 23 luglio 1941) è un fisico francese naturalizzato statunitense.\nNel 2023 ha ricevuto il Premio Nobel per la fisica insieme a Ferenc Krausz e Anne L\'Huillier «per i metodi sperimentali che generano impulsi di luce ad attosecondi per lo studio della dinamica degli elettroni nella materia».',
   },
   {
     anno: 2023,
@@ -2688,7 +2912,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per metodi sperimentali che generano impulsi di luce ad attosecondi per lo studio della dinamica degli elettroni nella materia',
     wikipedia: 'https://en.wikipedia.org/wiki/Ferenc_Krausz',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Ferenc_Krausz.png',
+    bioEstesa: 'Ferenc Krausz (Mór, 17 maggio 1962) è un fisico ungherese, specializzato in fisica degli attosecondi e scienza dei laser.',
   },
   {
     anno: 2023,
@@ -2700,7 +2925,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per metodi sperimentali che generano impulsi di luce ad attosecondi per lo studio della dinamica degli elettroni nella materia',
     wikipedia: 'https://en.wikipedia.org/wiki/Anne_L%27Huillier',
     genere: 'female',
-    immagine: null,
+    immagine: 'images/nobel/Anne_LHuillier.png',
+    bioEstesa: 'Anne Geneviève L\'Huillier (Parigi, 16 agosto 1958) è una fisica francese, specializzata in fisica atomica, materia che insegna all\'Università di Lund in Svezia.\nÈ conosciuta per aver vinto nel 2023 il Premio Nobel per la fisica insieme a Pierre Agostini e Ferenc Krauszsvista: "per i metodi sperimentali che generano impulsi di luce ad attosecondi per lo studio della dinamica degli elettroni nella materia". Da quando il premio esiste è la quinta donna a riceverlo.',
   },
   {
     anno: 2024,
@@ -2712,7 +2938,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per scoperte e invenzioni fondamentali che consentono l\'apprendimento automatico con reti neurali artificiali',
     wikipedia: 'https://en.wikipedia.org/wiki/John_Hopfield',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_Hopfield.png',
+    bioEstesa: 'John Joseph Hopfield (Chicago, 15 luglio 1933) è un fisico statunitense, attivo nel campo della biofisica e della fisica statistica.\nÈ noto soprattutto per aver ideato un tipo di rete neurale noto adesso come rete di Hopfield, e per aver introdotto, contemporaneamente a Jacques Ninio, il concetto di proofreading in biologia molecolare. Per il ruolo avuto nello sviluppo della teoria delle reti neurali, e quindi per la successiva nascita del concetto di machine learning, nel 2024 ha ricevuto, assieme a Geoffrey Hinton, il premio Nobel per la fisica.',
   },
   {
     anno: 2024,
@@ -2724,7 +2951,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per scoperte e invenzioni fondamentali che consentono l\'apprendimento automatico con reti neurali artificiali',
     wikipedia: 'https://en.wikipedia.org/wiki/Geoffrey_Hinton',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Geoffrey_Hinton.png',
+    bioEstesa: 'Geoffrey Everest Hinton (Wimbledon, 6 dicembre 1947) è uno psicologo e informatico britannico naturalizzato canadese.\nNoto per i suoi contributi allo sviluppo dell\'apprendimento automatico, è considerato uno tra i ricercatori più influenti nello sviluppo dell\'apprendimento profondo. Professore all\'Università di Toronto e ricercatore presso Google Brain, nel 2017 fondò il Vector Institute for Artificial Intelligence a Toronto, di cui è consulente scientifico principale pro bono.\nNel 1986 ha pubblicato con David Rumelhart e Ronald J. Williams un articolo di particolare influenza, che popolarizzò il già noto uso dell\'algoritmo di retropropagazione dell\'errore per l\'allenamento di reti neurali a più livelli. Nel 2012 AlexNet, rete neurale profonda progettata in collaborazione con i suoi studenti Alex Krizhevsky e Ilya Sutskever, ottenne risultati rivoluzionari nel problema di classificazione delle immagini, migliorando con un largo margine i risultati dell\'ImageNet challenge nel 2012 e aprendo la strada all\'applicazione delle reti neurali profonde in problemi di visione artificiale.\nNel 2018 ricevette, insieme a Yoshua Bengio e Yann LeCun, il Premio Turing per i suoi contributi allo sviluppo dell\'apprendimento profondo. I tre ricercatori sono noti come "padrini dell\'apprendimento profondo" per via dell\'influenza dei loro contributi allo sviluppo del settore.',
   },
   {
     anno: 2025,
@@ -2736,7 +2964,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta dell’effetto tunnel quantistico macroscopico e della quantizzazione dell’energia in un circuito elettrico',
     wikipedia: 'https://en.wikipedia.org/wiki/John_Clarke_(physicist)',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_Clarke_physicist.png',
+    bioEstesa: 'John Clarke (Cambridge, 10 febbraio 1942) è un fisico britannico, vincitore del premio Nobel per la fisica nel 2025 insieme a Michel H. Devoret e John M. Martinis.\nNegli anni \'80, Clarke guidò un gruppo di ricerca, che includeva John M. Martinis e Michel Devoret. Le loro scoperte nei fenomeni quantistici macroscopici nei superconduttori gli hanno fatto vincere il Premio Nobel per la fisica nel 2025. Clarke è professore emerito presso l\'Università di Berkeley, in California.',
   },
   {
     anno: 2025,
@@ -2748,7 +2977,8 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta dell’effetto tunnel quantistico macroscopico e della quantizzazione dell’energia in un circuito elettrico',
     wikipedia: 'https://en.wikipedia.org/wiki/Michel_Devoret',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/Michel_Devoret.png',
+    bioEstesa: 'Michel Henri Devoret (Parigi, 15 agosto 1953) è un fisico francese, premio Nobel per la fisica nel 2025 per la scoperta dell\'effetto tunnel quantistico macroscopico e della quantizzazione dell\'energia in un circuito elettrico..',
   },
   {
     anno: 2025,
@@ -2760,6 +2990,7 @@ export const NOBEL_FISICA = [
     motivazione: 'per la scoperta dell’effetto tunnel quantistico macroscopico e della quantizzazione dell’energia in un circuito elettrico',
     wikipedia: 'https://en.wikipedia.org/wiki/John_M._Martinis',
     genere: 'male',
-    immagine: null,
+    immagine: 'images/nobel/John_M_Martinis.png',
+    bioEstesa: 'John Matthew Martinis (1958) è un fisico statunitense, professore emerito di fisica presso l\'Università della California - Santa Barbara e premio Nobel per la fisica nel 2025 insieme a John Clarke e Michel Devoret per la scoperta dell\'effetto tunnel quantistico macroscopico e della quantizzazione dell\'energia in un circuito elettrico costituito da superconduttori.',
   },
 ];

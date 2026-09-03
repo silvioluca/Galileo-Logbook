@@ -129,18 +129,37 @@ export default function Nobel() {
           open={Boolean(selezionato)}
           onClose={() => setSelezionato(null)}
           title={selezionato?.nome}
+          className="nobel-modal"
         >
           {selezionato && (
-            <div>
-              <p className="strumento-meta">Premio Nobel per la Fisica {selezionato.anno}</p>
-              <p>{componiBiografia(selezionato, condivisoCon)}</p>
-              {selezionato.wikipedia && (
-                <p>
-                  <a href={selezionato.wikipedia} target="_blank" rel="noreferrer">
-                    Approfondisci su Wikipedia (in inglese) ↗
-                  </a>
-                </p>
-              )}
+            <div className="strumento-modal-layout">
+              <div className="strumento-modal-immagine">
+                {selezionato.immagine ? (
+                  <img
+                    src={`${import.meta.env.BASE_URL}${selezionato.immagine}`}
+                    alt={selezionato.nome}
+                  />
+                ) : (
+                  <span aria-hidden="true">Immagine non disponibile</span>
+                )}
+              </div>
+              <div className="nobel-modal-testo">
+                <p className="strumento-meta">Premio Nobel per la Fisica {selezionato.anno}</p>
+                <p>{componiBiografia(selezionato, condivisoCon)}</p>
+                {selezionato.bioEstesa && (
+                  <>
+                    <div className="ornament-divider">✦</div>
+                    <p className="nobel-bio-estesa">{selezionato.bioEstesa}</p>
+                  </>
+                )}
+                {selezionato.wikipedia && (
+                  <p>
+                    <a href={selezionato.wikipedia} target="_blank" rel="noreferrer">
+                      Approfondisci su Wikipedia (in inglese) ↗
+                    </a>
+                  </p>
+                )}
+              </div>
             </div>
           )}
         </Modal>
