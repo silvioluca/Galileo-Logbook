@@ -58,6 +58,11 @@ export default function Navbar() {
               Unità di Misura
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/esperimenti" onClick={() => setOpen(false)}>
+              Esperimenti
+            </NavLink>
+          </li>
         </ul>
         <div className="navbar-auth">
           {!loading &&

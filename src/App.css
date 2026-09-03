@@ -348,6 +348,15 @@
   height: 100%;
 }
 
+.esperimento-tesi {
+  font-weight: 600;
+  font-style: italic;
+  color: var(--accent-strong);
+  border-left: 3px solid var(--accent);
+  padding-left: 0.75rem;
+  margin: 0 0 1rem;
+}
+
 .nobel-anno {
   font-weight: 600;
   margin: 0 0 0.4rem;
