@@ -18,6 +18,12 @@ export default function StrumentiWiki() {
   const [branca, setBranca] = useState('');
   const [selezionato, setSelezionato] = useState(null);
 
+  const conteggioBranca = useMemo(() => {
+    const m = new Map();
+    for (const s of STRUMENTI_WIKI) m.set(s.branca, (m.get(s.branca) || 0) + 1);
+    return m;
+  }, []);
+
   const filtrati = useMemo(() => {
     const testo = ricerca.trim().toLowerCase();
     return STRUMENTI_WIKI.filter((s) => {
@@ -49,10 +55,10 @@ export default function StrumentiWiki() {
           <div className="filtro-field">
             <label htmlFor="strumento-branca">Branca</label>
             <select id="strumento-branca" value={branca} onChange={(e) => setBranca(e.target.value)}>
-              <option value="">Tutte le branche</option>
+              <option value="">Tutte le branche ({STRUMENTI_WIKI.length})</option>
               {BRANCHE.map((b) => (
                 <option key={b} value={b}>
-                  {b}
+                  {b} ({conteggioBranca.get(b) || 0})
                 </option>
               ))}
             </select>

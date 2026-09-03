@@ -76,3 +76,18 @@ export function traduciLuogo(luogo) {
   }
   return testo;
 }
+
+// Isola solo il nome del paese di nascita, per il filtro "Nazionalità":
+// preferisce il paese "attuale" tra parentesi quando presente (i confini
+// storici cambiano, es. "Russian Empire (now Poland)" -> Polonia).
+export function estraiPaeseNascita(luogo) {
+  if (!luogo || luogo === 'N/A') return null;
+  // "X (now Y)" può sostituire solo la città o solo il paese storico a
+  // seconda dei casi: si sostituisce ovunque compaia, poi si riprende
+  // l'ultimo segmento della stringa risultante come paese.
+  const senzaOra = luogo.replace(/[^,()]+\s*\(now ([^)]+)\)/g, '$1');
+  const parti = senzaOra.split(',').map((p) => p.trim());
+  const paese = (parti[parti.length - 1] || '').replace(/^the /, '');
+  if (!paese) return null;
+  return traduciLuogo(paese) || paese;
+}

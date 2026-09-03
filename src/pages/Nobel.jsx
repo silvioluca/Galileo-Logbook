@@ -1,11 +1,21 @@
 import { useMemo, useState } from 'react';
 import { NOBEL_FISICA } from '../data/nobelFisica';
 import Modal from '../components/Modal';
-import { formattaData } from '../utils/nobelUtils';
+import { formattaData, estraiPaeseNascita } from '../utils/nobelUtils';
 
 function decennio(anno) {
   const inizio = Math.floor(anno / 10) * 10;
   return `${inizio}–${inizio + 9}`;
+}
+
+function contaOccorrenze(lista, estraiChiave) {
+  const conteggio = new Map();
+  for (const el of lista) {
+    const chiave = estraiChiave(el);
+    if (!chiave) continue;
+    conteggio.set(chiave, (conteggio.get(chiave) || 0) + 1);
+  }
+  return conteggio;
 }
 
 // Le date/luoghi di nascita e morte sono già nella bio estesa di Wikipedia:
@@ -20,24 +30,44 @@ function infoPremio(laureato, condivisoCon) {
   return testo;
 }
 
+const GENERE_LABEL = { male: 'Uomini', female: 'Donne' };
+
 export default function Nobel() {
   const [ricerca, setRicerca] = useState('');
   const [decennioScelto, setDecennioScelto] = useState('');
+  const [nazionalitaScelta, setNazionalitaScelta] = useState('');
+  const [genereScelto, setGenereScelto] = useState('');
   const [selezionato, setSelezionato] = useState(null);
 
   const decenni = useMemo(() => {
     const insieme = new Set(NOBEL_FISICA.map((l) => decennio(l.anno)));
     return [...insieme].sort();
   }, []);
+  const conteggioDecenni = useMemo(() => contaOccorrenze(NOBEL_FISICA, (l) => decennio(l.anno)), []);
+
+  const nazionalita = useMemo(() => {
+    const insieme = new Set(
+      NOBEL_FISICA.map((l) => estraiPaeseNascita(l.luogoNascita)).filter(Boolean),
+    );
+    return [...insieme].sort((a, b) => a.localeCompare(b, 'it'));
+  }, []);
+  const conteggioNazionalita = useMemo(
+    () => contaOccorrenze(NOBEL_FISICA, (l) => estraiPaeseNascita(l.luogoNascita)),
+    [],
+  );
+
+  const conteggioGenere = useMemo(() => contaOccorrenze(NOBEL_FISICA, (l) => l.genere), []);
 
   const filtrati = useMemo(() => {
     const testo = ricerca.trim().toLowerCase();
     return NOBEL_FISICA.filter((l) => {
       if (decennioScelto && decennio(l.anno) !== decennioScelto) return false;
+      if (nazionalitaScelta && estraiPaeseNascita(l.luogoNascita) !== nazionalitaScelta) return false;
+      if (genereScelto && l.genere !== genereScelto) return false;
       if (testo && !l.nome.toLowerCase().includes(testo)) return false;
       return true;
     });
-  }, [ricerca, decennioScelto]);
+  }, [ricerca, decennioScelto, nazionalitaScelta, genereScelto]);
 
   const condivisoCon = useMemo(() => {
     if (!selezionato) return [];
@@ -70,10 +100,36 @@ export default function Nobel() {
               value={decennioScelto}
               onChange={(e) => setDecennioScelto(e.target.value)}
             >
-              <option value="">Tutti i decenni</option>
+              <option value="">Tutti i decenni ({NOBEL_FISICA.length})</option>
               {decenni.map((d) => (
                 <option key={d} value={d}>
-                  {d}
+                  {d} ({conteggioDecenni.get(d) || 0})
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="filtro-field">
+            <label htmlFor="nobel-nazionalita">Nazionalità</label>
+            <select
+              id="nobel-nazionalita"
+              value={nazionalitaScelta}
+              onChange={(e) => setNazionalitaScelta(e.target.value)}
+            >
+              <option value="">Tutte le nazionalità ({NOBEL_FISICA.length})</option>
+              {nazionalita.map((n) => (
+                <option key={n} value={n}>
+                  {n} ({conteggioNazionalita.get(n) || 0})
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="filtro-field">
+            <label htmlFor="nobel-genere">Genere</label>
+            <select id="nobel-genere" value={genereScelto} onChange={(e) => setGenereScelto(e.target.value)}>
+              <option value="">Tutti ({NOBEL_FISICA.length})</option>
+              {Object.entries(GENERE_LABEL).map(([valore, etichetta]) => (
+                <option key={valore} value={valore}>
+                  {etichetta} ({conteggioGenere.get(valore) || 0})
                 </option>
               ))}
             </select>
