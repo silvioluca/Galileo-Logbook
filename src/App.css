@@ -62,6 +62,7 @@
   border: 2px solid var(--accent-strong);
   display: block;
   object-fit: cover;
+  filter: sepia(0.85) saturate(1.15) contrast(1.05);
 }
 
 .navbar-avatar-fallback {
@@ -448,6 +449,46 @@
 
 .scheda-row:hover {
   background: rgba(107, 68, 35, 0.06);
+}
+
+.unita-table-wrap {
+  overflow-x: auto;
+}
+
+.unita-row {
+  cursor: pointer;
+}
+
+.unita-intestazione th {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.4rem;
+}
+
+.unita-modal-tabella {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.unita-modal-tabella th,
+.unita-modal-tabella td {
+  text-align: left;
+  padding: 0.3rem 0.6rem 0.3rem 0;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.unita-modal-tabella th {
+  font-weight: 600;
+  color: var(--accent-strong);
+  white-space: nowrap;
+  width: 40%;
 }
 
 .difficolta {

@@ -53,6 +53,11 @@ export default function Navbar() {
               Nobel
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/unita-di-misura" onClick={() => setOpen(false)}>
+              Unità di Misura
+            </NavLink>
+          </li>
         </ul>
         <div className="navbar-auth">
           {!loading &&
