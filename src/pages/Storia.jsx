@@ -15,23 +15,24 @@ function annoValore(testo) {
   return /a\.C\./.test(testo) ? -n : n;
 }
 
-const RISERVA_ALTO = 44;
+const RISERVA_ALTO_MINIMA = 44;
 const RISERVA_BASSO = 20;
 const SPAZIO_MINIMO = 22;
 
-function distribuisciEventi(eventi, altezzaDisponibile) {
+function distribuisciEventi(eventi, altezzaDisponibile, riservaAlto) {
   if (!eventi || eventi.length === 0) return [];
+  const alto = Math.max(riservaAlto, RISERVA_ALTO_MINIMA);
   const anni = eventi.map((ev) => annoValore(ev.anno));
   const min = Math.min(...anni);
   const max = Math.max(...anni);
-  const utile = Math.max(altezzaDisponibile - RISERVA_ALTO - RISERVA_BASSO, 0);
+  const utile = Math.max(altezzaDisponibile - alto - RISERVA_BASSO, 0);
   const posizioni = anni.map((a) => (max === min ? 0 : ((a - min) / (max - min)) * utile));
   for (let k = 1; k < posizioni.length; k++) {
     if (posizioni[k] - posizioni[k - 1] < SPAZIO_MINIMO) {
       posizioni[k] = posizioni[k - 1] + SPAZIO_MINIMO;
     }
   }
-  return posizioni.map((p) => p + RISERVA_ALTO);
+  return posizioni.map((p) => p + alto);
 }
 
 export default function Storia() {
@@ -39,8 +40,10 @@ export default function Storia() {
   const trackRef = useRef(null);
   const titoloRefs = useRef([]);
   const sezioneRefs = useRef([]);
+  const timelineTitoloRefs = useRef([]);
   const [posizioni, setPosizioni] = useState([]);
   const [altezze, setAltezze] = useState([]);
+  const [altezzeTitoloTimeline, setAltezzeTitoloTimeline] = useState([]);
 
   useEffect(() => {
     function calcola() {
@@ -48,6 +51,9 @@ export default function Storia() {
       const base = trackRef.current.getBoundingClientRect().top;
       setPosizioni(titoloRefs.current.map((el) => (el ? el.getBoundingClientRect().top - base : 0)));
       setAltezze(sezioneRefs.current.map((el) => (el ? el.getBoundingClientRect().height : 0)));
+      setAltezzeTitoloTimeline(
+        timelineTitoloRefs.current.map((el) => (el ? el.getBoundingClientRect().height : 0))
+      );
     }
     calcola();
     const ro = new ResizeObserver(() => requestAnimationFrame(calcola));
@@ -125,12 +131,17 @@ export default function Storia() {
                   key={era.id}
                   style={{ top: `${posizioni[i] ?? 0}px` }}
                 >
-                  <a href={`#${era.id}`} onClick={vaiAllEra(era.id)}>
+                  <a
+                    href={`#${era.id}`}
+                    onClick={vaiAllEra(era.id)}
+                    ref={(el) => (timelineTitoloRefs.current[i] = el)}
+                  >
                     <span className="storia-timeline-periodo">{era.periodo}</span>
                     <span className="storia-timeline-titolo">{era.titolo}</span>
                   </a>
                   {era.eventi && era.eventi.length > 0 && (() => {
-                    const posEventi = distribuisciEventi(era.eventi, altezze[i] ?? 0);
+                    const riservaAlto = (altezzeTitoloTimeline[i] ?? 0) + 12;
+                    const posEventi = distribuisciEventi(era.eventi, altezze[i] ?? 0, riservaAlto);
                     return (
                       <ol className="storia-timeline-eventi">
                         {era.eventi.map((ev, j) => (

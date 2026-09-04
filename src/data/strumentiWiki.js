@@ -353,7 +353,7 @@ export const STRUMENTI_WIKI = [
     unita: 'Hz',
     descrizione:
       "Un disco forato ruota davanti a un getto d'aria che, interrotto a intervalli regolari dai fori, produce un suono la cui altezza dipende dalla velocità di rotazione. Inventata nel 1819, è stato il primo strumento capace di misurare direttamente la frequenza di un suono contando i giri del disco.",
-    immagine: null,
+    immagine: 'images/strumenti/sirena-cagniard.jpg',
   },
   {
     nome: 'Tubo di Kundt',
