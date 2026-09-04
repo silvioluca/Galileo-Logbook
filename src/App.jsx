@@ -8,6 +8,7 @@ import StrumentiWiki from './pages/StrumentiWiki';
 import Nobel from './pages/Nobel';
 import UnitaMisura from './pages/UnitaMisura';
 import Esperimenti from './pages/Esperimenti';
+import Storia from './pages/Storia';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/nobel" element={<Nobel />} />
         <Route path="/unita-di-misura" element={<UnitaMisura />} />
         <Route path="/esperimenti" element={<Esperimenti />} />
+        <Route path="/storia" element={<Storia />} />
         <Route path="/crea-scheda" element={<CreaScheda />} />
         <Route path="/modifica-scheda/:id" element={<CreaScheda />} />
       </Routes>

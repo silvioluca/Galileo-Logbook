@@ -1218,3 +1218,242 @@
   align-items: flex-start;
   max-width: 480px;
 }
+
+/* Storia della Fisica */
+
+.storia-layout {
+  display: grid;
+  grid-template-columns: 1fr 270px;
+  gap: 2.5rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.storia-timeline {
+  position: sticky;
+  top: 90px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+}
+
+.storia-timeline h2 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.storia-timeline ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.storia-timeline ol::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: var(--line);
+}
+
+.storia-timeline li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.15rem;
+}
+
+.storia-timeline li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--accent-strong);
+}
+
+.storia-timeline a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.storia-timeline-periodo {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.storia-timeline-titolo {
+  display: block;
+  font-weight: 600;
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.storia-timeline a:hover .storia-timeline-titolo {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
+.storia-era {
+  scroll-margin-top: 90px;
+}
+
+.storia-era + .storia-era {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 3px double var(--line);
+}
+
+.storia-era-periodo {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 0.15rem;
+}
+
+.storia-era h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+}
+
+.storia-era-intro {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+}
+
+.storia-eventi {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.75rem;
+  margin: 0 0 2rem;
+  padding: 0.85rem 1.1rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(107, 68, 35, 0.06);
+}
+
+.storia-eventi li {
+  font-size: 0.85rem;
+}
+
+.storia-eventi strong {
+  color: var(--accent-strong);
+  margin-right: 0.35rem;
+}
+
+.storia-sezione {
+  margin-bottom: 2.25rem;
+}
+
+.storia-sezione::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.storia-sezione h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.storia-sezione p {
+  text-align: justify;
+  line-height: 1.65;
+  margin: 0 0 1rem;
+}
+
+.storia-figura {
+  width: 40%;
+  max-width: 280px;
+  margin-bottom: 0.75rem;
+  padding: 6px;
+  background: var(--paper);
+}
+
+.storia-figura-destra {
+  float: right;
+  margin: 0 0 0.75rem 1.25rem;
+}
+
+.storia-figura-sinistra {
+  float: left;
+  margin: 0 1.25rem 0.75rem 0;
+}
+
+.storia-figura img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.storia-figura figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.72rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.storia-equazione {
+  clear: both;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--accent-strong);
+  background: rgba(255, 250, 235, 0.5);
+  text-align: center;
+}
+
+.storia-equazione-formula {
+  margin: 0 0 0.35rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent-strong);
+}
+
+.storia-equazione-nome {
+  margin: 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .storia-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .storia-timeline {
+    position: static;
+    max-height: none;
+    order: -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .storia-figura-destra,
+  .storia-figura-sinistra {
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin: 0 0 1rem;
+  }
+}
