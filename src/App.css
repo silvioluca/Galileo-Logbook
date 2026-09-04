@@ -981,6 +981,12 @@
   margin: 0 0 0.6em;
 }
 
+.scheda-preview-page .procedimento-html hr {
+  border: none;
+  border-top: 1px dashed var(--ink-soft);
+  margin: 0.8em 0;
+}
+
 .scheda-preview-page .preview-label {
   font-weight: 700;
   margin-bottom: 0.2rem;
@@ -1235,6 +1241,50 @@
   background: rgba(107, 68, 35, 0.15);
   color: var(--accent-strong);
   border-color: var(--line);
+}
+
+.editor-simboli {
+  position: relative;
+  display: inline-flex;
+}
+
+.editor-simboli-pannello {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: repeat(9, 1.9rem);
+  gap: 2px;
+  background: var(--paper);
+  border: 1px solid var(--accent-strong);
+  box-shadow: 0 4px 14px rgba(43, 29, 15, 0.25);
+  padding: 0.4rem;
+}
+
+.editor-simbolo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.9rem;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.editor-simbolo-btn:hover {
+  border-color: var(--line);
+  background: rgba(107, 68, 35, 0.1);
+}
+
+.editor-content hr {
+  border: none;
+  border-top: 1px dashed var(--ink-soft);
+  margin: 1em 0;
 }
 
 .editor-content {

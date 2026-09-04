@@ -164,6 +164,26 @@ function creaScrittore(doc, margine, larghezza, altezzaPagina, famiglia = 'times
         y += interlinea;
       });
     },
+    // Come scrivi(), ma con rientro a bandiera: il prefisso (punto o numero)
+    // resta nel margine, e tutte le righe del testo, comprese quelle andate
+    // a capo, si allineano sotto la prima parola invece che tornare al
+    // margine della pagina.
+    scriviVoceElenco(testoVoce, prefisso, { dimensione = 11, stile = 'normal', interlinea = 14, colore = null } = {}) {
+      doc.setFont(famiglia, stile);
+      doc.setFontSize(dimensione);
+      doc.setTextColor(...(colore || [0, 0, 0]));
+      const rientro = doc.getTextWidth(`${prefisso}  `);
+      const righe = doc.splitTextToSize(testoVoce || '', larghezza - rientro);
+      righe.forEach((riga, indice) => {
+        if (y > altezzaPagina - margine) {
+          doc.addPage();
+          y = margine;
+        }
+        if (indice === 0) doc.text(prefisso, margine, y);
+        doc.text(riga, margine + rientro, y);
+        y += interlinea;
+      });
+    },
     get y() {
       return y;
     },
@@ -186,7 +206,7 @@ function pdfClassico(doc, margine, larghezza, altezzaPagina, scheda) {
 
   w.scrivi('Materiale utilizzato', { dimensione: 13, stile: 'bold', interlinea: 16, spazioSopra: 10 });
   if (strumenti.length === 0) w.scrivi('—');
-  else strumenti.forEach((s) => w.scrivi(`•  ${s}`));
+  else strumenti.forEach((s) => w.scriviVoceElenco(s, '•'));
 
   w.scrivi('Procedimento', { dimensione: 13, stile: 'bold', interlinea: 16, spazioSopra: 10 });
   if (haContenutoHtml(procedimento)) {

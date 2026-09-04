@@ -16,6 +16,8 @@ function segmentiInline(nodo, formati = {}) {
       const nuovi = { ...formati };
       if (tag === 'strong' || tag === 'b') nuovi.bold = true;
       if (tag === 'em' || tag === 'i') nuovi.italic = true;
+      if (tag === 'sup') nuovi.superscript = true;
+      if (tag === 'sub') nuovi.subscript = true;
       segmenti.push(...segmentiInline(figlio, nuovi));
     }
   });
@@ -29,19 +31,29 @@ function stileJsPdf({ bold, italic } = {}) {
   return 'normal';
 }
 
+// Chiave che identifica in modo univoco una combinazione di formattazioni
+// (grassetto, corsivo, apice, pedice), usata per decidere se un paragrafo va
+// disegnato con lo stile unico veloce o parola per parola.
+function chiaveFormato(segmento) {
+  return `${stileJsPdf(segmento)}|${segmento.superscript ? 1 : 0}|${segmento.subscript ? 1 : 0}`;
+}
+
 // Disegna un paragrafo con più stili inline (es. "testo normale e **grassetto**
-// insieme") parola per parola, avanzando la x manualmente: jsPDF non supporta
-// stili misti in una singola chiamata a text().
+// insieme", oppure con apici/pedici come in "v²") parola per parola, avanzando
+// la x manualmente: jsPDF non supporta stili misti in una singola chiamata a
+// text(), né l'apice/pedice.
 function disegnaParagrafoMisto({ doc, margine, larghezza, altezzaPagina, scrittore, segmenti, dimensione, interlinea }) {
-  doc.setFontSize(dimensione);
   let x = margine;
   let y = scrittore.y;
   const famiglia = scrittore.famiglia || 'times';
 
   segmenti.forEach((segmento) => {
+    const dimensioneParola = segmento.superscript || segmento.subscript ? dimensione * 0.7 : dimensione;
+    const scostamento = segmento.superscript ? -dimensione * 0.25 : segmento.subscript ? dimensione * 0.2 : 0;
+    doc.setFont(famiglia, stileJsPdf(segmento));
+    doc.setFontSize(dimensioneParola);
     const parole = segmento.testo.split(/(\s+)/).filter((p) => p !== '');
     parole.forEach((parola) => {
-      doc.setFont(famiglia, stileJsPdf(segmento));
       const larghezzaParola = doc.getTextWidth(parola);
       const finePagina = x + larghezzaParola > margine + larghezza;
       if (finePagina && parola.trim() !== '') {
@@ -52,11 +64,12 @@ function disegnaParagrafoMisto({ doc, margine, larghezza, altezzaPagina, scritto
           y = margine;
         }
       }
-      doc.text(parola, x, y);
+      doc.text(parola, x, y + scostamento);
       x += larghezzaParola;
     });
   });
 
+  doc.setFontSize(dimensione);
   scrittore.y = y + interlinea;
 }
 
@@ -74,7 +87,7 @@ export function disegnaHtmlInPdf({ doc, scrittore, margine, larghezza, altezzaPa
     if (tag === 'p') {
       const segmenti = segmentiInline(nodo);
       if (segmenti.length === 0) return;
-      const stiliDistinti = new Set(segmenti.map((s) => stileJsPdf(s)));
+      const stiliDistinti = new Set(segmenti.map((s) => chiaveFormato(s)));
 
       if (stiliDistinti.size <= 1) {
         const style = nodo.getAttribute('style') || '';
@@ -97,14 +110,15 @@ export function disegnaHtmlInPdf({ doc, scrittore, margine, larghezza, altezzaPa
       }
     } else if (tag === 'ul') {
       Array.from(nodo.children).forEach((li) => {
-        scrittore.scrivi(`•  ${li.textContent.trim()}`, opzioniTesto);
+        scrittore.scriviVoceElenco(li.textContent.trim(), '•', opzioniTesto);
       });
     } else if (tag === 'ol') {
       Array.from(nodo.children).forEach((li, indice) => {
-        scrittore.scrivi(`${indice + 1}.  ${li.textContent.trim()}`, opzioniTesto);
+        scrittore.scriviVoceElenco(li.textContent.trim(), `${indice + 1}.`, opzioniTesto);
       });
-    } else if (tag === 'table') {
-      const righe = estraiRigheTabella(nodo);
+    } else if (tag === 'table' || (tag === 'div' && nodo.querySelector(':scope > table'))) {
+      const tabella = tag === 'table' ? nodo : nodo.querySelector(':scope > table');
+      const righe = estraiRigheTabella(tabella);
       if (righe.length === 0) return;
       const haIntestazione = nodo.querySelector('th') !== null;
 
@@ -118,6 +132,16 @@ export function disegnaHtmlInPdf({ doc, scrittore, margine, larghezza, altezzaPa
         theme: 'grid',
       });
       scrittore.y = doc.lastAutoTable.finalY + 12;
+    } else if (tag === 'hr') {
+      if (scrittore.y > altezzaPagina - margine) {
+        doc.addPage();
+        scrittore.y = margine;
+      }
+      const y = scrittore.y + 4;
+      doc.setLineDashPattern([1.5, 1.5], 0);
+      doc.line(margine, y, margine + larghezza, y);
+      doc.setLineDashPattern([], 0);
+      scrittore.y = y + 12;
     } else {
       const testo = nodo.textContent.trim();
       if (testo) scrittore.scrivi(testo, opzioniTesto);

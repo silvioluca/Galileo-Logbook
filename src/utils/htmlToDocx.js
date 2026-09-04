@@ -1,4 +1,4 @@
-import { Paragraph, TextRun, Table, TableRow, TableCell, AlignmentType, WidthType } from 'docx';
+import { Paragraph, TextRun, Table, TableRow, TableCell, AlignmentType, WidthType, BorderStyle } from 'docx';
 
 function allineamento(el) {
   const style = el.getAttribute('style') || '';
@@ -13,13 +13,23 @@ function testRunsDaNodo(nodo, formati = {}) {
   nodo.childNodes.forEach((figlio) => {
     if (figlio.nodeType === Node.TEXT_NODE) {
       if (figlio.textContent) {
-        risultati.push(new TextRun({ text: figlio.textContent, bold: formati.bold, italics: formati.italic }));
+        risultati.push(
+          new TextRun({
+            text: figlio.textContent,
+            bold: formati.bold,
+            italics: formati.italic,
+            superScript: formati.superscript,
+            subScript: formati.subscript,
+          }),
+        );
       }
     } else if (figlio.nodeType === Node.ELEMENT_NODE) {
       const tag = figlio.tagName.toLowerCase();
       const nuoviFormati = { ...formati };
       if (tag === 'strong' || tag === 'b') nuoviFormati.bold = true;
       if (tag === 'em' || tag === 'i') nuoviFormati.italic = true;
+      if (tag === 'sup') nuoviFormati.superscript = true;
+      if (tag === 'sub') nuoviFormati.subscript = true;
       risultati.push(...testRunsDaNodo(figlio, nuoviFormati));
     }
   });
@@ -62,7 +72,14 @@ export function convertiHtmlInDocx(html) {
           new Paragraph({ children: [new TextRun({ text: `${indice + 1}. ` }), ...testRunsDaNodo(li)] }),
         );
       });
-    } else if (tag === 'table') {
+    } else if (tag === 'hr') {
+      elementi.push(
+        new Paragraph({
+          text: '',
+          border: { bottom: { style: BorderStyle.DASHED, size: 6, color: '999999', space: 8 } },
+        }),
+      );
+    } else if (tag === 'table' || (tag === 'div' && nodo.querySelector(':scope > table'))) {
       const righe = Array.from(nodo.querySelectorAll('tr')).map((tr) => new TableRow({ children: celleDaRiga(tr) }));
       if (righe.length > 0) {
         elementi.push(new Table({ rows: righe, width: { size: 100, type: WidthType.PERCENTAGE } }));

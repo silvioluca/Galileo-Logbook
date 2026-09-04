@@ -1,8 +1,10 @@
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import TextAlign from '@tiptap/extension-text-align';
+import Superscript from '@tiptap/extension-superscript';
+import Subscript from '@tiptap/extension-subscript';
 import { Table, TableRow, TableHeader, TableCell } from '@tiptap/extension-table';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   IconBold,
   IconItalic,
@@ -19,7 +21,63 @@ import {
   IconColumnInsertLeft,
   IconColumnInsertRight,
   IconColumnRemove,
+  IconSuperscript,
+  IconSubscript,
+  IconSeparatorHorizontal,
+  IconMathSymbols,
 } from '@tabler/icons-react';
+
+const SIMBOLI = [
+  'α', 'β', 'γ', 'δ', 'ε', 'θ', 'λ', 'μ', 'ν', 'ξ', 'π', 'ρ', 'σ', 'τ', 'φ', 'χ', 'ψ', 'ω',
+  'Δ', 'Σ', 'Ω', 'Φ', 'Θ', 'Λ', 'Π',
+  '±', '×', '÷', '·', '≈', '≠', '≤', '≥', '∝', '√', '∞',
+  '∫', '∑', '∂', '∇', '°', 'Å',
+  '→', '⇌', '↑', '↓',
+];
+
+function SelettoreSimboli({ editor }) {
+  const [aperto, setAperto] = useState(false);
+  const riferimento = useRef(null);
+
+  useEffect(() => {
+    if (!aperto) return undefined;
+    const onClickFuori = (e) => {
+      if (riferimento.current && !riferimento.current.contains(e.target)) setAperto(false);
+    };
+    document.addEventListener('mousedown', onClickFuori);
+    return () => document.removeEventListener('mousedown', onClickFuori);
+  }, [aperto]);
+
+  return (
+    <div className="editor-simboli" ref={riferimento}>
+      <button
+        type="button"
+        className="editor-btn"
+        title="Inserisci simbolo o operatore matematico"
+        onClick={() => setAperto((o) => !o)}
+      >
+        <IconMathSymbols size={16} stroke={2} />
+      </button>
+      {aperto && (
+        <div className="editor-simboli-pannello">
+          {SIMBOLI.map((s) => (
+            <button
+              type="button"
+              key={s}
+              className="editor-simbolo-btn"
+              onClick={() => {
+                editor.chain().focus().insertContent(s).run();
+                setAperto(false);
+              }}
+            >
+              {s}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 function BarraStrumenti({ editor }) {
   if (!editor) return null;
@@ -33,6 +91,12 @@ function BarraStrumenti({ editor }) {
       </button>
       <button type="button" className={`editor-btn${attivo('italic')}`} onClick={() => editor.chain().focus().toggleItalic().run()} title="Corsivo">
         <IconItalic size={16} stroke={2} />
+      </button>
+      <button type="button" className={`editor-btn${attivo('superscript')}`} onClick={() => editor.chain().focus().toggleSuperscript().run()} title="Apice (esponenti)">
+        <IconSuperscript size={16} stroke={2} />
+      </button>
+      <button type="button" className={`editor-btn${attivo('subscript')}`} onClick={() => editor.chain().focus().toggleSubscript().run()} title="Pedice (indici)">
+        <IconSubscript size={16} stroke={2} />
       </button>
       <span className="editor-separatore" />
       <button type="button" className={`editor-btn${attivo('bulletList')}`} onClick={() => editor.chain().focus().toggleBulletList().run()} title="Elenco puntato">
@@ -50,6 +114,16 @@ function BarraStrumenti({ editor }) {
       </button>
       <button type="button" className={`editor-btn${attivo('paragraph', { textAlign: 'right' })}`} onClick={() => editor.chain().focus().setTextAlign('right').run()} title="Allinea a destra">
         <IconAlignRight size={16} stroke={2} />
+      </button>
+      <span className="editor-separatore" />
+      <SelettoreSimboli editor={editor} />
+      <button
+        type="button"
+        className="editor-btn"
+        title="Inserisci una linea orizzontale (es. per far scrivere una risposta)"
+        onClick={() => editor.chain().focus().setHorizontalRule().run()}
+      >
+        <IconSeparatorHorizontal size={16} stroke={2} />
       </button>
       <span className="editor-separatore" />
       <button
@@ -94,6 +168,8 @@ export default function RichTextEditor({ value, onChange }) {
     extensions: [
       StarterKit,
       TextAlign.configure({ types: ['paragraph'] }),
+      Superscript,
+      Subscript,
       Table.configure({ resizable: false }),
       TableRow,
       TableHeader,
