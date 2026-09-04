@@ -1223,18 +1223,17 @@
 
 .storia-layout {
   display: grid;
-  grid-template-columns: 1fr 270px;
   gap: 2.5rem;
   align-items: start;
   margin-top: 2rem;
 }
 
+.storia-contenuto {
+  min-width: 0;
+}
+
 .storia-timeline {
-  position: sticky;
-  top: 90px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  padding: 0;
 }
 
 .storia-timeline h2 {
@@ -1246,14 +1245,14 @@
   border-bottom: 1px solid var(--line);
 }
 
-.storia-timeline ol {
+.storia-timeline > ol {
   list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
 }
 
-.storia-timeline ol::before {
+.storia-timeline > ol::before {
   content: '';
   position: absolute;
   left: 4px;
@@ -1263,13 +1262,17 @@
   background: var(--line);
 }
 
-.storia-timeline li {
+.storia-timeline-riga-era {
   position: relative;
   padding-left: 1.5rem;
-  margin-bottom: 1.15rem;
+  margin-top: 1.4rem;
 }
 
-.storia-timeline li::before {
+.storia-timeline-riga-era:first-child {
+  margin-top: 0;
+}
+
+.storia-timeline-riga-era::before {
   content: '';
   position: absolute;
   left: 0;
@@ -1303,9 +1306,51 @@
   line-height: 1.25;
 }
 
-.storia-timeline a:hover .storia-timeline-titolo {
+.storia-timeline-riga-era > a:hover .storia-timeline-titolo {
   color: var(--accent-strong);
   text-decoration: underline;
+}
+
+.storia-timeline-eventi {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+}
+
+.storia-timeline-riga-evento {
+  margin: 0.3rem 0;
+  padding-left: 1.1rem;
+  font-size: 0.76rem;
+  line-height: 1.3;
+}
+
+.storia-timeline-riga-evento a {
+  color: var(--ink-soft);
+}
+
+.storia-timeline-riga-evento a:hover {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
+.storia-timeline-anno {
+  font-weight: 600;
+  color: var(--accent-strong);
+  margin-right: 0.3rem;
+}
+
+@media (min-width: 901px) {
+  .storia-layout {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .storia-timeline {
+    order: 1;
+  }
+
+  .storia-contenuto {
+    order: 2;
+  }
 }
 
 .storia-era {
@@ -1383,8 +1428,6 @@
   width: 40%;
   max-width: 280px;
   margin-bottom: 0.75rem;
-  padding: 6px;
-  background: var(--paper);
 }
 
 .storia-figura-destra {
@@ -1397,14 +1440,19 @@
   margin: 0 1.25rem 0.75rem 0;
 }
 
-.storia-figura img {
+.storia-figura-cornice {
+  padding: 6px;
+  background: var(--paper);
+}
+
+.storia-figura-cornice img {
   display: block;
   width: 100%;
   height: auto;
 }
 
 .storia-figura figcaption {
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
   font-size: 0.72rem;
   font-style: italic;
   text-align: center;
@@ -1413,20 +1461,17 @@
 
 .storia-equazione {
   clear: both;
-  margin: 1.5rem 0;
-  padding: 1rem 1.25rem;
-  border: 1px solid var(--accent-strong);
-  background: rgba(255, 250, 235, 0.5);
+  margin: 1.75rem 0;
   text-align: center;
 }
 
 .storia-equazione-formula {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.4rem;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--accent-strong);
+  font-style: italic;
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+  color: var(--ink);
 }
 
 .storia-equazione-nome {
@@ -1434,18 +1479,6 @@
   font-size: 0.8rem;
   font-style: italic;
   color: var(--ink-soft);
-}
-
-@media (max-width: 900px) {
-  .storia-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .storia-timeline {
-    position: static;
-    max-height: none;
-    order: -1;
-  }
 }
 
 @media (max-width: 560px) {

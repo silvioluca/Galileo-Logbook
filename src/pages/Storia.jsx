@@ -17,20 +17,6 @@ export default function Storia() {
         </p>
 
         <div className="storia-layout">
-          <nav className="storia-timeline etched-frame" aria-label="Linea del tempo della fisica">
-            <h2>Linea del tempo</h2>
-            <ol>
-              {STORIA.map((era) => (
-                <li key={era.id}>
-                  <a href={`#${era.id}`} onClick={vaiAllEra(era.id)}>
-                    <span className="storia-timeline-periodo">{era.periodo}</span>
-                    <span className="storia-timeline-titolo">{era.titolo}</span>
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </nav>
-
           <div className="storia-contenuto">
             {STORIA.map((era) => (
               <section id={era.id} key={era.id} className="storia-era">
@@ -52,13 +38,13 @@ export default function Storia() {
                   <div className="storia-sezione" key={sez.titolo}>
                     <h3>{sez.titolo}</h3>
                     {sez.immagine && (
-                      <figure
-                        className={`storia-figura etched-frame storia-figura-${sez.immagine.lato || 'destra'}`}
-                      >
-                        <img
-                          src={`${import.meta.env.BASE_URL}${sez.immagine.src}`}
-                          alt={sez.immagine.alt}
-                        />
+                      <figure className={`storia-figura storia-figura-${sez.immagine.lato || 'destra'}`}>
+                        <div className="storia-figura-cornice etched-frame">
+                          <img
+                            src={`${import.meta.env.BASE_URL}${sez.immagine.src}`}
+                            alt={sez.immagine.alt}
+                          />
+                        </div>
                         <figcaption>{sez.immagine.didascalia}</figcaption>
                       </figure>
                     )}
@@ -76,6 +62,32 @@ export default function Storia() {
               </section>
             ))}
           </div>
+
+          <nav className="storia-timeline" aria-label="Linea del tempo della fisica">
+            <h2>Linea del tempo</h2>
+            <ol>
+              {STORIA.map((era) => (
+                <li className="storia-timeline-riga storia-timeline-riga-era" key={era.id}>
+                  <a href={`#${era.id}`} onClick={vaiAllEra(era.id)}>
+                    <span className="storia-timeline-periodo">{era.periodo}</span>
+                    <span className="storia-timeline-titolo">{era.titolo}</span>
+                  </a>
+                  {era.eventi && era.eventi.length > 0 && (
+                    <ol className="storia-timeline-eventi">
+                      {era.eventi.map((ev) => (
+                        <li className="storia-timeline-riga storia-timeline-riga-evento" key={ev.anno + ev.testo}>
+                          <a href={`#${era.id}`} onClick={vaiAllEra(era.id)}>
+                            <span className="storia-timeline-anno">{ev.anno}</span>
+                            {ev.testo}
+                          </a>
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
         </div>
       </div>
     </div>
