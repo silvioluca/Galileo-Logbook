@@ -45,7 +45,8 @@ function chiaveFormato(segmento) {
 function disegnaParagrafoMisto({ doc, margine, larghezza, altezzaPagina, scrittore, segmenti, dimensione, interlinea }) {
   let x = margine;
   let y = scrittore.y;
-  const famiglia = scrittore.famiglia || 'times';
+  const famiglia = scrittore.famiglia || 'DejaVu';
+  doc.setTextColor(0, 0, 0);
 
   segmenti.forEach((segmento) => {
     const dimensioneParola = segmento.superscript || segmento.subscript ? dimensione * 0.7 : dimensione;
@@ -127,8 +128,14 @@ export function disegnaHtmlInPdf({ doc, scrittore, margine, larghezza, altezzaPa
         margin: { left: margine, right: margine },
         head: haIntestazione ? [righe[0]] : undefined,
         body: haIntestazione ? righe.slice(1) : righe,
-        styles: { font: scrittore.famiglia || 'times', fontSize: opzioniTesto.dimensione ? opzioniTesto.dimensione - 1.5 : 9.5 },
-        headStyles: { fillColor: [235, 222, 195], textColor: [43, 29, 15] },
+        styles: {
+          font: scrittore.famiglia || 'DejaVu',
+          fontSize: opzioniTesto.dimensione ? opzioniTesto.dimensione - 1.5 : 9.5,
+          textColor: [0, 0, 0],
+          lineColor: [0, 0, 0],
+          lineWidth: 0.5,
+        },
+        headStyles: { fillColor: [255, 255, 255], textColor: [0, 0, 0], fontStyle: 'bold', lineColor: [0, 0, 0], lineWidth: 0.5 },
         theme: 'grid',
       });
       scrittore.y = doc.lastAutoTable.finalY + 12;

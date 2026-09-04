@@ -36,15 +36,20 @@ function testRunsDaNodo(nodo, formati = {}) {
   return risultati;
 }
 
+const BORDO_CELLA = { style: BorderStyle.SINGLE, size: 4, color: '000000' };
+const BORDI_CELLA = { top: BORDO_CELLA, bottom: BORDO_CELLA, left: BORDO_CELLA, right: BORDO_CELLA };
+
 function celleDaRiga(tr) {
   const celle = Array.from(tr.children);
-  return celle.map(
-    (cella) =>
-      new TableCell({
-        children: [new Paragraph({ children: testRunsDaNodo(cella) })],
-        width: { size: Math.round(100 / celle.length), type: WidthType.PERCENTAGE },
-      }),
-  );
+  const intestazione = tr.parentElement && tr.parentElement.tagName.toLowerCase() === 'thead';
+  return celle.map((cella) => {
+    const grassetto = intestazione || cella.tagName.toLowerCase() === 'th';
+    return new TableCell({
+      children: [new Paragraph({ children: testRunsDaNodo(cella, { bold: grassetto || undefined }) })],
+      width: { size: Math.round(100 / celle.length), type: WidthType.PERCENTAGE },
+      borders: BORDI_CELLA,
+    });
+  });
 }
 
 // Converte l'HTML dell'editor ricco del Procedimento in elementi docx
@@ -76,7 +81,7 @@ export function convertiHtmlInDocx(html) {
       elementi.push(
         new Paragraph({
           text: '',
-          border: { bottom: { style: BorderStyle.DASHED, size: 6, color: '999999', space: 8 } },
+          border: { bottom: { style: BorderStyle.DASHED, size: 6, color: '000000', space: 8 } },
         }),
       );
     } else if (tag === 'table' || (tag === 'div' && nodo.querySelector(':scope > table'))) {
