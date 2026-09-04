@@ -39,13 +39,8 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/schede" onClick={() => setOpen(false)}>
-              Schede di Laboratorio
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/strumenti" onClick={() => setOpen(false)}>
-              Strumenti di Misura
+            <NavLink to="/esperimenti" onClick={() => setOpen(false)}>
+              Esperimenti
             </NavLink>
           </li>
           <li>
@@ -54,13 +49,18 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/unita-di-misura" onClick={() => setOpen(false)}>
-              Unità di Misura
+            <NavLink to="/strumenti" onClick={() => setOpen(false)}>
+              Strumenti
             </NavLink>
           </li>
           <li>
-            <NavLink to="/esperimenti" onClick={() => setOpen(false)}>
-              Esperimenti
+            <NavLink to="/unita-di-misura" onClick={() => setOpen(false)}>
+              Unità
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/schede" onClick={() => setOpen(false)}>
+              Schede
             </NavLink>
           </li>
         </ul>
