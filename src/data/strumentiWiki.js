@@ -269,7 +269,7 @@ export const STRUMENTI_WIKI = [
     unita: 'm, s',
     descrizione:
       "Una rotaia di legno levigata, inclinata di un piccolo angolo, su cui Galileo fece rotolare sfere per \"diluire\" nel tempo la caduta libera, troppo rapida per essere cronometrata con i mezzi del Seicento. Misurando gli spazi percorsi in tempi uguali (contati a orecchio con un canto, o con una clessidra ad acqua) dimostrò che lo spazio cresce col quadrato del tempo.",
-    immagine: null,
+    immagine: 'images/strumenti/piano-inclinato-galileo.jpg',
   },
   {
     nome: 'Macchina di Atwood',

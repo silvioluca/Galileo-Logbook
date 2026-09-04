@@ -354,7 +354,16 @@
   color: var(--accent-strong);
   border-left: 3px solid var(--accent);
   padding-left: 0.75rem;
-  margin: 0 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.esperimento-modal-corpo .esperimento-tesi {
+  margin-top: 1.25rem;
+}
+
+.esperimento-modal-corpo .strumento-descrizione {
+  text-align: justify;
+  margin-top: 0.5rem;
 }
 
 .modal-box.esperimento-modal {
