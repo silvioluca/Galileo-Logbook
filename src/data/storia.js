@@ -10,6 +10,8 @@ export const STORIA = [
       { anno: '~450 a.C.', testo: 'Atomismo di Leucippo e Democrito' },
       { anno: '~340 a.C.', testo: 'La Fisica di Aristotele' },
       { anno: '~250 a.C.', testo: 'Archimede: leva e principio di galleggiamento' },
+      { anno: '~60 d.C.', testo: "Erone di Alessandria e l'eolipila" },
+      { anno: '~150 d.C.', testo: 'Almagesto di Tolomeo' },
     ],
     sezioni: [
       {
@@ -43,6 +45,21 @@ export const STORIA = [
         equazione: { formula: 'F_1 \\cdot d_1 = F_2 \\cdot d_2', nome: 'Legge della leva di Archimede' },
         immagine: { src: 'images/storia/archimede.jpg', alt: 'Archimede pensieroso, dipinto di Domenico Fetti', didascalia: '"Archimede pensieroso", Domenico Fetti, 1620.', lato: 'sinistra' },
       },
+      {
+        titolo: 'Erone di Alessandria e la tecnologia antica',
+        paragrafi: [
+          "Erone di Alessandria, attivo nel I secolo d.C., fu l'ingegnere e inventore più prolifico del mondo antico: descrisse nei suoi trattati decine di dispositivi meccanici, idraulici e pneumatici, tra cui la celebre eolipila, una sfera cava che ruotava spinta dal getto di vapore fuoriuscente da due ugelli, il primo motore a reazione a vapore mai documentato nella storia.",
+          "Erone comprese perfettamente il principio fisico alla base del suo dispositivo (la spinta prodotta dall'espulsione di un fluido in una direzione), ma lo trattò come una curiosità da dimostrazione o un giocattolo per i templi, senza mai immaginarne un'applicazione pratica come motore di lavoro: nel mondo antico, dove la manodopera schiavile rendeva superfluo automatizzare la produzione, l'eolipila restò un'invenzione geniale ma sterile, che avrebbe atteso altri diciassette secoli prima che il principio del vapore fosse sfruttato su scala industriale.",
+        ],
+      },
+      {
+        titolo: "Tolomeo e l'astronomia geocentrica",
+        paragrafi: [
+          "Claudio Tolomeo, nel II secolo d.C. ad Alessandria d'Egitto, raccolse e perfezionò nell'Almagesto l'intera astronomia matematica greca precedente, costruendo un modello geocentrico dell'universo capace di prevedere con notevole precisione le posizioni future dei pianeti, del Sole e della Luna attraverso un complesso sistema di cerchi (deferenti ed epicicli) su cui i pianeti si muovevano.",
+          "Pur fondato su un presupposto oggi noto come errato, la centralità immobile della Terra, il modello tolemaico era matematicamente sofisticato e funzionava sorprendentemente bene per gli scopi pratici dell'epoca, come il calcolo dei calendari e la previsione delle eclissi. La sua autorità, trasmessa e ulteriormente elaborata dagli astronomi del mondo islamico medievale, sarebbe rimasta lo standard indiscusso dell'astronomia occidentale per quasi millequattrocento anni, fino alla rivoluzione copernicana del Cinquecento.",
+        ],
+        immagine: { src: 'images/storia/tolomeo.jpg', alt: 'Ritratto di Tolomeo con sfera armillare', didascalia: 'Tolomeo raffigurato con una sfera armillare, dipinto del 1476 circa.', lato: 'destra' },
+      },
     ],
   },
   {
@@ -53,6 +70,8 @@ export const STORIA = [
       "Mentre in Europa occidentale gran parte del sapere scientifico greco andava perduto dopo la caduta dell'Impero Romano, nel mondo islamico esso fu tradotto, custodito e ampliato; solo a partire dal XII secolo l'Europa lo avrebbe riscoperto, sottoponendolo a una critica che avrebbe preparato, senza ancora saperlo, la rivoluzione scientifica.",
     eventi: [
       { anno: '~1021', testo: 'Il Libro di ottica di Ibn al-Haytham' },
+      { anno: '~1200', testo: 'La scuola di traduttori di Toledo' },
+      { anno: '~1267', testo: "L'Opus Majus di Ruggero Bacone" },
       { anno: '~1350', testo: "Teoria dell'impetus di Buridano" },
       { anno: '~1350', testo: 'Teorema della velocità media (Oxford e Parigi)' },
     ],
@@ -65,6 +84,20 @@ export const STORIA = [
         ],
         equazione: { formula: '\\theta_i = \\theta_r', nome: 'Legge della riflessione (Ibn al-Haytham)' },
         immagine: { src: 'images/storia/alhazen.jpg', alt: 'Ritratto di Ibn al-Haytham (Alhazen)', didascalia: 'Ibn al-Haytham in un\'incisione europea del Seicento.', lato: 'destra' },
+      },
+      {
+        titolo: 'La trasmissione del sapere: Toledo e le università',
+        paragrafi: [
+          "Un ruolo decisivo nel recupero europeo del sapere antico e islamico fu svolto dalla scuola di traduttori di Toledo, in Spagna, dove a partire dal XII secolo, in una città che aveva appena conosciuto la convivenza tra cultura araba, ebraica e cristiana, squadre di studiosi tradussero sistematicamente in latino centinaia di opere scientifiche e filosofiche greche e arabe, spesso passando per un doppio passaggio linguistico (dall'arabo al castigliano, dal castigliano al latino).",
+          "Grazie a questo lavoro imponente, testi fondamentali di Aristotele, Euclide, Tolomeo, Alhazen e Avicenna, fino ad allora sconosciuti o dimenticati in Occidente, tornarono disponibili agli studiosi europei proprio negli stessi decenni in cui nascevano le prime università (Bologna, Parigi, Oxford), le istituzioni che avrebbero dato una casa stabile e continuativa allo studio sistematico della filosofia naturale per i successivi otto secoli.",
+        ],
+      },
+      {
+        titolo: 'Ruggero Bacone e il metodo sperimentale',
+        paragrafi: [
+          "Il frate francescano inglese Ruggero Bacone, nel suo Opus Majus (1267) indirizzato al papa Clemente IV, sostenne con insolita insistenza per l'epoca che l'argomentazione logica da sola, per quanto ineccepibile, non può mai fornire certezza sui fenomeni naturali senza il controllo diretto dell'esperienza: la experientia, ottenuta anche attraverso strumenti costruiti appositamente, doveva affiancare e verificare il ragionamento deduttivo.",
+          "Influenzato dagli studi ottici di Alhazen, Bacone condusse ricerche originali sulla rifrazione della luce e sull'uso delle lenti per la correzione della vista, e immaginò con notevole preveggenza future applicazioni pratiche della scienza, dai grandi specchi ustori alle macchine volanti. Sebbene isolato e in parte osteggiato dai suoi stessi confratelli, Bacone è oggi ricordato come una delle voci più chiare, nel cuore del Medioevo, a favore di un sapere naturale fondato sull'osservazione controllata piuttosto che sulla sola autorità dei testi antichi.",
+        ],
       },
       {
         titolo: "La scolastica europea e la teoria dell'impetus",
@@ -87,6 +120,9 @@ export const STORIA = [
       { anno: '1609-1619', testo: 'Le leggi di Keplero' },
       { anno: '1609', testo: 'Galileo punta il telescopio verso il cielo' },
       { anno: '1638', testo: 'Il piano inclinato e i Discorsi di Galileo' },
+      { anno: '1648', testo: "L'esperimento del Puy-de-Dôme di Pascal" },
+      { anno: '1662', testo: 'La legge di Boyle sui gas' },
+      { anno: '1678', testo: 'La teoria ondulatoria della luce di Huygens' },
       { anno: '1687', testo: 'I Principia di Newton' },
     ],
     sezioni: [
@@ -108,6 +144,22 @@ export const STORIA = [
         immagine: { src: 'images/storia/galileo.jpg', alt: 'Ritratto di Galileo Galilei', didascalia: 'Galileo Galilei, ritratto di Justus Sustermans, 1635 circa.', lato: 'destra' },
       },
       {
+        titolo: 'Pascal e Boyle: la fisica dei fluidi e dei gas',
+        paragrafi: [
+          "Blaise Pascal, proseguendo gli studi di Torricelli sulla pressione atmosferica, dimostrò nel 1648 (facendo eseguire l'esperimento al cognato sul vulcano spento del Puy-de-Dôme, in Alvernia) che il livello del mercurio in un barometro si abbassa progressivamente man mano che si sale in quota, provando in modo definitivo che a sostenere la colonna di mercurio è il peso dell'aria sovrastante, e non una misteriosa repulsione del vuoto come sostenevano ancora alcuni aristotelici. Pascal formulò inoltre il principio che porta il suo nome, secondo cui la pressione esercitata su un fluido racchiuso si trasmette invariata in ogni sua direzione.",
+          "Robert Boyle, tra i fondatori della Royal Society di Londra, utilizzò una pompa pneumatica perfezionata per studiare sistematicamente il comportamento dei gas, scoprendo nel 1662 che, a temperatura costante, il volume di una quantità fissa di gas è inversamente proporzionale alla pressione a cui è sottoposto: la prima legge quantitativa della fisica dei gas, che avrebbe aperto la strada, un secolo più tardi, alla teoria cinetica e alla termodinamica.",
+        ],
+        equazione: { formula: 'pV = \\text{costante}', nome: 'Legge di Boyle (a temperatura costante)' },
+      },
+      {
+        titolo: 'Huygens e la teoria ondulatoria della luce',
+        paragrafi: [
+          "Christiaan Huygens, il più versatile fisico olandese del secolo, costruì telescopi che gli permisero di scoprire Titano, il maggiore satellite di Saturno, e di comprendere per primo la vera natura degli anelli del pianeta; inventò inoltre l'orologio a pendolo, che rese per la prima volta possibile una misura del tempo sufficientemente precisa per gli usi scientifici e per la navigazione.",
+          "Nel suo Traité de la Lumière (concepito nel 1678, pubblicato nel 1690) propose che la luce non fosse un flusso di corpuscoli, come riteneva Newton, ma una perturbazione ondulatoria che si propaga in un mezzo, l'etere, così come il suono si propaga nell'aria: formulò a questo scopo il principio secondo cui ogni punto di un fronte d'onda si comporta come sorgente di nuove onde secondarie, uno strumento concettuale che, ripreso e perfezionato da Fresnel un secolo più tardi, si sarebbe rivelato decisivo per spiegare l'interferenza e la diffrazione della luce.",
+        ],
+        immagine: { src: 'images/storia/huygens.jpg', alt: 'Ritratto di Christiaan Huygens', didascalia: 'Christiaan Huygens, ritratto di Caspar Netscher, 1671.', lato: 'sinistra' },
+      },
+      {
         titolo: 'Isaac Newton e i Principia',
         paragrafi: [
           "Nel 1687 Isaac Newton pubblicò i Philosophiae Naturalis Principia Mathematica, l'opera che unificò per la prima volta la fisica terrestre e quella celeste in un unico sistema matematico coerente: le sue tre leggi del moto e la legge di gravitazione universale spiegavano contemporaneamente la caduta di un grave, le maree oceaniche e le orbite ellittiche dei pianeti scoperte da Keplero, con un'unica forza che agiva su scale di grandezza enormemente diverse.",
@@ -125,8 +177,10 @@ export const STORIA = [
     intro:
       "Consolidata la sintesi newtoniana, la fisica dei due secoli successivi esplora sistematicamente nuovi territori rimasti ai margini di quella sintesi: l'elettricità, il magnetismo, il calore e la natura della luce, ciascuno dei quali si rivela obbedire a leggi matematiche altrettanto precise di quelle della meccanica celeste.",
     eventi: [
+      { anno: '1738', testo: "L'idrodinamica di Daniel Bernoulli" },
       { anno: '1752', testo: "Franklin e l'elettricità dei fulmini" },
       { anno: '1785', testo: 'Legge di Coulomb' },
+      { anno: '1798', testo: 'La bilancia di torsione di Cavendish' },
       { anno: '1800', testo: 'La pila di Volta' },
       { anno: '1801', testo: 'Doppia fenditura di Young' },
       { anno: '1820', testo: 'Ørsted e Ampère: elettromagnetismo' },
@@ -135,6 +189,14 @@ export const STORIA = [
     ],
     sezioni: [
       {
+        titolo: "Daniel Bernoulli e l'idrodinamica",
+        paragrafi: [
+          "Daniel Bernoulli, membro della celebre famiglia di matematici svizzeri, pubblicò nel 1738 l'Hydrodynamica, il primo trattato sistematico sul comportamento dei fluidi in movimento: dimostrò che in una corrente di fluido la pressione diminuisce quando la velocità aumenta, un principio apparentemente controintuitivo ma di enorme portata pratica, alla base ancora oggi del funzionamento delle ali di un aereo, dei carburatori e di innumerevoli dispositivi che sfruttano il flusso dei fluidi.",
+          "Nello stesso trattato Bernoulli abbozzò anche una prima, embrionale teoria cinetica dei gas, immaginando che la pressione di un gas contro le pareti di un recipiente fosse dovuta al bombardamento incessante di innumerevoli minuscole particelle in moto: un'intuizione che sarebbe rimasta sostanzialmente isolata e incompresa per oltre un secolo, fino a essere pienamente sviluppata da Maxwell e Boltzmann nella seconda metà dell'Ottocento.",
+        ],
+        equazione: { formula: 'p + \\tfrac{1}{2}\\rho v^2 + \\rho g h = \\text{costante}', nome: 'Equazione di Bernoulli' },
+      },
+      {
         titolo: 'Elettricità e magnetismo: i primi passi',
         paragrafi: [
           "Nel corso del Settecento l'elettricità, fino ad allora poco più che una curiosità da salotto prodotta con macchine a strofinio, divenne oggetto di indagine sistematica e quantitativa: Benjamin Franklin dimostrò con il suo celebre (e pericolosissimo) esperimento dell'aquilone la natura elettrica dei fulmini, mentre Charles-Augustin de Coulomb misurò con la sua bilancia di torsione che la forza tra due cariche elettriche obbedisce alla stessa legge dell'inverso del quadrato della distanza già scoperta da Newton per la gravitazione.",
@@ -142,6 +204,13 @@ export const STORIA = [
         ],
         equazione: { formula: 'F = k\\dfrac{q_1 q_2}{r^2}', nome: 'Legge di Coulomb' },
         immagine: { src: 'images/storia/volta.jpg', alt: 'Ritratto di Alessandro Volta', didascalia: 'Alessandro Volta con una sua pila elettrica.', lato: 'destra' },
+      },
+      {
+        titolo: 'Cavendish e il peso della Terra',
+        paragrafi: [
+          "Henry Cavendish, scienziato inglese eccentrico e schivo, riprese nel 1798 lo stesso principio della bilancia di torsione già impiegato da Coulomb per l'elettricità, applicandolo però alla forza di gran lunga più debole tra tutte quelle conosciute: la gravità. Misurò con estrema precisione la debolissima attrazione gravitazionale tra piccole sfere di piombo in laboratorio e sfere più grandi poste a distanza nota, riuscendo così a determinare, per la prima volta in un esperimento controllato, il valore della costante di gravitazione universale G presente nella legge di Newton.",
+          "Conoscendo G e l'accelerazione di gravità già nota sulla superficie terrestre, Cavendish poté calcolare la massa e la densità media dell'intera Terra con una precisione notevole per l'epoca, ottenendo un valore di circa 5,5 volte quello dell'acqua, pressoché identico a quello oggi accettato. Per questo motivo il suo esperimento, pur progettato come una misura della densità terrestre, viene oggi ricordato soprattutto come la prima pesatura della Terra mai realizzata in laboratorio.",
+        ],
       },
       {
         titolo: 'Il calore come forma di energia: la termodinamica',
@@ -169,6 +238,8 @@ export const STORIA = [
     eventi: [
       { anno: '1831', testo: 'Induzione elettromagnetica di Faraday' },
       { anno: '1865', testo: 'Le equazioni di Maxwell' },
+      { anno: '1877', testo: "L'entropia statistica di Boltzmann" },
+      { anno: '1887', testo: 'Hertz produce e rileva le onde radio' },
       { anno: '1887', testo: 'Esperimento di Michelson e Morley' },
       { anno: '1895-1897', testo: "Raggi X, radioattività ed elettrone" },
     ],
@@ -181,6 +252,22 @@ export const STORIA = [
         ],
         equazione: { formula: 'c = \\dfrac{1}{\\sqrt{\\varepsilon_0 \\mu_0}}', nome: 'Velocità della luce dalle equazioni di Maxwell' },
         immagine: { src: 'images/storia/maxwell.jpg', alt: 'Ritratto di James Clerk Maxwell', didascalia: 'James Clerk Maxwell, fotografia degli anni 1870.', lato: 'destra' },
+      },
+      {
+        titolo: 'Hertz conferma le onde elettromagnetiche',
+        paragrafi: [
+          "Le equazioni di Maxwell prevedevano l'esistenza di onde elettromagnetiche invisibili, capaci di propagarsi anche nel vuoto, ma per quasi vent'anni restarono una previsione puramente teorica, priva di conferma sperimentale diretta. Heinrich Hertz, tra il 1886 e il 1889, costruì un semplice ma ingegnoso apparato formato da un oscillatore a scintilla (il trasmettitore) e da un anello metallico con una piccola interruzione (il ricevitore), riuscendo a generare, trasmettere attraverso il laboratorio e rilevare onde elettromagnetiche del tutto simili alla luce ma di frequenza molto più bassa, quelle che oggi chiamiamo onde radio.",
+          "Hertz dimostrò inoltre che queste onde si riflettevano, si rifrangevano e potevano essere polarizzate esattamente come la luce visibile, confermando in modo diretto e inequivocabile la teoria di Maxwell. Curiosamente, Hertz stesso non credeva che la sua scoperta avrebbe mai avuto applicazioni pratiche; pochi anni dopo la sua morte prematura, Guglielmo Marconi avrebbe invece fondato su di essa l'intera tecnologia della radiotelegrafia senza fili.",
+        ],
+      },
+      {
+        titolo: 'La nascita della meccanica statistica',
+        paragrafi: [
+          "Ludwig Boltzmann, fisico austriaco di straordinaria profondità teorica, sviluppò a partire dagli anni 1870 una spiegazione microscopica dei fenomeni termodinamici: temperatura, pressione ed entropia, sostenne, non sono altro che manifestazioni statistiche del comportamento medio di un numero enorme di molecole in agitazione incessante, le cui posizioni e velocità individuali non è possibile né necessario conoscere esattamente.",
+          "La sua formula per l'entropia, incisa sulla sua lapide dopo la morte, lega per la prima volta una grandezza termodinamica macroscopica (l'entropia S) al numero di configurazioni microscopiche (W) compatibili con lo stato osservato del sistema, fondando la meccanica statistica e fornendo un'interpretazione probabilistica del secondo principio della termodinamica: uno stato disordinato è semplicemente molto più probabile, non impossibile da invertire per legge assoluta. Le sue idee, aspramente contestate in vita da chi ancora dubitava dell'esistenza reale degli atomi, furono pienamente confermate solo dopo la sua morte, in particolare dagli studi di Einstein sul moto browniano.",
+        ],
+        equazione: { formula: 'S = k_B \\ln W', nome: "Formula dell'entropia di Boltzmann" },
+        immagine: { src: 'images/storia/boltzmann.jpg', alt: 'Ritratto di Ludwig Boltzmann', didascalia: 'Ludwig Boltzmann, fotografia del 1902.', lato: 'sinistra' },
       },
       {
         titolo: "Le nubi all'orizzonte della fisica classica",
@@ -203,7 +290,9 @@ export const STORIA = [
       { anno: '1913', testo: 'Modello atomico di Bohr' },
       { anno: '1915', testo: 'Relatività generale' },
       { anno: '1925-1927', testo: 'Meccanica quantistica (Heisenberg, Schrödinger, Dirac)' },
+      { anno: '1928', testo: "L'equazione di Dirac e l'antimateria" },
       { anno: '1929', testo: "Espansione dell'universo di Hubble" },
+      { anno: '1935', testo: 'Yukawa e la forza nucleare forte' },
       { anno: '1938-1945', testo: 'Fissione nucleare e Progetto Manhattan' },
     ],
     sezioni: [
@@ -234,6 +323,22 @@ export const STORIA = [
         equazione: { formula: 'G_{\\mu\\nu} + \\Lambda g_{\\mu\\nu} = \\dfrac{8\\pi G}{c^4} T_{\\mu\\nu}', nome: 'Equazioni di campo della relatività generale' },
       },
       {
+        titolo: "Pauli, Dirac e l'antimateria",
+        paragrafi: [
+          "Wolfgang Pauli formulò nel 1925 il principio di esclusione, secondo cui due elettroni in uno stesso atomo non possono mai occupare esattamente lo stesso stato quantico: un principio apparentemente astratto che spiega in realtà perché la materia occupi spazio e non collassi su se stessa, ed è alla base dell'intera struttura a strati degli elettroni che determina le proprietà chimiche degli elementi.",
+          "Paul Dirac cercò nel 1928 un'equazione d'onda per l'elettrone che fosse compatibile sia con la meccanica quantistica sia con la relatività ristretta di Einstein, un problema che nessuno era riuscito a risolvere. La sua equazione, di rara eleganza matematica, prevedeva sorprendentemente anche soluzioni a energia negativa, che Dirac interpretò audacemente come l'esistenza di una particella gemella dell'elettrone, identica ma di carica opposta: l'antimateria. Quando nel 1932 Carl Anderson scoprì per puro caso questa particella nei raggi cosmici, chiamandola positrone, la previsione teorica di Dirac ricevette una delle conferme più spettacolari nella storia della fisica.",
+        ],
+        equazione: { formula: '(i\\hbar\\, \\gamma^\\mu \\partial_\\mu - mc)\\,\\psi = 0', nome: "Equazione di Dirac" },
+        immagine: { src: 'images/storia/dirac.jpg', alt: 'Ritratto di Paul Dirac', didascalia: 'Paul Dirac in una fotografia del 1933.', lato: 'destra' },
+      },
+      {
+        titolo: 'Yukawa e le forze nucleari',
+        paragrafi: [
+          "Dopo la scoperta del neutrone (1932), i fisici si trovarono di fronte a un enigma: quale forza tiene uniti protoni e neutroni in un nucleo atomico così piccolo, nonostante la repulsione elettrica tra le cariche positive dei protoni dovrebbe farlo esplodere? Il fisico giapponese Hideki Yukawa propose nel 1935 che l'attrazione fosse mediata da una nuova particella, allora sconosciuta e circa duecento volte più pesante dell'elettrone, che i nuclei si scambiano continuamente per tenersi legati, in analogia con lo scambio di fotoni che media la forza elettromagnetica.",
+          "La particella prevista da Yukawa, oggi chiamata mesone pi o pione, fu effettivamente scoperta nei raggi cosmici nel 1947, dodici anni dopo la sua previsione teorica: la conferma valse a Yukawa il premio Nobel per la fisica nel 1949, il primo mai assegnato a uno scienziato giapponese, e segnò l'inizio della moderna fisica delle particelle subnucleari, che nei decenni successivi avrebbe portato al Modello Standard.",
+        ],
+      },
+      {
         titolo: 'Fisica nucleare e la Seconda guerra mondiale',
         paragrafi: [
           "Negli anni Trenta Enrico Fermi e altri fisici esplorarono sistematicamente le reazioni nucleari indotte da neutroni, portando nel 1938 alla scoperta, da parte di Otto Hahn, Fritz Strassmann, Lise Meitner e Otto Frisch, della fissione nucleare: la scissione di un nucleo pesante come l'uranio in nuclei più leggeri, accompagnata da un enorme rilascio di energia.",
@@ -250,8 +355,11 @@ export const STORIA = [
       "Negli ultimi ottant'anni la fisica ha completato il Modello Standard delle particelle elementari, ricostruito la storia dell'intero universo a partire dal Big Bang, e confermato sperimentalmente due tra le sue previsioni più difficili, il bosone di Higgs e le onde gravitazionali, pur lasciando aperte domande fondamentali su cui la ricerca è tuttora impegnata.",
     eventi: [
       { anno: '1948', testo: 'Elettrodinamica quantistica' },
+      { anno: '1954', testo: 'Fondazione del CERN' },
       { anno: '1964', testo: 'Radiazione cosmica di fondo' },
       { anno: '1960-1970', testo: 'Quark e Modello Standard' },
+      { anno: '1981', testo: 'Feynman propone il computer quantistico' },
+      { anno: '1994', testo: "L'algoritmo di Shor" },
       { anno: '1998', testo: "Scoperta dell'espansione accelerata (energia oscura)" },
       { anno: '2012', testo: 'Bosone di Higgs' },
       { anno: '2015', testo: 'Onde gravitazionali di LIGO' },
@@ -263,6 +371,14 @@ export const STORIA = [
           "Nel secondo dopoguerra Richard Feynman, Julian Schwinger e Sin-Itiro Tomonaga svilupparono l'elettrodinamica quantistica, la teoria che descrive con una precisione straordinaria l'interazione tra luce e materia, unificando per la prima volta la relatività ristretta e la meccanica quantistica in un unico apparato coerente.",
           "Nei decenni successivi la scoperta di decine di nuove particelle subatomiche, prodotte negli acceleratori sempre più potenti, portò Murray Gell-Mann e altri a proporre, negli anni Sessanta, che protoni e neutroni fossero a loro volta composti da particelle ancora più fondamentali, i quark. Questo lavoro culminò nel Modello Standard della fisica delle particelle, completato concettualmente negli anni Settanta, che descrive con successo tre delle quattro forze fondamentali della natura, elettromagnetica, nucleare debole e nucleare forte, in termini di un numero ristretto di particelle elementari e delle loro reciproche interazioni.",
         ],
+      },
+      {
+        titolo: 'Gli acceleratori di particelle',
+        paragrafi: [
+          "Verificare sperimentalmente il Modello Standard richiese la costruzione di macchine sempre più grandi e potenti, capaci di accelerare particelle a velocità prossime a quella della luce e farle scontrare per liberare l'energia necessaria a creare le particelle più pesanti previste dalla teoria. Il CERN, fondato nel 1954 vicino a Ginevra da dodici paesi europei come laboratorio di fisica delle particelle condiviso, e il Fermilab, aperto nel 1967 vicino a Chicago, divennero i due poli principali di questa ricerca, ospitando anelli acceleratori di dimensioni e ambizioni crescenti.",
+          "Il Tevatron del Fermilab, in funzione dal 1983 al 2011, permise nel 1995 la scoperta del quark top, l'ultimo dei sei quark previsti dal Modello Standard a essere osservato direttamente; il Large Hadron Collider del CERN, entrato in funzione nel 2008 in un tunnel circolare di 27 chilometri scavato sotto il confine franco-svizzero, resta oggi l'acceleratore di particelle più potente mai costruito, e fu la macchina che rese possibile, nel 2012, la scoperta del bosone di Higgs.",
+        ],
+        immagine: { src: 'images/storia/fermilab.jpg', alt: 'Vista aerea degli anelli acceleratori del Fermilab', didascalia: "Vista aerea degli anelli acceleratori del Fermilab, vicino Chicago.", lato: 'sinistra' },
       },
       {
         titolo: "Cosmologia moderna: dal Big Bang all'energia oscura",
@@ -281,10 +397,17 @@ export const STORIA = [
         ],
       },
       {
+        titolo: "L'informatica quantistica",
+        paragrafi: [
+          "Richard Feynman osservò nel 1981 che nessun computer classico può simulare in modo efficiente un sistema quantistico complesso, dato che le risorse necessarie crescono esponenzialmente con il numero di particelle coinvolte, e propose provocatoriamente che l'unico modo per farlo fosse costruire calcolatori che sfruttassero essi stessi le leggi della meccanica quantistica, anziché limitarsi a simularle.",
+          "L'idea rimase per anni un'affascinante curiosità teorica, finché nel 1994 il matematico Peter Shor dimostrò che un ipotetico computer quantistico potrebbe scomporre in fattori primi numeri molto grandi in un tempo enormemente più breve di qualunque computer classico esistente o immaginabile, minacciando la sicurezza di gran parte della crittografia usata ancora oggi. Da allora laboratori di tutto il mondo, sfruttando qubit basati su circuiti superconduttori, ioni intrappolati o fotoni, competono per costruire macchine sempre più grandi e stabili, in una corsa tecnologica che ricorda, per ambizione, quella dei primi acceleratori di particelle del secolo scorso.",
+        ],
+      },
+      {
         titolo: 'Le frontiere aperte',
         paragrafi: [
-          "Nonostante i suoi straordinari successi, la fisica del XXI secolo affronta ancora enigmi fondamentali irrisolti: la materia oscura, che costituirebbe circa il 27% dell'universo e la cui natura resta sconosciuta nonostante decenni di ricerca; la ricerca di una teoria quantistica della gravità capace di unificare relatività generale e meccanica quantistica, per cui teoria delle stringhe e gravità quantistica a loop restano le proposte più studiate, ma nessuna ancora confermata sperimentalmente.",
-          "A queste si aggiunge lo sviluppo della computazione quantistica, che sfrutta i fenomeni di sovrapposizione ed entanglement per costruire calcolatori radicalmente più potenti di quelli classici in specifiche classi di problemi. Come è accaduto a ogni generazione dai tempi di Talete, la fisica di oggi continua a porsi le stesse domande di fondo sulla natura ultima dello spazio, del tempo e della materia, ma con strumenti concettuali e sperimentali che i suoi fondatori antichi non avrebbero mai potuto immaginare.",
+          "Nonostante i suoi straordinari successi, la fisica del XXI secolo affronta ancora enigmi fondamentali irrisolti: la materia oscura, che costituirebbe circa il 27% dell'universo e la cui natura resta sconosciuta nonostante decenni di ricerca condotta con rivelatori sotterranei sempre più sensibili; la ricerca di una teoria quantistica della gravità capace di unificare relatività generale e meccanica quantistica, per cui teoria delle stringhe e gravità quantistica a loop restano le proposte più studiate, ma nessuna ancora confermata sperimentalmente.",
+          "Come è accaduto a ogni generazione dai tempi di Talete, la fisica di oggi continua a porsi le stesse domande di fondo sulla natura ultima dello spazio, del tempo e della materia, ma con strumenti concettuali e sperimentali che i suoi fondatori antichi non avrebbero mai potuto immaginare.",
         ],
       },
     ],

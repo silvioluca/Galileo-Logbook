@@ -25,13 +25,6 @@ export default function Navbar() {
         <NavLink to="/" className="navbar-brand" onClick={() => setOpen(false)}>
           🜛 Galileo Logbook
         </NavLink>
-        <button
-          className="navbar-toggle"
-          onClick={() => setOpen((o) => !o)}
-          aria-label="Apri menu"
-        >
-          ☰
-        </button>
         <ul className={`navbar-links${open ? ' open' : ''}`}>
           <li>
             <NavLink to="/" end onClick={() => setOpen(false)}>
@@ -69,52 +62,62 @@ export default function Navbar() {
             </NavLink>
           </li>
         </ul>
-        <div className="navbar-auth">
-          {!loading &&
-            (user ? (
-              <div className="navbar-account" ref={accountRef}>
-                <button
-                  type="button"
-                  className="navbar-avatar-btn"
-                  onClick={() => setMenuAccountAperto((o) => !o)}
-                  aria-haspopup="true"
-                  aria-expanded={menuAccountAperto}
-                  aria-label="Account"
-                >
-                  {user.photoURL ? (
-                    <img
-                      src={user.photoURL}
-                      alt=""
-                      className="navbar-avatar"
-                      referrerPolicy="no-referrer"
-                    />
-                  ) : (
-                    <span className="navbar-avatar navbar-avatar-fallback" aria-hidden="true">
-                      {(user.email || '?')[0].toUpperCase()}
-                    </span>
+        <div className="navbar-right">
+          <div className="navbar-auth">
+            {!loading &&
+              (user ? (
+                <div className="navbar-account" ref={accountRef}>
+                  <button
+                    type="button"
+                    className="navbar-avatar-btn"
+                    onClick={() => setMenuAccountAperto((o) => !o)}
+                    aria-haspopup="true"
+                    aria-expanded={menuAccountAperto}
+                    aria-label="Account"
+                  >
+                    {user.photoURL ? (
+                      <img
+                        src={user.photoURL}
+                        alt=""
+                        className="navbar-avatar"
+                        referrerPolicy="no-referrer"
+                      />
+                    ) : (
+                      <span className="navbar-avatar navbar-avatar-fallback" aria-hidden="true">
+                        {(user.email || '?')[0].toUpperCase()}
+                      </span>
+                    )}
+                  </button>
+                  {menuAccountAperto && (
+                    <div className="navbar-account-menu" role="menu">
+                      <p className="navbar-account-email">{user.email}</p>
+                      <button
+                        type="button"
+                        role="menuitem"
+                        onClick={() => {
+                          setMenuAccountAperto(false);
+                          signOut();
+                        }}
+                      >
+                        Esci
+                      </button>
+                    </div>
                   )}
+                </div>
+              ) : (
+                <button type="button" className="btn" onClick={signIn}>
+                  Accedi con Google
                 </button>
-                {menuAccountAperto && (
-                  <div className="navbar-account-menu" role="menu">
-                    <p className="navbar-account-email">{user.email}</p>
-                    <button
-                      type="button"
-                      role="menuitem"
-                      onClick={() => {
-                        setMenuAccountAperto(false);
-                        signOut();
-                      }}
-                    >
-                      Esci
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <button type="button" className="btn" onClick={signIn}>
-                Accedi con Google
-              </button>
-            ))}
+              ))}
+          </div>
+          <button
+            className="navbar-toggle"
+            onClick={() => setOpen((o) => !o)}
+            aria-label={open ? 'Chiudi menu' : 'Apri menu'}
+            aria-expanded={open}
+          >
+            {open ? '×' : '☰'}
+          </button>
         </div>
       </div>
     </header>

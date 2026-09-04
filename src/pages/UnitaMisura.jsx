@@ -119,12 +119,24 @@ export default function UnitaMisura() {
                             if (e.key === 'Enter' || e.key === ' ') setSelezionata(u);
                           }}
                         >
-                          <td>{u.grandezza}</td>
-                          <td>{u.simboloGrandezza}</td>
-                          <td>{u.unita}</td>
-                          <td>{u.simboloUnita}</td>
-                          <td>{u.formulaDimensionale}</td>
-                          <td>{u.branca}</td>
+                          <td data-label="Grandezza">
+                            <span>{u.grandezza}</span>
+                          </td>
+                          <td data-label="Simbolo">
+                            <span>{u.simboloGrandezza}</span>
+                          </td>
+                          <td data-label="Unità di misura">
+                            <span>{u.unita}</span>
+                          </td>
+                          <td data-label="Simbolo">
+                            <span>{u.simboloUnita}</span>
+                          </td>
+                          <td data-label="Formula dimensionale">
+                            <span>{u.formulaDimensionale}</span>
+                          </td>
+                          <td data-label="Branca">
+                            <span>{u.branca}</span>
+                          </td>
                         </tr>
                       ))}
                     </tbody>
