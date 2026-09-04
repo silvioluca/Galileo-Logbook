@@ -117,27 +117,27 @@ export default function Esperimenti() {
           open={Boolean(selezionato)}
           onClose={() => setSelezionato(null)}
           title={selezionato?.nome}
-          className="strumento-modal"
+          className="esperimento-modal"
         >
           {selezionato && (
-            <div className="strumento-modal-layout">
-              <div className="strumento-modal-immagine">
-                {selezionato.immagine ? (
+            <div className="esperimento-modal-corpo">
+              <p className="strumento-meta">
+                {selezionato.scienziato} · {selezionato.anno}
+              </p>
+              <p className="esperimento-tesi">{selezionato.cosaDimostra}</p>
+              {selezionato.immagine ? (
+                <figure className="esperimento-figura">
                   <img
                     src={`${import.meta.env.BASE_URL}${selezionato.immagine}`}
                     alt={selezionato.nome}
                   />
-                ) : (
-                  <span aria-hidden="true">Immagine non ancora disponibile</span>
-                )}
-              </div>
-              <div className="strumento-modal-testo">
-                <p className="strumento-meta">
-                  {selezionato.scienziato} · {selezionato.anno}
-                </p>
-                <p className="esperimento-tesi">{selezionato.cosaDimostra}</p>
-                <p className="strumento-descrizione">{selezionato.dettagli}</p>
-              </div>
+                </figure>
+              ) : (
+                <figure className="esperimento-figura esperimento-figura-vuota" aria-hidden="true">
+                  <span>Immagine non ancora disponibile</span>
+                </figure>
+              )}
+              <p className="strumento-descrizione">{selezionato.dettagli}</p>
             </div>
           )}
         </Modal>
