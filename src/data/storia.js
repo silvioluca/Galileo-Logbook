@@ -40,7 +40,7 @@ export const STORIA = [
           "Archimede di Siracusa, nel III secolo a.C., rappresenta il vertice della fisica matematica antica: formulò con rigore la legge della leva, fondò la statica dei fluidi con il celebre principio che porta il suo nome, secondo cui un corpo immerso in un fluido riceve una spinta verso l'alto pari al peso del fluido spostato, e calcolò aree e volumi di figure curve con un metodo di esaustione che anticipa il calcolo integrale di quasi duemila anni.",
           "A differenza della fisica qualitativa di Aristotele, quella di Archimede era genuinamente quantitativa e verificabile con la misura: un approccio che sarebbe stato pienamente recuperato solo con Galileo, quasi diciannove secoli più tardi.",
         ],
-        equazione: { formula: 'F₁ · d₁ = F₂ · d₂', nome: 'Legge della leva di Archimede' },
+        equazione: { formula: 'F_1 \\cdot d_1 = F_2 \\cdot d_2', nome: 'Legge della leva di Archimede' },
         immagine: { src: 'images/storia/archimede.jpg', alt: 'Archimede pensieroso, dipinto di Domenico Fetti', didascalia: '"Archimede pensieroso", Domenico Fetti, 1620.', lato: 'sinistra' },
       },
     ],
@@ -63,7 +63,7 @@ export const STORIA = [
           "Tra l'VIII e il XIII secolo, nella Casa della Saggezza di Baghdad e in altri centri del mondo islamico, i testi di Aristotele, Euclide e Tolomeo furono tradotti dal greco, studiati criticamente e considerevolmente ampliati, in un'epoca in cui in Europa occidentale questo patrimonio era in gran parte inaccessibile.",
           "Ibn al-Haytham (Alhazen), nel suo monumentale Libro di ottica (Kitab al-Manazir, inizio dell'XI secolo), rifiutò la teoria greca secondo cui è l'occhio a emettere raggi visivi verso gli oggetti, e dimostrò invece sperimentalmente, ricorrendo anche alla camera oscura, che è la luce a viaggiare in linea retta dagli oggetti fino all'occhio. Il suo insistere sulla verifica sperimentale sistematica delle ipotesi, applicata per la prima volta in modo così rigoroso allo studio della natura, gli è valso da molti storici della scienza il titolo di precursore diretto del metodo scientifico moderno.",
         ],
-        equazione: { formula: 'θᵢ = θᵣ', nome: 'Legge della riflessione (Ibn al-Haytham)' },
+        equazione: { formula: '\\theta_i = \\theta_r', nome: 'Legge della riflessione (Ibn al-Haytham)' },
         immagine: { src: 'images/storia/alhazen.jpg', alt: 'Ritratto di Ibn al-Haytham (Alhazen)', didascalia: 'Ibn al-Haytham in un\'incisione europea del Seicento.', lato: 'destra' },
       },
       {
@@ -72,7 +72,7 @@ export const STORIA = [
           "A partire dal XII secolo, grazie alla traduzione latina dei testi arabi e greci, le università europee di Parigi, Oxford e Bologna riscoprirono la fisica aristotelica, sottoponendola tuttavia a una critica sempre più serrata. Nel XIV secolo Giovanni Buridano propose la teoria dell'impetus, secondo cui un corpo lanciato riceve una sorta di \"spinta\" interna che lo mantiene in moto anche lontano dal motore che lo ha originato: un'anticipazione concettuale, per quanto ancora imprecisa, del futuro principio d'inerzia.",
           "Nello stesso periodo, i cosiddetti \"Calcolatori di Oxford\" (Mertonians) e Nicola Oresme a Parigi svilupparono la prima trattazione realmente quantitativa del moto uniformemente accelerato, dimostrando geometricamente il cosiddetto teorema della velocità media: lo spazio percorso da un corpo con accelerazione uniforme equivale a quello percorso alla sua velocità media costante nello stesso intervallo di tempo, un risultato che Galileo avrebbe poi confermato sperimentalmente quasi due secoli più tardi.",
         ],
-        equazione: { formula: 's = ½ (v₀ + v) · t', nome: 'Teorema della velocità media (Oxford Calculators, XIV secolo)' },
+        equazione: { formula: 's = \\tfrac{1}{2}(v_0 + v)\\,t', nome: 'Teorema della velocità media (Oxford Calculators, XIV secolo)' },
       },
     ],
   },
@@ -96,7 +96,7 @@ export const STORIA = [
           "Nel 1543 Nicolò Copernico pubblicò il De revolutionibus orbium coelestium, proponendo un modello eliocentrico dell'universo in cui la Terra, come gli altri pianeti, ruota attorno al Sole: un'ipotesi che sfidava duemila anni di cosmologia geocentrica aristotelico-tolemaica, formulata inizialmente più per eleganza matematica che per prove osservative decisive.",
           "Johannes Keplero, analizzando con straordinaria pazienza le osservazioni planetarie estremamente precise raccolte da Tycho Brahe, scoprì all'inizio del Seicento che le orbite dei pianeti non sono cerchi perfetti ma ellissi, formulando le tre leggi che portano il suo nome: per la prima volta il moto celeste veniva descritto con una precisione matematica pienamente verificabile, ponendo le basi empiriche su cui Newton avrebbe poi costruito la teoria della gravitazione universale.",
         ],
-        equazione: { formula: 'T² ∝ a³', nome: 'Terza legge di Keplero' },
+        equazione: { formula: 'T^2 \\propto a^3', nome: 'Terza legge di Keplero' },
       },
       {
         titolo: 'Galileo Galilei e il metodo sperimentale',
@@ -104,7 +104,7 @@ export const STORIA = [
           "Galileo Galilei, tra la fine del Cinquecento e i primi decenni del Seicento, è spesso considerato il padre del metodo scientifico moderno. Puntando per primo un telescopio da lui stesso perfezionato verso il cielo notturno, scoprì i quattro maggiori satelliti di Giove, le fasi di Venere e i crateri della Luna: prove decisive a favore del sistema copernicano, che gli costarono l'accusa di eresia da parte del Sant'Uffizio.",
           "Sul piano terrestre, i suoi esperimenti sul piano inclinato gli permisero di dimostrare, con misure quantitative riproducibili, che la caduta dei gravi è uniformemente accelerata e indipendente dal peso del corpo, confutando definitivamente la fisica aristotelica. Il suo insistere sulla verifica sperimentale quantitativa come unico arbitro delle teorie fisiche, più ancora delle singole scoperte compiute, resta il suo contributo più duraturo alla nascita della scienza moderna.",
         ],
-        equazione: { formula: 's = ½ g t²', nome: 'Legge della caduta dei gravi (Galileo)' },
+        equazione: { formula: 's = \\tfrac{1}{2} g t^2', nome: 'Legge della caduta dei gravi (Galileo)' },
         immagine: { src: 'images/storia/galileo.jpg', alt: 'Ritratto di Galileo Galilei', didascalia: 'Galileo Galilei, ritratto di Justus Sustermans, 1635 circa.', lato: 'destra' },
       },
       {
@@ -113,7 +113,7 @@ export const STORIA = [
           "Nel 1687 Isaac Newton pubblicò i Philosophiae Naturalis Principia Mathematica, l'opera che unificò per la prima volta la fisica terrestre e quella celeste in un unico sistema matematico coerente: le sue tre leggi del moto e la legge di gravitazione universale spiegavano contemporaneamente la caduta di un grave, le maree oceaniche e le orbite ellittiche dei pianeti scoperte da Keplero, con un'unica forza che agiva su scale di grandezza enormemente diverse.",
           "Newton sviluppò inoltre, in parallelo e indipendentemente da Gottfried Leibniz, il calcolo infinitesimale, lo strumento matematico indispensabile per trattare grandezze in continuo mutamento, e con i suoi studi di ottica dimostrò sperimentalmente che la luce bianca è in realtà composta dalla somma di tutti i colori dello spettro. La sintesi newtoniana avrebbe dominato incontrastata la fisica per oltre due secoli, fino alla rivoluzione relativistica e quantistica del Novecento.",
         ],
-        equazione: { formula: 'F = m · a         F = G · (m₁m₂)/r²', nome: 'Seconda legge della dinamica e legge di gravitazione universale (Newton)' },
+        equazione: { formula: 'F = ma \\qquad F = G\\dfrac{m_1 m_2}{r^2}', nome: 'Seconda legge della dinamica e legge di gravitazione universale (Newton)' },
         immagine: { src: 'images/storia/newton.jpg', alt: 'Ritratto di Isaac Newton', didascalia: 'Isaac Newton, ritratto di Godfrey Kneller, 1689.', lato: 'sinistra' },
       },
     ],
@@ -140,7 +140,7 @@ export const STORIA = [
           "Nel corso del Settecento l'elettricità, fino ad allora poco più che una curiosità da salotto prodotta con macchine a strofinio, divenne oggetto di indagine sistematica e quantitativa: Benjamin Franklin dimostrò con il suo celebre (e pericolosissimo) esperimento dell'aquilone la natura elettrica dei fulmini, mentre Charles-Augustin de Coulomb misurò con la sua bilancia di torsione che la forza tra due cariche elettriche obbedisce alla stessa legge dell'inverso del quadrato della distanza già scoperta da Newton per la gravitazione.",
           "Alessandro Volta inventò nel 1800 la pila elettrica, la prima sorgente di corrente continua e costante della storia, aprendo la strada a tutta l'elettrotecnica successiva; pochi anni dopo Hans Christian Ørsted e André-Marie Ampère scoprirono il legame profondo tra elettricità e magnetismo, due fenomeni fino ad allora considerati completamente distinti tra loro.",
         ],
-        equazione: { formula: 'F = k · (q₁q₂)/r²', nome: 'Legge di Coulomb' },
+        equazione: { formula: 'F = k\\dfrac{q_1 q_2}{r^2}', nome: 'Legge di Coulomb' },
         immagine: { src: 'images/storia/volta.jpg', alt: 'Ritratto di Alessandro Volta', didascalia: 'Alessandro Volta con una sua pila elettrica.', lato: 'destra' },
       },
       {
@@ -149,7 +149,7 @@ export const STORIA = [
           "All'inizio dell'Ottocento il calore era ancora spesso concepito come un fluido sottile e imponderabile, il \"calorico\", che passava semplicemente da un corpo caldo a uno freddo senza trasformarsi in nient'altro. Sadi Carnot, studiando l'efficienza teorica delle macchine a vapore, gettò nel 1824 le basi concettuali della termodinamica; James Prescott Joule dimostrò poi sperimentalmente, con grande precisione, che calore e lavoro meccanico sono interconvertibili in una proporzione fissa e riproducibile, provando che il calore è in realtà una forma di energia e non una sostanza a sé.",
           "Rudolf Clausius e William Thomson (Lord Kelvin) formularono negli anni successivi i due principi fondamentali della termodinamica, la conservazione dell'energia totale e l'inevitabile aumento dell'entropia in ogni processo naturale spontaneo: leggi universali, valide indistintamente per una macchina a vapore, un essere vivente o una stella.",
         ],
-        equazione: { formula: 'ΔU = Q − L', nome: 'Primo principio della termodinamica' },
+        equazione: { formula: '\\Delta U = Q - L', nome: 'Primo principio della termodinamica' },
       },
       {
         titolo: 'La natura ondulatoria della luce',
@@ -179,7 +179,7 @@ export const STORIA = [
           "Michael Faraday, sperimentatore geniale privo di formazione matematica formale, scoprì nel 1831 l'induzione elettromagnetica, il fenomeno per cui un campo magnetico variabile genera una corrente elettrica, e introdusse il concetto, allora rivoluzionario, di \"campo\" per descrivere l'interazione tra cariche e magneti: un'entità fisica che permea lo spazio circostante, in sostituzione dell'idea newtoniana di forze che agiscono istantaneamente a distanza.",
           "James Clerk Maxwell tradusse le intuizioni fisiche di Faraday in un rigoroso apparato matematico, le quattro equazioni che oggi portano il suo nome, dimostrando teoricamente che campi elettrici e magnetici variabili si propagano nello spazio sotto forma di onde, esattamente alla velocità della luce misurata sperimentalmente. Ne concluse che la luce stessa altro non è che un'onda elettromagnetica: la più grande unificazione della fisica ottocentesca.",
         ],
-        equazione: { formula: 'c = 1 / √(ε₀μ₀)', nome: 'Velocità della luce dalle equazioni di Maxwell' },
+        equazione: { formula: 'c = \\dfrac{1}{\\sqrt{\\varepsilon_0 \\mu_0}}', nome: 'Velocità della luce dalle equazioni di Maxwell' },
         immagine: { src: 'images/storia/maxwell.jpg', alt: 'Ritratto di James Clerk Maxwell', didascalia: 'James Clerk Maxwell, fotografia degli anni 1870.', lato: 'destra' },
       },
       {
@@ -213,7 +213,7 @@ export const STORIA = [
           "Nel 1900 Max Planck risolse il problema della radiazione di corpo nero con un'ipotesi che egli stesso considerava un semplice artificio matematico provvisorio: l'energia scambiata tra materia e radiazione non è continua, ma avviene in pacchetti discreti, i \"quanti\", di energia proporzionale alla frequenza della radiazione.",
           "Albert Einstein, nel suo leggendario \"anno mirabile\" 1905, dimostrò che i quanti di luce (in seguito chiamati fotoni) sono entità fisiche reali, spiegando così l'effetto fotoelettrico, e nello stesso anno pubblicò anche la teoria della relatività ristretta, che ridefinì i concetti di spazio e tempo mostrandoli non assoluti ma relativi allo stato di moto dell'osservatore, e stabilì l'equivalenza tra massa ed energia: forse l'equazione più celebre nella storia della scienza.",
         ],
-        equazione: { formula: 'E = h f          E = m c²', nome: 'Quanto di Planck-Einstein ed equivalenza massa-energia' },
+        equazione: { formula: 'E = hf \\qquad E = mc^2', nome: 'Quanto di Planck-Einstein ed equivalenza massa-energia' },
         immagine: { src: 'images/storia/einstein.jpg', alt: 'Ritratto di Albert Einstein', didascalia: 'Albert Einstein, fotografia di Ferdinand Schmutzer, 1921.', lato: 'destra' },
       },
       {
@@ -222,7 +222,7 @@ export const STORIA = [
           "Niels Bohr applicò nel 1913 l'idea dei quanti alla struttura dell'atomo, proponendo che gli elettroni potessero occupare soltanto orbite discrete attorno al nucleo, spiegando così per la prima volta gli spettri di emissione degli elementi chimici. Louis de Broglie propose nel 1924 che anche la materia, non solo la luce, possedesse una natura duale onda-particella, un'intuizione audace confermata sperimentalmente pochi anni dopo dalla diffrazione degli elettroni.",
           "Tra il 1925 e il 1927 Werner Heisenberg, Erwin Schrödinger e Paul Dirac formularono, in forme matematicamente diverse ma equivalenti, la meccanica quantistica completa: una teoria che descrive il mondo subatomico non in termini di traiettorie definite ma di probabilità, e in cui, come dimostrò lo stesso Heisenberg con il suo celebre principio di indeterminazione, la posizione e la quantità di moto di una particella non possono mai essere conosciute entrambe con precisione arbitraria nello stesso istante.",
         ],
-        equazione: { formula: 'Δx · Δp ≥ ħ/2', nome: 'Principio di indeterminazione di Heisenberg' },
+        equazione: { formula: '\\Delta x \\, \\Delta p \\geq \\dfrac{\\hbar}{2}', nome: 'Principio di indeterminazione di Heisenberg' },
         immagine: { src: 'images/storia/solvay.jpg', alt: 'Fotografia della Conferenza Solvay del 1927', didascalia: "La Conferenza Solvay del 1927 a Bruxelles, con quasi tutti i protagonisti della nuova fisica quantistica riuniti in un'unica fotografia.", lato: 'sinistra' },
       },
       {
@@ -231,7 +231,7 @@ export const STORIA = [
           "Einstein completò nel 1915 la teoria della relatività generale, estendendo la relatività ai sistemi accelerati e alla gravità: la massa e l'energia curvano la geometria stessa dello spaziotempo, e ciò che percepiamo come forza di gravità non è altro che il moto di corpi liberi lungo le geodetiche di questo spaziotempo curvo. La spettacolare conferma, ottenuta durante l'eclissi solare del 1919, della deflessione della luce stellare prevista dalla teoria rese Einstein una celebrità mondiale nel giro di pochi giorni.",
           "Pochi anni dopo, le osservazioni di Edwin Hubble sullo spostamento verso il rosso della luce delle galassie lontane rivelarono che l'universo stesso è in espansione, ponendo le basi osservative su cui si sarebbe poi costruita la futura teoria del Big Bang.",
         ],
-        equazione: { formula: 'Gμν + Λgμν = (8πG/c⁴) Tμν', nome: 'Equazioni di campo della relatività generale' },
+        equazione: { formula: 'G_{\\mu\\nu} + \\Lambda g_{\\mu\\nu} = \\dfrac{8\\pi G}{c^4} T_{\\mu\\nu}', nome: 'Equazioni di campo della relatività generale' },
       },
       {
         titolo: 'Fisica nucleare e la Seconda guerra mondiale',
@@ -270,7 +270,7 @@ export const STORIA = [
           "La scoperta accidentale, nel 1964, da parte di Arno Penzias e Robert Wilson, della radiazione cosmica di fondo, il debole bagliore residuo del Big Bang che pervade in modo pressoché uniforme tutto il cielo, fornì la prova osservativa decisiva a favore di un universo nato da uno stato caldissimo e densissimo circa 13,8 miliardi di anni fa.",
           "Osservazioni più recenti, condotte alla fine degli anni Novanta sulle supernovae lontane, hanno rivelato con sorpresa che l'espansione dell'universo non sta rallentando per effetto della gravità, come ci si aspetterebbe, ma sta al contrario accelerando: un risultato che ha spinto i cosmologi a postulare l'esistenza di una misteriosa \"energia oscura\", che costituirebbe oggi da sola circa il 68% del contenuto totale dell'universo.",
         ],
-        equazione: { formula: 'v = H₀ · d', nome: 'Legge di Hubble' },
+        equazione: { formula: 'v = H_0 \\, d', nome: 'Legge di Hubble' },
         immagine: { src: 'images/storia/cms.jpg', alt: 'Interno del rivelatore CMS al CERN', didascalia: "L'interno del rivelatore CMS al CERN, uno dei quattro grandi esperimenti del Large Hadron Collider.", lato: 'destra' },
       },
       {

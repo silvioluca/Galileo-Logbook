@@ -1224,7 +1224,6 @@
 .storia-layout {
   display: grid;
   gap: 2.5rem;
-  align-items: start;
   margin-top: 2rem;
 }
 
@@ -1233,6 +1232,8 @@
 }
 
 .storia-timeline {
+  display: flex;
+  flex-direction: column;
   padding: 0;
 }
 
@@ -1245,31 +1246,26 @@
   border-bottom: 1px solid var(--line);
 }
 
-.storia-timeline > ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.storia-timeline-track {
   position: relative;
+  flex: 1;
 }
 
-.storia-timeline > ol::before {
+.storia-timeline-track::before {
   content: '';
   position: absolute;
   left: 4px;
   top: 4px;
-  bottom: 4px;
+  bottom: 0;
   width: 2px;
   background: var(--line);
 }
 
 .storia-timeline-riga-era {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
   padding-left: 1.5rem;
-  margin-top: 1.4rem;
-}
-
-.storia-timeline-riga-era:first-child {
-  margin-top: 0;
 }
 
 .storia-timeline-riga-era::before {
@@ -1353,6 +1349,25 @@
   }
 }
 
+@media (max-width: 900px) {
+  .storia-timeline-track {
+    min-height: 0 !important;
+  }
+
+  .storia-timeline-riga-era {
+    position: static !important;
+    margin-top: 1.4rem;
+  }
+
+  .storia-timeline-riga-era:first-child {
+    margin-top: 0;
+  }
+
+  .storia-timeline-track::before {
+    display: none;
+  }
+}
+
 .storia-era {
   scroll-margin-top: 90px;
 }
@@ -1379,26 +1394,6 @@
   font-size: 1.05rem;
   color: var(--ink-soft);
   margin-bottom: 1.5rem;
-}
-
-.storia-eventi {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1.75rem;
-  margin: 0 0 2rem;
-  padding: 0.85rem 1.1rem;
-  border-left: 3px solid var(--accent);
-  background: rgba(107, 68, 35, 0.06);
-}
-
-.storia-eventi li {
-  font-size: 0.85rem;
-}
-
-.storia-eventi strong {
-  color: var(--accent-strong);
-  margin-right: 0.35rem;
 }
 
 .storia-sezione {
@@ -1466,11 +1461,16 @@
 }
 
 .storia-equazione-formula {
-  margin: 0 0 0.4rem;
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-style: italic;
-  font-size: 1.6rem;
-  letter-spacing: 0.03em;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}
+
+.storia-equazione-formula .katex-display {
+  margin: 0;
+}
+
+.storia-equazione-formula .katex {
+  font-size: 1.2em;
   color: var(--ink);
 }
 
